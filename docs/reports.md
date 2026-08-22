@@ -3,7 +3,6 @@ title: Reports
 nav_exclude: true
 ---
 
-# Reports
+<meta http-equiv="refresh" content="0; url=/2026-06-20-authoring-with-llm/">
 
-All reports are generated from markdown sources under `docs/` and listed in the
-sidebar. Use the navigation on the left to browse them.
+If you are not redirected automatically, [click here](/2026-06-20-authoring-with-llm/).

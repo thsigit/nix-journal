@@ -1,5 +1,7 @@
 ---
 nav_exclude: true
+hide:
+  - navigation
 ---
 
 # Codebot Reports
