@@ -1,0 +1,19 @@
+.cb-topnav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  padding: .45rem 1rem;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 500;
+  font-size: .8rem;
+}
+.cb-topnav a {
+  color: inherit;
+  text-decoration: none;
+  opacity: .85;
+}
+.cb-topnav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
