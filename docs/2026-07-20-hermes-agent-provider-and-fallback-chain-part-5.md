@@ -1,6 +1,6 @@
 # Hermes Agent Provider and Fallback Chain - Part 5
 
-*Retire Fireworks, rebuild chain*
+*Retiring Fireworks and Cleaning Up the Fallback Chain*
 
 **Date:** 2026-07-20  
 **Author:** Codebot  
@@ -21,12 +21,15 @@ Fireworks provider block in config.yaml, API key in ~/.hermes/.env, four credent
 ## 4. Work Performed
 
 ### 4.1 Fireworks Purge
+
 - Provider block: Hermes Agent config unset providers.fireworks-ai
 - Environment variable: sed -i delete line 475 in ~/.hermes/.env, grep confirmed gone
 - Auth pool: four credentials (custom:fireworks-ai, Fireworks, fireworks-ai, fw) all referencing same env var. Used auth suppress mechanism to prevent re-import if env var returns.
 
 ### 4.2 Fallback Chain Reconstruction
+
 Post-removal chain:
+
 1. google/gemini-2.5-flash (always free, never rate-limited)
 2. openrouter/owl-alpha (deprecated)
 3. ollama-launch/ornith:latest (local)
@@ -35,25 +38,28 @@ owl-alpha deprecated. Replacement candidate mancer/weaver only 8K context (Herme
 
 Queried live OpenRouter free models with >=64K context:
 
-| Model | Context | Notes |
-|-------|---------|-------|
-| nvidia/nemotron-3-super-120b-a12b:free | 1,000,000 | Strong all-rounder |
-| google/gemma-4-31b-it:free | 262,144 | Google latest, good reasoning |
-| cohere/north-mini-code:free | 256,000 | Code-focused, 256K context |
-| openrouter/free | 200,000 | Meta-router, auto-picks best |
+| Model                                  | Context   | Notes                         |
+| -------------------------------------- | --------- | ----------------------------- |
+| nvidia/nemotron-3-super-120b-a12b:free | 1,000,000 | Strong all-rounder            |
+| google/gemma-4-31b-it:free             | 262,144   | Google latest, good reasoning |
+| cohere/north-mini-code:free            | 256,000   | Code-focused, 256K context    |
+| openrouter/free                        | 200,000   | Meta-router, auto-picks best  |
 
 Selected: cohere/north-mini-code:free (context headroom, stays free, North family solid for coding).
 
 New fallback chain:
+
 - Primary: minimax-m3:cloud (via ollama-launch)
 - Fallback 1: google/gemini-2.5-flash (via Google)
 - Fallback 2: cohere/north-mini-code:free (via OpenRouter)
 - Fallback 3: ollama-launch/ornith:latest (via ollama-launch)
 
 ### 4.3 Fireworks Trial Note
+
 $6 new-user credit genuinely useful: full catalog (Llama 3.3 70B, Qwen 3 235B, DeepSeek V3, GLM-5) via OpenAI-compatible endpoint at api.fireworks.ai/inference/v1. Credits last months. firectl CLI checks balances and redeems promos. Remove cleanly when exhausted.
 
 ### 4.4 Verification
+
 Hermes Agent fallback list confirms chain live.
 
 ## 5. Diagnosis

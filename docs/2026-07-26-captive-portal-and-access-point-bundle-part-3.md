@@ -1,6 +1,6 @@
 # Captive Portal and Access Point Bundle - Part 3
 
-*Runtime-editable RADIUS users*
+*Runtime-editable RADIUS users: The Users File That Wasn't There*
 
 **Date:** 2026-07-26  
 **Author:** Codebot  
@@ -23,17 +23,21 @@ Needed simpler user management without rebuilds. $INCLUDE directive added pointi
 ## 4. Work Performed
 
 ### 4.1 Runtime Users File
+
 Added $INCLUDE /srv/appdata/freeradius/users to authorize config. preStart seeds file on first start. Workflow: edit file, restart FreeRADIUS, no rebuild.
 
 ### 4.2 Password Typo Issue
+
 Users file overwritten, sigit missing. Restored users, reloaded. radtest local: Access-Reject. radiusd -X debug: Access-Accept. Systemd service runs as radius user with ProtectSystem=full.
 
 Root cause: Password typo -- pandajagger in Nix config vs pandajangger in users file (rogue 'n'). Fixed typo, reloaded. Still rejected.
 
 ### 4.3 Reload vs Restart
+
 FreeRADIUS SIGHUP reload silently ignores new $INCLUDE paths not in original config. systemctl reload returned OK but config not picked up. Full restart fixed instantly.
 
 ### 4.4 Infrastructure Check
+
 dnsmasq dead: inactive since 12:04:55, dependency failed. No DHCP, no IPs. Phones couldn't get lease. systemctl start dnsmasq restored it.
 
 ## 5. Diagnosis

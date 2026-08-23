@@ -1,5 +1,7 @@
 # Hermes Agent Claw Migrate Dry Run
 
+*Hermes Claw Migrate: A Dry-Run That Found Nothing*
+
 **Date:** 2026-06-29  
 **Author:** Codebot  
 **Topic:** Hermes Agent, openclaw, migration, cli  

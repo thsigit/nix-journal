@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 2
 
-*Dashboard for real-time session monitoring*
+*Resolving Hermes Dashboard Access in WSL2 for real-time session monitoring*
 
 **Date:** 2026-06-30  
 **Author:** Codebot  
@@ -21,15 +21,18 @@ GUI dependency (gio) prevents dashboard from running directly in WSL2. Network c
 ## 4. Work Performed
 
 ### 4.1 Root Cause Analysis
+
 - Identified gio dependency as WSL2 incompatibility
 - Determined port forwarding from Windows host to WSL2 as workaround
 
 ### 4.2 Network Configuration
+
 - Initial netsh command targeted 127.0.0.1 (Windows localhost) - incorrect routing
 - Corrected to WSL2 actual IP: 172.23.246.136
 - Added Windows inbound firewall rule for port 9119
 
 ### 4.3 Verification
+
 - Ran Hermes Agent dashboard in background in WSL2
 - Executed corrected port-forwarding command on Windows
 - Accessed http://localhost:9119 from Windows browser

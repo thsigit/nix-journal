@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 8
 
-*First PM Assistant workload*
+*PM Assistant Builds a Text Editor: First Real Workload*
 
 **Date:** 2026-07-21  
 **Author:** Codebot  
@@ -21,34 +21,38 @@ Validate workflow engine with real project. Identify Coder bug patterns and Revi
 ## 4. Work Performed
 
 ### 4.1 Workflow Execution
+
 7 state transitions across 3 Coder iterations:
 
-| Transition | Duration | Result |
-|------------|----------|--------|
-| INIT -> PLANNING | - | Session created |
-| PLANNING -> PLAN_REVIEW | 41s | 7-step plan written |
-| PLAN_REVIEW -> IMPLEMENTING | - | PM approved plan |
-| IMPLEMENTING -> VERIFYING | 59s | editor.html (11.8KB) |
-| VERIFYING -> REVIEWING | - | Skipped (no project type) |
-| REVIEWING -> IMPLEMENTING | 106s | REVISION: escape order broken, events unwired |
-| IMPLEMENTING -> VERIFYING | 64s | Revision 2 (14KB) |
-| REVIEWING -> IMPLEMENTING | 24s | REVISION: tokenizer indexing bug |
-| IMPLEMENTING -> VERIFYING | 50s | Revision 3 |
-| REVIEWING -> APPROVED | 30s | REVISION: diff truncated, events missing |
-| APPROVED -> COMPLETE | - | PM override approved with known bugs |
+| Transition                  | Duration | Result                                        |
+| --------------------------- | -------- | --------------------------------------------- |
+| INIT -> PLANNING            | -        | Session created                               |
+| PLANNING -> PLAN_REVIEW     | 41s      | 7-step plan written                           |
+| PLAN_REVIEW -> IMPLEMENTING | -        | PM approved plan                              |
+| IMPLEMENTING -> VERIFYING   | 59s      | editor.html (11.8KB)                          |
+| VERIFYING -> REVIEWING      | -        | Skipped (no project type)                     |
+| REVIEWING -> IMPLEMENTING   | 106s     | REVISION: escape order broken, events unwired |
+| IMPLEMENTING -> VERIFYING   | 64s      | Revision 2 (14KB)                             |
+| REVIEWING -> IMPLEMENTING   | 24s      | REVISION: tokenizer indexing bug              |
+| IMPLEMENTING -> VERIFYING   | 50s      | Revision 3                                    |
+| REVIEWING -> APPROVED       | 30s      | REVISION: diff truncated, events missing      |
+| APPROVED -> COMPLETE        | -        | PM override approved with known bugs          |
 
 ### 4.2 What Worked
+
 - Workflow engine flawless: state machine transitions correct
 - Recovery from STUCK (reviewer timeout) worked first try
 - Artifact-driven: every decision/output on disk
 - Coder produced working code each iteration (dark theme, line numbers, file open, drag-drop, language detection)
 
 ### 4.3 Coder Bug Patterns (3 rounds, same classes)
+
 1. Syntax highlighting: HTML escaping before regex matching -> patterns for ", <, > never fired. Each rewrite attempted fix but introduced tokenizer indexing errors.
 2. Event wiring: diff truncated before addEventListener calls. Handlers written but output cut off.
 3. Keyboard shortcuts: Tab->2 spaces, Ctrl+S, Ctrl+O never in any iteration.
 
 ### 4.4 PM Decision
+
 Approved with known bugs, follow-up session planned. Correct behavior: system caught issues, documented them, PM made call.
 
 ## 5. Diagnosis

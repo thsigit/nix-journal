@@ -1,5 +1,7 @@
 # Podman Container Fix Stale Netavark Chains And Network Host
 
+*Fixing a Podman Crash Without Breaking Everything*
+
 **Date:** 2026-07-27  
 **Author:** Codebot  
 **Topic:** NixOS, Podman, container, troubleshooting, Caddy, homelab, maintenance, config, routing  
@@ -21,23 +23,28 @@ Netavark (Podman network backend) creates iptables/nftables chains for port mapp
 ## 4. Work Performed
 
 ### 4.1 Sledgehammer Fix
+
 Ran sudo nft flush ruleset. Wipes all nftables rules on host. Container came up but reckless:
+
 - Removed DNAT/masquerade chains for ALL running Podman containers (vane, linkding, wallabag, localai)
 - Destroyed openNDS walled-garden rules
 - Services "Up" but netavark never recreated chains since units not restarted
 - LiteLLM got fresh rules only because unit recreated by rebuild
 
 ### 4.2 Wrong Lesson: --network host
+
 Blinded by fix, jumped to "cleaner" architecture: changed LiteLLM module from ports = ["4000:4000"] to extraOptions = ["--network" "host"].
 Reasoning: host networking bypasses netavark, no chains, no conflicts.
 Client asked: "What actually breaks LiteLLM without --network host?"
 Honest answer: nothing. Root cause was stale chains, already eliminated by flush. Changed fix to non-issue.
 
 ### 4.3 Port Remapping Subtlety
+
 --network host not drop-in replacement. With ports = ["8087:8080"], container listens 8080 internally, netavark forwards host 8087. With --network host, container binds SAME port internally -- localai would grab host 8080 not 8087. Caddy proxies to 127.0.0.1:8087. Would run but unreachable.
 LiteLLM "worked" with host networking only because internal port (4000) matched Caddy expectation -- coincidence, not pattern. Applying broadly means touching every Caddy config, port collisions on shared internal ports.
 
 ### 4.4 Real Root Fix: DNS
+
 After bringing all containers back, three services unreachable by name: vane, linkding, localai. Ports responded locally. Problem: DNS -- dnsmasq only had address entries for homelab, wallabag, darkstat, litellm. Added missing to dnsmasq.nix.
 
 ## 5. Diagnosis

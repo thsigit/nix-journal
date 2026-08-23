@@ -1,6 +1,6 @@
 # The LiteLLM Gateway Evolution - Part 3
 
-*PaxSenix removal + proxy migration*
+*Removing Paxsenix and Rewiring to a Local LiteLLM Proxy*
 
 **Date:** 2026-07-22  
 **Author:** Codebot  
@@ -21,17 +21,20 @@ PaxSenix removal straightforward but proxy migration introduced SSL certificate 
 ## 4. Work Performed
 
 ### 4.1 PaxSenix Removal
+
 - opencode.json: deleted provider.paxsenix block, rewrote all 7 agent model keys
 - auth.json: removed API key
 - model.json: purged PaxSenix from recent-model list
 - All agents fell back to opencode/deepseek-v4-flash-free (built-in free model)
 
 ### 4.2 Proxy Configuration
+
 - Added OpenAI-compatible provider pointing to https://litellm.home.arpa/v1
 - Stored API key in auth.json
 - Immediate error: "Failed to load auth provider metadata: unable to verify the first certificate"
 
 ### 4.3 SSL Certificate Resolution
+
 - Homelab uses self-signed internal CA
 - WSL2 mount had old homelab-ca.crt (AKI: 81:7A:0B:... vs server SKI: C8:3B:66:... - mismatch)
 - Correct CA on homelab: /etc/ssl/certs/homelab-ca.pem
@@ -40,6 +43,7 @@ PaxSenix removal straightforward but proxy migration introduced SSL certificate 
 - Node.js uses own CA bundle: set NODE_EXTRA_CA_CERTS permanently in .bashrc
 
 ### 4.4 502 Bad Gateway Debug
+
 - Caddy log: "dial tcp 127.0.0.1:4000: connect: connection refused"
 - LiteLLM Podman container crash-looping
 - systemd showed "active" (conmon wrapper alive), but podman ps empty
@@ -49,6 +53,7 @@ PaxSenix removal straightforward but proxy migration introduced SSL certificate 
 - Container started cleanly, registering 140+ models (kenari, NVIDIA, OpenRouter, zai, Gemini, Ollama, groq, cerebras)
 
 ### 4.5 Final Configuration
+
 - Rebuilt OpenCode config around proxy
 - Provider section: 20 Kenari model definitions (via LiteLLM gateway)
 - All agents use :free variants to avoid burning topped-up balance

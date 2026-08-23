@@ -1,5 +1,7 @@
 # Building A Local LLM Setup In WSL2
 
+*From Model Chaos to a Lean Inference Stack*
+
 **Date:** 2026-06-29  
 **Author:** Codebot  
 **Topic:** WSL2, Ollama, Hermes Agent, llm, local-inference, failover  
@@ -32,11 +34,11 @@ WSL2 allocation: 7.8GB (50% of 16GB host), ~6GB free. No GPU. Realistic model he
 
 Three models selected for quality-per-byte on CPU:
 
-| Model | Size | Role |
-|-------|------|------|
-| qwen2.5:3b | 1.9 GB | General purpose |
-| deepseek-r1:1.5b | 1.1 GB | Reasoning |
-| starcoder2:3b | 1.7 GB | Code-focused |
+| Model            | Size   | Role            |
+| ---------------- | ------ | --------------- |
+| qwen2.5:3b       | 1.9 GB | General purpose |
+| deepseek-r1:1.5b | 1.1 GB | Reasoning       |
+| starcoder2:3b    | 1.7 GB | Code-focused    |
 
 Background pulls at ~2.5 MB/s. Total new disk: ~4.7GB.
 
@@ -44,15 +46,16 @@ Background pulls at ~2.5 MB/s. Total new disk: ~4.7GB.
 
 Identical prompt across all three:
 
-| Model | Result | Time | Tokens/sec | Assessment |
-|-------|--------|------|------------|------------|
-| qwen2.5:3b | Correct JSON + prose | 16s | 11.38 | Reliable |
-| deepseek-r1:1.5b | Empty JSON (strict), good plain text | 2.88s | N/A | Good for explanations |
-| starcoder2:3b | Garbage, timeout on code | 10.31s / 120s | N/A | Unreliable |
+| Model            | Result                               | Time          | Tokens/sec | Assessment            |
+| ---------------- | ------------------------------------ | ------------- | ---------- | --------------------- |
+| qwen2.5:3b       | Correct JSON + prose                 | 16s           | 11.38      | Reliable              |
+| deepseek-r1:1.5b | Empty JSON (strict), good plain text | 2.88s         | N/A        | Good for explanations |
+| starcoder2:3b    | Garbage, timeout on code             | 10.31s / 120s | N/A        | Unreliable            |
 
 ### 4.5 Cleanup
 
 Removed from Hermes Agent config and Ollama disk:
+
 - `qwen2.5-coder:7b` (4.7 GB)
 - `translategemma:4b` (3.3 GB)
 - `qwen3-vl:4b-instruct` (~3 GB)
@@ -63,6 +66,7 @@ Freed ~11GB disk.
 ### 4.6 Default and Routing
 
 Set Hermes Agent default: `qwen2.5:3b`. Quick commands registered:
+
 - `plain` -> `deepseek-r1:1.5b`
 - `structured` -> `qwen2.5:3b`
 - `failover` -> `cloud_failover.sh`
@@ -70,6 +74,7 @@ Set Hermes Agent default: `qwen2.5:3b`. Quick commands registered:
 ### 4.7 Cloud Failover Layer
 
 `cloud_failover.sh`:
+
 - Iterates provider|model pairs in priority order
 - Sources `~/.hermes/.env`
 - Honors Hermes Agent profiles

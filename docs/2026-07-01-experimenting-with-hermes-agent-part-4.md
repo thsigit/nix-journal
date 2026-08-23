@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 4
 
-*Live key rotation without session disruption*
+*Replacing the Gemini API Key Without Taking Down the Main Tab*
 
 **Date:** 2026-07-01  
 **Author:** Codebot  
@@ -21,26 +21,31 @@ Gemini free tier hard ceiling (limit: 0 for generativelanguage.googleapis.com/ge
 ## 4. Work Performed
 
 ### 4.1 Diagnosis
+
 - Inspected ~/.hermes/auth.json: both Gemini credentials marked exhausted, error code 429
 - Network probe: curl to Google API host returned 177ms, HTTP 400 (expected with placeholder key)
 - Identified: free tier limit: 0 is hard ceiling, not transient spike
 
 ### 4.2 Key Replacement
+
 - User edited ~/.hermes/auth.json manually: swapped old AIzaSy...7J44 for new key (tail ...stUg)
 - Confirmed old key deleted from Google console
 - User preference: execute setup commands directly, not via chat transcript
 
 ### 4.3 Auth State Reset
+
 - Ran hermes auth list: pool still showed stale exhaustion flags (last_error_* fields)
 - Ran hermes auth reset Gemini to clear flags
 - Clarified: hermes auth status Google returns "logged out" for API-key providers (normal, means no OAuth session, not "no credentials")
 
 ### 4.4 Verification
+
 - Fixed Hermes Agent chat flag usage: -q/--query is single-shot flag, not positional
 - Working command: Hermes Agent chat -q "reply with the single word PONG" -m google/gemini-2.0-flash -Q
 - Result: PONG - new key live and responding
 
 ### 4.5 Memory Capture
+
 - Saved memory entry capturing resolution for future sessions
 
 ## 5. Diagnosis

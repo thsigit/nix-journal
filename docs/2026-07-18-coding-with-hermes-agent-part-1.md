@@ -1,6 +1,6 @@
 # Coding with Hermes Agent - Part 1
 
-*Hermes + OpenCode state-machine orchestration*
+*Building a Multi-Agent Workflow Orchestrator and running the first cycle*
 
 **Date:** 2026-07-18  
 **Author:** Codebot  
@@ -21,21 +21,26 @@ Simple turn-taking doesn't scale to multiple specialized agents. Need structured
 ## 4. Work Performed
 
 ### 4.1 Communication Mode Exploration
-| Mode | Description | Result |
-|------|-------------|--------|
-| 1. Ad-hoc relay | opencode run as one-shot subprocess | Works for single prompts, slow for multi-turn (cold start) |
-| 2. Long-lived server | opencode serve HTTP API (port 4096, SSE, OpenAPI 3.1) | Security issue: /config/providers returns all API keys plaintext even with Basic Auth. Mitigation: bind localhost, strong password. |
-| 3. Autonomous loop | Python converse.py alternating Hermes Agent chat / opencode run | Proved functional: 6 sec/turn with free tier (opencode/deepseek-v4-flash-free). Google models timeout via OpenCode but work via Hermes. |
+
+| Mode                 | Description                                                     | Result                                                                                                                                  |
+| -------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Ad-hoc relay      | opencode run as one-shot subprocess                             | Works for single prompts, slow for multi-turn (cold start)                                                                              |
+| 2. Long-lived server | opencode serve HTTP API (port 4096, SSE, OpenAPI 3.1)           | Security issue: /config/providers returns all API keys plaintext even with Basic Auth. Mitigation: bind localhost, strong password.     |
+| 3. Autonomous loop   | Python converse.py alternating Hermes Agent chat / opencode run | Proved functional: 6 sec/turn with free tier (opencode/deepseek-v4-flash-free). Google models timeout via OpenCode but work via Hermes. |
 
 ### 4.2 State Machine Redesign
+
 User rejected alternation model. Designed workflow state machine:
+
 - **Roles**: Project Manager (human), Code Reviewer (Hermes Agent), Coder (OpenCode)
 - **Artifacts**: status.json, objective.md, plan.md, implementation.diff, review.md, decision.md, coder-reply.md, workspace/, README.md, transcript.md
 - **States**: CLARIFY -> PLAN -> AUTHORIZE -> IMPLEMENT -> REVIEW -> APPROVED -> COMPLETE
 - **Authority**: OpenCode never receives task without explicit PM authorization. Control returns to human between agent actions.
 
 ### 4.3 Orchestrator Implementation
+
 workflow.py CLI with step-advance pattern:
+
 ```bash
 python3 workflow.py --init session/todoist-wrapper --objective "Create Electron app for Todoist"
 python3 workflow.py --advance session/todoist-wrapper  # -> PLAN
@@ -46,21 +51,25 @@ python3 workflow.py --advance session/todoist-wrapper  # -> REVIEW
 Coder step: opencode run returns conversational text. Script extracts markdown code blocks with filenames, writes to workspace/. Cleaning functions strip Hermes Agent CLI overhead and OpenCode ANSI/headers.
 
 ### 4.4 First Cycle: Todoist Electron Wrapper
+
 Objective: Minimal Electron wrapper for Todoist.com (1200x800, frameless, custom title bar, UA spoofing).
 
 **Successes:**
+
 - Thorough plan: security (contextBridge, no nodeIntegration), error handling, UA spoofing
 - Clean code: main.js, preload.js (draggable title bar overlay), package.json (Electron v33)
 - Full cycle ~8 minutes, zero manual intervention post-approval
 - Git initialized at session root (artifacts) and workspace/ (code diffs)
 
 **Failures Fixed:**
+
 - Deep nesting: OpenCode prefixed workspace/ -> workspace/workspace/main.js. Fixed by stripping prefixes.
 - Verdict parsing: instruction examples (VERDICT: APPROVED) leaked into output. Fixed by filtering instruction lines.
 - Stray node_modules: 271MB under skill scripts from test run.
 - Session state sync: do_approve saved AUTHORIZE before IMPLEMENT. If OpenCode hung, state stuck. Fixed by deferring save.
 
 ### 4.5 Code Quality Standards (Reviewer Prompt)
+
 8-point standard: descriptive names, error handling required, no hardcoded secrets, input safety, demo boundary, cross-platform fallbacks, well-known dependencies, comments on non-obvious logic.
 
 ## 5. Diagnosis

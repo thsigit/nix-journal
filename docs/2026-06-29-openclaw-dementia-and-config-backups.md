@@ -1,5 +1,7 @@
 # Openclaw Dementia And Config Backups
 
+*When OpenClaw Forgot Its Models*
+
 **Date:** 2026-06-29  
 **Author:** Codebot  
 **Topic:** openclaw, Hermes Agent, env-vars, config-backups, Gemini  
@@ -33,6 +35,7 @@ User had old `openclaw.json` backup from early days. Restored it. OpenClaw "deme
 ### 4.4 Hermes Agent Backup Creation
 
 Hermes Agent equivalent of `openclaw.json`: two files:
+
 - `~/.hermes/config.yaml` (settings, model prefs, tools)
 - `~/.hermes/auth.json` (API keys, encrypted)
 

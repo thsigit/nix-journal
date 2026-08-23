@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 1
 
-*Failover config + mem0 upgrade*
+**A Day with Hermes: Building a Resilient AI Assistant on Free Tiers*
 
 **Date:** 2026-06-29  
 **Author:** Codebot  
@@ -27,13 +27,13 @@ User runs exclusively on free LLM tiers: Alibaba DashScope (primary), Google AI 
 
 Configured 5-layer `fallback_model` chain in Hermes Agent:
 
-| Priority | Provider | Model | Notes |
-|----------|----------|-------|-------|
-| 1 | Google AI Studio | gemini-2.0-flash | Free tier, excellent |
-| 2 | Google AI Studio | gemini-2.5-flash | Newer, slightly smarter |
-| 3 | Fireworks AI | llama-v3p3-70b-instruct |  trial credit |
-| 4 | Ollama (local) | minimax-m3:cloud | Via Ollama, no local RAM |
-| 5 | OpenRouter | owl-alpha | Free tier |
+| Priority | Provider         | Model                   | Notes                    |
+| -------- | ---------------- | ----------------------- | ------------------------ |
+| 1        | Google AI Studio | gemini-2.0-flash        | Free tier, excellent     |
+| 2        | Google AI Studio | gemini-2.5-flash        | Newer, slightly smarter  |
+| 3        | Fireworks AI     | llama-v3p3-70b-instruct | trial credit             |
+| 4        | Ollama (local)   | minimax-m3:cloud        | Via Ollama, no local RAM |
+| 5        | OpenRouter       | owl-alpha               | Free tier                |
 
 Triggers on error codes: 429, 529, 503, connection failures. No manual intervention required.
 

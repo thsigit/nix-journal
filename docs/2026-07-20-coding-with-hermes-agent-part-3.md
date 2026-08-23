@@ -1,6 +1,6 @@
 # Coding with Hermes Agent - Part 3
 
-*Crash-safe PM Assistant upgrade*
+*PM Assistant v0.4 — Crash-Safe and Configurable*
 
 **Date:** 2026-07-20  
 **Author:** Codebot  
@@ -21,6 +21,7 @@ Three fragility points: (1) no error recovery - crash = manual cleanup, (2) hard
 ## 4. Work Performed
 
 ### 4.1 Failure Recovery
+
 - Added try/except wrapper around action dispatch in main()
 - On any exception: write failure.md (error, traceback tail, recovery command), pin state to STUCK in status.json
 - --advance detects STUCK, prints recovery hint instead of crashing
@@ -31,6 +32,7 @@ Three fragility points: (1) no error recovery - crash = manual cleanup, (2) hard
 - No auto-retry, no state rewind - deliberate single-command recovery for "one project a day" workflow
 
 ### 4.2 Agent Roster Configuration
+
 - Created agents.yaml at skill root with two slots: reviewer, coder
 - Each defines: command template ({prompt}, {model} placeholders), default_model, optional extra_args
 - Zero-dependency: ~30-line fallback parser for flat key:value format (uses PyYAML if available, silent fallback)
@@ -38,12 +40,14 @@ Three fragility points: (1) no error recovery - crash = manual cleanup, (2) hard
 - Example: swap coder to google/gemini-2.5-pro for one project, keep opencode/deepseek-v4-flash-free for others
 
 ### 4.3 Retrospect Report
+
 - On COMPLETE entry, workflow.py writes retrospect.md automatically (templated, no LLM cost)
 - Time-per-state table from status.json history timestamps
 - Optional --retrospect --llm calls reviewer for "Lessons learned" paragraph
 - Rest of report templated
 
 ### 4.4 README.md Quick Reference
+
 - Every --status prints quirks doc path
 - Human-scannable 6-section reference: CLI quick-ref, mental model, recovery flow, agents.yaml gotchas, retrospect caveats, session directory anatomy
 - Complements 350-line SKILL.md (model-facing)

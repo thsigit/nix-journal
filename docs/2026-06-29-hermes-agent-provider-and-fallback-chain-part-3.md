@@ -1,6 +1,6 @@
 # Hermes Agent Provider and Fallback Chain - Part 3
 
-*Gemini primary + credential practices*
+*Migrating from Ollama to Google Gemini.md + credential practices*
 
 **Date:** 2026-06-29  
 **Author:** Codebot  
@@ -33,18 +33,22 @@ hermes config set model.default gemini-2.5-flash
 ### 4.2 The `base_url` Trap
 
 Test failed: `404: model 'gemini-2.5-flash' not found`. Error showed:
+
 ```
 Endpoint: Endpoint: http://127.0.0.1:11434/v1
 ```
+
 `model.provider` switched but `model.base_url` still pointed at Ollama.
 
 Fix:
+
 ```bash
 hermes config set model.api_key ""
 hermes config set model.base_url ""
 ```
 
 Clean state confirmed:
+
 ```
 Model: {'api_key': '', 'base_url': '', 'default': 'gemini-2.5-flash', 'provider': 'gemini'}
 ```
@@ -54,9 +58,11 @@ Model: {'api_key': '', 'base_url': '', 'default': 'gemini-2.5-flash', 'provider'
 ### 4.3 Pro Model Quota Trap
 
 Tried `gemini-2.5-pro` for reasoning:
+
 ```
 429 Too Many Requests: You exceeded your current quota...
 ```
+
 Free tier Pro: extremely tight limits. Flash: 15 RPM. Pro unusable for agent workloads (5-10 rapid calls/task).
 
 Mitigation: Added agent memory note: **always suggest Flash, warn about Pro quota**. Hermes Agent now steers to `gemini-2.5-flash` by default. No way to hide Pro from picker (Hermes Agent reads full API model list). Workaround: pin default to Flash, let memory handle rest.
@@ -66,16 +72,19 @@ Mitigation: Added agent memory note: **always suggest Flash, warn about Pro quot
 Gemini key in Hermes auth pool (`~/.hermes/auth.json`, mode 600). External tools need same key.
 
 Naive approach (bad):
+
 ```bash
 export GOOGLE_API_KEY="AIzaSy..."  # plaintext in history, scrollback, hard to rotate
 ```
 
 Better approach: pull from vault at shell startup:
+
 ```bash
 export GOOGLE_API_KEY=$(hermes auth list gemini | grep -o 'AIzaSy[A-Za-z0-9_-]*' | head -n 1)
 ```
 
 Benefits:
+
 - Single source of truth (auth vault)
 - Rotation in Hermes Agent propagates automatically
 - No plaintext in shell profiles
@@ -84,14 +93,14 @@ Caveat: `hermes auth list` may redact secret in some versions. Fallback: `hermes
 
 ### 4.5 Before vs After Comparison
 
-| Aspect | Before (Ollama + OpenRouter) | After (Gemini) |
-|--------|------------------------------|----------------|
-| Latency | Variable (local: fast/dumb, cloud: slow aggregator) | Consistent ~1-2s |
-| Context window | 2K-8K (tinyllama fought) | 1M tokens |
-| Model quality | Small models hallucinated | Flash handles most tasks |
-| Rate limits | Ollama: none, OR: unpredictable | 15 RPM (predictable) |
-| Setup complexity | Moderate (Ollama + config hacks) | Minimal (3 commands) |
-| Reliability | Frequent 404s from OR, Ollama crashes | Single stable endpoint |
+| Aspect           | Before (Ollama + OpenRouter)                        | After (Gemini)           |
+| ---------------- | --------------------------------------------------- | ------------------------ |
+| Latency          | Variable (local: fast/dumb, cloud: slow aggregator) | Consistent ~1-2s         |
+| Context window   | 2K-8K (tinyllama fought)                            | 1M tokens                |
+| Model quality    | Small models hallucinated                           | Flash handles most tasks |
+| Rate limits      | Ollama: none, OR: unpredictable                     | 15 RPM (predictable)     |
+| Setup complexity | Moderate (Ollama + config hacks)                    | Minimal (3 commands)     |
+| Reliability      | Frequent 404s from OR, Ollama crashes               | Single stable endpoint   |
 
 ## 5. Diagnosis
 

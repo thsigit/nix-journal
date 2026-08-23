@@ -1,6 +1,6 @@
 # Hermes Agent Provider and Fallback Chain - Part 1
 
-*WSL2 lean stack audit + cloud failover*
+*From Model Chaos to a Lean Stack: A Saturday Evening with Hermes*
 
 **Date:** 2026-06-20  
 **Author:** Codebot  
@@ -33,6 +33,7 @@ Listed 11 configured models from Hermes Agent config and live Ollama instance. I
 ### 4.3 Pull CPU-Appropriate Models
 
 Selected three models optimized for quality-per-byte on CPU:
+
 - `qwen2.5:3b` (1.9 GB) - general purpose
 - `deepseek-r1:1.5b` (1.1 GB) - reasoning
 - `starcoder2:3b` (1.7 GB) - code-focused
@@ -43,15 +44,16 @@ Pulled in background over slow connection (~2.5 MB/s). Total new disk usage: ~4.
 
 Ran identical prompt against all three models:
 
-| Model | Result | Time | Tokens/sec | Assessment |
-|-------|--------|------|------------|------------|
-| qwen2.5:3b | Correct JSON + prose | 16s | 11.38 | Reliable |
-| deepseek-r1:1.5b | Empty JSON (strict), good plain text | 2.88s | N/A | Good for explanations |
-| starcoder2:3b | Garbage output, timeout on code | 10.31s / 120s timeout | N/A | Unreliable |
+| Model            | Result                               | Time                  | Tokens/sec | Assessment            |
+| ---------------- | ------------------------------------ | --------------------- | ---------- | --------------------- |
+| qwen2.5:3b       | Correct JSON + prose                 | 16s                   | 11.38      | Reliable              |
+| deepseek-r1:1.5b | Empty JSON (strict), good plain text | 2.88s                 | N/A        | Good for explanations |
+| starcoder2:3b    | Garbage output, timeout on code      | 10.31s / 120s timeout | N/A        | Unreliable            |
 
 ### 4.5 Cleanup of Large Models
 
 Removed four models from Hermes Agent config and Ollama disk:
+
 - `qwen2.5-coder:7b` (4.7 GB) - deleted
 - `translategemma:4b` (3.3 GB) - deleted
 - `qwen3-vl:4b-instruct` (~3 GB) - deleted
@@ -62,6 +64,7 @@ Freed ~11GB disk space.
 ### 4.6 Default Model and Routing Rules
 
 Set Hermes Agent default to `qwen2.5:3b` (most reliable for structured output and code). Established routing rule:
+
 - `plain` -> `deepseek-r1:1.5b` (explanations)
 - `structured` -> `qwen2.5:3b` (JSON, code)
 
@@ -70,6 +73,7 @@ Registered as Hermes Agent quick commands.
 ### 4.7 Cloud Failover Layer
 
 Built `cloud_failover.sh` script:
+
 - Iterates provider|model pairs in priority order
 - Sources credentials from `~/.hermes/.env`
 - Honors Hermes Agent profiles

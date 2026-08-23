@@ -1,6 +1,6 @@
 # Blogging Skill Evolution - Part 2
 
-*OpenCode skill rebuild*
+*Making a Skill for Blogging Sessions (so I Stop Having to Re-explain It)*
 
 **Date:** 2026-07-22  
 **Author:** Codebot  
@@ -21,18 +21,21 @@ Need skill that handles output mechanics (frontmatter, filename convention, tag 
 ## 4. Work Performed
 
 ### 4.1 Skill Design
+
 - Created from-notes-to-narrative skill
 - Source-agnostic: works with terminal logs, notes, half-formed thoughts, session data
 - Handles: frontmatter format, filename convention (YYYY-MM-DD-slug.md), existing tag list, save path
 - Editorial work stays with human: skill suggests structure/angle, human decides story
 
 ### 4.2 Test Drive
+
 - Immediate test on capstone post: "today I made a skill for blogging sessions"
 - Workflow: draft -> review -> save
 - No friction, no overreach
 - This post written using the skill
 
 ### 4.3 Deployment
+
 - Skill live at ~/.config/opencode/skills/from-notes-to-narrative/
 
 ## 5. Diagnosis
