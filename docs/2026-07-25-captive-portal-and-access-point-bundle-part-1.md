@@ -1,6 +1,6 @@
 # Captive Portal and Access Point Bundle - Part 1
 
-*hostapd + dnsmasq + NAT*
+*The Hostapd Hunt: When DNS Gets Lost at the Firewall*
 
 **Date:** 2026-07-25  
 **Author:** Codebot  
@@ -23,36 +23,47 @@ Phone connected, got IP, WPA handshake complete, dnsmasq lease written, NAT coun
 ## 4. Work Performed
 
 ### 4.1 Port 53 Conflict Resolution
+
 systemd-resolved on 127.0.0.53:53 conflicted with dnsmasq on 0.0.0.0:53. Fixed with bind-interfaces + listen-address=192.168.4.1.
 
 ### 4.2 DNS Disabled Workaround
+
 Removed port=0 workaround that killed DNS entirely.
 
 ### 4.3 Regulatory Domain
+
 Country code unset (00), channels on passive scan. Noted but not root cause.
 
 ### 4.4 MTU and rp_filter Checks
+
 MTU 1500 everywhere. rp_filter passing cleanly (71085 returns, 0 drops).
 
 ### 4.5 Namespace Simulation
+
 Created veth pair + network namespace to simulate AP client. Ping failed -- expected since veth not wlp2s0, so NAT prerouting rule (iifname wlp2s0) never marked packets.
 
 ### 4.6 Firewall Chain Analysis Breakthrough
+
 NixOS firewall has two paths: FORWARD (traffic through machine) and INPUT (traffic to machine). FORWARD chain was open:
+
 ```
 nixos-filter-forward:
   iifname "wlp2s0" oifname "enp0s31f6" accept
   ct state related,established accept
 ```
+
 NAT counters ticked because FORWARD worked.
 
 But DNS queries to 192.168.4.1:53 hit INPUT chain, not FORWARD. NixOS INPUT restrictive by default: only loopback, RELATED/ESTABLISHED, SSH/HTTP/HTTPS/SMB, trustedInterfaces. DNS from wlp2s0 dropped silently.
 
 ### 4.7 Fix
+
 Single line in firewall.nix:
+
 ```nix
 networking.firewall.trustedInterfaces = [ "wlp2s0" ];
 ```
+
 Treats all AP interface traffic as trusted -- no INPUT filtering. Dnsmasq gets all queries. Captive portal check passes.
 
 ## 5. Diagnosis

@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 3
 
-*SQLite session cleanup + reusable skill*
+*Cleaning Up Hermes Sessions and Teaching Hermes to Do It Again*
 
 **Date:** 2026-06-30  
 **Author:** Codebot  
@@ -21,22 +21,26 @@ No native session deletion capability in Hermes. Manual SQL required with proper
 ## 4. Work Performed
 
 ### 4.1 Database Inspection
+
 - Located ~/.hermes/state.db
 - Listed tables and schemas including FTS5 triggers (messages_fts_delete, messages_fts_trigram_delete)
 - Queried sessions ordered by started_at DESC, presented 26 rows categorized as titled-for-deletion and empty-title low-message experiments
 
 ### 4.2 Session Deletion
+
 - Executed batched DELETE in two passes: messages first, then sessions (FK order requirement)
 - Deleted 12 confirmed session IDs
 - Verified new total: 14 sessions (down from 26)
 - FTS5 search index maintained consistency automatically via existing triggers
 
 ### 4.3 Skill Creation
+
 - Authored cleanup-sessions skill at ~/.hermes/skills/productivity/cleanup-sessions/SKILL.md
 - Skill encodes workflow: list candidates (empty titles or message_count <= 2), present, ask which to delete, run DELETEs in FK order, report new count
 - Captures FK-ordering pitfall explicitly
 
 ### 4.4 Inventory Verification
+
 - Counted skills: 70 total (69 built-in, 1 custom: cleanup-sessions)
 
 ## 5. Diagnosis

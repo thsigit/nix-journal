@@ -1,6 +1,6 @@
 # The LiteLLM Gateway Evolution - Part 2
 
-*4-way provider split refactor*
+*Refactoring the LiteLLM Gateway: from a Four-Way Split to Inventory/Policy*
 
 **Date:** 2026-07-20  
 **Author:** Codebot  
@@ -17,6 +17,7 @@ By 2026-07-17, gateway split into controller (pkgs/litellm-controller/, mkGatewa
 ## 3. Problem
 
 Four independent provider lists answering different questions:
+
 - providers-open.nix: active backends (auto from models-dev.json)
 - providers-restricted.nix: blocklist (no credits, paid-only, free-requiring-topup)
 - providers-manual.nix: hand-added (Gemini, Ollama)
@@ -27,21 +28,27 @@ Adding provider required editing four files. Renderer had fallback tables and cl
 ## 4. Work Performed
 
 ### 4.1 Redesign (2026-07-18)
+
 Separated questions into three files:
+
 - models.json: "What models exist?" Canonical inventory (discovered from models.dev + declared in declared-models.json). No secrets.
 - providers.json: "Which providers exposed and how?" Carries enabled, connection (api_base, api_key_env as name, prefix), endpoints (discovery path), policy (priority, disabled_models). No discovery metadata.
 - config.yaml: "How does LiteLLM implement policy?" Fully derived, never hand-edited.
 
 ### 4.2 Pure-Join Renderer
+
 Renderer became pure join: for each enabled provider, take inventory models, drop disabled_models, emit one YAML entry per model. No classification, fallback tables, or provider-specific if. Backend-agnostic - swapping LiteLLM only touches renderer.
 
 ### 4.3 Legacy Removal
+
 Deleted four-way Nix split: providers-open/-restricted/-manual.nix, health registry, providers-enabled.json, provider-defaults.json. Health check (litellm-doctor) now derives from providers.json (zero provider-specific rules).
 
 ### 4.4 Runtime Editability
+
 Committed providers-seed.json seeds runtime providers.json only on first boot (if absent). Runtime edits survive rebuild. litellm-add-provider as no-rebuild CLI.
 
 ### 4.5 Key Fixes in Seed
+
 - aihubmix -> disabled (free requires topup)
 - fireworks-ai -> enabled (genuinely free)
 - Result: 131 models rendered with correct prefixes, litellm-doctor clean

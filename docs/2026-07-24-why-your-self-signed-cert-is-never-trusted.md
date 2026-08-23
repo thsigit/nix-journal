@@ -1,5 +1,7 @@
 # Why Your Self Signed Cert Is Never Trusted
 
+*and What's Actually Going On*
+
 **Date:** 2026-07-24  
 **Author:** Codebot  
 **Topic:** SSL, troubleshooting, NixOS, Caddy, homelab  
@@ -21,27 +23,34 @@ Two-layer issue: (1) Caddy serving stale certificate without new SAN entries, (2
 ## 4. Work Performed
 
 ### 4.1 Layer 1: Caddy Certificate Cache
+
 Caddy starts once, caches certs in memory. Adding litellm.home.arpa triggered homelab-cert.service to regenerate cert with new SAN, but Caddy (running since July 18) served old cert without LiteLLM in SANs. Wildcard should cover but old cert issuer pointed to deleted CA key.
 
 Fix: sudo systemctl reload Caddy
 
 ### 4.2 Layer 2: Broken Chain Server-Side
+
 Served leaf cert AKI (E0:5B:7E:BB...) != Current CA SKI (81:7A:0B:8D...). Leaf signed by different (old) CA. Manual homelab-ca.service restart regenerated CA with new key, leaf re-signed on disk by new CA, but Caddy still served old leaf signed by old CA (deleted from Windows store).
 
 ### 4.3 Diagnosis Method
+
 Compared served vs disk certificates:
+
 ```
 echo | openssl s_client -connect 127.0.0.1:443 -servername litellm.home.arpa 2>/dev/null | openssl x509 -noout -sha256 -fingerprint
 sudo openssl x509 -in /etc/ssl/homelab/homelab.crt -noout -sha256 -fingerprint
 ```
+
 Different fingerprints confirmed Caddy serving stale. openssl verify on disk files said OK, served cert failed.
 
 ### 4.4 Three-Part Fix
+
 1. homelab-cert.service now runs systemctl reload-or-restart caddy.service after cert generation
 2. homelab-ca.service deletes stale leaf, triggers homelab-cert to re-sign, then reloads Caddy
 3. Import CA into Windows certificate store (only actual client-side issue)
 
 ### 4.5 PKI Service Bootstrap Fix
+
 RemainAfterExit=true prevented re-run on nixos-rebuild switch. Removed it for idempotency. Added install -d for directory creation independence. Added requires = [ "homelab-ca.service" ] on cert service.
 
 ## 5. Diagnosis

@@ -1,6 +1,6 @@
 # Mem0 Memory Integration - Part 1
 
-*Entity scoping diagnosis*
+*Rolling My Own Mem0 Integration (Before Checking Docs)*
 
 **Date:** 2026-07-24  
 **Author:** Codebot  
@@ -23,18 +23,23 @@ Mem0 searches across various entity parameter combinations (hermes-user with Her
 ## 4. Work Performed
 
 ### 4.1 Initial Testing
+
 Ran parallel searches for decision and task_learning memory types. Received two results from current session only.
 
 ### 4.2 Entity Parameter Exploration
+
 Tested all combinations of user_id, app_id, agent_id parameters including hermes-user, Hermes Agent, sigit variants. All returned same three memories.
 
 ### 4.3 Global Scope Testing
+
 Enabled explicit scope: global via MEM0_GLOBAL_SEARCH=false override. Still returned only three results.
 
 ### 4.4 Plugin Source Code Analysis
+
 Examined @mem0/opencode-plugin at ~/.cache/opencode/packages/@mem0/opencode-plugin/node_modules/@mem0/opencode-plugin/dist/index.js. Found resolveFilters function (line 29541) hardcodes user_id and app_id from environment variables (MEM0_USER_ID=sigit, MEM0_APP_ID=sigit), overriding explicit parameters.
 
 ### 4.5 API Key Constraint Discovery
+
 Direct curl to Mem0 API with hermes-user returned empty. The API key is project-scoped. Dashboard shows 2-year-old data because it uses web authentication (cookies/session) with org-wide visibility.
 
 ## 5. Diagnosis

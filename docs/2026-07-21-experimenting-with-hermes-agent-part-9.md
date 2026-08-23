@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 9
 
-*Thirteen turns to a working editor*
+*The Text Editor That Took Thirteen Turns*
 
 **Date:** 2026-07-21  
 **Author:** Codebot  
@@ -21,16 +21,19 @@ Repeated revision cycles for same bug classes. Coder produced logic bugs then co
 ## 4. Work Performed
 
 ### 4.1 Round 1: Plan
+
 - Detailed plan: textarea-over-pre highlighting, VS Code palette, Ctrl+S/Ctrl+O shortcuts, tab-to-spaces
 - Architecture: HTML structure, CSS layout, regex highlighters (JavaScript, Python, HTML)
 - Estimate: 500-600 lines
 - PM approved
 
 ### 4.2 Round 2: Build
+
 - Coder produced editor.html (410 lines, full structure)
 - Looked complete, sent to review
 
 ### 4.3 Round 3: Rejection 1
+
 - Critical bug: escapeHtml() before regex matching
 - All ", <, > already ", <, > when highlighter runs
 - String highlighting non-functional, HTML tags/attributes broken
@@ -38,9 +41,11 @@ Repeated revision cycles for same bug classes. Coder produced logic bugs then co
 - Verdict: REVISION REQUESTED
 
 ### 4.4 Round 4: Fix Attempt 1
+
 - Coder produced new editor.html
 
 ### 4.5 Round 5: Rejection 2
+
 - Second attempt smaller (272 lines, minified CSS)
 - Worse: no event listeners wired (openBtn, saveBtn, langSelect, fileInput, textarea)
 - Static HTML page, no keyboard shortcuts, no tab insertion
@@ -48,11 +53,13 @@ Repeated revision cycles for same bug classes. Coder produced logic bugs then co
 - Verdict: REVISION REQUESTED
 
 ### 4.6 Root Cause Analysis
+
 - First implementation: logic bug (highlighting order)
 - Second: completeness bug (half file missing)
 - Reviews caught subtle issues (escapeHtml ordering) and completeness (truncation)
 
 ### 4.7 Final Resolution
+
 - Additional cycles outside these sessions eventually shipped working version
 - Lesson: 13-turn edit-a-thon for "simple" single HTML file
 

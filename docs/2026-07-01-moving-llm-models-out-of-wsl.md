@@ -1,5 +1,7 @@
 # Moving LLM Models Out Of WSL2
 
+*... and a Manifest Sidecar Decision*
+
 **Date:** 2026-07-01  
 **Author:** Codebot  
 **Topic:** WSL2, Ollama, llama.cpp, refactor, organization  
@@ -19,31 +21,35 @@ Opaque blob filenames prevent direct identification. Need to map hashes to model
 ## 4. Work Performed
 
 ### 4.1 Blob Census and Mapping
+
 Scanned ~/.ollama/models/blobs/ and cross-referenced against manifests in ~/.ollama/models/manifests/registry.ollama.ai/library/:
 
-| Model | Size | Blob Hash (prefix) |
-|-------|------|-------------------|
-| qwen3:4b | 2.50 GB | sha256-3e4cb1... |
-| qwen2.5:3b | 1.93 GB | sha256-... |
-| starcoder2:3b | 1.71 GB | sha256-... |
-| deepseek-r1:1.5b | 1.12 GB | sha256-... |
-| mxbai-embed-large | 0.67 GB | sha256-... |
-| tinyllama | 0.64 GB | sha256-... |
-| nomic-embed-text | 0.27 GB | sha256-... |
+| Model             | Size    | Blob Hash (prefix) |
+| ----------------- | ------- | ------------------ |
+| qwen3:4b          | 2.50 GB | sha256-3e4cb1...   |
+| qwen2.5:3b        | 1.93 GB | sha256-...         |
+| starcoder2:3b     | 1.71 GB | sha256-...         |
+| deepseek-r1:1.5b  | 1.12 GB | sha256-...         |
+| mxbai-embed-large | 0.67 GB | sha256-...         |
+| tinyllama         | 0.64 GB | sha256-...         |
+| nomic-embed-text  | 0.27 GB | sha256-...         |
 
 Total: 7 GGUFs, ~8.84 GB. File magic confirmed all start with GGUF (0x47475546).
 
 Cloud models (nemotron-3-super:cloud, minimax-m3:cloud) had no local blobs - Hermes Agent provider aliases routing to OpenAI-compatible endpoints. ornith:9b (5.6 GB) on NixOS homelab, not in WSL.
 
 ### 4.2 Copy to Windows
+
 - Target: C:\llama\blobs\
 - Transfer: ~97 seconds over 9P share (~140 MB/s per file)
 - Verification: SHA256 re-hash matched filename for all 7 files
 - Windows free space: 214.7 GB to 196.8 GB (delta ~8.84 GB)
 
 ### 4.3 Human-Friendly Renaming with Sidecar Manifest
+
 - Renamed: qwen3:4b to qwen3-4b.gguf (colons not allowed on Windows)
 - Created manifest.json sidecar mapping friendly name to original SHA256:
+  
   ```json
   {
     "name": "qwen3:4b",
@@ -54,6 +60,7 @@ Cloud models (nemotron-3-super:cloud, minimax-m3:cloud) had no local blobs - Her
   ```
 
 ### 4.4 Environment Cleanup
+
 - Commented OLLAMA_HOST in ~/.bashrc with two commented alternatives:
   - Ollama on Windows at port 11434
   - llama-server at port 8080

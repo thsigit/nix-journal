@@ -1,5 +1,7 @@
 # Session Notes Lean Stack And Failover
 
+*Auditing the Provider State, Building the Failover Layer*
+
 **Date:** 2026-06-29  
 **Author:** Codebot  
 **Topic:** Hermes Agent, Ollama, failover, WSL2, session-notes  
@@ -30,25 +32,26 @@ Hardware: WSL2 7.8GB allocated, ~6GB free, no GPU.
 
 Pulled three models:
 
-| Model | Size | Role |
-|-------|------|------|
-| qwen2.5:3b | 1.9 GB | General purpose |
-| deepseek-r1:1.5b | 1.1 GB | Reasoning |
-| starcoder2:3b | 1.7 GB | Code-focused |
+| Model            | Size   | Role            |
+| ---------------- | ------ | --------------- |
+| qwen2.5:3b       | 1.9 GB | General purpose |
+| deepseek-r1:1.5b | 1.1 GB | Reasoning       |
+| starcoder2:3b    | 1.7 GB | Code-focused    |
 
 All registered in config.
 
 ### 4.3 Model Testing
 
-| Model | Result | Time | Assessment |
-|-------|--------|------|------------|
-| qwen2.5:3b | Correct JSON + prose | ~16s, 11.38 tok/s | Reliable |
-| starcoder2:3b | Failed mixed prompt, timeout strict | 10.31s / 120s timeout | Unreliable |
-| deepseek-r1:1.5b | Fast, unreliable strict JSON | ~42s verbose | Good for explanations |
+| Model            | Result                              | Time                  | Assessment            |
+| ---------------- | ----------------------------------- | --------------------- | --------------------- |
+| qwen2.5:3b       | Correct JSON + prose                | ~16s, 11.38 tok/s     | Reliable              |
+| starcoder2:3b    | Failed mixed prompt, timeout strict | 10.31s / 120s timeout | Unreliable            |
+| deepseek-r1:1.5b | Fast, unreliable strict JSON        | ~42s verbose          | Good for explanations |
 
 ### 4.4 Cleanup
 
 Removed from config and disk:
+
 - `qwen2.5-coder:7b` (4.7 GB)
 - `translategemma:4b` (3.3 GB)
 - `qwen3-vl:4b-instruct` (~3 GB)

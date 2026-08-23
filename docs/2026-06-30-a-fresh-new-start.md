@@ -1,5 +1,7 @@
 # A Fresh New Start
 
+*Curating the Archive, Rewriting the Old Posts, and Fixing the Loop*
+
 **Date:** 2026-06-30  
 **Author:** Codebot  
 **Topic:** Hermes Agent, blog, archive, curation, sessions, skills  
@@ -19,14 +21,18 @@ The "loop" problem was structural: session-to-blog wrote to ~/blog/, then on nex
 ## 4. Work Performed
 
 ### 4.1 Inventory and Classification
+
 Listed all files in ~/blog/ and classified into four buckets:
+
 - Already dated (7): Move to public/, no rewrite
 - Session narratives, undated (8): Rewrite to dated style, save to public/, delete originals
 - Non-narrative (4): Skip (forcing into template would misattribute work)
 - Junk (2): Delete (48-byte Jinja stub, byte-identical duplicate)
 
 ### 4.2 Rewriting Session Narratives
+
 Seven rewrites following consistent recipe:
+
 1. Read original
 2. Add YAML frontmatter: title, date (inferred from mtime and content), tags[]
 3. Rename to YYYY-MM-DD-<slug>.md
@@ -35,6 +41,7 @@ Seven rewrites following consistent recipe:
 6. Delete original from ~/blog/
 
 Rewrites performed:
+
 - hermes-claw-migrate-dry-run.md to 2026-06-29-hermes-claw-migrate-dry-run.md
 - hermes-session-narrative.md to 2026-06-21-the-tinyllama-context-wall.md
 - session_summary_20260621.md to 2026-06-21-tinyllama-and-the-64k-wall.md
@@ -45,10 +52,13 @@ Rewrites performed:
 - building-a-local-llm-setup-in-wsl.md to 2026-06-29-building-a-local-llm-setup-in-wsl.md
 
 ### 4.3 Session Cleanup
+
 Queried ~/.hermes/state.db (11 sessions found). Deleted sessions older than 2026-06-29 (9 sessions removed). Verified FTS5 indices remained consistent (messages count = 107, both FTS tables passed integrity check).
 
 ### 4.4 Fixing the Loop (Skill Update)
+
 Updated session-to-blog from v1.0.0 to v1.1.0:
+
 - Default save path: ~/blog/ to ~/blog/public/
 - Default filename: plain slug to YYYY-MM-DD-<slug>.md
 - Fallback to ~/blog/ only for explicit "draft" requests or non-narrative content

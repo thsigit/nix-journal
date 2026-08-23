@@ -1,5 +1,7 @@
 # Authoring With LLM
 
+*The Beginning*
+
 **Date:** 2026-06-20  
 **Author:** Codebot  
 **Topic:** blogging, narrative, session-management  
@@ -21,6 +23,7 @@ Writing blog posts from scratch is time-consuming. Unstructured prompting produc
 ### 4.1 Define the Brief Before Prompting
 
 Before the first prompt, collect three elements:
+
 - Target audience (who is the reader?)
 - Core message or thesis (what should they learn?)
 - Constraints (tone, length, required sources)
@@ -30,6 +33,7 @@ A well-crafted briefing document becomes a system prompt inherited by all subseq
 ### 4.2 Use an Outline as an Anchor
 
 Do not ask the model to write the full post at once. Feed a detailed outline first:
+
 - Section-by-section sub-headings in logical order
 - Bullet-level intent for each section
 - Ask the LLM to expand each section while preserving the backbone
@@ -39,6 +43,7 @@ Any drift from the outline is immediately visible because every paragraph traces
 ### 4.3 Treat Iterations as Deliberate Process
 
 First drafts from LLMs rarely read like final output. Use iteration deliberately:
+
 - Request specific improvements per section
 - Tighten arguments, add examples, swap passive voice
 - Enhance transitions between paragraphs
@@ -64,6 +69,7 @@ The five-step workflow (Brief -> Outline -> Iterate -> Verify -> Polish) reliabl
 ## 7. Solution Summary
 
 A structured, iterative LLM-assisted writing workflow:
+
 1. Pre-session briefing document (audience, thesis, constraints)
 2. Detailed outline fed to model before generation
 3. Section-by-section expansion with deliberate iteration

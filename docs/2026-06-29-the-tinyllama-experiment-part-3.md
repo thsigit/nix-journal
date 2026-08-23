@@ -34,6 +34,7 @@ Hermes Agent searched session history, correctly pulled prior session (local mod
 ### 4.3 OpenRouter Removal Documentation
 
 Hermes Agent provided removal procedure (not executed):
+
 1. `hermes auth list` to see credential IDs
 2. `hermes auth remove openrouter <id>` for each entry
 3. Optional config cleanup

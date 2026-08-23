@@ -1,6 +1,6 @@
 # Blogging Skill Evolution - Part 1
 
-*First Hermes Agent blogging skill*
+*Making a Skill for Blogging Sessions so I Stop Having to Re-explain It*
 
 **Date:** 2026-06-29  
 **Author:** Codebot  
@@ -27,6 +27,7 @@ Loaded skill-authoring skill first (Format Lord principle). Reviewed validator c
 ### 4.2 Peer Survey
 
 Checked existing skills:
+
 - `creative` (16 entries: art, diagrams, generative tools, voice editing)
 - `note-taking` (Obsidian only)
 - `productivity` (closest action-oriented peers)
@@ -44,6 +45,7 @@ Three key decisions shaped the skill:
 2. **No-overwrite rule (load-bearing)**: User's prior instruction: "keep existing pieces, create a new entry." Baked in: `ls` directory first, slug filename, append disambiguator on collision, never clobber.
 
 3. **Bite-sized verification checklist**: Nine checkboxes:
+   
    - Narrative shown
    - Voice check
    - Directory exists

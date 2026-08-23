@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 6
 
-*Windows-host llama.cpp bridge attempt*
+*Attempting Llama.cpp Connection in WSL2*
 
 **Date:** 2026-07-02  
 **Author:** Codebot  
@@ -21,16 +21,19 @@ Connection attempts to port 8080 blocked by network restrictions. WSL2 environme
 ## 4. Work Performed
 
 ### 4.1 Network Path Identification
+
 - WSL2 IP: 172.23.246.136
 - Windows host IP: 172.23.240.1
 - Target port: 8080 (llama.cpp/Ollama on Windows)
 
 ### 4.2 Connection Attempts
+
 - Tested connectivity to Windows host port 8080
 - Blocked by network restrictions
 - Environment variable conflicts in WSL2
 
 ### 4.3 Model Switching
+
 - Attempted multiple provider/model combinations:
   - Gemini 2.5 Flash
   - GPT-5-mini

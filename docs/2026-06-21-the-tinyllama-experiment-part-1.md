@@ -1,6 +1,6 @@
 # The TinyLlama Experiment - Part 1
 
-*tinyllama vs the Hermes Agent 64K context guard*
+*The 64K Context Wall and How Hermes Refused to Let Me Through It (Modelfile Recipe Included)*
 
 **Date:** 2026-06-21  
 **Author:** Codebot  
@@ -83,15 +83,18 @@ After the patch, Hermes Agent still refused due to the second runtime-capability
 Attempted to increase Ollama runtime context via Modelfile:
 
 1. Created `~/tinyllama-modelfile`:
-
+   
    ```
    FROM tinyllama:latest
    PARAMETER num_ctx 65536
    ```
 
 2. Built tag: `ollama create tinyllama:65k -f ~/tinyllama-modelfile`
+
 3. Verified: `ollama show tinyllama:65k` showed `num_ctx 65536` in parameters
+
 4. Tested: `ollama run tinyllama:65k "Reply with exactly: connected"` succeeded
+
 5. Checked runtime: `ollama ps` confirmed running context 2048 before and after restart
 
 Reverse procedure (for rollback of any custom variant):

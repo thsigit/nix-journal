@@ -1,6 +1,6 @@
 # Experimenting with Hermes Agent - Part 5
 
-*Ollama blob cleanup via kill list*
+*A Manual Check That Caught a Rogue Blob*
 
 **Date:** 2026-07-01  
 **Author:** Codebot  
@@ -21,22 +21,26 @@ Blind deletion of 32 blobs risked: (1) deleting qwen3:4b (2.5 GB) before confirm
 ## 4. Work Performed
 
 ### 4.1 Blob Census
+
 - Listed ~/.ollama/models/blobs/: 35 files on disk, 16 matched kill list
 - Walked 10 manifests in ~/.ollama/models/manifests/
 - Built blob-to-model reference map from manifest JSON (config.digest, layers[].digest)
 - Fixed separator bug: manifest JSON uses sha256: (colon), filenames use sha256- (dash)
 
 ### 4.2 Classification Results
-| Blob Count | Category | Models |
-|------------|----------|--------|
-| 15 | Safe to delete | qwen3:4b, qwen2.5:3b, tinyllama:latest, mxbai-embed-large:latest, nomic-embed-text:latest |
-| 1 | Active - preserve | minimax-m3:cloud (currently serving this session) |
-| 16 | No-op (not on disk) | Various |
+
+| Blob Count | Category            | Models                                                                                    |
+| ---------- | ------------------- | ----------------------------------------------------------------------------------------- |
+| 15         | Safe to delete      | qwen3:4b, qwen2.5:3b, tinyllama:latest, mxbai-embed-large:latest, nomic-embed-text:latest |
+| 1          | Active - preserve   | minimax-m3:cloud (currently serving this session)                                         |
+| 16         | No-op (not on disk) | Various                                                                                   |
 
 ### 4.3 User Decision
+
 Presented 4 options: skip all, delete orphans (0), delete non-preserve (15), delete all including active. User selected option 3 (delete 15 non-preserve).
 
 ### 4.4 Execution
+
 - Re-verified cross-reference: 15 safe, 1 carved out
 - Ran rm -v on 15 deletions with pre-deletion ls -la showing sizes
 - Post-deletion verification: 15 removed confirmations, minimax-m3:cloud config intact (original timestamp Jun 9 18:44), 20 blobs remaining, 4.7 GB on disk

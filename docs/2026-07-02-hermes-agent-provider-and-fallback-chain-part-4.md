@@ -1,6 +1,6 @@
 # Hermes Agent Provider and Fallback Chain - Part 4
 
-*Multi-layer fallback chain*
+*Switching Providers and Picking a Fallback Chain*
 
 **Date:** 2026-07-02  
 **Author:** Codebot  
@@ -21,25 +21,28 @@ Existing fallback chain had single redundant entry: openrouter/free pointing to 
 ## 4. Work Performed
 
 ### 4.1 Configuration Audit
+
 - Read config.yaml: found stale model.base_url pointing to local Ollama
 - Auth pool: OpenRouter and Gemini credentials present
 - No new key wiring required
 
 ### 4.2 OpenRouter Free Model Discovery
+
 - Queried live OpenRouter models endpoint
 - 22 free models returned
 - Filtered for context >= 64K (Hermes Agent minimum)
 - Sorted by context length, presented recommendation tiers:
 
-| Tier | Models | Context | Notes |
-|------|--------|---------|-------|
+| Tier         | Models                                                                                     | Context        | Notes               |
+| ------------ | ------------------------------------------------------------------------------------------ | -------------- | ------------------- |
 | Best Overall | qwen/qwen3-coder:free, nousresearch/hermes-3-llama-3.1-405b:free, openai/gpt-oss-120b:free | 1M, 131K, 131K | Strong all-rounders |
-| Workhorses | meta-llama/llama-3.3-70b-instruct, poolside/laguna-m.1 | 131K | Reliable |
-| Code-Focused | qwen/qwen3-coder, cohere/north-mini-code | 1M, 256K | Coding optimized |
+| Workhorses   | meta-llama/llama-3.3-70b-instruct, poolside/laguna-m.1                                     | 131K           | Reliable            |
+| Code-Focused | qwen/qwen3-coder, cohere/north-mini-code                                                   | 1M, 256K       | Coding optimized    |
 
 - Selected: qwen/qwen3-coder:free (1M context, 480B params, coding + general)
 
 ### 4.3 Fallback Chain Construction
+
 Hermes Agent proposed 8-layer chain (written as {model, provider} dicts matching config.yaml schema):
 
 1. OpenRouter / qwen/qwen3-coder:free (primary)
@@ -52,6 +55,7 @@ Hermes Agent proposed 8-layer chain (written as {model, provider} dicts matching
 8. ollama-launch / qwen2.5:3b (local)
 
 ### 4.4 Verification
+
 - Verified YAML list format against existing config.yaml
 - Commands ready for user to paste (Hermes Agent config set)
 - Old single-entry fallback still active until commands executed
