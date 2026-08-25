@@ -106,4 +106,4 @@ The archive's inconsistency was procedural, not editorial: nothing codified how 
 - When bulk-editing remote files, never trust heredocs with special characters; write locally, copy remotely
 - Keep series append-only and let the subtitle carry per-part meaning; renumbering breaks every external link
 
-Generated with x-preview-f-free (OpenCode)
+Generated with Ox Alpha Free (OpenCode)

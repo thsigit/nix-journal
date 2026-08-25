@@ -77,7 +77,7 @@ Root cause (ruled out server-side): Served certificate consistent -- runtime CA 
 Fix:
 1. Export current CA: SSH homelab 'sudo cat /etc/ssl/homelab/homelab-ca.crt' > homelab-ca.crt (scp fails on mode-restricted /etc/ssl/homelab)
 2. Windows: install homelab-ca.crt into Trusted Root Certification Authorities (Local Machine)
-3. Workstation: rebuilt flake so security.pki.certificateFiles = [ ./homelab-ca.crt ] re-syncs system trust store
+3. Workstation: rebuilt flake so security.pki.certificateFiles = `[ ./homelab-ca.crt ]` re-syncs system trust store
 
 Verification: https://homelab.home.arpa loads clean on all clients; CA shows as "Homelab Internal CA".
 

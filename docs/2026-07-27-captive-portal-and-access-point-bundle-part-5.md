@@ -58,8 +58,8 @@ SESSION_TIMEOUT=0
 Edit file, restart openNDS -- no nixos-rebuild needed.
 
 ### 4.5 Management Scripts
-- generate-vouchers.sh [COUNT]: generate random 8-char codes
-- list-vouchers.sh [all|valid|used]: show status with expiry
+- generate-vouchers.sh `[COUNT]`: generate random 8-char codes
+- list-vouchers.sh `[all|valid|used]`: show status with expiry
 
 ### 4.6 BlastRADIUS Fix
 FreeRADIUS logged: "Error: BlastRADIUS check: Received packet with Message-Authenticator."

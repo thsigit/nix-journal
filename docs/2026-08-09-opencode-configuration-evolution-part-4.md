@@ -26,7 +26,7 @@ Diagnosed that freetheai was absent from models.dev, resulting in a credential w
 Credential added to `auth.json`. Verification blocked: the service reported **under maintenance**, and the API path returned Cloudflare 403 (WAF bot protection) for both curl and Node/undici clients. Integration postponed pending service availability.
 
 ### 4.4 dashscope - Removed
-API key rejected with HTTP 401 `invalid_api_key` on both native and compatible-mode endpoints. Confirmed service shutdown (site notice: "[service closed on 2026-08-01]"). Credential deleted.
+API key rejected with HTTP 401 `invalid_api_key` on both native and compatible-mode endpoints. Confirmed service shutdown (site notice: `"[service closed on 2026-08-01]"`). Credential deleted.
 
 ### 4.5 Provider Cleanup
 Removed non-functional or unwanted credentials from `auth.json`: **groq**, **cerebras**, **xiaomi**, **dashscope**. None had config entries in `opencode.jsonc`.
@@ -74,4 +74,4 @@ For future provider onboarding, first consult the models.dev registry; only regi
 5. Document WAF behavior: Record which providers block server-side clients (freetheai, aichixia) so future integrations can plan for browser-based or headed automation.
 6. Version-pin provider npm packages: Use @ai-sdk/openai-compatible@X.Y.Z to avoid breaking changes in the compatibility layer.
 
-Generated with x-preview-f-free (OpenCode)
+Generated with Ox Alpha Free (OpenCode)

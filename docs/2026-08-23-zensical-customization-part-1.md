@@ -150,4 +150,4 @@ report list.
 - When a URL redirect is needed and no plugin exists, a meta-refresh in the
   source markdown is a workable stopgap.
 
-Generated with hy3-free (OpenCode)
+Generated with Hy3 Free (OpenCode)

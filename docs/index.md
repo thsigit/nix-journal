@@ -13,16 +13,16 @@ hide:
     <aside class="cb-latest" aria-label="Latest posts">
       <h2>Latest posts</h2>
       <ul>
-        <li><a href="/litellm-frontend-build-part-1/">LiteLLM Frontend Build - Part 1</a></li>
-        <li><a href="/zensical-customization-part-1/">Zensical Customization - Part 1</a></li>
-        <li><a href="/blogging-skill-evolution-part-6/">Blogging Skill Evolution - Part 6</a></li>
-        <li><a href="/opencode-configuration-evolution-part-6/">OpenCode Configuration Evolution - Part 6 (FINAL)</a></li>
-        <li><a href="/switch-root-target-contains-no-usable-init-part-5/">"switch root target contains no usable init" - Part 5 (FINAL)</a></li>
-        <li><a href="/the-litellm-gateway-evolution-part-13/">The LiteLLM Gateway Evolution - Part 13</a></li>
-        <li><a href="/the-litellm-gateway-evolution-part-14/">The LiteLLM Gateway Evolution - Part 14</a></li>
-        <li><a href="/the-litellm-gateway-evolution-part-12/">The LiteLLM Gateway Evolution - Part 12</a></li>
-        <li><a href="/the-litellm-gateway-evolution-part-11/">The LiteLLM Gateway Evolution - Part 11</a></li>
-        <li><a href="/two-channel-repo-strategy/">Two-Channel Repo Strategy: nix-config (Stable) and nix-lab (Rolling)</a></li>
+        <li><a href="/2026-08-23-litellm-frontend-build-part-1/">LiteLLM Frontend Build - Part 1</a></li>
+        <li><a href="/2026-08-23-zensical-customization-part-1/">Zensical Customization - Part 1</a></li>
+        <li><a href="/2026-08-22-blogging-skill-evolution-part-6/">Blogging Skill Evolution - Part 6</a></li>
+        <li><a href="/2026-08-22-opencode-configuration-evolution-part-6/">OpenCode Configuration Evolution - Part 6 (FINAL)</a></li>
+        <li><a href="/2026-08-21-switch-root-target-contains-no-usable-init-part-5/">"switch root target contains no usable init" - Part 5 (FINAL)</a></li>
+        <li><a href="/2026-08-21-the-litellm-gateway-evolution-part-13/">The LiteLLM Gateway Evolution - Part 13</a></li>
+        <li><a href="/2026-08-21-the-litellm-gateway-evolution-part-14/">The LiteLLM Gateway Evolution - Part 14</a></li>
+        <li><a href="/2026-08-20-the-litellm-gateway-evolution-part-12/">The LiteLLM Gateway Evolution - Part 12</a></li>
+        <li><a href="/2026-08-18-the-litellm-gateway-evolution-part-11/">The LiteLLM Gateway Evolution - Part 11</a></li>
+        <li><a href="/2026-08-16-two-channel-repo-strategy/">Two-Channel Repo Strategy: nix-config (Stable) and nix-lab (Rolling)</a></li>
       </ul>
     </aside>
   </div>
@@ -31,106 +31,106 @@ hide:
 ## Series
 
 ### LiteLLM Frontend Build
-- [LiteLLM Frontend Build - Part 1](/litellm-frontend-build-part-1/)
+- [LiteLLM Frontend Build - Part 1](/2026-08-23-litellm-frontend-build-part-1/)
 
 ### Zensical Customization
-- [Zensical Customization - Part 1](/zensical-customization-part-1/)
+- [Zensical Customization - Part 1](/2026-08-23-zensical-customization-part-1/)
 
 ### Blogging Skill Evolution
-- [Blogging Skill Evolution - Part 1](/blogging-skill-evolution-part-1/)
-- [Blogging Skill Evolution - Part 2](/blogging-skill-evolution-part-2/)
-- [Blogging Skill Evolution - Part 3](/blogging-skill-evolution-part-3/)
-- [Blogging Skill Evolution - Part 4](/blogging-skill-evolution-part-4/)
-- [Blogging Skill Evolution - Part 5](/blogging-skill-evolution-part-5/)
-- [Blogging Skill Evolution - Part 6](/blogging-skill-evolution-part-6/)
+- [Blogging Skill Evolution - Part 1](/2026-06-29-blogging-skill-evolution-part-1/)
+- [Blogging Skill Evolution - Part 2](/2026-07-22-blogging-skill-evolution-part-2/)
+- [Blogging Skill Evolution - Part 3](/2026-07-24-blogging-skill-evolution-part-3/)
+- [Blogging Skill Evolution - Part 4](/2026-08-10-blogging-skill-evolution-part-4/)
+- [Blogging Skill Evolution - Part 5](/2026-08-14-blogging-skill-evolution-part-5/)
+- [Blogging Skill Evolution - Part 6](/2026-08-22-blogging-skill-evolution-part-6/)
 
 ### OpenCode Configuration Evolution
-- [OpenCode Configuration Evolution - Part 1](/opencode-configuration-evolution-part-1/)
-- [OpenCode Configuration Evolution - Part 2](/opencode-configuration-evolution-part-2/)
-- [OpenCode Configuration Evolution - Part 3](/opencode-configuration-evolution-part-3/)
-- [OpenCode Configuration Evolution - Part 4](/opencode-configuration-evolution-part-4/)
-- [OpenCode Configuration Evolution - Part 5](/opencode-configuration-evolution-part-5/)
-- [OpenCode Configuration Evolution - Part 6 (FINAL)](/opencode-configuration-evolution-part-6/)
+- [OpenCode Configuration Evolution - Part 1](/2026-07-22-opencode-configuration-evolution-part-1/)
+- [OpenCode Configuration Evolution - Part 2](/2026-07-25-opencode-configuration-evolution-part-2/)
+- [OpenCode Configuration Evolution - Part 3](/2026-07-31-opencode-configuration-evolution-part-3/)
+- [OpenCode Configuration Evolution - Part 4](/2026-08-09-opencode-configuration-evolution-part-4/)
+- [OpenCode Configuration Evolution - Part 5](/2026-08-11-opencode-configuration-evolution-part-5/)
+- [OpenCode Configuration Evolution - Part 6 (FINAL)](/2026-08-22-opencode-configuration-evolution-part-6/)
 
 ### switch root target contains no usable init
-- ["switch root target contains no usable init" - Part 1](/switch-root-target-contains-no-usable-init-part-1/)
-- ["switch root target contains no usable init" - Part 2](/switch-root-target-contains-no-usable-init-part-2/)
-- ["switch root target contains no usable init" - Part 3](/switch-root-target-contains-no-usable-init-part-3/)
-- ["switch root target contains no usable init" - Part 4](/switch-root-target-contains-no-usable-init-part-4/)
-- ["switch root target contains no usable init" - Part 5 (FINAL)](/switch-root-target-contains-no-usable-init-part-5/)
+- ["switch root target contains no usable init" - Part 1](/2026-08-10-switch-root-target-contains-no-usable-init-part-1/)
+- ["switch root target contains no usable init" - Part 2](/2026-08-11-switch-root-target-contains-no-usable-init-part-2/)
+- ["switch root target contains no usable init" - Part 3](/2026-08-12-switch-root-target-contains-no-usable-init-part-3/)
+- ["switch root target contains no usable init" - Part 4](/2026-08-16-switch-root-target-contains-no-usable-init-part-4/)
+- ["switch root target contains no usable init" - Part 5 (FINAL)](/2026-08-21-switch-root-target-contains-no-usable-init-part-5/)
 
 ### The LiteLLM Gateway Evolution
-- [The LiteLLM Gateway Evolution - Part 1](/the-litellm-gateway-evolution-part-1/)
-- [The LiteLLM Gateway Evolution - Part 2](/the-litellm-gateway-evolution-part-2/)
-- [The LiteLLM Gateway Evolution - Part 3](/the-litellm-gateway-evolution-part-3/)
-- [The LiteLLM Gateway Evolution - Part 4](/the-litellm-gateway-evolution-part-4/)
-- [The LiteLLM Gateway Evolution - Part 5](/the-litellm-gateway-evolution-part-5/)
-- [The LiteLLM Gateway Evolution - Part 6](/the-litellm-gateway-evolution-part-6/)
-- [The LiteLLM Gateway Evolution - Part 7](/the-litellm-gateway-evolution-part-7/)
-- [The LiteLLM Gateway Evolution - Part 8](/the-litellm-gateway-evolution-part-8/)
-- [The LiteLLM Gateway Evolution - Part 9](/the-litellm-gateway-evolution-part-9/)
-- [The LiteLLM Gateway Evolution - Part 10](/the-litellm-gateway-evolution-part-10/)
-- [The LiteLLM Gateway Evolution - Part 11](/the-litellm-gateway-evolution-part-11/)
-- [The LiteLLM Gateway Evolution - Part 12](/the-litellm-gateway-evolution-part-12/)
-- [The LiteLLM Gateway Evolution - Part 13](/the-litellm-gateway-evolution-part-13/)
-- [The LiteLLM Gateway Evolution - Part 14](/the-litellm-gateway-evolution-part-14/)
+- [The LiteLLM Gateway Evolution - Part 1](/2026-07-16-the-litellm-gateway-evolution-part-1/)
+- [The LiteLLM Gateway Evolution - Part 2](/2026-07-20-the-litellm-gateway-evolution-part-2/)
+- [The LiteLLM Gateway Evolution - Part 3](/2026-07-22-the-litellm-gateway-evolution-part-3/)
+- [The LiteLLM Gateway Evolution - Part 4](/2026-07-24-the-litellm-gateway-evolution-part-4/)
+- [The LiteLLM Gateway Evolution - Part 5](/2026-07-27-the-litellm-gateway-evolution-part-5/)
+- [The LiteLLM Gateway Evolution - Part 6](/2026-07-29-the-litellm-gateway-evolution-part-6/)
+- [The LiteLLM Gateway Evolution - Part 7](/2026-07-30-the-litellm-gateway-evolution-part-7/)
+- [The LiteLLM Gateway Evolution - Part 8](/2026-07-31-the-litellm-gateway-evolution-part-8/)
+- [The LiteLLM Gateway Evolution - Part 9](/2026-08-09-the-litellm-gateway-evolution-part-9/)
+- [The LiteLLM Gateway Evolution - Part 10](/2026-08-13-the-litellm-gateway-evolution-part-10/)
+- [The LiteLLM Gateway Evolution - Part 11](/2026-08-18-the-litellm-gateway-evolution-part-11/)
+- [The LiteLLM Gateway Evolution - Part 12](/2026-08-20-the-litellm-gateway-evolution-part-12/)
+- [The LiteLLM Gateway Evolution - Part 13](/2026-08-21-the-litellm-gateway-evolution-part-13/)
+- [The LiteLLM Gateway Evolution - Part 14](/2026-08-21-the-litellm-gateway-evolution-part-14/)
 
 ### Boot Recovery
-- [Boot Recovery - Part 1](/boot-recovery-part-1/)
-- [Boot Recovery - Part 2](/boot-recovery-part-2/)
-- [Boot Recovery - Part 3](/boot-recovery-part-3/)
-- [Boot Recovery - Part 4](/boot-recovery-part-4/)
-- [Boot Recovery - Part 5](/boot-recovery-part-5/)
+- [Boot Recovery - Part 1](/2026-08-03-boot-recovery-part-1/)
+- [Boot Recovery - Part 2](/2026-08-03-boot-recovery-part-2/)
+- [Boot Recovery - Part 3](/2026-08-03-boot-recovery-part-3/)
+- [Boot Recovery - Part 4](/2026-08-06-boot-recovery-part-4/)
+- [Boot Recovery - Part 5](/2026-08-13-boot-recovery-part-5/)
 
 ### Captive Portal and Access Point Bundle
-- [Captive Portal and Access Point Bundle - Part 1](/captive-portal-and-access-point-bundle-part-1/)
-- [Captive Portal and Access Point Bundle - Part 2](/captive-portal-and-access-point-bundle-part-2/)
-- [Captive Portal and Access Point Bundle - Part 3](/captive-portal-and-access-point-bundle-part-3/)
-- [Captive Portal and Access Point Bundle - Part 4](/captive-portal-and-access-point-bundle-part-4/)
-- [Captive Portal and Access Point Bundle - Part 5](/captive-portal-and-access-point-bundle-part-5/)
-- [Captive Portal and Access Point Bundle - Part 6](/captive-portal-and-access-point-bundle-part-6/)
-- [Captive Portal and Access Point Bundle - Part 7](/captive-portal-and-access-point-bundle-part-7/)
+- [Captive Portal and Access Point Bundle - Part 1](/2026-07-25-captive-portal-and-access-point-bundle-part-1/)
+- [Captive Portal and Access Point Bundle - Part 2](/2026-07-25-captive-portal-and-access-point-bundle-part-2/)
+- [Captive Portal and Access Point Bundle - Part 3](/2026-07-26-captive-portal-and-access-point-bundle-part-3/)
+- [Captive Portal and Access Point Bundle - Part 4](/2026-07-26-captive-portal-and-access-point-bundle-part-4/)
+- [Captive Portal and Access Point Bundle - Part 5](/2026-07-27-captive-portal-and-access-point-bundle-part-5/)
+- [Captive Portal and Access Point Bundle - Part 6](/2026-08-01-captive-portal-and-access-point-bundle-part-6/)
+- [Captive Portal and Access Point Bundle - Part 7](/2026-08-12-captive-portal-and-access-point-bundle-part-7/)
 
 ### OpenCode Provider and Fallback Chain
-- [OpenCode Provider and Fallback Chain - Part 1](/opencode-provider-and-fallback-chain-part-1/)
+- [OpenCode Provider and Fallback Chain - Part 1](/2026-08-09-opencode-provider-and-fallback-chain-part-1/)
 
 ### Mem0 Memory Integration
-- [Mem0 Memory Integration - Part 1](/mem0-memory-integration-part-1/)
-- [Mem0 Memory Integration - Part 2](/mem0-memory-integration-part-2/)
-- [Mem0 Memory Integration - Part 3](/mem0-memory-integration-part-3/)
-- [Mem0 Memory Integration - Part 4](/mem0-memory-integration-part-4/)
+- [Mem0 Memory Integration - Part 1](/2026-07-24-mem0-memory-integration-part-1/)
+- [Mem0 Memory Integration - Part 2](/2026-07-24-mem0-memory-integration-part-2/)
+- [Mem0 Memory Integration - Part 3](/2026-07-27-mem0-memory-integration-part-3/)
+- [Mem0 Memory Integration - Part 4](/2026-08-08-mem0-memory-integration-part-4/)
 
 ### Homelab Management
-- [Homelab Management - Part 1](/homelab-management-part-1/)
-- [Homelab Management - Part 2](/homelab-management-part-2/)
-- [Homelab Management - Part 3](/homelab-management-part-3/)
+- [Homelab Management - Part 1](/2026-07-27-homelab-management-part-1/)
+- [Homelab Management - Part 2](/2026-07-27-homelab-management-part-2/)
+- [Homelab Management - Part 3](/2026-08-07-homelab-management-part-3/)
 
 ### Experimenting with Hermes Agent
-- [Experimenting with Hermes Agent - Part 1](/experimenting-with-hermes-agent-part-1/)
-- [Experimenting with Hermes Agent - Part 2](/experimenting-with-hermes-agent-part-2/)
-- [Experimenting with Hermes Agent - Part 3](/experimenting-with-hermes-agent-part-3/)
-- [Experimenting with Hermes Agent - Part 4](/experimenting-with-hermes-agent-part-4/)
-- [Experimenting with Hermes Agent - Part 5](/experimenting-with-hermes-agent-part-5/)
-- [Experimenting with Hermes Agent - Part 6](/experimenting-with-hermes-agent-part-6/)
-- [Experimenting with Hermes Agent - Part 7](/experimenting-with-hermes-agent-part-7/)
-- [Experimenting with Hermes Agent - Part 8](/experimenting-with-hermes-agent-part-8/)
-- [Experimenting with Hermes Agent - Part 9](/experimenting-with-hermes-agent-part-9/)
-- [Experimenting with Hermes Agent - Part 10 (FINAL)](/experimenting-with-hermes-agent-part-10/)
+- [Experimenting with Hermes Agent - Part 1](/2026-06-29-experimenting-with-hermes-agent-part-1/)
+- [Experimenting with Hermes Agent - Part 2](/2026-06-30-experimenting-with-hermes-agent-part-2/)
+- [Experimenting with Hermes Agent - Part 3](/2026-06-30-experimenting-with-hermes-agent-part-3/)
+- [Experimenting with Hermes Agent - Part 4](/2026-07-01-experimenting-with-hermes-agent-part-4/)
+- [Experimenting with Hermes Agent - Part 5](/2026-07-01-experimenting-with-hermes-agent-part-5/)
+- [Experimenting with Hermes Agent - Part 6](/2026-07-02-experimenting-with-hermes-agent-part-6/)
+- [Experimenting with Hermes Agent - Part 7](/2026-07-21-experimenting-with-hermes-agent-part-7/)
+- [Experimenting with Hermes Agent - Part 8](/2026-07-21-experimenting-with-hermes-agent-part-8/)
+- [Experimenting with Hermes Agent - Part 9](/2026-07-21-experimenting-with-hermes-agent-part-9/)
+- [Experimenting with Hermes Agent - Part 10 (FINAL)](/2026-07-22-experimenting-with-hermes-agent-part-10/)
 
 ### Coding with Hermes Agent
-- [Coding with Hermes Agent - Part 1](/coding-with-hermes-agent-part-1/)
-- [Coding with Hermes Agent - Part 2](/coding-with-hermes-agent-part-2/)
-- [Coding with Hermes Agent - Part 3](/coding-with-hermes-agent-part-3/)
+- [Coding with Hermes Agent - Part 1](/2026-07-18-coding-with-hermes-agent-part-1/)
+- [Coding with Hermes Agent - Part 2](/2026-07-18-coding-with-hermes-agent-part-2/)
+- [Coding with Hermes Agent - Part 3](/2026-07-20-coding-with-hermes-agent-part-3/)
 
 ### Hermes Agent Provider and Fallback Chain
-- [Hermes Agent Provider and Fallback Chain - Part 1](/hermes-agent-provider-and-fallback-chain-part-1/)
-- [Hermes Agent Provider and Fallback Chain - Part 2](/hermes-agent-provider-and-fallback-chain-part-2/)
-- [Hermes Agent Provider and Fallback Chain - Part 3](/hermes-agent-provider-and-fallback-chain-part-3/)
-- [Hermes Agent Provider and Fallback Chain - Part 4](/hermes-agent-provider-and-fallback-chain-part-4/)
-- [Hermes Agent Provider and Fallback Chain - Part 5](/hermes-agent-provider-and-fallback-chain-part-5/)
+- [Hermes Agent Provider and Fallback Chain - Part 1](/2026-06-20-hermes-agent-provider-and-fallback-chain-part-1/)
+- [Hermes Agent Provider and Fallback Chain - Part 2](/2026-06-29-hermes-agent-provider-and-fallback-chain-part-2/)
+- [Hermes Agent Provider and Fallback Chain - Part 3](/2026-06-29-hermes-agent-provider-and-fallback-chain-part-3/)
+- [Hermes Agent Provider and Fallback Chain - Part 4](/2026-07-02-hermes-agent-provider-and-fallback-chain-part-4/)
+- [Hermes Agent Provider and Fallback Chain - Part 5](/2026-07-20-hermes-agent-provider-and-fallback-chain-part-5/)
 
 ### The TinyLlama Experiment
-- [The TinyLlama Experiment - Part 1](/the-tinyllama-experiment-part-1/)
-- [The TinyLlama Experiment - Part 2](/the-tinyllama-experiment-part-2/)
-- [The TinyLlama Experiment - Part 3](/the-tinyllama-experiment-part-3/)
+- [The TinyLlama Experiment - Part 1](/2026-06-21-the-tinyllama-experiment-part-1/)
+- [The TinyLlama Experiment - Part 2](/2026-06-29-the-tinyllama-experiment-part-2/)
+- [The TinyLlama Experiment - Part 3](/2026-06-29-the-tinyllama-experiment-part-3/)
 

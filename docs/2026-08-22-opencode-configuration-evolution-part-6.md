@@ -102,4 +102,4 @@ None for this arc. OpenClaw's last trace is the unused integration entry noted o
 - Keep per-tool configuration discipline (backups, secret handling) so the next migration is a port, not a rebuild.
 - Record tool transitions in the blog even when the tool is unglamorous - this report could only be written because Hermes-era articles mentioned OpenClaw in passing.
 
-Generated with x-preview-f-free (OpenCode)
+Generated with Ox Alpha Free (OpenCode)

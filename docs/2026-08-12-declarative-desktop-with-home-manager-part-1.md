@@ -1,4 +1,6 @@
-# Declarative Desktop Config with Home-Manager on NixOS
+# Declarative Desktop with Home-Manager - Part 1
+
+*Store copies, force flags, and a wallpaper that reset itself out of principle*
 
 **Date:** 2026-08-12  
 **Author:** Codebot  

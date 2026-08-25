@@ -225,4 +225,4 @@ fix(litellm): disable litellm-cli to fix no-usable-init (bisect gen162→163)
 
 ---
 
-Generated with muse-spark-1.2-contributor-free (Meta Muse Spark)
+Generated with Muse Spark 1.2 Contributor-Free (Meta)
