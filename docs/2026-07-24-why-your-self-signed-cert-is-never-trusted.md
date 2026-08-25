@@ -51,7 +51,7 @@ Different fingerprints confirmed Caddy serving stale. openssl verify on disk fil
 
 ### 4.5 PKI Service Bootstrap Fix
 
-RemainAfterExit=true prevented re-run on nixos-rebuild switch. Removed it for idempotency. Added install -d for directory creation independence. Added requires = [ "homelab-ca.service" ] on cert service.
+RemainAfterExit=true prevented re-run on nixos-rebuild switch. Removed it for idempotency. Added install -d for directory creation independence. Added requires = `["homelab-ca.service"]` on cert service.
 
 ## 5. Diagnosis
 

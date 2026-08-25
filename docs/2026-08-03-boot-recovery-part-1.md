@@ -41,7 +41,7 @@ Network module gates all five AP sub-services behind single boolean. Build verif
 Identical kernel (all gens -> n3y6zqiphvrsg3fxh1z2ymjhjl2qvqk2-linux-6.18.36), identical init binary hash (a48ce9d7...), identical initrd closure (CLOSURE_OK), valid init path on disk -- yet switch-root fails.
 
 ### 4.3 Session Attempts
-- Added boot.initrd.kernelModules = ["e1000e" "netconsole"] + rootwait/rootdelay=10 + dual netconsole targets to capture kernel logs to 192.168.1.105:6666 (Windows listener in C:\Users\Public\netconsole.log)
+- Added boot.initrd.kernelModules = `["e1000e" "netconsole"]` + rootwait/rootdelay=10 + dual netconsole targets to capture kernel logs to 192.168.1.105:6666 (Windows listener in C:\Users\Public\netconsole.log)
 - Committed 79d289b disabling AP bundle and rebuilt
 
 On-screen error unchanged. Netconsole listener produced EMPTY log on last boot.

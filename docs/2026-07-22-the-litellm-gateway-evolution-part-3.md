@@ -47,7 +47,7 @@ PaxSenix removal straightforward but proxy migration introduced SSL certificate 
 - Caddy log: "dial tcp 127.0.0.1:4000: connect: connection refused"
 - LiteLLM Podman container crash-looping
 - systemd showed "active" (conmon wrapper alive), but podman ps empty
-- journalctl root cause: ValueError: Invalid routing_strategy: 'usage-based'. Valid: ['usage-based-routing', ...]
+- journalctl root cause: ValueError: Invalid routing_strategy: 'usage-based'. Valid: `\['usage-based-routing', ...]`
 - LiteLLM v1.92.0 renamed usage-based to usage-based-routing
 - Fixed: sed on /srv/appdata/litellm/config.yaml
 - Container started cleanly, registering 140+ models (kenari, NVIDIA, OpenRouter, zai, Gemini, Ollama, groq, cerebras)

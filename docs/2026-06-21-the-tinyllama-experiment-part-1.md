@@ -166,4 +166,4 @@ OpenRouter free tier exhausted; local fallback required. The static guard patch 
 - Rotate API keys immediately when exposed in chat
 - Document reverse procedures for every custom variant created
 
-Generated with x-preview-f-free (OpenCode)
+Generated with Ox Alpha Free (OpenCode)

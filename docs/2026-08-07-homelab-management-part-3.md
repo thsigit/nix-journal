@@ -32,7 +32,7 @@ Attempt 2: tmpfiles L symlinks mapping /var/lib/karakeep -> /srv/appdata/karakee
 Attempt 3 (WORKING): Bind mounts via fileSystems. Declare state directories as real filesystems:
 ```nix
 fileSystems = {
-  "/var/lib/karakeep" = { device = "/srv/appdata/karakeep"; fsType = "none"; options = ["bind"]; noCheck = true; };
+  "/var/lib/karakeep" = { device = "/srv/appdata/karakeep"; fsType = "none"; options = `["bind"]`; noCheck = true; };
   # same for karakeep-browser and meilisearch
 };
 ```
@@ -40,8 +40,8 @@ Lands in /etc/fstab as none bind entries. systemd-fstab-generator creates .mount
 
 Ordered services after mounts:
 ```nix
-systemd.services.karakeep-init.after    = [ "var-lib-karakeep.mount" ];
-systemd.services.karakeep-init.requires = [ "var-lib-karakeep.mount" ];
+systemd.services.karakeep-init.after    = `["var-lib-karakeep.mount"]`;
+systemd.services.karakeep-init.requires = `["var-lib-karakeep.mount"]`;
 ```
 
 Wrinkle 1: DynamicUser units can't mount their own state. Meilisearch and karakeep-browser (DynamicUser=true) failed with EEXIST -- systemd 260 mounts internal special execution directory over StateDirectory path, can't do that over existing mountpoint. Fix: static system users for these two:
@@ -77,7 +77,7 @@ Diffing each modules/network/ap/*.nix against known-working nix-lab originals:
 5. router.nix: NAT flushed SHARED nixos-nat-pre/nixos-nat-post chains, destroying other module rules. Fix: dedicated opennds-pre/opennds-post chains, flushing only ours.
 
 ### 4.4 TLS SAN Coverage
-pki.nix used mkIf(pathExists) for runtime CA paths, causing builds to fail with FileNotFoundError when CA existed -- nss-cacert sandbox can't read absolute host paths. Fix: commit CA cert as modules/security/homelab-ca.crt, use static list security.pki.certificateFiles = [ ./homelab-ca.crt ]. Added extraDomains list so homelab cert always includes SANs for darkstat, LiteLLM, BitRouter, wallabag, localai.home.arpa independent of enabled services.
+pki.nix used mkIf(pathExists) for runtime CA paths, causing builds to fail with FileNotFoundError when CA existed -- nss-cacert sandbox can't read absolute host paths. Fix: commit CA cert as modules/security/homelab-ca.crt, use static list security.pki.certificateFiles = \[./homelab-ca.crt\]. Added extraDomains list so homelab cert always includes SANs for darkstat, LiteLLM, BitRouter, wallabag, localai.home.arpa independent of enabled services.
 
 ### 4.5 Boot Failure
 Generations 28-31 all die at: "switch root target contains no usable init". Proved NOT: AP bundle (disabled gen 31), BitRouter/LiteLLM (present in working gen 27 and failing gen 28), initrd (identical), kernel params, store integrity, SATA flakiness. Netconsole capture empty -- e1000e driver module not builtin, if interface not link-up at module load or listener not reachable from initrd pre-root namespace, silence.
