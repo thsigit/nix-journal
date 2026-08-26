@@ -6,6 +6,14 @@
 # .nojekyll). The nix-journal repo's `main` branch keeps the source
 # (docs/, zensical.toml, overrides/); gh-pages keeps only built output.
 #
+# The GitHub repo is published as a <user>.github.io user site, so it is
+# served at the domain ROOT (https://thsigit.github.io/), not under a
+# /nix-journal/ subpath. zensical's internal theme emits root-absolute links
+# (/reports/, /2026-.../), which only resolve correctly under root serving.
+# The build for publishing therefore overrides site_url to the root URL (via a
+# temporary config copy). The local build (systemd / manual) keeps the config's
+# own site_url (journal.home.arpa) and also serves at root.
+#
 # Usage: ./scripts/publish.sh [--no-build]
 set -euo pipefail
 
@@ -15,9 +23,15 @@ cd "$REPO_DIR"
 NO_BUILD=0
 [[ "${1:-}" == "--no-build" ]] && NO_BUILD=1
 
+GH_SITE_URL="https://thsigit.github.io/"
+
 if [[ "$NO_BUILD" -eq 0 ]]; then
-  echo "==> Building site with zensical"
-  zensical build -f "$REPO_DIR/zensical.toml"
+  echo "==> Building site with zensical (site_url=$GH_SITE_URL)"
+  CONF="$REPO_DIR/zensical.toml"
+  TMP_CONF="$(mktemp "$REPO_DIR/zensical.publish.XXXX.toml")"
+  sed "s#^site_url = .*#site_url = \"$GH_SITE_URL\"#" "$CONF" > "$TMP_CONF"
+  trap 'rm -f "$TMP_CONF"' EXIT
+  zensical build -f "$TMP_CONF"
 fi
 
 SRC="$REPO_DIR/journal"
