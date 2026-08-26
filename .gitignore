@@ -3,3 +3,6 @@ journal
 
 # Cache
 .cache/
+
+# Publish build output (throwaway)
+.publish_tmp

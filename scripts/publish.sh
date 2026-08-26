@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # scripts/publish.sh — build the codebot journal and publish the generated
-# HTML (journal/) to the gh-pages branch of origin.
+# HTML to the gh-pages branch of origin.
 #
 # GitHub Pages serves the prebuilt site as-is (we do NOT use Jekyll, hence
 # .nojekyll). The nix-journal repo's `main` branch keeps the source
@@ -14,6 +14,9 @@
 # temporary config copy). The local build (systemd / manual) keeps the config's
 # own site_url (journal.home.arpa) and also serves at root.
 #
+# IMPORTANT: the publish build writes to a throwaway dir, never to the live
+# /srv/www/codebot/journal, so local serving is left untouched.
+#
 # Usage: ./scripts/publish.sh [--no-build]
 set -euo pipefail
 
@@ -24,25 +27,30 @@ NO_BUILD=0
 [[ "${1:-}" == "--no-build" ]] && NO_BUILD=1
 
 GH_SITE_URL="https://thsigit.github.io/"
+BUILD_OUT="$REPO_DIR/.publish_tmp"
+
+cleanup() { rm -rf "$BUILD_OUT" "${TMP_CONF:-}"; }
+trap cleanup EXIT
 
 if [[ "$NO_BUILD" -eq 0 ]]; then
   echo "==> Building site with zensical (site_url=$GH_SITE_URL)"
   CONF="$REPO_DIR/zensical.toml"
   TMP_CONF="$(mktemp "$REPO_DIR/zensical.publish.XXXX.toml")"
-  sed "s#^site_url = .*#site_url = \"$GH_SITE_URL\"#" "$CONF" > "$TMP_CONF"
-  trap 'rm -f "$TMP_CONF"' EXIT
+  sed -e "s#^site_url = .*#site_url = \"$GH_SITE_URL\"#" \
+      -e "s#^site_dir = .*#site_dir = \".publish_tmp\"#" \
+      "$CONF" > "$TMP_CONF"
   zensical build -f "$TMP_CONF"
 fi
 
-SRC="$REPO_DIR/journal"
+SRC="$BUILD_OUT"
 if [[ ! -d "$SRC" ]]; then
   echo "ERROR: built site not found at $SRC (run without --no-build)" >&2
   exit 1
 fi
 
 WT="$(mktemp -d /tmp/codebot-gh-pages.XXXX)"
-cleanup() { git worktree remove "$WT" --force 2>/dev/null || rm -rf "$WT"; }
-trap cleanup EXIT
+cleanup_wt() { git worktree remove "$WT" --force 2>/dev/null || rm -rf "$WT"; }
+trap 'cleanup; cleanup_wt' EXIT
 
 echo "==> Preparing gh-pages worktree"
 if git show-ref --verify --quiet refs/heads/gh-pages; then
