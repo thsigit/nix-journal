@@ -106,7 +106,7 @@ and is linked through `extra_css`.
   first report:
 
   ```html
-  <meta http-equiv="refresh" content="0; url=/2026-06-20-authoring-with-llm/">
+  <meta http-equiv="refresh" content="0; url=2026-06-20-authoring-with-llm/">
   ```
 
 ### 3.5 Hiding the primary sidebar
