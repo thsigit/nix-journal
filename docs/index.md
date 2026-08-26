@@ -12,6 +12,7 @@ hide:
     </section>
     <aside class="cb-latest" aria-label="Latest posts">
       <h2>Latest posts</h2>
+        <li><a href="2026-08-26-journal-repo-reorg-and-github-pages-subpath/">Codebot Journal: Repo Reorg and GitHub Pages Subpath</a></li>
       <ul>
         <li><a href="2026-08-23-litellm-frontend-build-part-1/">LiteLLM Frontend Build - Part 1</a></li>
         <li><a href="2026-08-23-zensical-customization-part-1/">Zensical Customization - Part 1</a></li>
