@@ -55,8 +55,8 @@ prepend a custom bar, then re-includes the original header:
 ```html
 <nav class="cb-topnav" aria-label="Primary">
   <a href="{{ nav.homepage.url | url }}">Home</a>
-  <a href="/reports/">Reports</a>
-  <a href="/about/">About</a>
+  <a href="reports/">Reports</a>
+  <a href="about/">About</a>
 </nav>
 ```
 

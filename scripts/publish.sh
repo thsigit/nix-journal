@@ -26,7 +26,7 @@ cd "$REPO_DIR"
 NO_BUILD=0
 [[ "${1:-}" == "--no-build" ]] && NO_BUILD=1
 
-GH_SITE_URL="https://thsigit.github.io/"
+GH_SITE_URL="https://thsigit.github.io/nix-journal/"
 BUILD_OUT="$REPO_DIR/.publish_tmp"
 
 cleanup() { rm -rf "$BUILD_OUT" "${TMP_CONF:-}"; }
