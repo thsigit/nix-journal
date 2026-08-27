@@ -325,12 +325,12 @@
         <loc>https://thsigit.github.io/nix-journal/2026-08-26-litellm-cli-inventory-overhaul/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-27-litellm-frontend-build-part-3/</loc>
-      </url>
-      <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/reports/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-08-27-litellm-frontend-build-part-3/</loc>
       </url>
 </urlset>
