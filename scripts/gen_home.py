@@ -6,7 +6,7 @@ SKIP = ("index.md", "about.md", "reports.md")
 files = [f for f in glob.glob(DOCS + "/*.md") if os.path.basename(f) not in SKIP]
 
 def meta(path):
-    base = os.path.basename(path)[:-3]
+    base = os.path.basename(path)[:-3]  # removes .md
     m = re.match(r"(\d{4}-\d{2}-\d{2})-(.+)", base)
     date, slug = m.group(1), m.group(2)
     title = base
@@ -14,18 +14,18 @@ def meta(path):
         if line.startswith("# "):
             title = line[2:].strip()
             break
-    return date, slug, title
+    return date, slug, title, base
 
 series_re = re.compile(r"^(.*)-part-(\d+)$")
 groups = {}
 standalone = []
 for path in files:
-    date, slug, title = meta(path)
+    date, slug, title, base = meta(path)
     mm = series_re.match(slug)
     if mm:
-        groups.setdefault(mm.group(1), []).append((int(mm.group(2)), date, slug, title))
+        groups.setdefault(mm.group(1), []).append((int(mm.group(2)), date, slug, title, base))
     else:
-        standalone.append((date, slug, title))
+        standalone.append((date, slug, title, base))
 
 NAMES = {
     "blogging-skill-evolution": "Blogging Skill Evolution",
@@ -47,10 +47,10 @@ NAMES = {
 def disp(key):
     return NAMES.get(key, key.replace("-", " ").title())
 
-all_items = standalone + [(d, s, t) for k in groups for (_, d, s, t) in groups[k]]
+all_items = standalone + [(d, s, t, b) for k in groups for (_, d, s, t, b) in groups[k]]
 latest10 = sorted(all_items, key=lambda x: x[0], reverse=True)[:10]
 
-order = sorted(groups.items(), key=lambda kv: max(d for _, d, _, _ in kv[1]), reverse=True)
+order = sorted(groups.items(), key=lambda kv: max(d for _, d, _, _, _ in kv[1]), reverse=True)
 
 block = (
     '<div class="cb-home">\n'
@@ -61,19 +61,19 @@ block = (
     'Browse the series below, or the latest posts on the right.</p>\n'
     '    </section>\n'
     '    <aside class="cb-latest" aria-label="Latest posts">\n'
-    '      <h2>Latest posts</h2>\n'
+    '      <h2>Latest posts</h2>'
     '      <ul>\n'
 )
-for d, s, t in latest10:
-    block += f'        <li><a href="/{s}/">{t}</a></li>\n'
+for d, s, t, b in latest10:
+    block += f'        <li><a href="{b}/">{t}</a></li>\n'
 block += '      </ul>\n    </aside>\n  </div>\n</div>\n'
 
 lines = ["## Series", ""]
 for key, items in order:
     items_sorted = sorted(items, key=lambda x: x[0])
     lines.append(f"### {disp(key)}")
-    for _, date, slug, title in items_sorted:
-        lines.append(f"- [{title}](/{slug}/)")
+    for _, date, slug, title, base in items_sorted:
+        lines.append(f"- [{title}]({base}/)")
     lines.append("")
 
 content = (
