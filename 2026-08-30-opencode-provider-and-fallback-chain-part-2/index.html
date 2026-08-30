@@ -4014,7 +4014,8 @@
 <h2 id="1-objective">1. Objective<a class="headerlink" href="#1-objective" title="Permanent link">&para;</a></h2>
 <p>This report documents the comprehensive testing and pruning of OpenCode provider endpoints and model availability across all configured providers: LiteLLM, AIHubMix, Abliteration.ai, GitHub Copilot, and NVIDIA.</p>
 <h2 id="2-background">2. Background<a class="headerlink" href="#2-background" title="Permanent link">&para;</a></h2>
-<p>OpenCode uses a provider-based architecture where models are accessed through various API endpoints. The configuration in <code>opencode.json</code> defines providers and whitelisted models, while <code>auth.json</code> stores API keys and credentials. This session tested:</p>
+<p>OpenCode uses a provider-based architecture where models are accessed through various API endpoints. The configuration in <code>opencode.json</code> defines providers and whitelisted models, while <code>auth.json</code> stores API keys and credentials.</p>
+<p>This session follows the universal opencode settings reconfiguration described in "Three Distros, One OpenCode Setup" (2026-08-29), where we consolidated configuration across FedoraWSL, DebianWSL, and Windows into a shared hub at <code>/mnt/c/users/sigit/.config/opencode/</code>. With the unified setup in place, we now test provider connectivity and optimize the model whitelist. This session tested:</p>
 <ol>
 <li>API key validity for all providers</li>
 <li>Model availability for each provider</li>
