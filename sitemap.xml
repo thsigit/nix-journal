@@ -1,360 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://thsigit.github.io/nix-journal/</loc>
+        <loc>https://homelab.home.arpa/journal/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-20-authoring-with-llm/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-20-authoring-with-llm/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-20-hermes-agent-provider-and-fallback-chain-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-20-hermes-agent-provider-and-fallback-chain-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-21-the-tinyllama-experiment-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-21-the-tinyllama-experiment-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-blogging-skill-evolution-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-blogging-skill-evolution-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-building-a-local-llm-setup-in-wsl/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-building-a-local-llm-setup-in-wsl/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-configuring-ollama-github-models/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-configuring-ollama-github-models/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-experimenting-with-hermes-agent-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-experimenting-with-hermes-agent-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-hermes-agent-provider-and-fallback-chain-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-hermes-agent-provider-and-fallback-chain-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-hermes-agent-provider-and-fallback-chain-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-hermes-agent-provider-and-fallback-chain-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-hermes-claw-migrate-dry-run/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-hermes-claw-migrate-dry-run/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-openclaw-dementia-and-config-backups/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-openclaw-dementia-and-config-backups/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-session-notes-lean-stack-and-failover/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-session-notes-lean-stack-and-failover/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-the-tinyllama-experiment-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-the-tinyllama-experiment-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-29-the-tinyllama-experiment-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-29-the-tinyllama-experiment-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-30-a-fresh-new-start/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-30-a-fresh-new-start/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-30-experimenting-with-hermes-agent-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-30-experimenting-with-hermes-agent-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-30-experimenting-with-hermes-agent-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-30-experimenting-with-hermes-agent-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-06-30-nix-reorg/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-06-30-nix-reorg/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-01-experimenting-with-hermes-agent-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-01-experimenting-with-hermes-agent-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-01-experimenting-with-hermes-agent-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-01-experimenting-with-hermes-agent-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-01-moving-llm-models-out-of-wsl/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-01-moving-llm-models-out-of-wsl/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-02-experimenting-with-hermes-agent-part-6/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-02-experimenting-with-hermes-agent-part-6/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-02-hermes-agent-provider-and-fallback-chain-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-02-hermes-agent-provider-and-fallback-chain-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-16-the-agent-that-didnt-get-to-upgrade/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-16-the-agent-that-didnt-get-to-upgrade/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-16-the-cert-that-led-to-a-sudo-policy/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-16-the-cert-that-led-to-a-sudo-policy/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-16-the-litellm-gateway-evolution-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-16-the-litellm-gateway-evolution-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-18-coding-with-hermes-agent-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-18-coding-with-hermes-agent-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-18-coding-with-hermes-agent-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-18-coding-with-hermes-agent-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-20-coding-with-hermes-agent-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-20-coding-with-hermes-agent-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-20-hermes-agent-provider-and-fallback-chain-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-20-hermes-agent-provider-and-fallback-chain-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-20-the-litellm-gateway-evolution-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-20-the-litellm-gateway-evolution-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-21-experimenting-with-hermes-agent-part-7/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-21-experimenting-with-hermes-agent-part-7/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-21-experimenting-with-hermes-agent-part-8/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-21-experimenting-with-hermes-agent-part-8/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-21-experimenting-with-hermes-agent-part-9/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-21-experimenting-with-hermes-agent-part-9/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-22-blogging-skill-evolution-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-22-blogging-skill-evolution-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-22-experimenting-with-hermes-agent-part-10/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-22-experimenting-with-hermes-agent-part-10/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-22-opencode-configuration-evolution-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-22-opencode-configuration-evolution-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-22-opencode-session-archaeology-and-cleanup/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-22-opencode-session-archaeology-and-cleanup/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-22-the-litellm-gateway-evolution-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-22-the-litellm-gateway-evolution-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-24-blogging-skill-evolution-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-24-blogging-skill-evolution-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-24-freeing-up-root-moving-xdg-dirs-to-srv-media-on-nixos/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-24-freeing-up-root-moving-xdg-dirs-to-srv-media-on-nixos/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-24-mem0-memory-integration-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-24-mem0-memory-integration-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-24-mem0-memory-integration-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-24-mem0-memory-integration-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-24-the-litellm-gateway-evolution-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-24-the-litellm-gateway-evolution-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-24-why-your-self-signed-cert-is-never-trusted/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-24-why-your-self-signed-cert-is-never-trusted/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-25-captive-portal-and-access-point-bundle-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-25-captive-portal-and-access-point-bundle-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-25-captive-portal-and-access-point-bundle-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-25-captive-portal-and-access-point-bundle-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-25-opencode-configuration-evolution-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-25-opencode-configuration-evolution-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-26-captive-portal-and-access-point-bundle-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-26-captive-portal-and-access-point-bundle-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-26-captive-portal-and-access-point-bundle-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-26-captive-portal-and-access-point-bundle-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-27-captive-portal-and-access-point-bundle-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-27-captive-portal-and-access-point-bundle-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-27-homelab-management-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-27-homelab-management-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-27-homelab-management-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-27-homelab-management-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-27-mem0-memory-integration-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-27-mem0-memory-integration-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-27-podman-container-fix-stale-netavark-chains-and-network-host/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-27-podman-container-fix-stale-netavark-chains-and-network-host/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-27-the-litellm-gateway-evolution-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-27-the-litellm-gateway-evolution-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-29-the-litellm-gateway-evolution-part-6/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-29-the-litellm-gateway-evolution-part-6/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-30-the-litellm-gateway-evolution-part-7/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-30-the-litellm-gateway-evolution-part-7/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-31-opencode-configuration-evolution-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-31-opencode-configuration-evolution-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-07-31-the-litellm-gateway-evolution-part-8/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-07-31-the-litellm-gateway-evolution-part-8/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-01-captive-portal-and-access-point-bundle-part-6/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-01-captive-portal-and-access-point-bundle-part-6/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-03-boot-recovery-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-03-boot-recovery-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-03-boot-recovery-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-03-boot-recovery-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-03-boot-recovery-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-03-boot-recovery-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-03-reviving-nix-config-ai-gateway-bitrouter-ap-bundle-repair/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-03-reviving-nix-config-ai-gateway-bitrouter-ap-bundle-repair/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-05-archiving-nix-lab-and-restoring-nix-config-as-the-active-repo/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-05-archiving-nix-lab-and-restoring-nix-config-as-the-active-repo/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-05-xfce-desktop-theme-on-nixos/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-05-xfce-desktop-theme-on-nixos/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-06-boot-recovery-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-06-boot-recovery-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-07-homelab-management-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-07-homelab-management-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-07-persistent-state-on-nixos-surviving-systemd-260-statedirectory/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-07-persistent-state-on-nixos-surviving-systemd-260-statedirectory/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-08-mem0-memory-integration-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-08-mem0-memory-integration-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-08-testing-browser-use-in-wsl/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-08-testing-browser-use-in-wsl/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-09-opencode-configuration-evolution-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-09-opencode-configuration-evolution-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-09-opencode-provider-and-fallback-chain-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-09-opencode-provider-and-fallback-chain-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-09-testing-browser-use-in-wsl-part2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-09-testing-browser-use-in-wsl-part2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-09-the-litellm-gateway-evolution-part-9/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-09-the-litellm-gateway-evolution-part-9/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-10-blogging-skill-evolution-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-10-blogging-skill-evolution-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-10-switch-root-target-contains-no-usable-init-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-10-switch-root-target-contains-no-usable-init-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-11-editing-the-goal-command/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-11-editing-the-goal-command/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-11-opencode-configuration-evolution-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-11-opencode-configuration-evolution-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-11-switch-root-target-contains-no-usable-init-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-11-switch-root-target-contains-no-usable-init-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-12-captive-portal-and-access-point-bundle-part-7/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-12-captive-portal-and-access-point-bundle-part-7/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-12-declarative-desktop-with-home-manager-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-12-declarative-desktop-with-home-manager-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-12-switch-root-target-contains-no-usable-init-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-12-switch-root-target-contains-no-usable-init-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-13-boot-recovery-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-13-boot-recovery-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-13-splitting-nix-lab-pkgs-and-github-auth/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-13-splitting-nix-lab-pkgs-and-github-auth/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-13-the-litellm-gateway-evolution-part-10/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-13-the-litellm-gateway-evolution-part-10/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-14-blogging-skill-evolution-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-14-blogging-skill-evolution-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-16-switch-root-target-contains-no-usable-init-part-4/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-16-switch-root-target-contains-no-usable-init-part-4/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-16-two-channel-repo-strategy/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-16-two-channel-repo-strategy/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-18-the-litellm-gateway-evolution-part-11/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-18-the-litellm-gateway-evolution-part-11/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-20-the-litellm-gateway-evolution-part-12/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-20-the-litellm-gateway-evolution-part-12/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-21-switch-root-target-contains-no-usable-init-part-5/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-21-switch-root-target-contains-no-usable-init-part-5/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-21-the-litellm-gateway-evolution-part-13/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-21-the-litellm-gateway-evolution-part-13/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-21-the-litellm-gateway-evolution-part-14-final/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-21-the-litellm-gateway-evolution-part-14-final/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-22-blogging-skill-evolution-part-6/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-22-blogging-skill-evolution-part-6/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-22-opencode-configuration-evolution-part-6/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-22-opencode-configuration-evolution-part-6/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-23-litellm-frontend-build-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-23-litellm-frontend-build-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-23-zensical-customization-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-23-zensical-customization-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-24-declarative-desktop-with-home-manager-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-24-declarative-desktop-with-home-manager-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-24-miscellaneous-tasks-wakectl-journal-and-agent-cleanup/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-24-miscellaneous-tasks-wakectl-journal-and-agent-cleanup/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-25-blogging-skill-evolution-part-7/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-25-blogging-skill-evolution-part-7/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-25-knowledgebaseai-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-25-knowledgebaseai-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-25-litellm-frontend-build-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-25-litellm-frontend-build-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-25-the-litellm-callback-saga-part-1/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-25-the-litellm-callback-saga-part-1/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-26-journal-repo-reorg-and-github-pages-subpath/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-26-journal-repo-reorg-and-github-pages-subpath/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-26-litellm-cli-inventory-overhaul/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-26-litellm-cli-inventory-overhaul/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-27-ai-infrastructure-task-review-and-update/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-27-ai-infrastructure-task-review-and-update/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-27-blogging-skill-evolution-part-8/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-27-blogging-skill-evolution-part-8/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-27-litellm-frontend-build-part-3/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-27-litellm-frontend-build-part-3/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-27-the-litellm-callback-saga-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-27-the-litellm-callback-saga-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-28-knowledgebaseai-part-2/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-28-knowledgebaseai-part-2/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-29-cleanup-bit-back-fedora-opencode-debian-rescue/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-29-cleanup-bit-back-fedora-opencode-debian-rescue/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-29-three-distros-one-opencode-setup/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-29-three-distros-one-opencode-setup/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-29-wakectl-architecture-refactor/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-29-wakectl-architecture-refactor/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-30-the-litellm-callback-saga-part-3-final/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-30-automating-blog-series-navigation/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/about/</loc>
+        <loc>https://homelab.home.arpa/journal/2026-08-30-the-litellm-callback-saga-part-3-final/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/reports/</loc>
+        <loc>https://homelab.home.arpa/journal/about/</loc>
+      </url>
+      <url>
+        <loc>https://homelab.home.arpa/journal/reports/</loc>
       </url>
 </urlset>
