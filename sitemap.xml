@@ -343,7 +343,7 @@
         <loc>https://thsigit.github.io/nix-journal/2026-08-29-cleanup-bit-back-fedora-opencode-debian-rescue/</loc>
       </url>
       <url>
-        <loc>https://thsigit.github.io/nix-journal/2026-08-29-three-distros-one-opencode-setup/</loc>
+        <loc>https://thsigit.github.io/nix-journal/2026-08-29-three-distros-one-opencode-setup-part-1/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/2026-08-29-wakectl-architecture-refactor/</loc>
@@ -359,6 +359,12 @@
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/2026-08-30-the-litellm-callback-saga-part-3-final/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-08-30-three-distros-one-opencode-setup-part-2/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-01-bitrouter-alpha-27-add-providers/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
