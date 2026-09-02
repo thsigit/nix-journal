@@ -367,7 +367,16 @@
         <loc>https://thsigit.github.io/nix-journal/2026-09-01-bitrouter-alpha-27-add-providers/</loc>
       </url>
       <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-01-opencode-provider-and-fallback-chain-part-3-final/</loc>
+      </url>
+      <url>
         <loc>https://thsigit.github.io/nix-journal/2026-09-01-retiring-bitrouter-single-gateway/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-02-litellm-pruning-and-non-text-discovery/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-02-static-config-refactor/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
