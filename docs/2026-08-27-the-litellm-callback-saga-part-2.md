@@ -1,4 +1,4 @@
-# The LiteLLM Callback That Wouldn't Fire — Part 16
+# The LiteLLM Callback Saga - Part 2
 
 *or: How I learned to stop debugging Python imports and start reading nix build logs*
 
@@ -10,9 +10,9 @@
 
 ## 1. Recap (The Cliffhanger)
 
-[Part 15](https://homelab.home.arpa/journal/2026-08-25-the-litellm-gateway-evolution-part-15/) ended with the
-callback working perfectly in a transient test unit on port 4001 —
-`usage.jsonl` written, `litellm-cli stats` showing the right numbers —
+[Part 14 (Final)](../2026-08-21-the-litellm-gateway-evolution-part-14-final/) ended with the
+callback working perfectly in a transient test unit on port 4001 -
+`usage.jsonl` written, `litellm-cli stats` showing the right numbers -
 but **silently doing nothing** in the production systemd service on port 4000.
 
 Same code. Same PYTHONPATH (`/srv/appdata/litellm`). Same config
@@ -37,7 +37,7 @@ module's code literally did not run?
 ### Theory 1: Systemd sandboxing
 
 `DynamicUser=true`, `PrivateUsers=true`, `ProtectHome=true`,
-`DevicePolicy=closed` — the full NixOS default for services. We disabled
+`DevicePolicy=closed` - the full NixOS default for services. We disabled
 `DynamicUser` and `PrivateUsers` with `lib.mkForce false`. Still nothing.
 
 **Verdict:** Not the issue.
@@ -113,14 +113,14 @@ The result:
 
 The `litellm.service` PYTHONPATH is set to
 `config.services.litellm-cli.dataDir` which resolves to
-`/srv/appdata/litellm/` — a **persistent runtime directory**, not the
+`/srv/appdata/litellm/` - a **persistent runtime directory**, not the
 package's store path. The render service is supposed to populate that
 directory, but it uses the package's *bin* path to find `litellm-cli`,
 and the package's missing `data/` means any internal references fail.
 
 But here's the kicker: the callback file **already exists** in
 `/srv/appdata/litellm/usage_logger.py` from a previous successful
-render. The import should work — yet it doesn't. Why? Because the
+render. The import should work - yet it doesn't. Why? Because the
 `litellm-render.service` that copies it runs from the **broken
 package's bin path**, so its own internal logic to find the source file
 also breaks. The file sits there stale, but never fresh enough for the
@@ -148,20 +148,20 @@ working in the new nixpkgs context.
 
 ## 5. Four Ways Forward (Ranked)
 
-### Option A — Embed the callback via Nix activation (RECOMMENDED)
+### Option A - Embed the callback via Nix activation (RECOMMENDED)
 Write `usage_logger.py` directly to `/srv/appdata/litellm/` in the
 existing `litellm-cli-config` activation script
 (`common/ai/litellm/litellm-cli.nix`). The service already has
 `PYTHONPATH = /srv/appdata/litellm`. No package rebuild needed. 20
 lines of Nix.
 
-### Option B — Use `litellm.callbacks` with relative path
+### Option B - Use `litellm.callbacks` with relative path
 Emit `litellm.callbacks: ["./usage_logger.py"]` in the rendered
 config. Litellm's `get_instance_fn` resolves relative to
 `config_file_path` (`/var/lib/litellm/config.yaml`), bypassing
 `importlib` entirely. Edit `render.sh` + rebuild.
 
-### Option C — Fix the package build
+### Option C - Fix the package build
 Replace the glob in `default.nix` `installPhase` with a copy Nix
 always evaluates:
 
@@ -171,9 +171,9 @@ cp -r --no-preserve=mode,ownership $src/data/. $out/data/
 
 Requires rebuilding the package and every downstream consumer.
 
-### Option D — Patch litellm itself
+### Option D - Patch litellm itself
 Add the callback registration in `proxy_server.py` startup. Nuclear
-option — works regardless of path issues. Only if A/B/C all fail.
+option - works regardless of path issues. Only if A/B/C all fail.
 
 ---
 
@@ -233,6 +233,6 @@ minutes to fix, 10 minutes to verify.
 
 ---
 
-[Part 15](https://homelab.home.arpa/journal/2026-08-25-the-litellm-gateway-evolution-part-15/).*
+[Part 14 (Final)](../2026-08-21-the-litellm-gateway-evolution-part-14-final/).*
 
 *Generated with Nemotron 3 Ultra (NVIDIA).*

@@ -1,0 +1,22 @@
+{#-
+  Series navigation footer. Renders when the page has series frontmatter
+  (injected by scripts/gen_home.py --stage at render time).
+-#}
+{% if page.meta and page.meta.series %}
+  <hr>
+  <div class="cb-series-footer">
+    <p>
+      Part of the <strong>{{ page.meta.series_name }}</strong> series.
+    </p>
+    {% if page.meta.series_prev_url %}
+      <p>Previous: <a href="{{ page.meta.series_prev_url | url }}">{{ page.meta.series_prev_title }}</a>.</p>
+    {% else %}
+      <p>This is the first part.</p>
+    {% endif %}
+    {% if page.meta.series_next_url %}
+      <p>Next: <a href="{{ page.meta.series_next_url | url }}">{{ page.meta.series_next_title }}</a>.</p>
+    {% else %}
+      <p>This is the final part.</p>
+    {% endif %}
+  </div>
+{% endif %}

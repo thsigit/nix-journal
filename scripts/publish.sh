@@ -28,16 +28,21 @@ NO_BUILD=0
 
 GH_SITE_URL="https://thsigit.github.io/nix-journal/"
 BUILD_OUT="$REPO_DIR/.publish_tmp"
+STAGE_DIR="$REPO_DIR/build_docs"
 
-cleanup() { rm -rf "$BUILD_OUT" "${TMP_CONF:-}"; }
+cleanup() { rm -rf "$BUILD_OUT" "$STAGE_DIR" "${TMP_CONF:-}"; }
 trap cleanup EXIT
 
 if [[ "$NO_BUILD" -eq 0 ]]; then
+  echo "==> Staging docs with series frontmatter (gen_home.py --stage)"
+  python3 scripts/gen_home.py --stage "$STAGE_DIR"
+
   echo "==> Building site with zensical (site_url=$GH_SITE_URL)"
   CONF="$REPO_DIR/zensical.toml"
   TMP_CONF="$(mktemp "$REPO_DIR/zensical.publish.XXXX.toml")"
   sed -e "s#^site_url = .*#site_url = \"$GH_SITE_URL\"#" \
       -e "s#^site_dir = .*#site_dir = \".publish_tmp\"#" \
+      -e "s#^docs_dir = .*#docs_dir = \"build_docs\"#" \
       "$CONF" > "$TMP_CONF"
   zensical build -f "$TMP_CONF"
 fi
@@ -46,6 +51,12 @@ SRC="$BUILD_OUT"
 if [[ ! -d "$SRC" ]]; then
   echo "ERROR: built site not found at $SRC (run without --no-build)" >&2
   exit 1
+fi
+
+# Update local journal directory (served at homelab.home.arpa/journal)
+if [[ "$NO_BUILD" -eq 0 ]]; then
+  echo "==> Updating local journal directory"
+  cp -r "$SRC"/* /srv/www/codebot/journal/
 fi
 
 WT="$(mktemp -d /tmp/codebot-gh-pages.XXXX)"

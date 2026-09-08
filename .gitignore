@@ -6,3 +6,10 @@ journal
 
 # Publish build output (throwaway)
 .publish_tmp
+
+# Staged docs copy (series frontmatter)
+build_docs
+
+# Python
+__pycache__/
+*.pyc
