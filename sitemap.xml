@@ -382,6 +382,63 @@
         <loc>https://thsigit.github.io/nix-journal/2026-09-02-static-config-refactor/</loc>
       </url>
       <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-03-captive-portal-and-access-point-bundle-part-8/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-03-captive-portal-and-access-point-bundle-part-9/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-04-taming-the-model-zoo-pruning-nvidia-kenari-openrouter-and-a-copilot-pulse-check/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-04-wakectl-mouse-mode-resurrection/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-06-llama-cpp-multi-model-router-and-local-model-zoo/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-06-the-zoo-after-dark-pruning-vibevoice-bert-tiny-and-why-gemma-still-wont-load/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-07-open-webui-whisper-and-the-quest-for-offline-vision/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-08-ai-home-arpa-domain-move-and-fast-health/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-08-litellm-frontend-rebuild-and-sqlite-stats/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-08-one-repo-one-main-and-a-pruned-snapshot/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-08-smaller-models-and-a-homegrown-translator/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-08-wakectl-mouse-mode-the-keys-you-type-with/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-09-from-a-provider-zoo-to-a-free-tier-first-fleet/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-09-silently-dropped-opencode-skills/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-09-windows-ai-zoo-lm-studio-and-the-18gb-diet/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-10-windows-ai-zoo-rag-wiring-and-the-prune-to-six/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-12-kebab-webapp-autorun-and-retirement/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-12-litellm-revival-and-the-four-dead-elephants/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-13-knowledgebaseai-part-3/</loc>
+      </url>
+      <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
       </url>
       <url>
