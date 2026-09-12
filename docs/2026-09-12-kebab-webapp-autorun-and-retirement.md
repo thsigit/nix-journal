@@ -111,8 +111,6 @@ The user decided this version of kebab had run its course for now:
 2. **Restore nix-lab**: tagged `kebab-retired` at the last kebab HEAD, then `git reset --hard 5ff0f4d` (the commit before `3102c02` introduced `common/web/kebab.nix`). All eight kebab commits were contiguous and kebab-only, so the restore is byte-clean: `default.nix` back to `[ ./caddy.nix ./codebot.nix ]`, `kebab.nix` gone. `nix eval` confirmed `systemd.services.kebab-api` no longer exists.
 3. **Runtime cleanup**: stopped `kebab-api` and the `kebab-web-build.path` watcher; the user rebuilt (`#workstation`), which dropped the units and the Caddy vhosts; deleted `/srv/www/kebab` and the throwaway `/tmp/kebab-autotest`.
 
-Interesting footnote: the only "kebab" references left in nix-lab after cleanup are a WiFi SSID (`kebabtamalate`) and its FreeRADIUS AP entry - unrelated, and correctly left alone.
-
 ## 6. Verification Status
 
 | Check | Result |
@@ -137,7 +135,6 @@ Interesting footnote: the only "kebab" references left in nix-lab after cleanup 
 
 - Does a future kebab revisit want the GUI at all, or is the CLI the honest home for a research pipeline?
 - If it returns, should `plan/apply` also be web-exposed, or is that review workflow better left to `git` + a terminal?
-- The `kebabtamalate` SSID is, for the record, not secretly a kebab deployment. It is a Wi-Fi network. The record is refreshed.
 
 ---
 
