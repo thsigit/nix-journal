@@ -121,9 +121,23 @@ Final state of the fleet config:
 
 ## 8. Open Questions and Follow-Ups
 
-- **Does the 5-model NIM whitelist actually serve LiteLLM well?** The current `providers.json` nvidia whitelist is bigger (gemma-4, nemotron-3-nano, gpt-oss-120b, minimax-m3, etc.). Today's probe only found 5 text-only models via `opencode models nvidia` -- worth checking whether the catalog shrank or the filter got stricter.
 - **NVIDIA as an opencode provider** remains "may not be reliable" per the user -- no decision to drop it, but no new dependents either.
 - **Restart confirmation**: config changes need an opencode restart to take effect; skills are read at runtime and need none. The tail of this migration is a clean opencode+session restart on all three hosts.
+
+## 8.1 Dashboard Update
+
+The homepage at `homelab.home.arpa` was updated to reflect live LAN services:
+
+- **Removed retired cards**: `litellm.home.arpa` and `vane.home.arpa` (both confirmed retired 2026-09-09; no Caddy host blocks remain).
+- **Added live services missing from the dashboard**: `ai` (LiteLLM frontend at `ai.home.arpa`), `chat` (Open WebUI at `chat.home.arpa`), `llama` (llama.cpp at `llama.home.arpa`), `whisper` (STT server), `mailpit` (email testing).
+- Footer count adjusted from "18 layanan" to "19 layanan" to match the new 19-card grid.
+- A `README.md` was added at `/srv/www/homepage/` documenting the source-of-truth (Caddy nix-lab config), retired hosts, and the convention that card lists must match live Caddy vhosts.
+
+## 8.2 Nix-lab Changes
+
+- `caddy.nix` (`/srv/repo/nix-lab/common/web/caddy.nix`): removed the `handle /lidarr*` route block (3 lines deleted, git commit `dd9d50b`). This route served `/lidarr` under `homelab.home.arpa` but the underlying service is long gone (no listener on port 8686).
+- The rendered `/etc/caddy/caddy_config` was also edited to remove the dead route. It will fully take effect after `nixos-rebuild switch`.
+- `/srv/www/litellm/` was moved to trash then fully deleted — a stale duplicate of `/srv/www/ai/` with zero references in nix or Caddy config.
 
 ---
 

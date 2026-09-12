@@ -13,3 +13,6 @@ build_docs
 # Python
 __pycache__/
 *.pyc
+
+# Zensical build artifacts
+.revision.tmp*
