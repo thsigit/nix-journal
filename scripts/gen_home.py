@@ -21,7 +21,10 @@ NAMES = {
     "the-litellm-callback-saga": "The LiteLLm Callback Saga",
     "the-litellm-gateway-evolution": "The LiteLLM Gateway Evolution",
     "the-tinyllama-experiment": "The TinyLlama Experiment",
+    "three-distros-one-opencode-setup": "Three Distros, One OpenCode Setup",
+    "declarative-desktop-with-home-manager": "Declarative Desktop with Home-Manager",
     "zensical-customization": "Zensical Customization",
+    "knowledgebaseai": "KnowledgeBaseAI",
 }
 def disp(key):
     return NAMES.get(key, key.replace("-", " ").title())
