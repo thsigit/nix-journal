@@ -191,15 +191,15 @@ def main():
     with open(os.path.join(CACHE, "series_data.json"), "w") as f:
         json.dump(series_data, f, indent=2)
 
-    write_index(DOCS, series_data, groups, standalone)
-
     if stage:
         if os.path.exists(stage):
             shutil.rmtree(stage)
         shutil.copytree(DOCS, stage)
+        write_index(stage, series_data, groups, standalone)
         injected = inject_frontmatter(stage, series_data)
         print(f"staged {stage} ({injected} posts with series frontmatter)")
     else:
+        write_index(DOCS, series_data, groups, standalone)
         print("wrote index.md and series_data.json")
     print("series groups:", len(groups))
 
