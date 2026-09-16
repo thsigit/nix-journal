@@ -161,6 +161,75 @@ Each skill documents the full `gws_*` surface with required params (verified aga
 
 Part 1 built the door. Part 2 found the door was locked (program-level), then built a local door that opens now. Part 3 is one restart and one consent click away from a mailbox that actually answers.
 
+## 9. Addendum (or: The Local Server Becomes a Public Plugin, and the DPP Doors Come Down)
+
+Same day, 2026-09-16. Part 2 ended on "one restart and one consent click away." This addendum closes that loop, then reverses a Part 2 decision.
+
+### 9.1 Packaging the Skills into a Plugin (or: Sharing Is Caring, With a Config Hook)
+
+With the six `gws_*` skills proven against a live server, the whole thing was packaged as a distributable OpenCode plugin and published: `thsigit/opencode-google-workspace` (https://github.com/thsigit/opencode-google-workspace), MIT, first commit `48256a6` on `main`.
+
+The plugin does two things at load:
+
+1. A `config` hook registers the `gws` local MCP server (`npx -y @dguido/google-workspace-mcp`, env `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` / `GOOGLE_WORKSPACE_SERVICES`) - the whole Part 2 config block becomes generated, not hand-maintained.
+2. It copies its bundled `skills/` directory into `~/.config/opencode/skills/` - idempotent, and it never overwrites an existing skill.
+
+Skills cannot travel through the plugin API itself; opencode discovers them from disk. Copy-on-first-load is the standard workaround, and it logged honest numbers: on a fresh box `6 copied, 0 already present`; on the already-skilled Windows box `0 copied, 6 already present`.
+
+### 9.2 One Shared Hub Cannot Point Three OSes at One Path (or: Path Resolution Takes On a New Meaning)
+
+A single `plugin:` entry in the shared hub cannot resolve on all three environments - a `file:///C:/Users/...` URL is meaningless to Linux, and `/home/sigit/...` is meaningless to Windows. So the shared hub keeps `"plugin": []` and each per-OS overlay carries a path its own OS can resolve:
+
+| Environment | Plugin entry (overlay) | Repo location |
+| --- | --- | --- |
+| Windows native | `opencode.windows.json` -> `file:///C:/Users/SIGIT/dev/opencode-google-workspace/src/index.js` | `C:\Users\SIGIT\dev\opencode-google-workspace` (clone) |
+| Fedora WSL | `opencode.fedora.json` -> `/home/sigit/.opencode/plugins/opencode-google-workspace/src/index.js` | `/home/sigit/.opencode/plugins/opencode-google-workspace` (clone) |
+| Debian WSL | `opencode.debian.json` -> same path | same location (clone) |
+
+Each Linux `.bashrc` gained `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` exports (Fedora and Debian already had `OPENCODE_CONFIG` and a working opencode PATH); Windows got User-scope env vars (`SetEnvironmentVariable`) so a fresh shell inherits them. Every shared-file edit was preceded by a tray backup (`opencode-hub-pre-plugin-peros-*`, plus the three `opencode-{windows,fedora,debian}-pre-plugin-peros-*`).
+
+### 9.3 The Fedora Red Herring (or: It Worked Better Before It Worked)
+
+An early "running gws from Fedora WSL actually works" was a stale running opencode session still holding the pre-edit config. A fresh Fedora `opencode mcp list` showed no `gws` at all, and a direct probe confirmed the cause: `import('file:///C:/Users/SIGIT/dev/opencode-google-workspace/src/index.js')` fails on Linux with `Cannot find module '/C:/Users/...'`. Config is snapshotted at startup, not re-read per request - "it worked" was the ghost of the old config. After the per-OS wiring above, all three hosts genuinely report:
+
+```
+> opencode mcp list
+mem0  connected
+gws   connected   (npx -y @dguido/google-workspace-mcp)
+```
+
+(the four official remotes had not been deleted yet at that point, so the count was 7 servers total.)
+
+### 9.4 The Round-Trip Part 2 Owed (or: Verified Live, With 201 Emails to Spare)
+
+The live test finally ran from a fresh Windows shell:
+
+- Storage quota call succeeded: authenticated as `th.sigit@gmail.com`, 15.00 GB total / 8.16 GB used. Tokens exist under `~/.config/google-workspace-mcp/` - no re-consent needed.
+- Gmail search (`in:inbox newer_than:7d`) returned 201 messages with correct senders, subjects, and labels.
+- Drive root listing returned real files.
+
+One cosmetic quirk surfaced: `gws_get_status` throws a server-side schema mismatch (`data/last_error must be object`). Harmless - it is the diagnostic-only tool; every functional `gws_*` tool works.
+
+### 9.5 The DPP Doors Come Down (or: We Read the Fine Print and Declined)
+
+Researching the actual DPP application revealed the enrollment form wants a **Google Workspace account**, not a consumer Gmail - a likely rejection for this setup. The decision: do not apply for DPP. Part 2's "disable, don't delete" advice became moot, and the five disabled remote servers were deleted outright:
+
+- Hub `opencode.json`: `mcp` now contains only `mem0`.
+- `mcp-auth.json`: emptied (`{}`; the only stored tokens belonged to the never-working official servers).
+- Fedora and Debian `~/.bashrc`: stale `GOOGLE_OAUTH_CLIENT_ID` / `GOOGLE_OAUTH_CLIENT_SECRET` exports removed.
+- Every change backed up first (`opencode-hub-pre-del-dpp-*`, `mcp-auth-pre-del-dpp-*`).
+
+Nothing else was affected: `gws` reads `GOOGLE_CLIENT_*` and its own token directory, neither touched.
+
+## 10. Recommendations (Addendum)
+
+- **Config is snapshotted at startup.** Before debugging an "it works here but not there" that spans environments, check whether the environment in question was actually restarted - a running opencode keeps its load-time config and goes stale fast.
+- **Per-OS plugin paths belong in per-OS overlays.** A single absolute Windows or POSIX path can never serve a three-distro shared hub; the per-distro overlays are where platform-resolvable plugin entries must live.
+- **Idempotent skill install matters.** Copy-on-first-load with a "never overwrite existing" rule is what makes the plugin safe on an already-skilled box - it logged `0 copied, 6 already present` instead of stomping working files.
+- **Route-around beats enrollment.** Even with a Workspace account, DPP approval costs days of waiting; the local REST server worked within a session and is now public tooling.
+- **Read admission criteria before filling the form.** DPP accepts Workspace organizational email, not consumer Gmail - know that before deciding whether to apply at all.
+
+Part 3 turned out to be that restart, a consent click, and a surprising amount of cross-OS path wrangling. The mailbox answers now - from all three hosts.
 ---
 
 Generated by Big Pickle (OpenCode)
