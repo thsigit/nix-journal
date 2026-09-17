@@ -18,7 +18,7 @@ The Windows AI Zoo had grown to an unruly state. `C:\ai\models` once held lm Stu
 
 1. **The model directory was cluttered.** Whisper (a whisper.cpp GGML file AnythingLLM cannot use), Qwen3-VL-4B-Thinking (a vision model missing its mmproj), and the Open WebUI experiment were all dead weight on a 15.7 GiB CPU-only box.
 2. **The blog series parts were unnumbered.** Part 1 and Part 2 had been published without the `-part-N` convention the series now uses, breaking the series grouping in `index.md`.
-3. **The GitHub Pages push was blocked.** A leaked Google OAuth client secret (`GOCSPX-...`) in the gmail MCP part 2 published HTML triggered GitHub secret scanning, halting the Part 3 publish.
+3. **The GitHub Pages push was blocked.** A leaked Google OAuth client secret (redacted) in the gmail MCP part 2 published HTML triggered GitHub secret scanning, halting the Part 3 publish.
 4. **Two research tasks had no framework.** bert-tiny and vibevoice needed an orchestration layer (tinyllm) and an experiment plan before they could graduate from "stragglers" to "experiments."
 
 ## 4. Work Performed
