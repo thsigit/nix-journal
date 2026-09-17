@@ -18,33 +18,161 @@
   text-decoration: underline;
 }
 
-/* Home page: hero + latest-posts sidebar, then series groups */
-.cb-home__top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 18rem;
-  gap: 1.5rem;
-  align-items: start;
-  margin-bottom: 1.5rem;
-}
+/* Home page: hero + featured + latest + series */
 .cb-hero {
-  padding: 1rem 1.25rem;
+  padding: 2rem 1.5rem;
   border-radius: .4rem;
   background: var(--md-primary-fg-color--light, var(--md-primary-fg-color));
   color: var(--md-primary-bg-color);
+  margin-bottom: 1.5rem;
 }
-.cb-hero h1 { margin-top: 0; color: inherit; }
-.cb-hero p { margin-bottom: 0; opacity: .9; }
-.cb-latest {
-  padding: .75rem 1rem;
-  border: 1px solid var(--md-default-fg-color--lightest, #eee);
+.cb-hero h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: inherit;
+}
+.cb-hero p {
+  margin-bottom: 0;
+  opacity: .9;
+  max-width: 40rem;
+}
+.cb-hero__cta {
+  display: flex;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+.cb-btn {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .85rem;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.cb-btn:hover {
+  opacity: .9;
+  transform: translateY(-1px);
+}
+.cb-btn--primary {
+  background: var(--md-accent-fg-color, #fff);
+  color: var(--md-primary-fg-color);
+}
+.cb-btn--secondary {
+  background: transparent;
+  border: 1px solid var(--md-primary-bg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.cb-featured {
+  margin-bottom: 1.5rem;
+}
+.cb-featured h2,
+.cb-latest h2,
+.cb-series h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .8;
+  margin-bottom: 1rem;
+}
+.cb-featured__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.cb-card {
+  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
   border-radius: .4rem;
-  position: sticky;
-  top: 1rem;
+  padding: 1rem 1.25rem;
+  transition: box-shadow .15s ease, border-color .15s ease;
+  background: var(--md-default-bg-color);
 }
-.cb-latest h2 { margin-top: 0; font-size: .9rem; text-transform: uppercase; letter-spacing: .04em; }
-.cb-latest ul { margin: 0; padding-left: 1.1rem; }
-.cb-latest li { margin-bottom: .35rem; font-size: .85rem; }
-@media (max-width: 60rem) {
-  .cb-home__top { grid-template-columns: 1fr; }
-  .cb-latest { position: static; }
+.cb-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  border-color: var(--md-accent-fg-color, #888);
+}
+.cb-card a {
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+}
+.cb-card a:hover {
+  color: var(--md-accent-fg-color);
+}
+.cb-card__date {
+  font-size: .75rem;
+  opacity: .6;
+  margin-top: .5rem;
+  display: inline-block;
+}
+
+.cb-latest {
+  margin-bottom: 1.5rem;
+}
+.cb-latest ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.cb-latest li {
+  margin-bottom: .5rem;
+  font-size: .9rem;
+}
+
+.cb-series__list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.cb-series__item {
+  border: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
+  border-radius: .4rem;
+  overflow: hidden;
+}
+.cb-series__summary {
+  padding: .75rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  background: var(--md-default-fg-color--lightest, #f5f5f5);
+  list-style: none;
+}
+.cb-series__summary::-webkit-details-marker { display: none; }
+.cb-series__summary::before {
+  content: "\25B8";
+  margin-right: .5rem;
+  transition: transform .15s ease;
+}
+.cb-series__item[open] .cb-series__summary::before {
+  transform: rotate(90deg);
+}
+.cb-series__count {
+  font-size: .75rem;
+  opacity: .6;
+}
+.cb-series__parts {
+  padding: .5rem 1rem;
+  margin: 0;
+  list-style: none;
+}
+.cb-series__parts li {
+  margin-bottom: .4rem;
+  font-size: .88rem;
+}
+.cb-series__parts a {
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+}
+.cb-series__parts a:hover {
+  color: var(--md-accent-fg-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 48rem) {
+  .cb-hero h1 { font-size: 1.6rem; }
+  .cb-featured__grid { grid-template-columns: 1fr; }
 }
