@@ -43,7 +43,7 @@ Wrote `2026-09-17-windows-ai-zoo-anythingllm-returns-part-3.md` (139 lines). Pub
 
 ### 4.5 Secret Redacted
 
-The gmail MCP part 2 post (`2026-09-16-gmail-mcp-wiring-part-2.md`) contained a live Google OAuth client secret (`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`) in two places (line 67 and 85). Redacted to `REDACTED` in the source, committed (`49e17c0`), reset local gh-pages to clean tip `fee5271`, and republished. **Action item: rotate the secret in Google Console.**
+The gmail MCP part 2 post (`2026-09-16-gmail-mcp-wiring-part-2.md`) contained a live Google OAuth client secret (`REDACTED`) in two places (line 67 and 85). Redacted to `REDACTED` in the source, committed (`49e17c0`), reset local gh-pages to clean tip `fee5271`, and republished. **Action item: rotate the secret in Google Console.**
 
 ### 4.6 Research Tasks Created
 
