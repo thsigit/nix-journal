@@ -148,4 +148,4 @@ The tinyllama hallucination is the same class of problem as Part 1's corrupted `
 
 ---
 
-**Generated with Codebot by homelab**
+**Generated with Hy3 (Free) by Kenari (free tier)**

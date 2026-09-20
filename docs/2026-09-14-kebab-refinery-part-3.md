@@ -197,4 +197,4 @@ The next session must:
 
 ---
 
-Generated with Codebot by homelab
+Generated with Hy3 (Free) by Kenari (free tier)
