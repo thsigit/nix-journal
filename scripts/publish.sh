@@ -122,13 +122,38 @@ fi
 
 WT="$(mktemp -d /tmp/codebot-gh-pages.XXXX)"
 
+# A previous run that died between `git worktree add` and cleanup leaves a
+# registered worktree behind, and the next run then fails with
+#   fatal: 'gh-pages' is already used by worktree at /tmp/...
+# -- exit 128, with git's message as the only clue. Observed 2026-09-29.
+# Prune first, then name the holder explicitly if it is still there.
 echo "==> Preparing gh-pages worktree"
-if git show-ref --verify --quiet refs/heads/gh-pages; then
-  git worktree add "$WT" gh-pages
-elif git fetch origin gh-pages 2>/dev/null; then
-  git worktree add "$WT" gh-pages
-else
-  git worktree add -b gh-pages "$WT" --orphan
+git worktree prune
+
+add_worktree() {
+  if git show-ref --verify --quiet refs/heads/gh-pages; then
+    git worktree add "$WT" gh-pages
+  elif git fetch origin gh-pages 2>/dev/null; then
+    git worktree add "$WT" gh-pages
+  else
+    git worktree add -b gh-pages "$WT" --orphan
+  fi
+}
+
+if ! add_worktree; then
+  HOLDER=""
+  if git show-ref --verify --quiet refs/heads/gh-pages; then
+    HOLDER="$(git worktree list --porcelain | awk '/^worktree /{p=$2} /^branch refs\/heads\/gh-pages$/{print p}')"
+  fi
+  if [[ -n "$HOLDER" ]]; then
+    echo "ERROR: the gh-pages branch is checked out at $HOLDER" >&2
+    echo "       A previous publish run left that worktree registered." >&2
+    echo "       If that path no longer exists, clear it with:" >&2
+    echo "         git worktree remove $HOLDER --force" >&2
+    echo "         git worktree prune" >&2
+    exit 1
+  fi
+  exit 1
 fi
 
 echo "==> Syncing built site into gh-pages"
