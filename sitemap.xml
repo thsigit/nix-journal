@@ -475,7 +475,70 @@
         <loc>https://thsigit.github.io/nix-journal/2026-09-18-zensical-customization-part-2/</loc>
       </url>
       <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-19-decentralizing-the-opencode-hub-part-1/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-19-decentralizing-the-opencode-hub/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-19-plugin-consolidation-and-sync-part-2/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-19-plugin-consolidation-and-sync/</loc>
+      </url>
+      <url>
         <loc>https://thsigit.github.io/nix-journal/2026-09-19-the-tiny-encoder-that-could/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-20-cleanup-universal-setup-references-part-3-final/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-20-cloudflare-workers-ai-into-litellm/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-20-manage-tasks-to-opencode-task-manager-plugin-part-1/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-20-manage-tasks-to-opencode-task-manager-plugin/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-21-fedora-wsl-reset-opencode-restore/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-21-opencode-v1-to-v2-migration-recovery/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-24-fedora-wsl-reset-opencode-restore-part-2/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-24-manage-tasks-to-opencode-task-manager-plugin-part-2/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-24-manage-tasks-to-opencode-task-manager-plugin-part-3/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-25-debian-wsl-reset-and-canonical-v2-hub/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-25-windows-opencode-v2-migration/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-26-splitting-the-task-tree-and-automatic-redistribution/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-28-nixos-opencode-v2-upgrade-attempt/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-28-opencode-fleet-sync-mem0-event-driven/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-29-false-verifications-and-the-v1-question/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-29-migrate-task-manager-to-plan-manager/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-09-29-per-host-identity-overlays-and-finishing-the-plan-manager-migration/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
