@@ -140,10 +140,40 @@ Per-host identity belongs in per-host files, selected by `OPENCODE_CONFIG`, gene
 
 ## 9. Pending Actions
 
-- **Distro service env** - a detached `opencode` service has no `OPENCODE_CONFIG`; only `.bashrc` exports it, so it is visible to login and interactive shells but not to a service. Needs `opencode service set env` if that launch mode is used.
 - `sync-opencode` SKILL.md still says the overlay is "settled: none, and none needed" - now false, needs rewriting.
 - Distros are one commit behind on the plan tree; they converge on next sync.
 - Backup tray (`reapply_*.py`, `diff_regions.py`, and friends) embeds file content and can be deleted.
+
+### 9.1 Deferred by decision: service env
+
+**Not required now, by explicit decision.** If a detached-service launch mode is ever adopted on the distros, set it then:
+
+```bash
+opencode service set env OPENCODE_CONFIG "$HOME/.config/opencode/overlays/opencode.<distro>.json"
+```
+
+Until then the overlay reaches opencode through `~/.bashrc` in login and interactive shells, which is how the distros are actually used.
+
+**A correction to an earlier draft of this report.** It first listed "the detached opencode service has no `OPENCODE_CONFIG`" as an outstanding gap. That finding was an artifact of a broken probe, not a real observation. The probe ran `opencode service env` in a non-interactive `bash script.sh`, where `~/.bashrc` is never read and `opencode` is therefore *not on `PATH`*:
+
+```
+opencode binary   : not on PATH
+service env       : opencode: command not found
+```
+
+The `||` fallback in the probe then printed "not set in service env", which reads exactly like a legitimate negative result. Re-run under a login shell, the true state is:
+
+| Probe | DebianWSL | FedoraWSL |
+|---|---|---|
+| `opencode` on PATH | `/home/sigit/.opencode/bin/opencode` | same |
+| `opencode service list` | help text only - no service registered | same |
+| opencode systemd user units | none | none |
+| running `opencode serve` | none | none |
+| opencode timers | 0 | 0 |
+
+**No detached service exists on either distro, so there is nothing to configure.** The gap was hypothetical, and the deferral is safe by definition rather than by assumption.
+
+This is the session's own theme, one last time, wearing a disguise: a check whose failure mode was indistinguishable from its success mode. The first draft of this report would have carried a fabricated gap into the permanent record. It nearly got away with it because the output looked like a clean negative.
 
 ## 10. Recommendations
 
