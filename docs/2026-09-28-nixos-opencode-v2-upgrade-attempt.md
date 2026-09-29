@@ -93,7 +93,7 @@ Bun is a fast JavaScript runtime...
 
 The binary reported **Bun 1.4.2**, not opencode v2.0.18.
 
-### 4.2 Discovery: the npm binary is a Bun wrapper with argv[0] detection
+### 4.2 Discovery: the npm binary is a Bun wrapper with `argv[0]` detection
 
 Tested the original npm binary directly:
 
@@ -109,7 +109,7 @@ The exact same file behaves differently based on `argv[0]`:
 - `bun` -> shows Bun 1.4.2
 
 `autoPatchelfHook` patches the ELF interpreter to NixOS's glibc. This
-modification breaks the argv[0] detection logic inside the Bun-compiled binary,
+modification breaks the `argv[0]` detection logic inside the Bun-compiled binary,
 causing it to default to "Bun mode".
 
 ### 4.3 Reversion to v1 (commit 47ea14e)
@@ -130,8 +130,8 @@ $ opencode --version
 
 | Layer | Finding |
 |---|---|
-| npm `@opencode/cli-linux-x64` | Single ELF binary compiled with Bun, dual-personality via argv[0] |
-| `autoPatchelfHook` | Patches interpreter path, breaks internal argv[0] check |
+| npm `@opencode/cli-linux-x64` | Single ELF binary compiled with Bun, dual-personality via `argv[0]` |
+| `autoPatchelfHook` | Patches interpreter path, breaks internal `argv[0]` check |
 | NixOS dynamic linking | Requires patched interpreter; unpatched binary fails to start |
 | GitHub `anomalyco/opencode` main branch | v1.18.32, not v2 |
 | v2 source | Only via `github:anomalyco/opencode` v2 branch (not npm) |
@@ -144,7 +144,7 @@ source lives in the `v2` branch of the GitHub repo.
 
 | Configuration | Commit | opencode version | Status |
 |---|---|---|---|
-| v2 via npm + autoPatchelfHook | 15400e2 | 1.4.2 (Bun) | **Broken** -- argv[0] detection broken |
+| v2 via npm + autoPatchelfHook | 15400e2 | 1.4.2 (Bun) | **Broken** -- `argv[0]` detection broken |
 | v1 via GitHub flake | 47ea14e | 1.18.32+b471c2b | **Working** -- systemd service, Caddy proxy, MCP all functional |
 | Current (reverted) | 47ea14e | 1.18.32+b471c2b | **Deployed** -- `nixos-rebuild switch` completed |
 
@@ -192,7 +192,7 @@ the v2 branch and build from source.
 
 2. **If npm binary must be used**: Avoid `autoPatchelfHook`. Use a targeted
    `patchelf --set-interpreter` in `fixupPhase` that only changes the dynamic
-   linker path without touching other ELF metadata that Bun's argv[0] check
+   linker path without touching other ELF metadata that Bun's `argv[0]` check
    depends on.
 
 3. **Accept v1 for stable NixOS hosts**. The GitHub flake input at main branch
@@ -201,7 +201,7 @@ the v2 branch and build from source.
    the GitHub v2 branch is the real source.
 
 4. **Document the npm trap**. Future attempts to "just use the npm package" on
-   NixOS will hit the same argv[0] issue. The binary is not what it appears.
+   NixOS will hit the same `argv[0]` issue. The binary is not what it appears.
 
 ## 9. Relevant Files
 

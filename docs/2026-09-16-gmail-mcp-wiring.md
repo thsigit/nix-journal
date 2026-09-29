@@ -68,7 +68,7 @@ Added the server to the hub `opencode.json` (the shared, three-distro configurat
 
 `opencode mcp auth gmail` produced a textbook OAuth turn: browser, consent screen, redirect, callback. And a `mcp-auth.json` that read exactly `{ "gmail": {} }`. `opencode mcp debug gmail` said "not authenticated" while simultaneously returning HTTP 200 and the server's badge (`StatelessServer`, `ESF`). The endpoint was reachable; the token just wasn't there. The command walks you to the door and does not, in fact, hand you the key.
 
-### 4.4 The Manual PKCE Script (or: Fine, I'll Do It [the Nickname of a D.I.Y. OAuth Flow])
+### 4.4 The Manual PKCE Script (or: Fine, I'll Do It `[the Nickname of a D.I.Y. OAuth Flow]`)
 
 Wrote `gmail_oauth.ps1`: generate a PKCE verifier/challenge, build the authorization URL, open the browser, run a `HttpListener` on the callback port, grab the `code`, exchange it with `oauth2.googleapis.com/token`, and write `mcp-auth.json` directly. No opencode subprocess, no in-memory state to race with, no "trust me, it worked" UI.
 

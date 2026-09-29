@@ -219,7 +219,7 @@ perfect parity table cannot see.
 exist. The service is **session-scoped**: it exists only while someone has a
 session open, and silently stops when the last one closes.
 
-Yesterday's report investigated "the systemd timer [that] discards stderr" and
+Yesterday's report investigated "the systemd timer `[that]` discards stderr" and
 the task-tree wedge that "every timer run had failed." **There is no timer.**
 That entire investigation was chasing a mechanism that does not exist on these
 hosts. (It also independently confirmed yesterday's finding that no detached
