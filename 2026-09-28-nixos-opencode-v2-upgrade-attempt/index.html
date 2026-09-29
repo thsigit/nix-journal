@@ -5191,7 +5191,7 @@
   <a href="#42-discovery-the-npm-binary-is-a-bun-wrapper-with-argv0-detection" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        4.2 Discovery: the npm binary is a Bun wrapper with argv[0] detection
+        4.2 Discovery: the npm binary is a Bun wrapper with <code>argv[0]</code> detection
       </span>
     </span>
   </a>
@@ -5544,7 +5544,7 @@
   <a href="#42-discovery-the-npm-binary-is-a-bun-wrapper-with-argv0-detection" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        4.2 Discovery: the npm binary is a Bun wrapper with argv[0] detection
+        4.2 Discovery: the npm binary is a Bun wrapper with <code>argv[0]</code> detection
       </span>
     </span>
   </a>
@@ -5715,7 +5715,7 @@ the GitHub flake input. Updated <code>common/ai/opencode.nix</code> to use <code
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Bun<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>fast<span class="w"> </span>JavaScript<span class="w"> </span>runtime...
 </span></code></pre></div>
 <p>The binary reported <strong>Bun 1.4.2</strong>, not opencode v2.0.18.</p>
-<h3 id="42-discovery-the-npm-binary-is-a-bun-wrapper-with-argv0-detection">4.2 Discovery: the npm binary is a Bun wrapper with argv[0] detection<a class="headerlink" href="#42-discovery-the-npm-binary-is-a-bun-wrapper-with-argv0-detection" title="Permanent link">&para;</a></h3>
+<h3 id="42-discovery-the-npm-binary-is-a-bun-wrapper-with-argv0-detection">4.2 Discovery: the npm binary is a Bun wrapper with <code>argv[0]</code> detection<a class="headerlink" href="#42-discovery-the-npm-binary-is-a-bun-wrapper-with-argv0-detection" title="Permanent link">&para;</a></h3>
 <p>Tested the original npm binary directly:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>./package/bin/opencode<span class="w"> </span>--version
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>opencode<span class="w"> </span>v2.0.18
@@ -5726,7 +5726,7 @@ the GitHub flake input. Updated <code>common/ai/opencode.nix</code> to use <code
 - <code>opencode</code> -&gt; shows opencode v2.0.18
 - <code>bun</code> -&gt; shows Bun 1.4.2</p>
 <p><code>autoPatchelfHook</code> patches the ELF interpreter to NixOS's glibc. This
-modification breaks the argv[0] detection logic inside the Bun-compiled binary,
+modification breaks the <code>argv[0]</code> detection logic inside the Bun-compiled binary,
 causing it to default to "Bun mode".</p>
 <h3 id="43-reversion-to-v1-commit-47ea14e">4.3 Reversion to v1 (commit 47ea14e)<a class="headerlink" href="#43-reversion-to-v1-commit-47ea14e" title="Permanent link">&para;</a></h3>
 <p>Since v2 is in beta and constantly changing, and the npm binary is
@@ -5748,11 +5748,11 @@ correctly on NixOS:</p>
 <tbody>
 <tr>
 <td>npm <code>@opencode/cli-linux-x64</code></td>
-<td>Single ELF binary compiled with Bun, dual-personality via argv[0]</td>
+<td>Single ELF binary compiled with Bun, dual-personality via <code>argv[0]</code></td>
 </tr>
 <tr>
 <td><code>autoPatchelfHook</code></td>
-<td>Patches interpreter path, breaks internal argv[0] check</td>
+<td>Patches interpreter path, breaks internal <code>argv[0]</code> check</td>
 </tr>
 <tr>
 <td>NixOS dynamic linking</td>
@@ -5786,7 +5786,7 @@ source lives in the <code>v2</code> branch of the GitHub repo.</p>
 <td>v2 via npm + autoPatchelfHook</td>
 <td>15400e2</td>
 <td>1.4.2 (Bun)</td>
-<td><strong>Broken</strong> -- argv[0] detection broken</td>
+<td><strong>Broken</strong> -- <code>argv[0]</code> detection broken</td>
 </tr>
 <tr>
 <td>v1 via GitHub flake</td>
@@ -5836,7 +5836,7 @@ the v2 branch and build from source.</p>
 <li>
 <p><strong>If npm binary must be used</strong>: Avoid <code>autoPatchelfHook</code>. Use a targeted
    <code>patchelf --set-interpreter</code> in <code>fixupPhase</code> that only changes the dynamic
-   linker path without touching other ELF metadata that Bun's argv[0] check
+   linker path without touching other ELF metadata that Bun's <code>argv[0]</code> check
    depends on.</p>
 </li>
 <li>
@@ -5847,7 +5847,7 @@ the v2 branch and build from source.</p>
 </li>
 <li>
 <p><strong>Document the npm trap</strong>. Future attempts to "just use the npm package" on
-   NixOS will hit the same argv[0] issue. The binary is not what it appears.</p>
+   NixOS will hit the same <code>argv[0]</code> issue. The binary is not what it appears.</p>
 </li>
 </ol>
 <h2 id="9-relevant-files">9. Relevant Files<a class="headerlink" href="#9-relevant-files" title="Permanent link">&para;</a></h2>

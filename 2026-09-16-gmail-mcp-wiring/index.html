@@ -4530,7 +4530,7 @@
   <a href="#44-the-manual-pkce-script-or-fine-ill-do-it-the-nickname-of-a-diy-oauth-flow" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        4.4 The Manual PKCE Script (or: Fine, I'll Do It [the Nickname of a D.I.Y. OAuth Flow])
+        4.4 The Manual PKCE Script (or: Fine, I'll Do It <code>[the Nickname of a D.I.Y. OAuth Flow]</code>)
       </span>
     </span>
   </a>
@@ -5499,7 +5499,7 @@
   <a href="#44-the-manual-pkce-script-or-fine-ill-do-it-the-nickname-of-a-diy-oauth-flow" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        4.4 The Manual PKCE Script (or: Fine, I'll Do It [the Nickname of a D.I.Y. OAuth Flow])
+        4.4 The Manual PKCE Script (or: Fine, I'll Do It <code>[the Nickname of a D.I.Y. OAuth Flow]</code>)
       </span>
     </span>
   </a>
@@ -5676,7 +5676,7 @@
 </ul>
 <h3 id="43-first-attempt-with-the-official-command-or-trust-then-verify">4.3 First Attempt With the Official Command (or: Trust, Then Verify)<a class="headerlink" href="#43-first-attempt-with-the-official-command-or-trust-then-verify" title="Permanent link">&para;</a></h3>
 <p><code>opencode mcp auth gmail</code> produced a textbook OAuth turn: browser, consent screen, redirect, callback. And a <code>mcp-auth.json</code> that read exactly <code>{ "gmail": {} }</code>. <code>opencode mcp debug gmail</code> said "not authenticated" while simultaneously returning HTTP 200 and the server's badge (<code>StatelessServer</code>, <code>ESF</code>). The endpoint was reachable; the token just wasn't there. The command walks you to the door and does not, in fact, hand you the key.</p>
-<h3 id="44-the-manual-pkce-script-or-fine-ill-do-it-the-nickname-of-a-diy-oauth-flow">4.4 The Manual PKCE Script (or: Fine, I'll Do It [the Nickname of a D.I.Y. OAuth Flow])<a class="headerlink" href="#44-the-manual-pkce-script-or-fine-ill-do-it-the-nickname-of-a-diy-oauth-flow" title="Permanent link">&para;</a></h3>
+<h3 id="44-the-manual-pkce-script-or-fine-ill-do-it-the-nickname-of-a-diy-oauth-flow">4.4 The Manual PKCE Script (or: Fine, I'll Do It <code>[the Nickname of a D.I.Y. OAuth Flow]</code>)<a class="headerlink" href="#44-the-manual-pkce-script-or-fine-ill-do-it-the-nickname-of-a-diy-oauth-flow" title="Permanent link">&para;</a></h3>
 <p>Wrote <code>gmail_oauth.ps1</code>: generate a PKCE verifier/challenge, build the authorization URL, open the browser, run a <code>HttpListener</code> on the callback port, grab the <code>code</code>, exchange it with <code>oauth2.googleapis.com/token</code>, and write <code>mcp-auth.json</code> directly. No opencode subprocess, no in-memory state to race with, no "trust me, it worked" UI.</p>
 <p>The first run exposed the missing refresh-token plot twist: <code>tokeninfo</code> reported <code>access_type: online</code>. Google only issues a refresh token when the URL asks for it. Fix: add <code>access_type=offline</code> and <code>prompt=consent</code> to the authorize request, and the second round came back with a refresh token in hand.</p>
 <h2 id="5-diagnosis-or-three-culprits-one-is-oauth-two-are-process-sociology">5. Diagnosis (or: Three Culprits, One Is OAuth, Two Are Process Sociology)<a class="headerlink" href="#5-diagnosis-or-three-culprits-one-is-oauth-two-are-process-sociology" title="Permanent link">&para;</a></h2>

@@ -6156,7 +6156,7 @@ perfect parity table cannot see.</p>
 <code>systemctl --user list-units</code> finds nothing; <code>~/.config/systemd/user/</code> does not
 exist. The service is <strong>session-scoped</strong>: it exists only while someone has a
 session open, and silently stops when the last one closes.</p>
-<p>Yesterday's report investigated "the systemd timer [that] discards stderr" and
+<p>Yesterday's report investigated "the systemd timer <code>[that]</code> discards stderr" and
 the task-tree wedge that "every timer run had failed." <strong>There is no timer.</strong>
 That entire investigation was chasing a mechanism that does not exist on these
 hosts. (It also independently confirmed yesterday's finding that no detached
