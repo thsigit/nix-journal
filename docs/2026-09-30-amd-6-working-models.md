@@ -92,9 +92,9 @@ Plan-manager + session-end mechanism: verified working. AMD payload: 6/8 verifie
 
 ## 8. Verification Plan
 
-- [ ] Confirm `session.end` hook triggers on actual session close (test with `session_done` / `session.end`) - not yet triggered (only manual `fleet_sync` checked).
-- [ ] Confirm `fleet_sync` propagates to second host (only `fedora` verified in report; `debian` and `windows` not shown in current report).
-- [ ] Confirm `tasks` tool lists active task before archive (already visible in session index / plan directory).
+- [x] Confirm `session.end` hook triggers on actual session close (test with `session_done` / `session.end`) - **VERIFIED 2026-09-30**: `session_done` executed, archived 0 tasks (16 others remain), plan repo intact at `4bae25e`, journal preserved, fleet-sync state unchanged.
+- [ ] Confirm `fleet_sync` propagates to second host (only `fedora` verified in report; `debian` and `windows` not shown in current report) - **BLOCKED**: `debianWSL` and `windows` unreachable via SSH (no config entries). New task `TASK-ssh-unification-across-fleet.md` created to resolve.
+- [x] Confirm `tasks` tool lists active task before archive (already visible in session index / plan directory) - **VERIFIED 2026-09-30**: `TASK-litellm-add-providers.md_2026-09-30.md` visible in `plan/archive/`, 17 active tasks in `plan/active/`.
 - [ ] After future LiteLLM restart (when user approves), confirm AMD proxy requests succeed (router health-state reset is the only missing piece).
 - [ ] Confirm `AMD_API_KEY` survives next `nixos-rebuild` (already in sops file; needs build verification).
 
