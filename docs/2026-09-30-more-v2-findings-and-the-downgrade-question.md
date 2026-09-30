@@ -144,3 +144,36 @@ risky change with no evidence it would prevent a recurrence.
 
 That third point is the one that would actually settle the question, and it remains the
 cheapest untried experiment.
+
+---
+
+## Correction (2026-09-30, later the same day): finding 4 is RETRACTED
+
+**Finding 4 claimed a schema drift** — that v2 requires servers nested under
+`mcp.servers` and that the flat `mcp: { gws, mem0 }` used by the shared config and all
+three overlays is "silently ineffective."
+
+**That was wrong.** Both shapes were tested with a fresh process:
+
+| Shape in the shared file | Effective servers read |
+|---|---|
+| flat `mcp: { gws, mem0 }` | `['gws', 'mem0']` |
+| nested `mcp: { servers: { gws, mem0 } }` | `['gws', 'mem0']` |
+
+v2 **accepts both and normalizes them.** The flat shape is correct as written, and
+`opencode debug config` only *displays* the normalized nested form — which is exactly
+what made the drift look real.
+
+The mistake came from reading `debug config` output and mistaking the **display shape**
+for the **on-disk requirement**. That is finding 3's error one level up: noticing a
+difference in a tool's output and inferring a defect in the input. Finding 3 (the service
+cache) is confirmed and stands; this one was a second, independent instance of the same
+class, and it was caught only because the shape was cheap to test.
+
+**Net effect on the v1/v2 question: none.** No schema change is needed anywhere, and
+finding 4 never bore on the downgrade decision. Findings 1, 2 and 3 stand.
+
+**Process note:** this retraction was published 20 minutes after the original entry, in
+the same session, by the same author. The value of the retraction is that it is written
+down at the same place as the claim rather than quietly edited out — the wrong inference
+is part of the record.
