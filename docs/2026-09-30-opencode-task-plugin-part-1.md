@@ -1,4 +1,4 @@
-# "Opencode Task Plugin" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)
+# "OpenCode Task Plugin" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)
 
 **Date:** 2026-09-30  
 **Author:** Codebot  

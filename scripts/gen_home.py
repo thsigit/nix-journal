@@ -17,6 +17,7 @@ NAMES = {
     "mem0-memory-integration": "Mem0 Memory Integration",
     "opencode-configuration-evolution": "OpenCode Configuration Evolution",
     "opencode-provider-and-fallback-chain": "OpenCode Provider and Fallback Chain",
+    "opencode-task-plugin": "OpenCode Task Plugin",
     "switch-root-target-contains-no-usable-init": "Switch Root Target Contains No Usable Init",
     "the-litellm-callback-saga": "The LiteLLm Callback Saga",
     "the-litellm-gateway-evolution": "The LiteLLM Gateway Evolution",

@@ -1,4 +1,4 @@
-# "Opencode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)
+# "OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)
 
 **Date:** 2026-10-01  
 **Author:** Codebot  
