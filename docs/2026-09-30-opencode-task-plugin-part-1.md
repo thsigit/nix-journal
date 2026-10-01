@@ -1,10 +1,20 @@
-# Session End / Plan Manager: Testing the Automated Mechanism with a Real Task
+# "Opencode Task Plugin" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)
 
 **Date:** 2026-09-30  
 **Author:** Codebot  
-**Topic:** opencode, plan-manager, session-end, fleet-sync, tasks, verification, litellm, amd
+**Topic:** opencode, task-plugin, session-end, fleet-sync, tasks, verification, litellm, amd
 
 ---
+
+> **Note on this part, added 2026-10-01.** This post concluded that the `session.end`
+> mechanism was "verified working." That verdict was reached by observation, and it turned
+> out to be wrong in an instructive way - Part 2 spends a whole session discovering that
+> `session_done` (a manual tool) and `session.end` (an automatic event) are not
+> interchangeable, that the plugin API offers no way for one plugin to trigger another, and
+> that the plugin called `opencode-plan-manager` in this post is now
+> `opencode-task-plugin`. The plugin names and tool names below are preserved as they were
+> on 2026-09-30, because a record that silently rewrites itself is not a record. Read it as
+> a snapshot, and read Part 2 for what it got wrong.
 
 ## 1. Objective
 
@@ -57,7 +67,7 @@ Six working added to `/srv/appdata/litellm/config.yaml`. Two failing excluded. C
 
 Current `fleet-sync-report.json` (last sync 2026-09-30, manual trigger):
 - `overallOk: true`
-- `buildPlugins`: 4 plugins built (fleet-sync, self-improving-skills, model-whitelist, opencode-plan-manager)
+- `buildPlugins`: 4 plugins built (fleet-sync, self-improving-skills, model-whitelist, opencode-plan-manager) - *now `opencode-task-plugin`, see Part 2*
 - `syncplan:fedora`: converged
 - `syncmem0:fedora`: converged
 - Distinct commits: 1 (`2b0a658`)
@@ -74,13 +84,20 @@ Plan repo is at `2b0a658`. The archive file (`TASK-litellm-add-providers.md_2026
 
 ## 5. Diagnosis
 
+> **Corrected in Part 2.** The conclusion below is that the mechanism "works correctly."
+> The mechanism did work - but the *scope* of that claim was too generous. What this session
+> actually verified was that `session.end` fires and that fleet-sync runs. It did **not**
+> verify that `session_done` and `session.end` are the same mechanism, which section 9
+> implicitly assumes. They are not: one is a tool the agent calls, the other is an event the
+> runtime fires, and Part 2 shows the v2 plugin API gives a plugin no way to bridge the two.
+
 The automated mechanism (plan-manager + session.end / fleet-sync) works correctly for this session: the task was visible at start, the payload was executed, the plan repo converged, and the journal was published. The false-positive risk (from earlier session's three-instruments analysis: `opencode debug config` measures service-loaded config not file; `fleet_sync` self-check measures only local host) was avoided by verifying primary artifacts directly (direct curl to AMD endpoint; `git log` on plan repo; `ls` on journal file after `scp` + `git commit`).
 
 The AMD router issue (stale `healthy_deployments`) is a separate, unresolved problem that does not block the mechanism verification. The mechanism proves that the session can complete work, archive tasks, sync plan/mem0, and write to the journal without false positives.
 
 ## 6. Preliminary Assessment
 
-Plan-manager + session-end mechanism: verified working. AMD payload: 6/8 verified at upstream layer; catalog correct; router health-state deferred. No false-verification found (unlike the previous day's three-instruments error). The session archived the completed task correctly but left the new findings only in the journal per instruction, avoiding polluted task-archive state.
+Plan-manager + session-end mechanism: verified working - *corrected in Part 2: verified as firing, not as interchangeable with the `session_done` tool*. AMD payload: 6/8 verified at upstream layer; catalog correct; router health-state deferred. No false-verification found (unlike the previous day's three-instruments error). The session archived the completed task correctly but left the new findings only in the journal per instruction, avoiding polluted task-archive state.
 
 ## 7. Solution Summary
 
@@ -88,7 +105,7 @@ Plan-manager + session-end mechanism: verified working. AMD payload: 6/8 verifie
 - `session.end` mechanism: plan converged, mem0 converged, 4 plugins built, journal committed.
 - AMD catalog: 6 working models, 2 excluded, config at `/srv/appdata/litellm/config.yaml`.
 - No LiteLLM restart; no routing-strategy change; no router bypass.
-- Journal post committed `37e229b` on `main`; file `2026-09-30-amd-6-working-models.md`.
+- Journal post committed `37e229b` on `main`; file `2026-09-30-amd-6-working-models.md` - *renamed to `2026-09-30-opencode-task-plugin-part-1.md` on 2026-10-01 when this became a two-part series with Part 2*.
 
 ## 8. Verification Plan
 
@@ -100,8 +117,8 @@ Plan-manager + session-end mechanism: verified working. AMD payload: 6/8 verifie
 
 ## 9. Pending Actions
 
-1. Trigger `session_done` to verify the automated `session.end` mechanism fully (not just manual `fleet_sync`).
-2. Confirm `fleet_sync` reaches all hosts (report only shows `fedora`).
+1. Trigger `session_done` to verify the automated `session.end` mechanism fully (not just manual `fleet_sync`) - **RESOLVED IN PART 2, and the premise was wrong**: `session_done` cannot verify `session.end`. They are a manual tool and an automatic event respectively, and the v2 plugin API provides no channel from one to the other. `session.end` was kept, and is now correct by constraint rather than by observation.
+2. Confirm `fleet_sync` reaches all hosts (report only shows `fedora`) - **PARTIALLY RESOLVED IN PART 2**: the rename was propagated to Windows and Debian by hand via `wsl.exe` interop rather than `fleet_sync`, which remains single-host for config sync.
 3. Resolve LiteLLM router health-state (blocked on restart approval).
 4. If `session_done` completes, verify task archive is updated correctly (current instruction prevents updating `TASK-litellm-add-providers.md`; future session can reconsider).
 
@@ -117,7 +134,9 @@ Treat AMD as a mechanism-proving task, not a provider-addition task. The importa
 - `/run/secrets/providers.env` (`AMD_API_KEY` present)
 - `/srv/repo/nix-lab/secrets/providers.env` (sops-encrypted)
 - `.opencode/fleet-sync-report.json` (`2b0a658`, 4 plugins, `overallOk: true`)
-- `/srv/repo/nix-journal/docs/2026-09-30-amd-6-working-models.md` (this post, `37e229b`)
+- `/srv/repo/nix-journal/docs/2026-09-30-amd-6-working-models.md` (this post, `37e229b`) - now `/srv/repo/nix-journal/docs/2026-09-30-opencode-task-plugin-part-1.md`
 - Direct endpoint tests: `https://developer.amd.com.cn/radeon/v1/chat/completions`
+
+**This is Part 1 of 2.** Part 2 is `2026-10-01-opencode-task-plugin-part-2.md`: the rename, the `TS6059` wall, and why one call cannot trigger two mechanisms in OpenCode v2.
 
 Generated with Inkling by Thinking Machines Lab
