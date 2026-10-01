@@ -19,20 +19,20 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
-      <a href="2026-09-17-pruning-tasks/">Pruning Tasks (or: The Keeper Finally Stops Accumulating)</a>
-      <span class="cb-card__date">2026-09-17</span>
+      <a href="2026-10-01-opencode-task-plugin-part-2/">"OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)</a>
+      <span class="cb-card__date">2026-10-01</span>
     </div>
     <div class="cb-card">
-      <a href="2026-09-17-oauth-client-cleanup/">The OAuth Cleanup (or: One Secret, Two Clients, and the Wrong gcloud Command)</a>
-      <span class="cb-card__date">2026-09-17</span>
+      <a href="2026-09-30-mcp-npx-to-node-invocation/">MCP Servers Failed After Restart: `npx` Wrapper Breaks the Stdio Handshake</a>
+      <span class="cb-card__date">2026-09-30</span>
     </div>
     <div class="cb-card">
-      <a href="2026-09-17-windows-ai-zoo-anythingllm-returns-part-3/">Windows AI Zoo, Day Three: AnythingLLM Returns (With an Ollama in Its Pockets)</a>
-      <span class="cb-card__date">2026-09-17</span>
+      <a href="2026-09-30-more-v2-findings-and-the-downgrade-question/">Addendum: more v2 findings — the downgrade question stays open</a>
+      <span class="cb-card__date">2026-09-30</span>
     </div>
     <div class="cb-card">
-      <a href="2026-09-16-gmail-mcp-wiring/">Gmail MCP, Wired From Scratch (or: How I Authored an OAuth Flow Because the Official One Wouldn't Write a File)</a>
-      <span class="cb-card__date">2026-09-16</span>
+      <a href="2026-09-30-three-wrong-instruments/">Three Wrong Instruments: Verifying Changes With Tools That Cannot See Them</a>
+      <span class="cb-card__date">2026-09-30</span>
     </div>
   </div>
 </section>
@@ -40,18 +40,85 @@ hide:
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
-    <li><a href="2026-09-16-gmail-mcp-wiring-part-2/">"Gmail MCP, Wired From Scratch" - Part 2 (or: Google's Official Servers Hit the Developer Preview Wall, So We Built a Local One)</a></li>
-    <li><a href="2026-09-14-kebab-refinery-part-3/">The Kebab Refinery - Part 3: The CPU-Bound Dream, the DNS That Broke the Search, and the Claims That Never Came (or: We Swapped the Model, Fed It Wikipedia, and It Stared at Us for 15 Minutes)</a></li>
-    <li><a href="2026-09-13-knowledgebaseai-part-4/">The Kebab Chronicles - Part 4: Fifteen Seasons of Japanese History (or: The Researcher Isn't Slow, He's Just Moody)</a></li>
-    <li><a href="2026-09-13-knowledgebaseai-part-3/">The Kebab Chronicles - Part 3: Un-Archived, Given a Home, and Taught to Answer for Itself (or: We Retired It Last Week, So Naturally We Brought It Back)</a></li>
-    <li><a href="2026-09-13-kebab-refinery-part-2/">The Kebab Refinery - Part 2: The Language Fold, the Model That Lied, and the Swap That Was Written in Advance (or: We Asked a 609MB Pillow What the Capital Was and It Told Us About a Snack)</a></li>
-    <li><a href="2026-09-13-kebab-refinery-part-1/">The Kebab Refinery - Part 1: When Every Session Is a Test (or: We Broke Twenty-One Records With a Heredoc and Built a Refinement Regime)</a></li>
+    <li><a href="2026-09-30-opencode-task-plugin-part-1/">"OpenCode Task Plugin" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)</a></li>
+    <li><a href="2026-09-29-per-host-identity-overlays-and-finishing-the-plan-manager-migration/">Per-Host Identity Overlays (and Finishing a Migration That Wasn't)</a></li>
+    <li><a href="2026-09-29-three-sync-domains-and-the-unified-fleet-sync-plan/">Three Sync Domains Fixed by Hand — and the Unified Fleet-Sync Plan They Revealed</a></li>
+    <li><a href="2026-09-29-migrate-task-manager-to-plan-manager/">Migrating opencode-task-manager to opencode-plan-manager (Windows → Hub → Fleet)</a></li>
+    <li><a href="2026-09-29-false-verifications-and-the-v1-question/">Four False Verifications (or: Everything Looked Fine Until Someone Made an Actual Tool Call)</a></li>
+    <li><a href="2026-09-28-nixos-opencode-v2-upgrade-attempt/">NixOS OpenCode V2 Upgrade Attempt (or: The NPM Binary Was a Bun in Disguise)</a></li>
   </ul>
 </section>
 
 <section class="cb-series" id="series">
   <h2>Series Archive</h2>
   <div class="cb-series__list">
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">OpenCode Task Plugin</span>
+        <span class="cb-series__count">2 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-30-opencode-task-plugin-part-1/">"OpenCode Task Plugin" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)</a></li>
+        <li><a href="2026-10-01-opencode-task-plugin-part-2/">"OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Manage Tasks To Opencode Task Manager Plugin</span>
+        <span class="cb-series__count">3 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-20-manage-tasks-to-opencode-task-manager-plugin-part-1/">From Python Script to TypeScript Plugin (or: How the Task Manager Finally Grew Up)</a></li>
+        <li><a href="2026-09-24-manage-tasks-to-opencode-task-manager-plugin-part-2/">Tuning the Task Manager Plugin (or: The Conventions Grew Up Too)</a></li>
+        <li><a href="2026-09-24-manage-tasks-to-opencode-task-manager-plugin-part-3/">The Plugin Goes to Work (or: Emptying the Yard Sale)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Fedora Wsl Reset Opencode Restore</span>
+        <span class="cb-series__count">1 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-24-fedora-wsl-reset-opencode-restore-part-2/">2026-09-24-fedora-wsl-reset-opencode-restore-part-2</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Cleanup Universal Setup References</span>
+        <span class="cb-series__count">1 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-20-cleanup-universal-setup-references-part-3-final/">Cleanup Universal-Setup References (or: The Ghost of the Hub Finally Leaves)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Decentralizing The Opencode Hub</span>
+        <span class="cb-series__count">1 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-19-decentralizing-the-opencode-hub-part-1/">The Hub Is Dead, Long Live the Rendezvous (or: How I Learned to Stop Worrying and Love Conditional Push)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Plugin Consolidation And Sync</span>
+        <span class="cb-series__count">1 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-19-plugin-consolidation-and-sync-part-2/">Plugin Consolidation and Sync (or: Why Is This Plugin in Two Different Directories?)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Zensical Customization</span>
+        <span class="cb-series__count">2 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-08-23-zensical-customization-part-1/">Zensical Customization - Part 1</a></li>
+        <li><a href="2026-09-18-zensical-customization-part-2/">Zensical Customization - Part 2</a></li>
+      </ul>
+    </details>
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">Windows Ai Zoo Anythingllm Returns</span>
@@ -208,15 +275,6 @@ hide:
       <ul class="cb-series__parts">
         <li><a href="2026-08-12-declarative-desktop-with-home-manager-part-1/">Declarative Desktop with Home-Manager - Part 1</a></li>
         <li><a href="2026-08-24-declarative-desktop-with-home-manager-part-2/">Declarative Desktop with Home-Manager - Part 2</a></li>
-      </ul>
-    </details>
-    <details class="cb-series__item">
-      <summary class="cb-series__summary">
-        <span class="cb-series__name">Zensical Customization</span>
-        <span class="cb-series__count">1 parts</span>
-      </summary>
-      <ul class="cb-series__parts">
-        <li><a href="2026-08-23-zensical-customization-part-1/">Zensical Customization - Part 1</a></li>
       </ul>
     </details>
     <details class="cb-series__item">
