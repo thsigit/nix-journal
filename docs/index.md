@@ -19,20 +19,20 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
-      <a href="2026-10-01-opencode-task-plugin-part-2/">"OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)</a>
+      <a href="2026-10-05-ai-gateway-profile-graduation/">AI-Gateway Profile: The Graduation, the Chain We Buried, and the Exception We Buried With It</a>
+      <span class="cb-card__date">2026-10-05</span>
+    </div>
+    <div class="cb-card">
+      <a href="2026-10-02-litellm-cli-fix-and-ai-gateway-profile/">Litellm Cli Config Corruption Fix and AI-Gateway Profile Architecture</a>
+      <span class="cb-card__date">2026-10-02</span>
+    </div>
+    <div class="cb-card">
+      <a href="2026-10-02-litellm-provider-discovery-and-architecture-cleanup/">Litellm Provider Discovery and Architecture Cleanup - Part 2</a>
+      <span class="cb-card__date">2026-10-02</span>
+    </div>
+    <div class="cb-card">
+      <a href="2026-10-01-fleet-sync-command-delivery/">Command Delivery Across the SSH Hop: Where One Code Path Serves Two Shells</a>
       <span class="cb-card__date">2026-10-01</span>
-    </div>
-    <div class="cb-card">
-      <a href="2026-09-30-mcp-npx-to-node-invocation/">MCP Servers Failed After Restart: `npx` Wrapper Breaks the Stdio Handshake</a>
-      <span class="cb-card__date">2026-09-30</span>
-    </div>
-    <div class="cb-card">
-      <a href="2026-09-30-more-v2-findings-and-the-downgrade-question/">Addendum: more v2 findings — the downgrade question stays open</a>
-      <span class="cb-card__date">2026-09-30</span>
-    </div>
-    <div class="cb-card">
-      <a href="2026-09-30-three-wrong-instruments/">Three Wrong Instruments: Verifying Changes With Tools That Cannot See Them</a>
-      <span class="cb-card__date">2026-09-30</span>
     </div>
   </div>
 </section>
@@ -40,12 +40,12 @@ hide:
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-01-opencode-task-plugin-part-2/">"OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)</a></li>
+    <li><a href="2026-09-30-mcp-npx-to-node-invocation/">MCP Servers Failed After Restart: `npx` Wrapper Breaks the Stdio Handshake</a></li>
+    <li><a href="2026-09-30-more-v2-findings-and-the-downgrade-question/">Addendum: more v2 findings — the downgrade question stays open</a></li>
+    <li><a href="2026-09-30-three-wrong-instruments/">Three Wrong Instruments: Verifying Changes With Tools That Cannot See Them</a></li>
     <li><a href="2026-09-30-opencode-task-plugin-part-1/">"OpenCode Task Plugin" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)</a></li>
     <li><a href="2026-09-29-per-host-identity-overlays-and-finishing-the-plan-manager-migration/">Per-Host Identity Overlays (and Finishing a Migration That Wasn't)</a></li>
-    <li><a href="2026-09-29-three-sync-domains-and-the-unified-fleet-sync-plan/">Three Sync Domains Fixed by Hand — and the Unified Fleet-Sync Plan They Revealed</a></li>
-    <li><a href="2026-09-29-migrate-task-manager-to-plan-manager/">Migrating opencode-task-manager to opencode-plan-manager (Windows → Hub → Fleet)</a></li>
-    <li><a href="2026-09-29-false-verifications-and-the-v1-question/">Four False Verifications (or: Everything Looked Fine Until Someone Made an Actual Tool Call)</a></li>
-    <li><a href="2026-09-28-nixos-opencode-v2-upgrade-attempt/">NixOS OpenCode V2 Upgrade Attempt (or: The NPM Binary Was a Bun in Disguise)</a></li>
   </ul>
 </section>
 
