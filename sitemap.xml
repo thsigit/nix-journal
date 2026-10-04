@@ -553,7 +553,19 @@
         <loc>https://thsigit.github.io/nix-journal/2026-09-30-three-wrong-instruments/</loc>
       </url>
       <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-01-fleet-sync-command-delivery/</loc>
+      </url>
+      <url>
         <loc>https://thsigit.github.io/nix-journal/2026-10-01-opencode-task-plugin-part-2/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-02-litellm-cli-fix-and-ai-gateway-profile/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-02-litellm-provider-discovery-and-architecture-cleanup/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-05-ai-gateway-profile-graduation/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
