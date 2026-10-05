@@ -44,7 +44,7 @@ hide:
     <li><a href="2026-10-01-fleet-sync-command-delivery/">Command Delivery Across the SSH Hop: Where One Code Path Serves Two Shells</a></li>
     <li><a href="2026-10-01-opencode-task-plugin-part-2/">"OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)</a></li>
     <li><a href="2026-09-30-mcp-npx-to-node-invocation/">MCP Servers Failed After Restart: `npx` Wrapper Breaks the Stdio Handshake</a></li>
-    <li><a href="2026-09-30-more-v2-findings-and-the-downgrade-question/">Addendum: more v2 findings — the downgrade question stays open</a></li>
+    <li><a href="2026-09-30-more-v2-findings-and-the-downgrade-question/">Three Wrong Instruments, One Right Question (or: The Addendum That Retracted Itself)</a></li>
     <li><a href="2026-09-30-three-wrong-instruments/">Three Wrong Instruments: Verifying Changes With Tools That Cannot See Them</a></li>
   </ul>
 </section>
