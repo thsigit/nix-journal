@@ -6089,8 +6089,8 @@ which is why a spec author picked the wrong one.</p>
 <p>While testing a config change, <code>opencode debug config</code> reported an <code>mcp</code> block that had
 been deleted from disk. Decisive test:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>disk: mcp REMOVED
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  [A] via the RUNNING SERVICE (default)    -&gt; mcp present? True
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  [B] via a FRESH PROCESS (isolated port) -&gt; mcp present? False
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  A: via the RUNNING SERVICE (default)    -&gt; mcp present? True
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  B: via a FRESH PROCESS (isolated port) -&gt; mcp present? False
 </span></code></pre></div>
 <p>The service (pid 470) had started at 08:29 and was reading config from 2.5 hours earlier.
 A junk <code>__probe__</code> key written to disk confirmed it independently: <code>debug config</code> never
