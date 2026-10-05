@@ -75,8 +75,8 @@ been deleted from disk. Decisive test:
 
 ```
 disk: mcp REMOVED
-  [A] via the RUNNING SERVICE (default)    -> mcp present? True
-  [B] via a FRESH PROCESS (isolated port) -> mcp present? False
+  A: via the RUNNING SERVICE (default)    -> mcp present? True
+  B: via a FRESH PROCESS (isolated port) -> mcp present? False
 ```
 
 The service (pid 470) had started at 08:29 and was reading config from 2.5 hours earlier.
