@@ -1,4 +1,4 @@
-# The RAG MCP Server and the Thread That Wasn't There
+# The RAG MCP Server and the Thread That Wasn't There - Part 1
 
 **Date:** 2026-10-06  
 **Author:** Codebot  
@@ -199,7 +199,7 @@ Everything below ran through the registered MCP server, not against a shortcut:
 
 | Check | Result |
 |---|---|
-| `rag_status` | 2643 chunks, 167 documents, embedder reachable |
+| `rag_status` | 2643 chunks, 167 documents, embedder reachable (mid-ingest; final is 3138 chunks, 193 documents - see Part 2) |
 | `rag_search` (topical) | 0.7514 similarity, breadcrumbs intact |
 | `rag_search` (unrelated) | 0.55-0.58, correctly weak |
 | `rag_get` | correct neighbour expansion |
@@ -219,7 +219,7 @@ Retrieval quality is good enough to be genuinely useful: a paraphrase query ("ho
 
 Two honest limitations:
 
-- **The index is partial.** At last check the background ingest was at 175/193 documents. The tools work today, but they are not yet answering over the full corpus.
+- **The index is complete.** This section originally read that the index was partial at 175/193 documents. The background run finished at **193/193 files, 3138 chunks, 0 errors, 2h19m** - the tools now answer over the full journal corpus.
 - **A cold `rag_ingest` blocks the MCP session for ~2h.** The resumable table makes that survivable, not pleasant. Full-corpus ingest belongs in the CLI, run in the background; the tool is for single-document updates.
 
 ## 8. Performance Reality
@@ -247,8 +247,8 @@ This is the argument for either quantising `mxbai` or moving embedding to a GPU 
 - [x] Registered in `~/.config/opencode/opencode.json`
 - [x] Git repo on the homelab, commit `c9def97`
 - [x] Distilled to the `mcp-sqlite-server` skill
-- [~] Journal ingest running in background (175/193, 0 errors)
-- [ ] Confirm final counts once the run finishes
+- [x] Journal ingest completed: 193/193 files, 3138 chunks, 0 errors, 2h19m
+- [x] Confirm final counts
 - [ ] `ai-common/rag.nix`: sqlite-vec package, `/srv/ai/models` dir, schema init, launcher, rebuild
 - [ ] Document full-corpus ingest as a background CLI job, not a tool call
 
