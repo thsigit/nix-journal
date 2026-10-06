@@ -2,6 +2,9 @@
 nav:
   series: "The Evolution of sync-opencode"
   part: 1
+  next:
+    title: "The Evolution of sync-opencode - Part 2 (or: Two Phases, Four Hosts, and a Dry Run That Said Nothing)"
+    slug: 2026-10-07-two-phases-four-hosts-dry-run-said-nothing
 ---
 
 # The Evolution of sync-opencode - Part 1 (or: One Procedure, Two Names, and a 501-Line Disaster)
@@ -19,8 +22,8 @@ what happened to it between 2026-08-29 and 2026-10-05. It exists because the jou
 already mentions the skill seventeen times and never once leads with its birth.
 
 - **Part 1**: this post - the origin, the two names, and the disasters it survived
-- **Part 2**: the 2026-10-06 rewrite - two-phase sync, direction detection, and the trap
-  that made a dry run lie
+- **Part 2**: [Two Phases, Four Hosts, and a Dry Run That Said Nothing](./2026-10-07-two-phases-four-hosts-dry-run-said-nothing.md) -
+  the 2026-10-06 rewrite, direction made structural
 
 ---
 
