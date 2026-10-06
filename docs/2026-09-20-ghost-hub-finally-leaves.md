@@ -9,8 +9,8 @@
 ## Trilogy Context
 
 **Part 3 of 3 (Final)** — This session removes the last stale references to the retired universal-setup skill.
-- **Part 1**: [Decentralizing the opencode Hub](./learned-stop-worrying-love-conditional-push.md) — kills shared hub, creates rendezvous + sync-opencode
-- **Part 2**: [Plugin Consolidation and Sync](./why-plugin-two-different-directories.md) — unifies plugin locations, fixes sync-excludes
+- **Part 1**: [Decentralizing the opencode Hub](./2026-09-19-learned-stop-worrying-love-conditional-push.md) — kills shared hub, creates rendezvous + sync-opencode
+- **Part 2**: [Plugin Consolidation and Sync](./2026-09-19-why-plugin-two-different-directories.md) — unifies plugin locations, fixes sync-excludes
 
 ---
 

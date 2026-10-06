@@ -6,6 +6,18 @@
 
 ---
 
+## Series Context
+
+**Part 2 of 3** - This session consolidates plugin locations and fixes the sync-excludes.
+
+- **Part 1**: [The Hub Is Dead, Long Live the Rendezvous](./2026-09-19-learned-stop-worrying-love-conditional-push.md) - kills shared hub, creates rendezvous + sync-opencode
+- **Part 2**: this post - unifies plugin locations, fixes sync-excludes
+- **Part 3**: [Cleanup Universal-Setup References](./2026-09-20-ghost-hub-finally-leaves.md) - removes stale docs, finalizes handoffs
+
+---
+
+After the decentralized sync migration (Part 1), the opencode-google-workspace plugin was installed via npm/opencode CLI into `~/.opencode/plugins/` (the opencode runtime directory). Meanwhile, self-improving-skills was manually placed in `~/.config/opencode/plugins/` (the config directory). Two different locations, no clear reason why.
+
 ## 1. Objective (or: Fix the Plugin Location Mess)
 
 Clean up the plugin directory sprawl across three distros (FedoraWSL, DebianWSL, Windows native) and establish a consistent rule: all plugins live in `~/.config/opencode/plugins/`, not split between `~/.opencode/plugins/` and `~/.config/opencode/plugins/`.

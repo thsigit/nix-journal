@@ -6,6 +6,16 @@
 
 ---
 
+## Series Context
+
+**Part 1 of 3** - This session kills the shared hub and establishes the decentralized rendezvous.
+
+- **Part 1**: this post - kills shared hub, creates rendezvous + sync-opencode
+- **Part 2**: [Plugin Consolidation and Sync](./2026-09-19-why-plugin-two-different-directories.md) - unifies plugin locations, fixes sync-excludes
+- **Part 3**: [Cleanup Universal-Setup References](./2026-09-20-ghost-hub-finally-leaves.md) - removes stale docs, finalizes handoffs
+
+---
+
 ## 1. Objective (or: What We Were Even Doing Here)
 
 Take the "universal setup" - a single shared config hub at `/mnt/c/users/sigit/.config/opencode/` that FedoraWSL and DebianWSL reached through symlinks - and kill it. The goal was simple to state and surprisingly painful to achieve:
@@ -72,6 +82,15 @@ Fedora first, then Debian (whose `rsync` install the user handled personally - v
 4. Point `~/.bashrc` at `$HOME/.config/opencode/opencode.<os>.json` via `OPENCODE_CONFIG`.
 
 `skills.paths` was slimmed in the base `opencode.json` to the portable form `[".opencode/skills", "~/.config/opencode/skills"]`; the pre-change file was backed up per the backup-opencode convention (`opencode.json-pre-decentralize-20260919-150100.json`).
+
+### 4.3.1 The Overlays Are Not Optional (or: Why Three Files Survive)
+
+Each host loads its overlay via `OPENCODE_CONFIG` (`opencode.fedora.json`, `opencode.debian.json`, `opencode.windows.json`). The overlay carries two fields the universal base does not, and only one of them truly forces the split:
+
+1. **`plugin` path** - the real reason the Windows overlay cannot be deleted. The google-workspace plugin lives at `~/.config/opencode/plugins/...` on Linux but `C:\Users\SIGIT\.config\opencode\plugins\...` on Windows. You cannot put both paths in one universal `opencode.json` - the wrong one is invalid on the other platform. So the per-OS overlay is the only place the correct plugin path can live. Fedora and Debian share the *same* Linux path, so their two overlays are functionally identical; they could collapse into one `opencode.linux.json`, but each host's `OPENCODE_CONFIG` already points at its own file, so leaving them separate is harmless.
+2. **`shell`** - the universal base sets no `shell`. Linux defaults to `bash` anyway, and Windows native defaults to `pwsh` (which is what `opencode.windows.json` wants), so the explicit `shell` in the overlays is belt-and-suspenders rather than strictly required. It stays because an explicit `shell` is cheaper than a surprise when a platform default changes.
+
+Everything else - providers, agents, models - lives in the universal `opencode.json` and reaches all three distros through the normal sync. Case in point: on 2026-09-21 the Cloudflare Workers AI provider (added only to Fedora's local `opencode.json` and never synced) was propagated to Debian and Windows purely by pushing the universal base to the rendezvous and pulling. All four copies (Fedora, Debian, Windows, hub) ended on the identical `opencode.json` sha `a085b55a...`, with provider keys `['nvidia','openrouter','kenari','cloudflare']` everywhere. The cloudflare API key rides along in the separately-synced `auth.json`, already present on all hosts, so no new credential distribution was needed. The overlays needed no edit for that change - another data point that they exist only for `shell` + the per-OS `plugin` path.
 
 ### 4.4 The Sync Skill (First Draft)
 
