@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "blogging-skill-evolution"
+  series: "Blogging Skill Evolution"
   part: 5
   prev:
     title: "Blogging Skill Evolution - Part 4"

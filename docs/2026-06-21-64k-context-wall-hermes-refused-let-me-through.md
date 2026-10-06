@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "the-tinyllama-experiment"
+  series: "The TinyLlama Experiment"
   part: 1
   next:
     title: "The TinyLlama Experiment - Part 2"

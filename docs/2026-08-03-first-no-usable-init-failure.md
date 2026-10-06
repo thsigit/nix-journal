@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "boot-recovery"
+  series: "Boot Recovery"
   part: 1
   next:
     title: "Boot Recovery - Part 2"

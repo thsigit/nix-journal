@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "opencode-configuration-evolution"
+  series: "OpenCode Configuration Evolution"
   part: 5
   prev:
     title: "OpenCode Configuration Evolution - Part 4"

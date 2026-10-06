@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "opencode-task-plugin"
+  series: "OpenCode Task Plugin"
   part: 1
   next:
     title: "\"OpenCode Task Plugin\" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)"

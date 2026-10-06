@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "captive-portal-and-access-point-bundle"
+  series: "Captive Portal and Access Point Bundle"
   part: 1
   next:
     title: "Captive Portal and Access Point Bundle - Part 2"

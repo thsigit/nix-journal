@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "declarative-desktop-with-home-manager"
+  series: "Declarative Desktop with Home-Manager"
   part: 2
   prev:
     title: "Declarative Desktop with Home-Manager - Part 1"

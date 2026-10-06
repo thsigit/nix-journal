@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "the-litellm-gateway-evolution"
+  series: "The LiteLLM Gateway Evolution"
   part: 12
   prev:
     title: "The LiteLLM Gateway Evolution - Part 11"

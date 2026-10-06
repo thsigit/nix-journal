@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "switch-root-target-contains-no-usable-init"
+  series: "Switch Root Target Contains No Usable Init"
   part: 2
   prev:
     title: "\"switch root target contains no usable init\" - Part 1"

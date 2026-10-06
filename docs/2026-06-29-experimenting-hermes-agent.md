@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "experimenting-with-hermes-agent"
+  series: "Experimenting with Hermes Agent"
   part: 1
   next:
     title: "Experimenting with Hermes Agent - Part 2"

@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "the-litellm-callback-saga"
+  series: "The LiteLLM Callback Saga"
   part: 1
   next:
     title: "The LiteLLM Callback Saga - Part 2"

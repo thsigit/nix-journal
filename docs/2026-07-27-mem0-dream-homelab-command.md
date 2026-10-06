@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "mem0-memory-integration"
+  series: "mem0 Memory Integration"
   part: 3
   prev:
     title: "Mem0 Memory Integration - Part 2"

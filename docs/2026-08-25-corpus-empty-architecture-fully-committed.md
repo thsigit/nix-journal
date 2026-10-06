@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "knowledgebaseai"
+  series: "KnowledgeBaseAI"
   part: 1
   next:
     title: "KnowledgeBaseAI - Part 2"

@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "kebab-refinery"
+  series: "The Kebab Refinery"
   part: 2
   prev:
     title: "The Kebab Refinery - Part 1: When Every Session Is a Test (or: We Broke Twenty-One Records With a Heredoc and Built a Refinement Regime)"

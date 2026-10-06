@@ -1,22 +1,22 @@
-{#-
-  Series navigation footer. Renders when the page has series frontmatter
-  (injected by scripts/gen_home.py --stage at render time).
--#}
-{% if page.meta and page.meta.series %}
+{##-
+  Series navigation footer. Renders from the nav: frontmatter that each series
+  post declares about itself (series, part, prev, next).
+
+  There are deliberately no "first part" / "final part" branches: under explicit
+  navigation a post may legitimately have neither side, and claiming otherwise
+  would be a guess.
+-##}
+{% if page.meta and page.meta.nav and page.meta.nav.series %}
   <hr>
   <div class="cb-series-footer">
     <p>
-      Part of the <strong>{{ page.meta.series_name }}</strong> series.
+      Part {{ page.meta.nav.part }} of the <strong>{{ page.meta.nav.series }}</strong> series.
     </p>
-    {% if page.meta.series_prev_url %}
-      <p>Previous: <a href="{{ page.meta.series_prev_url | url }}">{{ page.meta.series_prev_title }}</a>.</p>
-    {% else %}
-      <p>This is the first part.</p>
+    {% if page.meta.nav.prev %}
+      <p>Previous: <a href="{{ page.meta.nav.prev.slug | url }}/">{{ page.meta.nav.prev.title }}</a>.</p>
     {% endif %}
-    {% if page.meta.series_next_url %}
-      <p>Next: <a href="{{ page.meta.series_next_url | url }}">{{ page.meta.series_next_title }}</a>.</p>
-    {% else %}
-      <p>This is the final part.</p>
+    {% if page.meta.nav.next %}
+      <p>Next: <a href="{{ page.meta.nav.next.slug | url }}/">{{ page.meta.nav.next.title }}</a>.</p>
     {% endif %}
   </div>
 {% endif %}

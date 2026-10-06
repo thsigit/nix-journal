@@ -1,246 +1,243 @@
-import os, re, glob, json, sys, shutil
+import os, re, glob, json, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(REPO, "docs")
 CACHE = os.path.join(REPO, ".cache")
 SKIP = ("index.md", "about.md", "reports.md")
 
-NAMES = {
-    "blogging-skill-evolution": "Blogging Skill Evolution",
-    "boot-recovery": "Boot Recovery",
-    "captive-portal-and-access-point-bundle": "Captive Portal and Access Point Bundle",
-    "coding-with-hermes-agent": "Coding with Hermes Agent",
-    "experimenting-with-hermes-agent": "Experimenting with Hermes Agent",
-    "hermes-agent-provider-and-fallback-chain": "Hermes Agent Provider and Fallback Chain",
-    "homelab-management": "Homelab Management",
-    "litellm-frontend-build": "LiteLLM Frontend Build",
-    "mem0-memory-integration": "Mem0 Memory Integration",
-    "opencode-configuration-evolution": "OpenCode Configuration Evolution",
-    "opencode-provider-and-fallback-chain": "OpenCode Provider and Fallback Chain",
-    "opencode-task-plugin": "OpenCode Task Plugin",
-    "switch-root-target-contains-no-usable-init": "Switch Root Target Contains No Usable Init",
-    "the-litellm-callback-saga": "The LiteLLm Callback Saga",
-    "the-litellm-gateway-evolution": "The LiteLLM Gateway Evolution",
-    "the-tinyllama-experiment": "The TinyLlama Experiment",
-    "three-distros-one-opencode-setup": "Three Distros, One OpenCode Setup",
-    "declarative-desktop-with-home-manager": "Declarative Desktop with Home-Manager",
-    "zensical-customization": "Zensical Customization",
-    "knowledgebaseai": "KnowledgeBaseAI",
-}
-def disp(key):
-    return NAMES.get(key, key.replace("-", " ").title())
+# ---------------------------------------------------------------------------
+# Navigation is DECLARED, not inferred.
+#
+# Each series post carries its own nav: frontmatter (series, part, prev, next).
+# Nothing here derives membership from a filename, because filenames now describe
+# content and carry no sequence information.
+#
+# The important function in this file is validate(), not collect(). Under the old
+# design a broken grouping failed visibly (no footer rendered). With hand-written
+# navigation the failure modes are silent: a link to a post that was renamed, a
+# one-way prev/next pair, a self-reference. Those render as a dead or
+# contradictory footer on a live page. So they are build errors.
+# ---------------------------------------------------------------------------
 
-def meta(path):
-    base = os.path.basename(path)[:-3]
-    m = re.match(r"(\d{4}-\d{2}-\d{2})-(.+)", base)
-    date, slug = m.group(1), m.group(2)
-    title = base
-    for line in open(path):
-        if line.startswith("# "):
-            title = line[2:].strip()
-            break
-    return date, slug, title, base
 
-def collect(docs_dir):
-    series_re = re.compile(r"^(.*)-part-(\d+)(?:-[a-z]+)?$")
-    files = [f for f in glob.glob(docs_dir + "/*.md") if os.path.basename(f) not in SKIP]
-    groups = {}
-    standalone = []
-    for path in files:
-        date, slug, title, base = meta(path)
-        mm = series_re.match(slug)
-        if mm:
-            groups.setdefault(mm.group(1), []).append((int(mm.group(2)), date, slug, title, base))
-        else:
-            standalone.append((date, slug, title, base))
-    series_data = {}
-    for key, items in groups.items():
-        items_sorted = sorted(items, key=lambda x: x[0])
-        parts = []
-        for idx, (part_num, date, slug, title, base) in enumerate(items_sorted):
-            prev_url = items_sorted[idx - 1][4] + "/" if idx > 0 else None
-            prev_title = items_sorted[idx - 1][3] if idx > 0 else None
-            next_url = items_sorted[idx + 1][4] + "/" if idx < len(items_sorted) - 1 else None
-            next_title = items_sorted[idx + 1][3] if idx < len(items_sorted) - 1 else None
-            parts.append({
-                "part": part_num,
-                "title": title,
-                "url": base + "/",
-                "slug": slug,
-                "date": date,
-                "prev_url": prev_url,
-                "prev_title": prev_title,
-                "next_url": next_url,
-                "next_title": next_title,
-            })
-        series_data[key] = {
-            "name": disp(key),
-            "parts": parts,
-            "total": len(parts),
-        }
-    return series_data, groups, standalone
-
-def yaml_escape(s):
-    return s.replace("\\", "\\\\").replace('"', '\\"')
-
-def inject_frontmatter(stage_dir, series_data):
-    count = 0
-    manual_line_re = re.compile(r"^\[Part \d+\]\(https://homelab\.home\.arpa/journal/[^)]+\.md\)\.$")
-    for path in glob.glob(stage_dir + "/*.md"):
-        base = os.path.basename(path)[:-3]
-        if base in SKIP:
+def parse_frontmatter(path):
+    """Return (frontmatter_dict_or_None, body). Minimal YAML subset:
+    nav.series (str), nav.part (int), nav.prev/.next ({title, slug})."""
+    with open(path, encoding="utf-8", errors="replace") as f:
+        text = f.read()
+    if not text.startswith("---\n"):
+        return None, text
+    end = text.find("\n---\n", 3)
+    if end == -1:
+        return None, text
+    block = text[4:end + 1]
+    body = text[end + 5:]
+    nav = {"series": None, "part": None, "prev": None, "next": None}
+    section = None
+    side = None
+    for raw in block.split("\n"):
+        if not raw.strip() or raw.strip().startswith("#"):
             continue
-        mdate = re.match(r"^(\d{4}-\d{2}-\d{2})-(.+)$", base)
-        slug = mdate.group(2) if mdate else base
-        m = re.match(r"^(.*)-part-(\d+)", slug)
+        m = re.match(r"^(\s*)([A-Za-z_]+):\s*(.*)$", raw)
         if not m:
             continue
-        key = m.group(1)
-        series = series_data.get(key)
-        if not series:
+        indent, key, val = m.group(1), m.group(2), m.group(3).strip()
+        if indent == "":
+            section = key if val == "" else None
+            if key == "nav":
+                section = "nav"
+                side = None
             continue
-        part = None
-        for p in series["parts"]:
-            if p["slug"] == slug:
-                part = p
-                break
-        if part is None:
+        if section != "nav":
             continue
-        with open(path) as f:
-            lines = f.readlines()
-        new_lines = []
-        for line in lines:
-            if manual_line_re.match(line.rstrip()):
-                continue
-            new_lines.append(line)
-        body = "".join(new_lines)
-        meta_lines = [
-            "---",
-            "series: " + key,
-            'series_name: "' + yaml_escape(series["name"]) + '"',
-        ]
-        if part.get("prev_url"):
-            meta_lines.append('series_prev_url: "' + yaml_escape(part["prev_url"]) + '"')
-            meta_lines.append('series_prev_title: "' + yaml_escape(part["prev_title"]) + '"')
-        if part.get("next_url"):
-            meta_lines.append('series_next_url: "' + yaml_escape(part["next_url"]) + '"')
-            meta_lines.append('series_next_title: "' + yaml_escape(part["next_title"]) + '"')
-        meta_lines.append("---")
-        with open(path, "w") as f:
-            f.write("\n".join(meta_lines) + "\n\n" + body)
-        count += 1
-    return count
+        if indent == "  ":
+            if key in ("prev", "next"):
+                side = key
+                nav[side] = {}
+            elif key == "series":
+                nav["series"] = unquote(val)
+                side = None
+            elif key == "part" and val.isdigit():
+                nav["part"] = int(val)
+                side = None
+        elif indent == "    " and side:
+            nav[side][key] = unquote(val)
+    return nav, body
 
-def write_index(docs_dir, series_data, groups, standalone):
-    # All items sorted by date (most recent first)
-    all_items = standalone + [(d, s, t, b) for k in groups for (_, d, s, t, b) in groups[k]]
-    all_items_sorted = sorted(all_items, key=lambda x: x[0], reverse=True)
-    
-    # Featured: last 4 items (most recent 4)
-    featured = all_items_sorted[:4]
-    
-    # Latest for sidebar: next 6 after featured
-    latest = all_items_sorted[4:10]
-    
-    # Series sorted by most recent part date
-    order = sorted(groups.items(), key=lambda kv: max(d for _, d, _, _, _ in kv[1]), reverse=True)
-    
-    # Hero section
-    hero_block = (
-        '<div class="cb-hero">\n'
-        '  <div class="cb-hero__content">\n'
+
+def unquote(v):
+    v = v.strip()
+    if len(v) >= 2 and v[0] == '"' and v[-1] == '"':
+        v = v[1:-1]
+    return v.replace('\\"', '"').replace("\\\\", "\\")
+
+
+def title_of(path, body):
+    for line in body.split("\n"):
+        if line.startswith("# "):
+            return line[2:].strip()
+    return None
+
+
+def collect():
+    """Group posts by their declared nav.series. Returns (series, standalone)."""
+    series = {}
+    standalone = []
+    for path in sorted(glob.glob(os.path.join(DOCS, "*.md"))):
+        base = os.path.basename(path)
+        if base in SKIP:
+            continue
+        stem = base[:-3]
+        nav, body = parse_frontmatter(path)
+        title = title_of(path, body)
+        if not nav or not nav.get("series"):
+            standalone.append({"stem": stem, "title": title})
+            continue
+        series.setdefault(nav["series"], []).append({
+            "stem": stem,
+            "part": nav["part"],
+            "title": title,
+            "prev": nav["prev"],
+            "next": nav["next"],
+        })
+    for items in series.values():
+        items.sort(key=lambda x: (x["part"] is None, x["part"] or 0))
+    return series, standalone
+
+
+def validate(series, standalone):
+    """Fail the build on any navigation defect. Returns a list of errors."""
+    errors = []
+    stems = {p["stem"] for items in series.values() for p in items}
+    stems |= {p["stem"] for p in standalone}
+
+    for name, items in series.items():
+        parts = [i["part"] for i in items]
+        if any(p is None for p in parts):
+            errors.append(f"series {name!r}: post missing nav.part")
+            continue
+        expected = list(range(1, len(parts) + 1))
+        if sorted(parts) != expected:
+            errors.append(f"series {name!r}: parts {sorted(parts)} are not contiguous from 1")
+            continue
+        for idx, item in enumerate(items):
+            want_prev = items[idx - 1] if idx > 0 else None
+            want_next = items[idx + 1] if idx < len(items) - 1 else None
+            for side, neighbour in (("prev", want_prev), ("next", want_next)):
+                got = item[side]
+                if neighbour is None:
+                    if got:
+                        errors.append(
+                            f"{item['stem']}: has nav.{side} but is at the edge of {name!r}")
+                    continue
+                if not got:
+                    errors.append(f"{item['stem']}: missing nav.{side} in {name!r}")
+                    continue
+                if got.get("slug") != neighbour["stem"]:
+                    errors.append(
+                        f"{item['stem']}: nav.{side}.slug is {got.get('slug')!r}, "
+                        f"expected {neighbour['stem']!r}")
+                if not got.get("title"):
+                    errors.append(f"{item['stem']}: nav.{side}.title is empty")
+                if got.get("slug") == item["stem"]:
+                    errors.append(f"{item['stem']}: nav.{side} points at itself")
+                if got.get("slug") and got["slug"] not in stems:
+                    errors.append(
+                        f"{item['stem']}: nav.{side}.slug {got['slug']!r} does not exist")
+            # reciprocity, checked independently of ordering
+            if want_next and item["next"] and want_next["prev"]:
+                back = want_next["prev"].get("slug")
+                if back != item["stem"]:
+                    errors.append(
+                        f"one-way link: {item['stem']} -> {want_next['stem']} "
+                        f"but {want_next['stem']} -> {back!r}")
+    return errors
+
+
+def write_index(series, standalone):
+    dated = []
+    for items in series.values():
+        for i in items:
+            dated.append(i)
+    all_items = [(s["title"], s["stem"]) for s in standalone] + \
+                [(i["title"], i["stem"]) for i in dated]
+
+    def date_of(stem):
+        m = re.match(r"^(\d{4}-\d{2}-\d{2})-", stem)
+        return m.group(1) if m else ""
+
+    ordered = sorted(all_items, key=lambda x: date_of(x[1]), reverse=True)
+    featured = ordered[:4]
+    latest = ordered[4:10]
+
+    order = sorted(series.items(),
+                   key=lambda kv: date_of(kv[1][-1]["stem"]), reverse=True)
+
+    hero = (
+        '<div class="cb-hero">\n  <div class="cb-hero__content">\n'
         '    <h1>Codebot Reports</h1>\n'
         '    <p>Technical reports from homelab experiments, builds, and research.</p>\n'
         '    <div class="cb-hero__cta">\n'
         '      <a href="#series" class="cb-btn cb-btn--primary">Browse Series</a>\n'
         '      <a href="#latest" class="cb-btn cb-btn--secondary">Latest Posts</a>\n'
-        '    </div>\n'
-        '  </div>\n'
-        '</div>\n'
+        '    </div>\n  </div>\n</div>\n'
     )
-    
-    # Featured posts section
-    featured_block = '<section class="cb-featured" id="featured">\n'
-    featured_block += '  <h2>Latest Highlights</h2>\n'
-    featured_block += '  <div class="cb-featured__grid">\n'
-    for d, s, t, b in featured:
-        featured_block += f'    <div class="cb-card">\n'
-        featured_block += f'      <a href="{b}/">{t}</a>\n'
-        featured_block += f'      <span class="cb-card__date">{d}</span>\n'
-        featured_block += f'    </div>\n'
-    featured_block += '  </div>\n'
-    featured_block += '</section>\n'
-    
-    # Latest posts sidebar section
-    latest_block = '<section class="cb-latest" id="latest">\n'
-    latest_block += '  <h2>More Recent Posts</h2>\n'
-    latest_block += '  <ul>\n'
-    for d, s, t, b in latest:
-        latest_block += f'    <li><a href="{b}/">{t}</a></li>\n'
-    latest_block += '  </ul>\n'
-    latest_block += '</section>\n'
-    
-    # Series navigation section
-    series_block = '<section class="cb-series" id="series">\n'
-    series_block += '  <h2>Series Archive</h2>\n'
-    series_block += '  <div class="cb-series__list">\n'
-    for key, items in order:
-        items_sorted = sorted(items, key=lambda x: x[0])
-        series_block += f'    <details class="cb-series__item">\n'
-        series_block += f'      <summary class="cb-series__summary">\n'
-        series_block += f'        <span class="cb-series__name">{disp(key)}</span>\n'
-        series_block += f'        <span class="cb-series__count">{len(items_sorted)} parts</span>\n'
-        series_block += f'      </summary>\n'
-        series_block += f'      <ul class="cb-series__parts">\n'
-        for _, date, slug, title, base in items_sorted:
-            series_block += f'        <li><a href="{base}/">{title}</a></li>\n'
-        series_block += f'      </ul>\n'
-        series_block += f'    </details>\n'
-    series_block += '  </div>\n'
-    series_block += '</section>\n'
-    
-    content = (
-        "---\n"
-        "nav_exclude: true\n"
-        "hide:\n"
-        "  - navigation\n"
-        "---\n\n"
-        + hero_block
-        + "\n"
-        + featured_block
-        + "\n"
-        + latest_block
-        + "\n"
-        + series_block
-    )
-    
-    with open(os.path.join(docs_dir, "index.md"), "w") as f:
+
+    b = '<section class="cb-featured" id="featured">\n  <h2>Latest Highlights</h2>\n'
+    b += '  <div class="cb-featured__grid">\n'
+    for t, stem in featured:
+        b += f'    <div class="cb-card">\n      <a href="{stem}/">{esc(t)}</a>\n'
+        b += f'      <span class="cb-card__date">{date_of(stem)}</span>\n    </div>\n'
+    b += "  </div>\n</section>\n"
+
+    b += '<section class="cb-latest" id="latest">\n  <h2>More Recent Posts</h2>\n  <ul>\n'
+    for t, stem in latest:
+        b += f'    <li><a href="{stem}/">{esc(t)}</a></li>\n'
+    b += "  </ul>\n</section>\n"
+
+    b += '<section class="cb-series" id="series">\n  <h2>Series Archive</h2>\n'
+    b += '  <div class="cb-series__list">\n'
+    for name, items in order:
+        b += '    <details class="cb-series__item">\n'
+        b += '      <summary class="cb-series__summary">\n'
+        b += f'        <span class="cb-series__name">{esc(name)}</span>\n'
+        b += f'        <span class="cb-series__count">{len(items)} parts</span>\n'
+        b += "      </summary>\n      <ul class=\"cb-series__parts\">\n"
+        for i in items:
+            b += f'        <li><a href="{i["stem"]}/">{esc(i["title"])}</a></li>\n'
+        b += "      </ul>\n    </details>\n"
+    b += "  </div>\n</section>\n"
+
+    content = ("---\nnav_exclude: true\nhide:\n  - navigation\n---\n\n"
+               + hero + "\n" + b)
+    with open(os.path.join(DOCS, "index.md"), "w") as f:
         f.write(content)
 
-def main():
-    args = sys.argv[1:]
-    stage = None
-    if "--stage" in args:
-        i = args.index("--stage")
-        stage = args[i + 1]
 
+def esc(s):
+    return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def main():
     os.makedirs(CACHE, exist_ok=True)
-    series_data, groups, standalone = collect(DOCS)
+    series, standalone = collect()
+
+    errors = validate(series, standalone)
+    if errors:
+        print(f"navigation validation FAILED ({len(errors)} problems):")
+        for e in errors:
+            print("  !!", e)
+        sys.exit(1)
 
     with open(os.path.join(CACHE, "series_data.json"), "w") as f:
-        json.dump(series_data, f, indent=2)
+        json.dump(series, f, indent=2)
 
-    if stage:
-        if os.path.exists(stage):
-            shutil.rmtree(stage)
-        shutil.copytree(DOCS, stage)
-        write_index(stage, series_data, groups, standalone)
-        injected = inject_frontmatter(stage, series_data)
-        print(f"staged {stage} ({injected} posts with series frontmatter)")
-    else:
-        write_index(DOCS, series_data, groups, standalone)
-        print("wrote index.md and series_data.json")
-    print("series groups:", len(groups))
+    write_index(series, standalone)
+    print(f"wrote index.md and series_data.json")
+    print(f"series: {len(series)}  posts in a series: {sum(len(v) for v in series.values())}"
+          f"  standalone: {len(standalone)}")
+    print("navigation validation passed")
+
 
 if __name__ == "__main__":
     main()

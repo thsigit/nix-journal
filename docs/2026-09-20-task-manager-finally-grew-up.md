@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "manage-tasks-to-opencode-task-manager-plugin"
+  series: "Manage Tasks to the OpenCode Task Manager Plugin"
   part: 1
   next:
     title: "Tuning the Task Manager Plugin (or: The Conventions Grew Up Too)"

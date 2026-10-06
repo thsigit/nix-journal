@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "three-distros-one-opencode-setup"
+  series: "Three Distros, One OpenCode Setup"
   part: 2
   prev:
     title: "Three Distros, One OpenCode Setup - Part 1 (or: I Built a Fleet by Accident)"

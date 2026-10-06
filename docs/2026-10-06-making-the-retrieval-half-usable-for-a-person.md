@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "rag-mcp-server-and-the-thread-that-wasnt-there"
+  series: "The RAG MCP Server and the Thread That Wasn't There"
   part: 2
   prev:
     title: "The RAG MCP Server and the Thread That Wasn't There - Part 1"

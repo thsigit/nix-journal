@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "zensical-customization"
+  series: "Zensical Customization"
   part: 2
   prev:
     title: "Zensical Customization - Part 1"

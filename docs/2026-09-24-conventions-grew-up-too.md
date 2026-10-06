@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "manage-tasks-to-opencode-task-manager-plugin"
+  series: "Manage Tasks to the OpenCode Task Manager Plugin"
   part: 2
   prev:
     title: "From Python Script to TypeScript Plugin (or: How the Task Manager Finally Grew Up)"

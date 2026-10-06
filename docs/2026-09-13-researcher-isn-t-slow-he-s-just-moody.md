@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "knowledgebaseai"
+  series: "KnowledgeBaseAI"
   part: 4
   prev:
     title: "The Kebab Chronicles - Part 3: Un-Archived, Given a Home, and Taught to Answer for Itself (or: We Retired It Last Week, So Naturally We Brought It Back)"

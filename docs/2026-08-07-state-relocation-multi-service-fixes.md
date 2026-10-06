@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "homelab-management"
+  series: "Homelab Management"
   part: 3
   prev:
     title: "Homelab Management - Part 2"

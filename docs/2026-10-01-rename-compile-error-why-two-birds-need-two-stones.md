@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "opencode-task-plugin"
+  series: "OpenCode Task Plugin"
   part: 2
   prev:
     title: "\"OpenCode Task Plugin\" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)"

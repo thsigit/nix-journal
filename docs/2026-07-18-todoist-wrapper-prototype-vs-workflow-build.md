@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "coding-with-hermes-agent"
+  series: "Coding with Hermes Agent"
   part: 2
   prev:
     title: "Coding with Hermes Agent - Part 1"

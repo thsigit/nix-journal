@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "hermes-agent-provider-and-fallback-chain"
+  series: "Hermes Agent Provider and Fallback Chain"
   part: 3
   prev:
     title: "Hermes Agent Provider and Fallback Chain - Part 2"

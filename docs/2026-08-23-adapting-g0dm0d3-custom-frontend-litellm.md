@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "litellm-frontend-build"
+  series: "LiteLLM Frontend Build"
   part: 1
   next:
     title: "LiteLLM Frontend Build - Part 2"

@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "kebab-refinery"
+  series: "The Kebab Refinery"
   part: 1
   next:
     title: "The Kebab Refinery - Part 2: The Language Fold, the Model That Lied, and the Swap That Was Written in Advance (or: We Asked a 609MB Pillow What the Capital Was and It Told Us About a Snack)"

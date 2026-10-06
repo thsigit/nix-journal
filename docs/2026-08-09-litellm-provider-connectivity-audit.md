@@ -1,6 +1,6 @@
 ---
 nav:
-  series: "opencode-provider-and-fallback-chain"
+  series: "OpenCode Provider and Fallback Chain"
   part: 1
   next:
     title: "\"OpenCode Provider and Fallback Chain\" - Part 2"
