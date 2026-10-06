@@ -1,4 +1,4 @@
-import os, re, glob, json, sys
+import os, re, glob, json, sys, shutil
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(REPO, "docs")
@@ -154,7 +154,7 @@ def validate(series, standalone):
     return errors
 
 
-def write_index(series, standalone):
+def write_index(series, standalone, out_dir):
     dated = []
     for items in series.values():
         for i in items:
@@ -210,7 +210,7 @@ def write_index(series, standalone):
 
     content = ("---\nnav_exclude: true\nhide:\n  - navigation\n---\n\n"
                + hero + "\n" + b)
-    with open(os.path.join(DOCS, "index.md"), "w") as f:
+    with open(os.path.join(out_dir, "index.md"), "w") as f:
         f.write(content)
 
 
@@ -219,6 +219,29 @@ def esc(s):
 
 
 def main():
+    args = sys.argv[1:]
+    stage = None
+    if "--stage" in args:
+        i = args.index("--stage")
+        if i + 1 >= len(args):
+            print("error: --stage requires a directory", file=sys.stderr)
+            sys.exit(2)
+        stage = os.path.abspath(args[i + 1])
+        # --stage was removed by 7396181 (2026-10-06) while the service kept
+        # passing it, so it silently became a no-op: build_docs stopped being
+        # refreshed and the auto-build served a stale snapshot. Python ignores
+        # unknown argv, which makes an un-honoured flag indistinguishable from a
+        # honoured one -- hence these guards fail loudly instead of doing nothing.
+        if stage == DOCS:
+            print(f"error: --stage must not be the docs directory itself ({DOCS});",
+                  file=sys.stderr)
+            print("       it would be deleted before being copied", file=sys.stderr)
+            sys.exit(2)
+        if not os.path.isdir(os.path.dirname(stage) or "."):
+            print(f"error: --stage parent does not exist: {os.path.dirname(stage)}",
+                  file=sys.stderr)
+            sys.exit(2)
+
     os.makedirs(CACHE, exist_ok=True)
     series, standalone = collect()
 
@@ -232,7 +255,19 @@ def main():
     with open(os.path.join(CACHE, "series_data.json"), "w") as f:
         json.dump(series, f, indent=2)
 
-    write_index(series, standalone)
+    if stage:
+        if os.path.isdir(stage):
+            shutil.rmtree(stage)
+        shutil.copytree(DOCS, stage)
+        # The fresh index goes into the STAGE, never into docs/: docs/ is
+        # watched by zensical-build.path, so writing index.md there during a
+        # service run re-triggers the watcher. That is the protection 58d75b4
+        # added and 7396181 lost.
+        write_index(series, standalone, stage)
+        print(f"staged {len(glob.glob(os.path.join(stage, '*.md')))} .md files -> {stage}")
+    else:
+        write_index(series, standalone, DOCS)
+
     print(f"wrote index.md and series_data.json")
     print(f"series: {len(series)}  posts in a series: {sum(len(v) for v in series.values())}"
           f"  standalone: {len(standalone)}")
