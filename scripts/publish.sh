@@ -164,6 +164,39 @@ git rm -r --quiet --ignore-unmatch '*' 2>/dev/null || true
 find . -maxdepth 1 -mindepth 1 ! -name '.git' -exec rm -rf {} +
 cp -r "$SRC"/. "$WT"/
 touch "$WT/.nojekyll"
+
+# The rename in 1185257 (2026-10-06) changed all 186 post slugs, and the wipe
+# above deletes every old path. GitHub Pages serves /404.html for ANY missing
+# URL, so injecting the old->new map into the built 404.html rescues all 186
+# renamed URLs with one file instead of keeping stale copies of every post.
+# The local /srv/www/codebot/journal is deliberately not touched: it keeps the
+# old directories (the copy at line 122 is additive), so old URLs still resolve
+# there, and the path-triggered zensical-build.service would overwrite any
+# injection anyway.
+REDIRECT_JS="$REPO_DIR/scripts/gh-pages-redirect.js"
+if [[ -f "$REDIRECT_JS" && -f "$WT/404.html" ]]; then
+  echo "==> Injecting renamed-slug redirect into 404.html"
+  python3 - "$WT/404.html" "$REDIRECT_JS" <<'PYEOF'
+import sys
+html_path, js_path = sys.argv[1], sys.argv[2]
+TAG = "<!-- renamed-slug-redirect -->"
+html = open(html_path, encoding="utf-8").read()
+if TAG in html:
+    print("    already present, skipping")
+else:
+    block = ("\n" + TAG + "\n<script>\n"
+             + open(js_path, encoding="utf-8").read() + "\n</script>\n")
+    i = html.rfind("</body>")
+    html = html[:i] + block + html[i:] if i != -1 else html + block
+    open(html_path, "w", encoding="utf-8").write(html)
+    print("    injected old->new slug map (%d bytes)" % len(block))
+PYEOF
+else
+  echo "ERROR: renamed-slug redirect NOT injected" >&2
+  echo "       missing: $REDIRECT_JS or $WT/404.html" >&2
+  exit 1
+fi
+
 git add -A
 
 COMMITTED=0

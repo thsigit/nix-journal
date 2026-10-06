@@ -1,0 +1,230 @@
+/*
+ * Renamed-slug redirect for GitHub Pages.
+ *
+ * Commit 1185257 (2026-10-06) renamed all 186 posts to content-representing
+ * slugs. publish.sh wipes the gh-pages worktree before copying, so without
+ * this map every one of those 186 URLs 404s the next time the site is
+ * published. GitHub Pages serves /404.html for any missing path, which is what
+ * lets a single injected file cover all of them.
+ *
+ * scripts/publish.sh injects this into the built 404.html. It is generated from
+ * the rename commit itself rather than maintained by hand, so it cannot drift
+ * away from the actual rename.
+ *
+ * Regenerate after another rename (run in the repo root):
+ *
+ *   git show -M --name-status --format="" 1185257 |
+ *     awk '$1 ~ /^R/ {print $2, $3}' |
+ *     sed 's|docs/||g; s|\.md||g' > /tmp/rename-map.txt
+ *
+ * then rebuild MAP above from that two-column file (one "old new" pair per
+ * line) and leave the body below unchanged.
+ */
+(function () {
+  "use strict";
+
+  var MAP = {
+    "2026-06-20-authoring-with-llm": "2026-06-20-authoring-with-llm-the-beginning",
+    "2026-06-20-hermes-agent-provider-and-fallback-chain-part-1": "2026-06-20-model-chaos-lean-stack-saturday-evening-hermes",
+    "2026-06-21-the-tinyllama-experiment-part-1": "2026-06-21-64k-context-wall-hermes-refused-let-me-through",
+    "2026-06-29-blogging-skill-evolution-part-1": "2026-06-29-making-skill-blogging-sessions-so-stop-having-re-explain",
+    "2026-06-29-building-a-local-llm-setup-in-wsl": "2026-06-29-model-chaos-lean-inference-stack",
+    "2026-06-29-experimenting-with-hermes-agent-part-1": "2026-06-29-experimenting-hermes-agent",
+    "2026-06-29-hermes-agent-provider-and-fallback-chain-part-2": "2026-06-29-openrouter-cloud-provider",
+    "2026-06-29-hermes-agent-provider-and-fallback-chain-part-3": "2026-06-29-migrating-ollama-google-gemini-md-credential-practices",
+    "2026-06-29-hermes-claw-migrate-dry-run": "2026-06-29-hermes-claw-migrate-dry-run-found-nothing",
+    "2026-06-29-openclaw-dementia-and-config-backups": "2026-06-29-when-openclaw-forgot-models",
+    "2026-06-29-session-notes-lean-stack-and-failover": "2026-06-29-auditing-provider-state-building-failover-layer",
+    "2026-06-29-the-tinyllama-experiment-part-2": "2026-06-29-taming-context-window",
+    "2026-06-29-the-tinyllama-experiment-part-3": "2026-06-29-config-boundaries-tinyllama-wind-down",
+    "2026-06-30-a-fresh-new-start": "2026-06-30-curating-archive-rewriting-old-posts-fixing-loop",
+    "2026-06-30-experimenting-with-hermes-agent-part-2": "2026-06-30-resolving-hermes-dashboard-access-wsl2-real-time-session-monitoring",
+    "2026-06-30-experimenting-with-hermes-agent-part-3": "2026-06-30-cleaning-up-hermes-sessions-teaching-hermes-do-again",
+    "2026-06-30-nix-reorg": "2026-06-30-repository-restructure-module-split-machines-profiles-separation",
+    "2026-07-01-experimenting-with-hermes-agent-part-4": "2026-07-01-replacing-gemini-api-key-without-taking-down-main-tab",
+    "2026-07-01-experimenting-with-hermes-agent-part-5": "2026-07-01-manual-check-caught-rogue-blob",
+    "2026-07-01-moving-llm-models-out-of-wsl": "2026-07-01-manifest-sidecar-decision",
+    "2026-07-02-experimenting-with-hermes-agent-part-6": "2026-07-02-attempting-llama-cpp-connection-wsl2",
+    "2026-07-02-hermes-agent-provider-and-fallback-chain-part-4": "2026-07-02-switching-providers-picking-fallback-chain",
+    "2026-07-16-the-agent-that-didnt-get-to-upgrade": "2026-07-16-agent-didnt-get-upgrade",
+    "2026-07-16-the-cert-that-led-to-a-sudo-policy": "2026-07-16-cert-led-sudo-policy",
+    "2026-07-16-the-litellm-gateway-evolution-part-1": "2026-07-16-podman-migration-stabilization",
+    "2026-07-18-coding-with-hermes-agent-part-1": "2026-07-18-building-multi-agent-workflow-orchestrator-running-first-cycle",
+    "2026-07-18-coding-with-hermes-agent-part-2": "2026-07-18-todoist-wrapper-prototype-vs-workflow-build",
+    "2026-07-20-coding-with-hermes-agent-part-3": "2026-07-20-pm-assistant-v0-4-crash-safe-configurable",
+    "2026-07-20-hermes-agent-provider-and-fallback-chain-part-5": "2026-07-20-retiring-fireworks-cleaning-up-fallback-chain",
+    "2026-07-20-the-litellm-gateway-evolution-part-2": "2026-07-20-refactoring-litellm-gateway-four-way-split-inventory-policy",
+    "2026-07-21-experimenting-with-hermes-agent-part-7": "2026-07-21-overengineering-hello-world",
+    "2026-07-21-experimenting-with-hermes-agent-part-8": "2026-07-21-pm-assistant-builds-text-editor-first-real-workload",
+    "2026-07-21-experimenting-with-hermes-agent-part-9": "2026-07-21-text-editor-took-thirteen-turns",
+    "2026-07-22-blogging-skill-evolution-part-2": "2026-07-22-blogging-skill-evolution-hardening-the-conventions",
+    "2026-07-22-experimenting-with-hermes-agent-part-10": "2026-07-22-retirement-hermes-deleted",
+    "2026-07-22-opencode-configuration-evolution-part-1": "2026-07-22-agent-roster-specialized-model-routing",
+    "2026-07-22-opencode-session-archaeology-and-cleanup": "2026-07-22-session-archaeology-cleanup",
+    "2026-07-22-the-litellm-gateway-evolution-part-3": "2026-07-22-removing-paxsenix-rewiring-local-litellm-proxy",
+    "2026-07-24-blogging-skill-evolution-part-3": "2026-07-24-67-sessions-posts",
+    "2026-07-24-freeing-up-root-moving-xdg-dirs-to-srv-media-on-nixos": "2026-07-24-freeing-up-root-moving-xdg-dirs-srv-media-nixos",
+    "2026-07-24-mem0-memory-integration-part-1": "2026-07-24-rolling-own-mem0-integration",
+    "2026-07-24-mem0-memory-integration-part-2": "2026-07-24-custom-integration-vs-official-plugin",
+    "2026-07-24-the-litellm-gateway-evolution-part-4": "2026-07-24-rename-data-files",
+    "2026-07-24-why-your-self-signed-cert-is-never-trusted": "2026-07-24-what-s-actually-going",
+    "2026-07-25-captive-portal-and-access-point-bundle-part-1": "2026-07-25-hostapd-hunt-when-dns-gets-lost-firewall",
+    "2026-07-25-captive-portal-and-access-point-bundle-part-2": "2026-07-25-wpa2-enterprise-freeradius-peap-pem-wouldn-t-load",
+    "2026-07-25-opencode-configuration-evolution-part-2": "2026-07-25-persistent-context-vs-fresh-start-problem",
+    "2026-07-26-captive-portal-and-access-point-bundle-part-3": "2026-07-26-runtime-editable-radius-users-users-file-wasn-t-there",
+    "2026-07-26-captive-portal-and-access-point-bundle-part-4": "2026-07-26-opennds-captive-portal-nixos",
+    "2026-07-27-captive-portal-and-access-point-bundle-part-5": "2026-07-27-voucher-based-guest-auth",
+    "2026-07-27-homelab-management-part-1": "2026-07-27-housekeeping-containers-dashboard-storage",
+    "2026-07-27-homelab-management-part-2": "2026-07-27-single-reference-skill-agents",
+    "2026-07-27-mem0-memory-integration-part-3": "2026-07-27-mem0-dream-homelab-command",
+    "2026-07-27-podman-container-fix-stale-netavark-chains-and-network-host": "2026-07-27-fixing-podman-crash-without-breaking-everything",
+    "2026-07-27-the-litellm-gateway-evolution-part-5": "2026-07-27-model-catalog-expansion-opencode",
+    "2026-07-29-the-litellm-gateway-evolution-part-6": "2026-07-29-test-models-fix-no-connected-db",
+    "2026-07-30-the-litellm-gateway-evolution-part-7": "2026-07-30-prune-dead-providers-opencode-integration",
+    "2026-07-31-opencode-configuration-evolution-part-3": "2026-07-31-dead-provider-agent-model-cleanup",
+    "2026-07-31-the-litellm-gateway-evolution-part-8": "2026-07-31-fix-sqlite-crash-loop-postgresql-requirement",
+    "2026-08-01-captive-portal-and-access-point-bundle-part-6": "2026-08-01-voucher-fix-bitrouter-bug",
+    "2026-08-03-boot-recovery-part-1": "2026-08-03-first-no-usable-init-failure",
+    "2026-08-03-boot-recovery-part-2": "2026-08-03-pre-failure-cleanup-session",
+    "2026-08-03-boot-recovery-part-3": "2026-08-03-reinstall-recovery-fixes",
+    "2026-08-05-archiving-nix-lab-and-restoring-nix-config-as-the-active-repo": "2026-08-05-archiving-nix-lab-restoring-nix-config-active-repo",
+    "2026-08-05-xfce-desktop-theme-on-nixos": "2026-08-05-xfce-desktop-theme-nixos",
+    "2026-08-06-boot-recovery-part-4": "2026-08-06-boot-menu-cleanup-repo-sync",
+    "2026-08-07-homelab-management-part-3": "2026-08-07-state-relocation-multi-service-fixes",
+    "2026-08-07-persistent-state-on-nixos-surviving-systemd-260-statedirectory": "2026-08-07-persistent-state-nixos-surviving-systemd-260-statedirectory",
+    "2026-08-08-mem0-memory-integration-part-4": "2026-08-08-259-memory-dream-run",
+    "2026-08-08-testing-browser-use-in-wsl": "2026-08-08-browser-automation-opencode-technical-report",
+    "2026-08-09-opencode-configuration-evolution-part-4": "2026-08-09-multi-provider-config-kenari-freetheai-aihubmix",
+    "2026-08-09-opencode-provider-and-fallback-chain-part-1": "2026-08-09-litellm-provider-connectivity-audit",
+    "2026-08-09-testing-browser-use-in-wsl-part2": "2026-08-09-browser-use-from-agent-to-skill",
+    "2026-08-09-the-litellm-gateway-evolution-part-9": "2026-08-09-consolidate-3-file-config-into-gateway-json",
+    "2026-08-10-blogging-skill-evolution-part-4": "2026-08-10-technical-report-format-standardization",
+    "2026-08-10-switch-root-target-contains-no-usable-init-part-1": "2026-08-10-stage-1-timing-diagnosis",
+    "2026-08-11-editing-the-goal-command": "2026-08-11-adding-review-checkpoint-session-flow",
+    "2026-08-11-opencode-configuration-evolution-part-5": "2026-08-11-nvidia-whitelist-dead-reference-sweep",
+    "2026-08-11-switch-root-target-contains-no-usable-init-part-2": "2026-08-11-culprit-confirmed-mitigation",
+    "2026-08-12-captive-portal-and-access-point-bundle-part-7": "2026-08-12-common-reorg-ap-revival",
+    "2026-08-12-declarative-desktop-with-home-manager-part-1": "2026-08-12-store-copies-force-flags-wallpaper-reset-itself-out-principle",
+    "2026-08-12-switch-root-target-contains-no-usable-init-part-3": "2026-08-12-ap-bundle-trigger",
+    "2026-08-13-boot-recovery-part-5": "2026-08-13-emergency-grub-failsafe-entry",
+    "2026-08-13-splitting-nix-lab-pkgs-and-github-auth": "2026-08-13-splitting-nix-lab-pkgs-into-standalone-repos-setting-up-multi",
+    "2026-08-13-the-litellm-gateway-evolution-part-10": "2026-08-13-litellm-cli-independent-toggleable-module",
+    "2026-08-14-blogging-skill-evolution-part-5": "2026-08-14-zensical-static-site-reports-home-arpa",
+    "2026-08-16-switch-root-target-contains-no-usable-init-part-4": "2026-08-16-workstation-wave",
+    "2026-08-16-two-channel-repo-strategy": "2026-08-16-nix-config-nix-lab",
+    "2026-08-18-the-litellm-gateway-evolution-part-11": "2026-08-18-provider-lifecycle-commands-sops-consolidation",
+    "2026-08-20-the-litellm-gateway-evolution-part-12": "2026-08-20-module-restructure-recovery",
+    "2026-08-21-switch-root-target-contains-no-usable-init-part-5": "2026-08-21-litellm-cli-activation-bisect",
+    "2026-08-21-the-litellm-gateway-evolution-part-13": "2026-08-21-podman-native-systemd-migration",
+    "2026-08-21-the-litellm-gateway-evolution-part-14-final": "2026-08-21-provider-native-discovery-providers-json",
+    "2026-08-22-blogging-skill-evolution-part-6": "2026-08-22-series-architecture-brand-normalization-across-archive",
+    "2026-08-22-opencode-configuration-evolution-part-6": "2026-08-22-agent-cli-path-openclaw-hermes-agent-opencode",
+    "2026-08-23-litellm-frontend-build-part-1": "2026-08-23-adapting-g0dm0d3-custom-frontend-litellm",
+    "2026-08-23-zensical-customization-part-1": "2026-08-23-adding-custom-top-navigation-controlling-sidebar-codebot-reports-site",
+    "2026-08-24-declarative-desktop-with-home-manager-part-2": "2026-08-24-out-store-symlinks-every-gui-click-now-uncommitted-change",
+    "2026-08-24-miscellaneous-tasks-wakectl-journal-and-agent-cleanup": "2026-08-24-task-roulette-draw-one-park-write-report-instead",
+    "2026-08-25-blogging-skill-evolution-part-7": "2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan",
+    "2026-08-25-knowledgebaseai-part-1": "2026-08-25-corpus-empty-architecture-fully-committed",
+    "2026-08-25-litellm-frontend-build-part-2": "2026-08-25-writing-javascript-scratch",
+    "2026-08-25-the-litellm-callback-saga-part-1": "2026-08-25-callbacks-easy-until-they-nix-store-has-opinions-about-your",
+    "2026-08-26-journal-repo-reorg-and-github-pages-subpath": "2026-08-26-blog-got-own-repo-github-pages-got-told-lives-nix",
+    "2026-08-26-litellm-cli-inventory-overhaul": "2026-08-26-learned-stop-worrying-love-free-tag",
+    "2026-08-27-ai-infrastructure-task-review-and-update": "2026-08-27-audited-task-list-against-actual-code-found-most-items-already",
+    "2026-08-27-blogging-skill-evolution-part-8": "2026-08-27-blogging-skill-evolution",
+    "2026-08-27-litellm-frontend-build-part-3": "2026-08-27-litellm-frontend-build",
+    "2026-08-27-the-litellm-callback-saga-part-2": "2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs",
+    "2026-08-28-knowledgebaseai-part-2": "2026-08-28-empty-scaffolding-searchable-llm-augmented-knowledge-base",
+    "2026-08-29-cleanup-bit-back-fedora-opencode-debian-rescue": "2026-08-29-aggressive-cache-wipe-broke-opencode-fedora-wsl-spawned-debian-backup",
+    "2026-08-29-three-distros-one-opencode-setup-part-1": "2026-08-29-built-fleet-accident",
+    "2026-08-29-wakectl-architecture-refactor": "2026-08-29-monolith-modular-framework",
+    "2026-08-30-mem0-memory-integration-part-5": "2026-08-30-plugin-mcp-local-store-survives-quota-wall",
+    "2026-08-30-opencode-provider-and-fallback-chain-part-2": "2026-08-30-litellm-without-a-db-and-nvidia-cold-starts",
+    "2026-08-30-the-litellm-callback-saga-part-3-final": "2026-08-30-glob-didn-t-hash-changed-activation-script-had-go",
+    "2026-08-30-three-distros-one-opencode-setup-part-2": "2026-08-30-three-distros-one-configuration-windows-asterisk",
+    "2026-09-01-bitrouter-alpha-27-add-providers": "2026-09-01-adding-providers-easy-making-them-chat",
+    "2026-09-01-opencode-provider-and-fallback-chain-part-3-final": "2026-09-01-killing-the-gateway-that-was-hiding-two-bugs",
+    "2026-09-01-retiring-bitrouter-single-gateway": "2026-09-01-litellm-becomes-homelab-s-single-gateway",
+    "2026-09-02-architecture-conformance-pass": "2026-09-02-punching-up-nix-lab-s-single-source-truth",
+    "2026-09-02-static-config-refactor": "2026-09-02-litellm-gateway-now-uses-committed-config-yaml",
+    "2026-09-03-captive-portal-and-access-point-bundle-part-8": "2026-09-03-boot-failure-root-caused-opennds-nft-iptables-hybrid-wall",
+    "2026-09-03-captive-portal-and-access-point-bundle-part-9": "2026-09-03-captive-portal-access-point-bundle",
+    "2026-09-04-taming-the-model-zoo-pruning-nvidia-kenari-openrouter-and-a-copilot-pulse-check": "2026-09-04-filtering-nvidia-kenari-openrouter-working-text-models",
+    "2026-09-04-wakectl-mouse-mode-resurrection": "2026-09-04-missing-makeraw-ruined-everyone-s-tuesday",
+    "2026-09-06-llama-cpp-multi-model-router-and-local-model-zoo": "2026-09-06-organizing-homelab-model-zoo-giving-llama-cpp-front-door",
+    "2026-09-06-the-zoo-after-dark-pruning-vibevoice-bert-tiny-and-why-gemma-still-wont-load": "2026-09-06-started-tinyllama-llama-home-arpa",
+    "2026-09-07-open-webui-whisper-and-the-quest-for-offline-vision": "2026-09-07-stopped-trusting-dns",
+    "2026-09-08-ai-home-arpa-domain-move-and-fast-health": "2026-09-08-ai-home-arpa-born",
+    "2026-09-08-litellm-frontend-rebuild-and-sqlite-stats": "2026-09-08-evicted-g0dm0d3-gave-gateway-proper-dashboard",
+    "2026-09-08-one-repo-one-main-and-a-pruned-snapshot": "2026-09-08-git-archaeology-nobody-asked",
+    "2026-09-08-smaller-models-and-a-homegrown-translator": "2026-09-08-smaller-models-one-real-translator",
+    "2026-09-08-wakectl-mouse-mode-the-keys-you-type-with": "2026-09-08-alt-arrow-won-being-compromise-nobody-protested",
+    "2026-09-09-from-a-provider-zoo-to-a-free-tier-first-fleet": "2026-09-09-provider-zoo-free-tier-first-fleet",
+    "2026-09-09-silently-dropped-opencode-skills": "2026-09-09-yaml-2-x-silently-ate-research-skill",
+    "2026-09-09-windows-ai-zoo-lm-studio-and-the-18gb-diet-part-1": "2026-09-09-lm-studio-llama-cpp-18-gigabyte-diet",
+    "2026-09-10-windows-ai-zoo-rag-wiring-and-the-prune-to-six-part-2": "2026-09-10-rag-wiring-api-keys-prune-six",
+    "2026-09-12-kebab-webapp-autorun-and-retirement": "2026-09-12-built-shipped-fed-then-archived-one-long-day",
+    "2026-09-12-litellm-revival-and-the-four-dead-elephants": "2026-09-12-litellm-revival-september-edition",
+    "2026-09-13-kebab-refinery-part-1": "2026-09-13-broke-twenty-one-records-heredoc-built-refinement-regime",
+    "2026-09-13-kebab-refinery-part-2": "2026-09-13-asked-609mb-pillow-what-capital-told-us-about-snack",
+    "2026-09-13-knowledgebaseai-part-3": "2026-09-13-retired-last-week-so-naturally-brought-back",
+    "2026-09-13-knowledgebaseai-part-4": "2026-09-13-researcher-isn-t-slow-he-s-just-moody",
+    "2026-09-14-kebab-refinery-part-3": "2026-09-14-swapped-model-fed-wikipedia-stared-us-15-minutes",
+    "2026-09-16-gmail-mcp-wiring": "2026-09-16-authored-oauth-flow-because-official-one-wouldn-t-write-file",
+    "2026-09-16-gmail-mcp-wiring-part-2": "2026-09-16-google-s-official-servers-hit-developer-preview-wall-so-built",
+    "2026-09-17-oauth-client-cleanup": "2026-09-17-one-secret-two-clients-wrong-gcloud-command",
+    "2026-09-17-pruning-tasks": "2026-09-17-keeper-finally-stops-accumulating",
+    "2026-09-17-windows-ai-zoo-anythingllm-returns-part-3": "2026-09-17-anythingllm-returns",
+    "2026-09-18-manage-tasks-handoff-system": "2026-09-18-task-management-finally-grows-memory",
+    "2026-09-18-openwebui-customization": "2026-09-18-title-canceled-tastemaker-bottled-whisper-finally-hears",
+    "2026-09-18-zensical-customization-part-2": "2026-09-18-adding-modern-homepage-featured-posts-collapsible-series-navigation-cta-buttons",
+    "2026-09-19-decentralizing-the-opencode-hub": "2026-09-19-learned-stop-worrying-love-conditional-push",
+    "2026-09-19-plugin-consolidation-and-sync": "2026-09-19-why-plugin-two-different-directories",
+    "2026-09-19-the-tiny-encoder-that-could": "2026-09-19-4-4-million-parameters-missing-tokenizer-framework-broke-own-house",
+    "2026-09-20-cleanup-universal-setup-references-part-3-final": "2026-09-20-ghost-hub-finally-leaves",
+    "2026-09-20-cloudflare-workers-ai-into-litellm": "2026-09-20-missing-word-cost-us-day",
+    "2026-09-20-manage-tasks-to-opencode-task-manager-plugin-part-1": "2026-09-20-task-manager-finally-grew-up",
+    "2026-09-21-fedora-wsl-reset-opencode-restore": "2026-09-21-great-fedora-death-rebirth",
+    "2026-09-21-opencode-v1-to-v2-migration-recovery": "2026-09-21-opencode-v1-18-31-v2-0-11-migration-recovery",
+    "2026-09-24-fedora-wsl-reset-opencode-restore-part-2": "2026-09-24-completing-the-reset-the-version-drift-had-blocked",
+    "2026-09-24-manage-tasks-to-opencode-task-manager-plugin-part-2": "2026-09-24-conventions-grew-up-too",
+    "2026-09-24-manage-tasks-to-opencode-task-manager-plugin-part-3": "2026-09-24-emptying-yard-sale",
+    "2026-09-25-debian-wsl-reset-and-canonical-v2-hub": "2026-09-25-two-hubs-one-hub-too-many",
+    "2026-09-25-windows-opencode-v2-migration": "2026-09-25-last-v1-host-joins-fleet",
+    "2026-09-26-splitting-the-task-tree-and-automatic-redistribution": "2026-09-26-two-copies-truth-neither-one-synced",
+    "2026-09-28-nixos-opencode-v2-upgrade-attempt": "2026-09-28-npm-binary-bun-disguise",
+    "2026-09-28-opencode-fleet-sync-mem0-event-driven": "2026-09-28-stopped-pretending-polling-architecture",
+    "2026-09-29-false-verifications-and-the-v1-question": "2026-09-29-everything-looked-fine-until-someone-made-actual-tool-call",
+    "2026-09-29-migrate-task-manager-to-plan-manager": "2026-09-29-migrating-opencode-task-manager-opencode-plan-manager",
+    "2026-09-29-per-host-identity-overlays-and-finishing-the-plan-manager-migration": "2026-09-29-per-host-identity-overlays",
+    "2026-09-29-three-sync-domains-and-the-unified-fleet-sync-plan": "2026-09-29-three-sync-domains-fixed-hand-unified-fleet-sync-plan-they",
+    "2026-09-30-mcp-npx-to-node-invocation": "2026-09-30-npx-wrapper-breaks-stdio-handshake",
+    "2026-09-30-more-v2-findings-and-the-downgrade-question": "2026-09-30-addendum-retracted-itself",
+    "2026-09-30-opencode-task-plugin-part-1": "2026-09-30-testing-automated-mechanism-real-task-then-misreading-result",
+    "2026-09-30-three-wrong-instruments": "2026-09-30-verifying-changes-tools-cannot-see-them",
+    "2026-10-01-fleet-sync-command-delivery": "2026-10-01-where-one-code-path-serves-two-shells",
+    "2026-10-01-opencode-task-plugin-part-2": "2026-10-01-rename-compile-error-why-two-birds-need-two-stones",
+    "2026-10-02-litellm-cli-fix-and-ai-gateway-profile": "2026-10-02-litellm-cli-config-corruption-fix-ai-gateway-profile-architecture",
+    "2026-10-02-litellm-provider-discovery-and-architecture-cleanup": "2026-10-02-litellm-provider-discovery-architecture-cleanup",
+    "2026-10-05-ai-gateway-profile-graduation": "2026-10-05-graduation-chain-buried-exception-buried",
+    "2026-10-05-eight-hundred-forty-nine-health-checks": "2026-10-05-eight-hundred-forty-nine-health-checks-never-checked-anything",
+    "2026-10-05-seven-rounds-about-a-whitelist": "2026-10-05-stale-docs-cost-whole-afternoon",
+    "2026-10-06-rag-mcp-server-and-the-thread-that-wasnt-there-part-1": "2026-10-06-the-failing-tool-moved",
+    "2026-10-06-rag-mcp-server-and-the-thread-that-wasnt-there-part-2": "2026-10-06-making-the-retrieval-half-usable-for-a-person"
+  };
+
+  // Handle both directory URLs (/old/) and file URLs (/old.html, /old/index.html)
+  var p = location.pathname.replace(/\/index\.html?$/, "/").replace(/\.html?$/, "");
+  var parts = p.split("/");
+  var hit = false;
+  for (var i = 0; i < parts.length; i++) {
+    if (Object.prototype.hasOwnProperty.call(MAP, parts[i])) {
+      parts[i] = MAP[parts[i]];
+      hit = true;
+    }
+  }
+  if (!hit) return;
+
+  var target = parts.join("/");
+  if (target.charAt(target.length - 1) !== "/") target += "/";
+  location.replace(target);
+})();
