@@ -1,3 +1,15 @@
+---
+nav:
+  series: "opencode-provider-and-fallback-chain"
+  part: 2
+  prev:
+    title: "OpenCode Provider and Fallback Chain - Part 1"
+    slug: 2026-08-09-litellm-provider-connectivity-audit
+  next:
+    title: "\"OpenCode Provider and Fallback Chain\" - Part 3 (Final)"
+    slug: 2026-09-01-killing-the-gateway-that-was-hiding-two-bugs
+---
+
 # "OpenCode Provider and Fallback Chain" - Part 2
 
 **Date:** 2026-08-30  

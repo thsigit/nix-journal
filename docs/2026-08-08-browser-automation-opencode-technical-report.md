@@ -1,3 +1,12 @@
+---
+nav:
+  series: "Testing Browser-Use in WSL2"
+  part: 1
+  next:
+    title: "\"Testing Browser-Use in WSL2: From Agent to Skill\" - Part 2"
+    slug: 2026-08-09-browser-use-from-agent-to-skill
+---
+
 # "Testing Browser-Use in WSL2: Browser Automation for OpenCode" - Technical Report
 
 **Date:** 2026-08-08  

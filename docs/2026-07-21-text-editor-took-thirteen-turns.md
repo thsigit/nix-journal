@@ -1,3 +1,15 @@
+---
+nav:
+  series: "experimenting-with-hermes-agent"
+  part: 9
+  prev:
+    title: "Experimenting with Hermes Agent - Part 8"
+    slug: 2026-07-21-pm-assistant-builds-text-editor-first-real-workload
+  next:
+    title: "Experimenting with Hermes Agent - Part 10 (FINAL)"
+    slug: 2026-07-22-retirement-hermes-deleted
+---
+
 # Experimenting with Hermes Agent - Part 9
 
 *The Text Editor That Took Thirteen Turns*

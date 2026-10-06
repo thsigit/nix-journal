@@ -1,3 +1,12 @@
+---
+nav:
+  series: "rag-mcp-server-and-the-thread-that-wasnt-there"
+  part: 2
+  prev:
+    title: "The RAG MCP Server and the Thread That Wasn't There - Part 1"
+    slug: 2026-10-06-the-failing-tool-moved
+---
+
 # The RAG MCP Server and the Thread That Wasn't There - Part 2
 
 **Date:** 2026-10-06  

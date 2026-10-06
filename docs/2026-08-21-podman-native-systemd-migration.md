@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 13
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 12"
+    slug: 2026-08-20-module-restructure-recovery
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 14 (Final)"
+    slug: 2026-08-21-provider-native-discovery-providers-json
+---
+
 # The LiteLLM Gateway Evolution - Part 13
 
 *Podman to native systemd migration*

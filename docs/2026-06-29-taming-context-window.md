@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-tinyllama-experiment"
+  part: 2
+  prev:
+    title: "The TinyLlama Experiment - Part 1"
+    slug: 2026-06-21-64k-context-wall-hermes-refused-let-me-through
+  next:
+    title: "The TinyLlama Experiment - Part 3"
+    slug: 2026-06-29-config-boundaries-tinyllama-wind-down
+---
+
 # The TinyLlama Experiment - Part 2
 
 *Taming The Context Window*

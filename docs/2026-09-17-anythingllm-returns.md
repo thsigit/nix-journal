@@ -1,3 +1,12 @@
+---
+nav:
+  series: "Windows AI Zoo"
+  part: 3
+  prev:
+    title: "Windows AI Zoo, Day Two: RAG Wiring, API Keys, and the Prune to Six"
+    slug: 2026-09-10-rag-wiring-api-keys-prune-six
+---
+
 # Windows AI Zoo, Day Three: AnythingLLM Returns (With an Ollama in Its Pockets)
 
 **Date:** 2026-09-17  

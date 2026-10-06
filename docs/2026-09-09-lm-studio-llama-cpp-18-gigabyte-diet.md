@@ -1,3 +1,12 @@
+---
+nav:
+  series: "Windows AI Zoo"
+  part: 1
+  next:
+    title: "Windows AI Zoo, Day Two: RAG Wiring, API Keys, and the Prune to Six"
+    slug: 2026-09-10-rag-wiring-api-keys-prune-six
+---
+
 # Windows Gets a Zoo of Its Own: LM Studio, llama.cpp, and the 18-Gigabyte Diet
 
 **Date:** 2026-09-09  

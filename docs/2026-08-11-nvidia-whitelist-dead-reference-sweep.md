@@ -1,3 +1,15 @@
+---
+nav:
+  series: "opencode-configuration-evolution"
+  part: 5
+  prev:
+    title: "OpenCode Configuration Evolution - Part 4"
+    slug: 2026-08-09-multi-provider-config-kenari-freetheai-aihubmix
+  next:
+    title: "OpenCode Configuration Evolution - Part 6 (FINAL)"
+    slug: 2026-08-22-agent-cli-path-openclaw-hermes-agent-opencode
+---
+
 # OpenCode Configuration Evolution - Part 5
 
 *NVIDIA whitelist + dead-reference sweep*

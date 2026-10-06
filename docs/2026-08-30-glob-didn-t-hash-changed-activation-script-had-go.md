@@ -1,3 +1,12 @@
+---
+nav:
+  series: "the-litellm-callback-saga"
+  part: 3
+  prev:
+    title: "The LiteLLM Callback Saga - Part 2"
+    slug: 2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs
+---
+
 # The LiteLLM Callback Saga Part 3 (Final)
 
 *or: The glob that didn't, the hash that changed, and the activation script that had to go*

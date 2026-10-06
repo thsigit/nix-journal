@@ -1,3 +1,12 @@
+---
+nav:
+  series: "the-tinyllama-experiment"
+  part: 3
+  prev:
+    title: "The TinyLlama Experiment - Part 2"
+    slug: 2026-06-29-taming-context-window
+---
+
 # The TinyLlama Experiment - Part 3
 
 *Config boundaries and the tinyllama wind-down*

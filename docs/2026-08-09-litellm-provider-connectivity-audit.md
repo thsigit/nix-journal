@@ -1,3 +1,12 @@
+---
+nav:
+  series: "opencode-provider-and-fallback-chain"
+  part: 1
+  next:
+    title: "\"OpenCode Provider and Fallback Chain\" - Part 2"
+    slug: 2026-08-30-litellm-without-a-db-and-nvidia-cold-starts
+---
+
 # OpenCode Provider and Fallback Chain - Part 1
 
 *LiteLLM provider connectivity audit*

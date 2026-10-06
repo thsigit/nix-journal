@@ -1,3 +1,12 @@
+---
+nav:
+  series: "coding-with-hermes-agent"
+  part: 1
+  next:
+    title: "Coding with Hermes Agent - Part 2"
+    slug: 2026-07-18-todoist-wrapper-prototype-vs-workflow-build
+---
+
 # Coding with Hermes Agent - Part 1
 
 *Building a Multi-Agent Workflow Orchestrator and running the first cycle*

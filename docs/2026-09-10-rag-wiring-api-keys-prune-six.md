@@ -1,3 +1,15 @@
+---
+nav:
+  series: "Windows AI Zoo"
+  part: 2
+  prev:
+    title: "Windows Gets a Zoo of Its Own: LM Studio, llama.cpp, and the 18-Gigabyte Diet"
+    slug: 2026-09-09-lm-studio-llama-cpp-18-gigabyte-diet
+  next:
+    title: "Windows AI Zoo, Day Three: AnythingLLM Returns (With an Ollama in Its Pockets)"
+    slug: 2026-09-17-anythingllm-returns
+---
+
 # Windows AI Zoo, Day Two: RAG Wiring, API Keys, and the Prune to Six
 
 **Date:** 2026-09-10  

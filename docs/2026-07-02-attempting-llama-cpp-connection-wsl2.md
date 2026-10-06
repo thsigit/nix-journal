@@ -1,3 +1,15 @@
+---
+nav:
+  series: "experimenting-with-hermes-agent"
+  part: 6
+  prev:
+    title: "Experimenting with Hermes Agent - Part 5"
+    slug: 2026-07-01-manual-check-caught-rogue-blob
+  next:
+    title: "Experimenting with Hermes Agent - Part 7"
+    slug: 2026-07-21-overengineering-hello-world
+---
+
 # Experimenting with Hermes Agent - Part 6
 
 *Attempting Llama.cpp Connection in WSL2*

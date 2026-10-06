@@ -1,3 +1,12 @@
+---
+nav:
+  series: "coding-with-hermes-agent"
+  part: 3
+  prev:
+    title: "Coding with Hermes Agent - Part 2"
+    slug: 2026-07-18-todoist-wrapper-prototype-vs-workflow-build
+---
+
 # Coding with Hermes Agent - Part 3
 
 *PM Assistant v0.4 — Crash-Safe and Configurable*

@@ -1,3 +1,15 @@
+---
+nav:
+  series: "switch-root-target-contains-no-usable-init"
+  part: 4
+  prev:
+    title: "\"switch root target contains no usable init\" - Part 3"
+    slug: 2026-08-12-ap-bundle-trigger
+  next:
+    title: "\"switch root target contains no usable init\" - Part 5 (FINAL)"
+    slug: 2026-08-21-litellm-cli-activation-bisect
+---
+
 # "switch root target contains no usable init" - Part 4
 
 *Workstation wave (gens 136-142)*

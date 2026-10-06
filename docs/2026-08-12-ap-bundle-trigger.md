@@ -1,3 +1,15 @@
+---
+nav:
+  series: "switch-root-target-contains-no-usable-init"
+  part: 3
+  prev:
+    title: "\"switch root target contains no usable init\" - Part 2"
+    slug: 2026-08-11-culprit-confirmed-mitigation
+  next:
+    title: "\"switch root target contains no usable init\" - Part 4"
+    slug: 2026-08-16-workstation-wave
+---
+
 # "switch root target contains no usable init" - Part 3
 
 *AP bundle trigger (gens 101-105)*

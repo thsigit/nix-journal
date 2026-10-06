@@ -1,3 +1,12 @@
+---
+nav:
+  series: "homelab-management"
+  part: 1
+  next:
+    title: "Homelab Management - Part 2"
+    slug: 2026-07-27-single-reference-skill-agents
+---
+
 # Homelab Management - Part 1
 
 *Housekeeping: containers, dashboard, storage*

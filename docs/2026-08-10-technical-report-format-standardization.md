@@ -1,3 +1,15 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 4
+  prev:
+    title: "Blogging Skill Evolution - Part 3"
+    slug: 2026-07-24-67-sessions-posts
+  next:
+    title: "Blogging Skill Evolution - Part 5"
+    slug: 2026-08-14-zensical-static-site-reports-home-arpa
+---
+
 # Blogging Skill Evolution - Part 4
 
 *Technical report format standardization*

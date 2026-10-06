@@ -1,3 +1,12 @@
+---
+nav:
+  series: "opencode-provider-and-fallback-chain"
+  part: 3
+  prev:
+    title: "\"OpenCode Provider and Fallback Chain\" - Part 2"
+    slug: 2026-08-30-litellm-without-a-db-and-nvidia-cold-starts
+---
+
 # "OpenCode Provider and Fallback Chain" - Part 3 (Final)
 
 **Date:** 2026-09-01  

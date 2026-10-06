@@ -1,3 +1,12 @@
+---
+nav:
+  series: "switch-root-target-contains-no-usable-init"
+  part: 1
+  next:
+    title: "\"switch root target contains no usable init\" - Part 2"
+    slug: 2026-08-11-culprit-confirmed-mitigation
+---
+
 # "switch root target contains no usable init" - Part 1
 
 *Stage-1 timing diagnosis*

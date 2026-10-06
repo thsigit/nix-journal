@@ -1,3 +1,12 @@
+---
+nav:
+  series: "Gmail MCP"
+  part: 2
+  prev:
+    title: "Gmail MCP, Wired From Scratch (or: How I Authored an OAuth Flow Because the Official One Wouldn't Write a File)"
+    slug: 2026-09-16-authored-oauth-flow-because-official-one-wouldn-t-write-file
+---
+
 # "Gmail MCP, Wired From Scratch" - Part 2 (or: Google's Official Servers Hit the Developer Preview Wall, So We Built a Local One)
 
 **Date:** 2026-09-16  

@@ -1,3 +1,12 @@
+---
+nav:
+  series: "mem0-memory-integration"
+  part: 5
+  prev:
+    title: "Mem0 Memory Integration - Part 4"
+    slug: 2026-08-08-259-memory-dream-run
+---
+
 # Mem0 Memory Integration - Part 5
 
 *From plugin to MCP, and a local store that survives the quota wall*

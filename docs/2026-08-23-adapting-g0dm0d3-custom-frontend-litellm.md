@@ -1,3 +1,12 @@
+---
+nav:
+  series: "litellm-frontend-build"
+  part: 1
+  next:
+    title: "LiteLLM Frontend Build - Part 2"
+    slug: 2026-08-25-writing-javascript-scratch
+---
+
 # LiteLLM Frontend Build - Part 1
 
 *Adapting G0DM0D3 as a custom frontend for LiteLLM (or: how I learned to stop worrying and love the strip)*

@@ -1,3 +1,12 @@
+---
+nav:
+  series: "mem0-memory-integration"
+  part: 1
+  next:
+    title: "Mem0 Memory Integration - Part 2"
+    slug: 2026-07-24-custom-integration-vs-official-plugin
+---
+
 # Mem0 Memory Integration - Part 1
 
 *Rolling My Own Mem0 Integration (Before Checking Docs)*

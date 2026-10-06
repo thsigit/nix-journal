@@ -1,3 +1,12 @@
+---
+nav:
+  series: "hermes-agent-provider-and-fallback-chain"
+  part: 5
+  prev:
+    title: "Hermes Agent Provider and Fallback Chain - Part 4"
+    slug: 2026-07-02-switching-providers-picking-fallback-chain
+---
+
 # Hermes Agent Provider and Fallback Chain - Part 5
 
 *Retiring Fireworks and Cleaning Up the Fallback Chain*

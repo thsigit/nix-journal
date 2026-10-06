@@ -1,3 +1,15 @@
+---
+nav:
+  series: "The OpenCode Hub Trilogy"
+  part: 2
+  prev:
+    title: "The Hub Is Dead, Long Live the Rendezvous (or: How I Learned to Stop Worrying and Love Conditional Push)"
+    slug: 2026-09-19-learned-stop-worrying-love-conditional-push
+  next:
+    title: "Cleanup Universal-Setup References (or: The Ghost of the Hub Finally Leaves)"
+    slug: 2026-09-20-ghost-hub-finally-leaves
+---
+
 # Plugin Consolidation and Sync (or: Why Is This Plugin in Two Different Directories?)
 
 **Date:** 2026-09-19  

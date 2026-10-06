@@ -1,3 +1,12 @@
+---
+nav:
+  series: "manage-tasks-to-opencode-task-manager-plugin"
+  part: 1
+  next:
+    title: "Tuning the Task Manager Plugin (or: The Conventions Grew Up Too)"
+    slug: 2026-09-24-conventions-grew-up-too
+---
+
 # From Python Script to TypeScript Plugin (or: How the Task Manager Finally Grew Up)
 
 **Date:** 2026-09-20  

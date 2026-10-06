@@ -1,3 +1,12 @@
+---
+nav:
+  series: "litellm-frontend-build"
+  part: 3
+  prev:
+    title: "LiteLLM Frontend Build - Part 2"
+    slug: 2026-08-25-writing-javascript-scratch
+---
+
 # LiteLLM Frontend Build - Part 3
 
 **Date:** 2026-08-27  

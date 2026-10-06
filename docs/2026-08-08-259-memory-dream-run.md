@@ -1,3 +1,15 @@
+---
+nav:
+  series: "mem0-memory-integration"
+  part: 4
+  prev:
+    title: "Mem0 Memory Integration - Part 3"
+    slug: 2026-07-27-mem0-dream-homelab-command
+  next:
+    title: "Mem0 Memory Integration - Part 5"
+    slug: 2026-08-30-plugin-mcp-local-store-survives-quota-wall
+---
+
 # Mem0 Memory Integration - Part 4
 
 *259-memory dream run*

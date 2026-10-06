@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-callback-saga"
+  part: 2
+  prev:
+    title: "The LiteLLM Callback Saga Part 1"
+    slug: 2026-08-25-callbacks-easy-until-they-nix-store-has-opinions-about-your
+  next:
+    title: "The LiteLLM Callback Saga Part 3 (Final)"
+    slug: 2026-08-30-glob-didn-t-hash-changed-activation-script-had-go
+---
+
 # The LiteLLM Callback Saga - Part 2
 
 *or: How I learned to stop debugging Python imports and start reading nix build logs*

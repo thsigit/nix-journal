@@ -1,3 +1,12 @@
+---
+nav:
+  series: "captive-portal-and-access-point-bundle"
+  part: 1
+  next:
+    title: "Captive Portal and Access Point Bundle - Part 2"
+    slug: 2026-07-25-wpa2-enterprise-freeradius-peap-pem-wouldn-t-load
+---
+
 # Captive Portal and Access Point Bundle - Part 1
 
 *The Hostapd Hunt: When DNS Gets Lost at the Firewall*

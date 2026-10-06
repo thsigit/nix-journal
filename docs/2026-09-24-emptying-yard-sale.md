@@ -1,3 +1,12 @@
+---
+nav:
+  series: "manage-tasks-to-opencode-task-manager-plugin"
+  part: 3
+  prev:
+    title: "Tuning the Task Manager Plugin (or: The Conventions Grew Up Too)"
+    slug: 2026-09-24-conventions-grew-up-too
+---
+
 # The Plugin Goes to Work (or: Emptying the Yard Sale)
 
 **Date:** 2026-09-24  

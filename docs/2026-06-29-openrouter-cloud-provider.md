@@ -1,3 +1,15 @@
+---
+nav:
+  series: "hermes-agent-provider-and-fallback-chain"
+  part: 2
+  prev:
+    title: "Hermes Agent Provider and Fallback Chain - Part 1"
+    slug: 2026-06-20-model-chaos-lean-stack-saturday-evening-hermes
+  next:
+    title: "Hermes Agent Provider and Fallback Chain - Part 3"
+    slug: 2026-06-29-migrating-ollama-google-gemini-md-credential-practices
+---
+
 # Hermes Agent Provider and Fallback Chain - Part 2
 
 *OpenRouter as cloud provider*

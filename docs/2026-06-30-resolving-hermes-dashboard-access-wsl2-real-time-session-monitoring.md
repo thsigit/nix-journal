@@ -1,3 +1,15 @@
+---
+nav:
+  series: "experimenting-with-hermes-agent"
+  part: 2
+  prev:
+    title: "Experimenting with Hermes Agent - Part 1"
+    slug: 2026-06-29-experimenting-hermes-agent
+  next:
+    title: "Experimenting with Hermes Agent - Part 3"
+    slug: 2026-06-30-cleaning-up-hermes-sessions-teaching-hermes-do-again
+---
+
 # Experimenting with Hermes Agent - Part 2
 
 *Resolving Hermes Dashboard Access in WSL2 for real-time session monitoring*

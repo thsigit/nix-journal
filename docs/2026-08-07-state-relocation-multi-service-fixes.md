@@ -1,3 +1,12 @@
+---
+nav:
+  series: "homelab-management"
+  part: 3
+  prev:
+    title: "Homelab Management - Part 2"
+    slug: 2026-07-27-single-reference-skill-agents
+---
+
 # Homelab Management - Part 3
 
 *State relocation + multi-service fixes*

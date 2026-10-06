@@ -1,3 +1,12 @@
+---
+nav:
+  series: "knowledgebaseai"
+  part: 4
+  prev:
+    title: "The Kebab Chronicles - Part 3: Un-Archived, Given a Home, and Taught to Answer for Itself (or: We Retired It Last Week, So Naturally We Brought It Back)"
+    slug: 2026-09-13-retired-last-week-so-naturally-brought-back
+---
+
 # The Kebab Chronicles - Part 4: Fifteen Seasons of Japanese History (or: The Researcher Isn't Slow, He's Just Moody)
 
 **Date:** 2026-09-13  

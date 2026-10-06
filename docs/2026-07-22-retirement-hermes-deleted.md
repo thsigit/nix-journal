@@ -1,3 +1,12 @@
+---
+nav:
+  series: "experimenting-with-hermes-agent"
+  part: 10
+  prev:
+    title: "Experimenting with Hermes Agent - Part 9"
+    slug: 2026-07-21-text-editor-took-thirteen-turns
+---
+
 # Experimenting with Hermes Agent - Part 10 (FINAL)
 
 *Retirement: ~/.hermes deleted*

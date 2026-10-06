@@ -1,3 +1,15 @@
+---
+nav:
+  series: "manage-tasks-to-opencode-task-manager-plugin"
+  part: 2
+  prev:
+    title: "From Python Script to TypeScript Plugin (or: How the Task Manager Finally Grew Up)"
+    slug: 2026-09-20-task-manager-finally-grew-up
+  next:
+    title: "The Plugin Goes to Work (or: Emptying the Yard Sale)"
+    slug: 2026-09-24-emptying-yard-sale
+---
+
 # Tuning the Task Manager Plugin (or: The Conventions Grew Up Too)
 
 **Date:** 2026-09-24  

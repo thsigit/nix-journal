@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 4
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 3"
+    slug: 2026-07-22-removing-paxsenix-rewiring-local-litellm-proxy
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 5"
+    slug: 2026-07-27-model-catalog-expansion-opencode
+---
+
 # The LiteLLM Gateway Evolution - Part 4
 
 *Rename data files*

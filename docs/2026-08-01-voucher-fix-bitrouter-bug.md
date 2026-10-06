@@ -1,3 +1,15 @@
+---
+nav:
+  series: "captive-portal-and-access-point-bundle"
+  part: 6
+  prev:
+    title: "Captive Portal and Access Point Bundle - Part 5"
+    slug: 2026-07-27-voucher-based-guest-auth
+  next:
+    title: "Captive Portal and Access Point Bundle - Part 7"
+    slug: 2026-08-12-common-reorg-ap-revival
+---
+
 # Captive Portal and Access Point Bundle - Part 6
 
 *Voucher fix + BitRouter bug*

@@ -1,3 +1,12 @@
+---
+nav:
+  series: "the-litellm-callback-saga"
+  part: 1
+  next:
+    title: "The LiteLLM Callback Saga - Part 2"
+    slug: 2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs
+---
+
 # The LiteLLM Callback Saga Part 1
 
 *Callbacks are easy until they are not, and the nix store has opinions about your source files (also: I have opinions about the nix store)*

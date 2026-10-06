@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 5
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 4"
+    slug: 2026-07-24-rename-data-files
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 6"
+    slug: 2026-07-29-test-models-fix-no-connected-db
+---
+
 # The LiteLLM Gateway Evolution - Part 5
 
 *Model catalog expansion + OpenCode*

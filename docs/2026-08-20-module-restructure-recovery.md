@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 12
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 11"
+    slug: 2026-08-18-provider-lifecycle-commands-sops-consolidation
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 13"
+    slug: 2026-08-21-podman-native-systemd-migration
+---
+
 # The LiteLLM Gateway Evolution - Part 12
 
 *Module restructure recovery*

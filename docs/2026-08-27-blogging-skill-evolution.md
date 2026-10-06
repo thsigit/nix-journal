@@ -1,3 +1,12 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 8
+  prev:
+    title: "Blogging Skill Evolution - Part 7"
+    slug: 2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan
+---
+
 # Blogging Skill Evolution - Part 8
 
 **Date:** 2026-08-27  

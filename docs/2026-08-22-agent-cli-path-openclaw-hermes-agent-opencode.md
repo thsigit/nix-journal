@@ -1,3 +1,12 @@
+---
+nav:
+  series: "opencode-configuration-evolution"
+  part: 6
+  prev:
+    title: "OpenCode Configuration Evolution - Part 5"
+    slug: 2026-08-11-nvidia-whitelist-dead-reference-sweep
+---
+
 # OpenCode Configuration Evolution - Part 6 (FINAL)
 
 *The agent CLI path: OpenClaw to Hermes Agent to OpenCode*

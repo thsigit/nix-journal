@@ -1,3 +1,15 @@
+---
+nav:
+  series: "switch-root-target-contains-no-usable-init"
+  part: 2
+  prev:
+    title: "\"switch root target contains no usable init\" - Part 1"
+    slug: 2026-08-10-stage-1-timing-diagnosis
+  next:
+    title: "\"switch root target contains no usable init\" - Part 3"
+    slug: 2026-08-12-ap-bundle-trigger
+---
+
 # "switch root target contains no usable init" - Part 2
 
 *Culprit confirmed + mitigation*

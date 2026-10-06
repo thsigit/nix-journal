@@ -1,3 +1,15 @@
+---
+nav:
+  series: "litellm-frontend-build"
+  part: 2
+  prev:
+    title: "LiteLLM Frontend Build - Part 1"
+    slug: 2026-08-23-adapting-g0dm0d3-custom-frontend-litellm
+  next:
+    title: "LiteLLM Frontend Build - Part 3"
+    slug: 2026-08-27-litellm-frontend-build
+---
+
 # LiteLLM Frontend Build - Part 2
 
 *Writing the JavaScript from scratch (or: "How hard can it be?")*

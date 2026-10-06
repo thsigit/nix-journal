@@ -1,3 +1,15 @@
+---
+nav:
+  series: "hermes-agent-provider-and-fallback-chain"
+  part: 4
+  prev:
+    title: "Hermes Agent Provider and Fallback Chain - Part 3"
+    slug: 2026-06-29-migrating-ollama-google-gemini-md-credential-practices
+  next:
+    title: "Hermes Agent Provider and Fallback Chain - Part 5"
+    slug: 2026-07-20-retiring-fireworks-cleaning-up-fallback-chain
+---
+
 # Hermes Agent Provider and Fallback Chain - Part 4
 
 *Switching Providers and Picking a Fallback Chain*

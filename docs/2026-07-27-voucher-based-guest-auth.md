@@ -1,3 +1,15 @@
+---
+nav:
+  series: "captive-portal-and-access-point-bundle"
+  part: 5
+  prev:
+    title: "Captive Portal and Access Point Bundle - Part 4"
+    slug: 2026-07-26-opennds-captive-portal-nixos
+  next:
+    title: "Captive Portal and Access Point Bundle - Part 6"
+    slug: 2026-08-01-voucher-fix-bitrouter-bug
+---
+
 # Captive Portal and Access Point Bundle - Part 5
 
 *Voucher-based guest auth*

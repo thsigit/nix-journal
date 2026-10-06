@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 6
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 5"
+    slug: 2026-07-27-model-catalog-expansion-opencode
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 7"
+    slug: 2026-07-30-prune-dead-providers-opencode-integration
+---
+
 # The LiteLLM Gateway Evolution - Part 6
 
 *Test models + fix "No connected db"*

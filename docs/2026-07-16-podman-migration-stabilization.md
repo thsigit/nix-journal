@@ -1,3 +1,12 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 1
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 2"
+    slug: 2026-07-20-refactoring-litellm-gateway-four-way-split-inventory-policy
+---
+
 # The LiteLLM Gateway Evolution - Part 1
 
 *Podman migration & stabilization*

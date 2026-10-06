@@ -1,3 +1,12 @@
+---
+nav:
+  series: "knowledgebaseai"
+  part: 1
+  next:
+    title: "KnowledgeBaseAI - Part 2"
+    slug: 2026-08-28-empty-scaffolding-searchable-llm-augmented-knowledge-base
+---
+
 # KnowledgeBaseAI - Part 1
 
 *The corpus is empty, but the architecture is fully committed (and honestly? That's the fun part)*

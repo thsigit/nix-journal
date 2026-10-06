@@ -1,3 +1,12 @@
+---
+nav:
+  series: "declarative-desktop-with-home-manager"
+  part: 2
+  prev:
+    title: "Declarative Desktop with Home-Manager - Part 1"
+    slug: 2026-08-12-store-copies-force-flags-wallpaper-reset-itself-out-principle
+---
+
 # Declarative Desktop with Home-Manager - Part 2
 
 *Out-of-store symlinks: every GUI click is now an uncommitted change*

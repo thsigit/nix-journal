@@ -1,3 +1,12 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 1
+  next:
+    title: "Blogging Skill Evolution - Part 2"
+    slug: 2026-07-22-blogging-skill-evolution-hardening-the-conventions
+---
+
 # Blogging Skill Evolution - Part 1
 
 *Making a Skill for Blogging Sessions so I Stop Having to Re-explain It*

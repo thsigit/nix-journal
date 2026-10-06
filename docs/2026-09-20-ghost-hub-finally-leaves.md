@@ -1,3 +1,12 @@
+---
+nav:
+  series: "The OpenCode Hub Trilogy"
+  part: 3
+  prev:
+    title: "Plugin Consolidation and Sync (or: Why Is This Plugin in Two Different Directories?)"
+    slug: 2026-09-19-why-plugin-two-different-directories
+---
+
 # Cleanup Universal-Setup References (or: The Ghost of the Hub Finally Leaves)
 
 **Date:** 2026-09-20  

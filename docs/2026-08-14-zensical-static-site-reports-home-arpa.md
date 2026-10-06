@@ -1,3 +1,15 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 5
+  prev:
+    title: "Blogging Skill Evolution - Part 4"
+    slug: 2026-08-10-technical-report-format-standardization
+  next:
+    title: "Blogging Skill Evolution - Part 6"
+    slug: 2026-08-22-series-architecture-brand-normalization-across-archive
+---
+
 # Blogging Skill Evolution - Part 5
 
 *Zensical static site at reports.home.arpa*

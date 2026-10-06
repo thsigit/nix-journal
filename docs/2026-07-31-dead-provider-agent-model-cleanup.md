@@ -1,3 +1,15 @@
+---
+nav:
+  series: "opencode-configuration-evolution"
+  part: 3
+  prev:
+    title: "OpenCode Configuration Evolution - Part 2"
+    slug: 2026-07-25-persistent-context-vs-fresh-start-problem
+  next:
+    title: "OpenCode Configuration Evolution - Part 4"
+    slug: 2026-08-09-multi-provider-config-kenari-freetheai-aihubmix
+---
+
 # OpenCode Configuration Evolution - Part 3
 
 *Dead provider and agent-model cleanup*

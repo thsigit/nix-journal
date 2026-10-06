@@ -1,3 +1,12 @@
+---
+nav:
+  series: "opencode-configuration-evolution"
+  part: 1
+  next:
+    title: "OpenCode Configuration Evolution - Part 2"
+    slug: 2026-07-25-persistent-context-vs-fresh-start-problem
+---
+
 # OpenCode Configuration Evolution - Part 1
 
 *Agent roster for specialized model routing*

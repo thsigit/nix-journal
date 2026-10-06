@@ -1,3 +1,15 @@
+---
+nav:
+  series: "boot-recovery"
+  part: 2
+  prev:
+    title: "Boot Recovery - Part 1"
+    slug: 2026-08-03-first-no-usable-init-failure
+  next:
+    title: "Boot Recovery - Part 3"
+    slug: 2026-08-03-reinstall-recovery-fixes
+---
+
 # Boot Recovery - Part 2
 
 *Pre-failure cleanup session*

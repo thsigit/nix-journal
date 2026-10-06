@@ -1,3 +1,15 @@
+---
+nav:
+  series: "opencode-configuration-evolution"
+  part: 2
+  prev:
+    title: "OpenCode Configuration Evolution - Part 1"
+    slug: 2026-07-22-agent-roster-specialized-model-routing
+  next:
+    title: "OpenCode Configuration Evolution - Part 3"
+    slug: 2026-07-31-dead-provider-agent-model-cleanup
+---
+
 # OpenCode Configuration Evolution - Part 2
 
 *Persistent context vs fresh-start problem*

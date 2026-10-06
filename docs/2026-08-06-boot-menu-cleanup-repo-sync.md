@@ -1,3 +1,15 @@
+---
+nav:
+  series: "boot-recovery"
+  part: 4
+  prev:
+    title: "Boot Recovery - Part 3"
+    slug: 2026-08-03-reinstall-recovery-fixes
+  next:
+    title: "Boot Recovery - Part 5"
+    slug: 2026-08-13-emergency-grub-failsafe-entry
+---
+
 # Boot Recovery - Part 4
 
 *Boot menu cleanup + repo sync*

@@ -1,3 +1,15 @@
+---
+nav:
+  series: "experimenting-with-hermes-agent"
+  part: 3
+  prev:
+    title: "Experimenting with Hermes Agent - Part 2"
+    slug: 2026-06-30-resolving-hermes-dashboard-access-wsl2-real-time-session-monitoring
+  next:
+    title: "Experimenting with Hermes Agent - Part 4"
+    slug: 2026-07-01-replacing-gemini-api-key-without-taking-down-main-tab
+---
+
 # Experimenting with Hermes Agent - Part 3
 
 *Cleaning Up Hermes Sessions and Teaching Hermes to Do It Again*

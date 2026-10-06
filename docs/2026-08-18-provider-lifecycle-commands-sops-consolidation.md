@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 11
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 10"
+    slug: 2026-08-13-litellm-cli-independent-toggleable-module
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 12"
+    slug: 2026-08-20-module-restructure-recovery
+---
+
 # The LiteLLM Gateway Evolution - Part 11
 
 *Provider lifecycle commands + sops consolidation*

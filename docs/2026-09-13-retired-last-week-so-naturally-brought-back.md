@@ -1,3 +1,15 @@
+---
+nav:
+  series: "knowledgebaseai"
+  part: 3
+  prev:
+    title: "KnowledgeBaseAI - Part 2"
+    slug: 2026-08-28-empty-scaffolding-searchable-llm-augmented-knowledge-base
+  next:
+    title: "The Kebab Chronicles - Part 4: Fifteen Seasons of Japanese History (or: The Researcher Isn't Slow, He's Just Moody)"
+    slug: 2026-09-13-researcher-isn-t-slow-he-s-just-moody
+---
+
 # The Kebab Chronicles - Part 3: Un-Archived, Given a Home, and Taught to Answer for Itself (or: We Retired It Last Week, So Naturally We Brought It Back)
 
 **Date:** 2026-09-13  

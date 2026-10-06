@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 7
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 6"
+    slug: 2026-07-29-test-models-fix-no-connected-db
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 8"
+    slug: 2026-07-31-fix-sqlite-crash-loop-postgresql-requirement
+---
+
 # The LiteLLM Gateway Evolution - Part 7
 
 *Prune dead providers + OpenCode integration*

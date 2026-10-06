@@ -1,3 +1,12 @@
+---
+nav:
+  series: "captive-portal-and-access-point-bundle"
+  part: 9
+  prev:
+    title: "Captive Portal and Access Point Bundle - Part 8"
+    slug: 2026-09-03-boot-failure-root-caused-opennds-nft-iptables-hybrid-wall
+---
+
 # Captive Portal and Access Point Bundle - Part 9 (FINAL)
 
 ---

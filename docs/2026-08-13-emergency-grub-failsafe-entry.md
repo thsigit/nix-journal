@@ -1,3 +1,12 @@
+---
+nav:
+  series: "boot-recovery"
+  part: 5
+  prev:
+    title: "Boot Recovery - Part 4"
+    slug: 2026-08-06-boot-menu-cleanup-repo-sync
+---
+
 # Boot Recovery - Part 5
 
 *Emergency grub failsafe entry*

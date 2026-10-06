@@ -1,3 +1,15 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 2
+  prev:
+    title: "Blogging Skill Evolution - Part 1"
+    slug: 2026-06-29-making-skill-blogging-sessions-so-stop-having-re-explain
+  next:
+    title: "Blogging Skill Evolution - Part 3"
+    slug: 2026-07-24-67-sessions-posts
+---
+
 # Blogging Skill Evolution - Part 2
 
 *Making a Skill for Blogging Sessions (so I Stop Having to Re-explain It)*

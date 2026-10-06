@@ -1,3 +1,12 @@
+---
+nav:
+  series: "switch-root-target-contains-no-usable-init"
+  part: 5
+  prev:
+    title: "\"switch root target contains no usable init\" - Part 4"
+    slug: 2026-08-16-workstation-wave
+---
+
 # "switch root target contains no usable init" - Part 5 (FINAL)
 
 *litellm-cli activation bisect (FINAL)*

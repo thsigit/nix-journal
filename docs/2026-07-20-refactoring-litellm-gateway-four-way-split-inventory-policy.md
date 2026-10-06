@@ -1,3 +1,15 @@
+---
+nav:
+  series: "the-litellm-gateway-evolution"
+  part: 2
+  prev:
+    title: "The LiteLLM Gateway Evolution - Part 1"
+    slug: 2026-07-16-podman-migration-stabilization
+  next:
+    title: "The LiteLLM Gateway Evolution - Part 3"
+    slug: 2026-07-22-removing-paxsenix-rewiring-local-litellm-proxy
+---
+
 # The LiteLLM Gateway Evolution - Part 2
 
 *Refactoring the LiteLLM Gateway: from a Four-Way Split to Inventory/Policy*

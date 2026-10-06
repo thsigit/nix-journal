@@ -1,3 +1,15 @@
+---
+nav:
+  series: "captive-portal-and-access-point-bundle"
+  part: 7
+  prev:
+    title: "Captive Portal and Access Point Bundle - Part 6"
+    slug: 2026-08-01-voucher-fix-bitrouter-bug
+  next:
+    title: "Captive Portal and Access Point Bundle - Part 8"
+    slug: 2026-09-03-boot-failure-root-caused-opennds-nft-iptables-hybrid-wall
+---
+
 # Captive Portal and Access Point Bundle - Part 7
 
 *common/ reorg + AP revival*

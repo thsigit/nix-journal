@@ -1,3 +1,15 @@
+---
+nav:
+  series: "boot-recovery"
+  part: 3
+  prev:
+    title: "Boot Recovery - Part 2"
+    slug: 2026-08-03-pre-failure-cleanup-session
+  next:
+    title: "Boot Recovery - Part 4"
+    slug: 2026-08-06-boot-menu-cleanup-repo-sync
+---
+
 # Boot Recovery - Part 3
 
 *Reinstall recovery + fixes*

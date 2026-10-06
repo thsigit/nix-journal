@@ -1,3 +1,15 @@
+---
+nav:
+  series: "opencode-configuration-evolution"
+  part: 4
+  prev:
+    title: "OpenCode Configuration Evolution - Part 3"
+    slug: 2026-07-31-dead-provider-agent-model-cleanup
+  next:
+    title: "OpenCode Configuration Evolution - Part 5"
+    slug: 2026-08-11-nvidia-whitelist-dead-reference-sweep
+---
+
 # OpenCode Configuration Evolution - Part 4
 
 *Multi-provider config: kenari, freetheai, aihubmix*

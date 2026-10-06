@@ -1,3 +1,15 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 3
+  prev:
+    title: "Blogging Skill Evolution - Part 2"
+    slug: 2026-07-22-blogging-skill-evolution-hardening-the-conventions
+  next:
+    title: "Blogging Skill Evolution - Part 4"
+    slug: 2026-08-10-technical-report-format-standardization
+---
+
 # Blogging Skill Evolution - Part 3
 
 *67 sessions to posts*

@@ -1,3 +1,15 @@
+---
+nav:
+  series: "mem0-memory-integration"
+  part: 3
+  prev:
+    title: "Mem0 Memory Integration - Part 2"
+    slug: 2026-07-24-custom-integration-vs-official-plugin
+  next:
+    title: "Mem0 Memory Integration - Part 4"
+    slug: 2026-08-08-259-memory-dream-run
+---
+
 # Mem0 Memory Integration - Part 3
 
 *mem0-dream + homelab command*

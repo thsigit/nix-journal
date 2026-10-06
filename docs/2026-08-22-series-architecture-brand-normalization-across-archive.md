@@ -1,3 +1,15 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 6
+  prev:
+    title: "Blogging Skill Evolution - Part 5"
+    slug: 2026-08-14-zensical-static-site-reports-home-arpa
+  next:
+    title: "Blogging Skill Evolution - Part 7"
+    slug: 2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan
+---
+
 # Blogging Skill Evolution - Part 6
 
 *Series architecture + brand normalization across the archive*

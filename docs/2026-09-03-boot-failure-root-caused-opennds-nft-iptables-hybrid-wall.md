@@ -1,3 +1,15 @@
+---
+nav:
+  series: "captive-portal-and-access-point-bundle"
+  part: 8
+  prev:
+    title: "Captive Portal and Access Point Bundle - Part 7"
+    slug: 2026-08-12-common-reorg-ap-revival
+  next:
+    title: "Captive Portal and Access Point Bundle - Part 9 (FINAL)"
+    slug: 2026-09-03-captive-portal-access-point-bundle
+---
+
 # Captive Portal and Access Point Bundle - Part 8
 
 *Boot Failure Root-Caused, openNDS nft/iptables Hybrid Wall*

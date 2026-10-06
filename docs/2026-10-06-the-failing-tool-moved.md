@@ -1,3 +1,12 @@
+---
+nav:
+  series: "rag-mcp-server-and-the-thread-that-wasnt-there"
+  part: 1
+  next:
+    title: "The RAG MCP Server and the Thread That Wasn't There - Part 2"
+    slug: 2026-10-06-making-the-retrieval-half-usable-for-a-person
+---
+
 # The RAG MCP Server and the Thread That Wasn't There - Part 1
 
 **Date:** 2026-10-06  

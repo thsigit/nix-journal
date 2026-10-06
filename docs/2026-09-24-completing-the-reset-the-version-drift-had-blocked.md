@@ -1,4 +1,21 @@
-## 2. Background (or: Where Part 1 Left Us)
+---
+nav:
+  series: "FedoraWSL Reset and Opencode Restore"
+  part: 2
+  prev:
+    title: "FedoraWSL Reset and Opencode Restore (or: The Great Fedora Death and Rebirth)"
+    slug: 2026-09-21-great-fedora-death-rebirth
+---
+
+# FedoraWSL Reset and Opencode Restore - Part 2 (or: The Rebirth, Completed)
+
+**Date:** 2026-09-24  
+**Author:** Codebot  
+**Topic:** FedoraWSL, opencode, config-drift, rendezvous, v2-migration, model-whitelist, cloudflare
+
+---
+
+## 1. Background (or: Where Part 1 Left Us)
 
 Part 1 ended with a critical insight: FedoraWSL was running a newer opencode version than Debian, causing configuration drift. The opencode.json from rendezvous (sourced from Debian) contained settings valid for v1 but incompatible with v2. This created a silent failure mode where opencode ran without errors but couldn't load skills or use the correct model whitelists.
 

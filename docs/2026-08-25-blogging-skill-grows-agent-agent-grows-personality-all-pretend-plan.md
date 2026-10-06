@@ -1,3 +1,15 @@
+---
+nav:
+  series: "blogging-skill-evolution"
+  part: 7
+  prev:
+    title: "Blogging Skill Evolution - Part 6"
+    slug: 2026-08-22-series-architecture-brand-normalization-across-archive
+  next:
+    title: "Blogging Skill Evolution - Part 8"
+    slug: 2026-08-27-blogging-skill-evolution
+---
+
 # Blogging Skill Evolution - Part 7
 
 *The blogging skill grows an agent, the agent grows a personality, and we all pretend this was the plan*
