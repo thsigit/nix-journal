@@ -16,7 +16,7 @@ The user wanted a clean slate. Famous last words.
 
 ## 2. Background (or: The Decentralized Era)
 
-After the universal-setup skill retirement (see 2026-09-19-decentralizing-the-opencode-hub-part-1.md), opencode configuration lives as real local copies on each host, synchronized via `sync-opencode` skill with conditional-push + authoritative-pull from rendezvous.
+After the universal-setup skill retirement (see learned-stop-worrying-love-conditional-push.md), opencode configuration lives as real local copies on each host, synchronized via `sync-opencode` skill with conditional-push + authoritative-pull from rendezvous.
 
 FedoraWSL was polluted with old symlinks, stale plugin locations, and session clutter. Time for a controlled demolition.
 
