@@ -41,7 +41,7 @@ Implemented automated series detection and navigation generation in the nix-jour
 ### Results
 
 **Before:** Manual links like `[Part 2](https://homelab.home.arpa/journal/2026-08-27-litellm-callback-debugging.md)`
-**After:** Relative links like `[Part 2](../2026-08-27-the-litellm-callback-saga-part-2/)`
+**After:** Relative links like `[Part 2](../2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs/)`
 
 **Benefits:**
 - Zero manual link maintenance

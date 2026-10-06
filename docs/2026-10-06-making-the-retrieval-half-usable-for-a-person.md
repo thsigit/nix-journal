@@ -29,7 +29,7 @@ The theme is legibility. Part 1 made retrieval *correct*. This part is about
 making the result *readable* - by a person at a terminal, and by a 1B model
 asked to summarise it.
 
-Part 1: [the-thread-that-wasnt-there-part-1](2026-10-06-rag-mcp-server-and-the-thread-that-wasnt-there-part-1/)
+Part 1: [the-thread-that-wasnt-there-part-1](2026-10-06-the-failing-tool-moved/)
 
 ## 2. Background
 

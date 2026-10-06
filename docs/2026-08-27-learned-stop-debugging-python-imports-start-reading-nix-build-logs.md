@@ -22,7 +22,7 @@ nav:
 
 ## 1. Recap (The Cliffhanger)
 
-[Part 14 (Final)](../2026-08-21-the-litellm-gateway-evolution-part-14-final/) ended with the
+[Part 14 (Final)](../2026-08-21-provider-native-discovery-providers-json/) ended with the
 callback working perfectly in a transient test unit on port 4001 -
 `usage.jsonl` written, `litellm-cli stats` showing the right numbers -
 but **silently doing nothing** in the production systemd service on port 4000.
@@ -245,6 +245,6 @@ minutes to fix, 10 minutes to verify.
 
 ---
 
-[Part 14 (Final)](../2026-08-21-the-litellm-gateway-evolution-part-14-final/).*
+[Part 14 (Final)](../2026-08-21-provider-native-discovery-providers-json/).*
 
 *Generated with Nemotron 3 Ultra (NVIDIA).*

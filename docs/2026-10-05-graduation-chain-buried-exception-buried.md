@@ -27,7 +27,7 @@ The homelab is one physical machine - a Toshiba Portege R30-C - wearing several 
 | `workstation` | desktop (XFCE/SDDM) + AI stack |
 | `failsafe` | minimal recovery, fully independent |
 
-The previous post ([2026-10-02](2026-10-02-litellm-cli-fix-and-ai-gateway-profile/)) ended with a graduation pattern sketched and a dry-run prototype built. The AI stack sat at `common/ai/`, imported by `workstation` ad-hoc. The proposal on the table was:
+The previous post ([2026-10-02](2026-10-02-litellm-cli-config-corruption-fix-ai-gateway-profile-architecture/)) ended with a graduation pattern sketched and a dry-run prototype built. The AI stack sat at `common/ai/`, imported by `workstation` ad-hoc. The proposal on the table was:
 
 ```
 system/ -> common/ -> server -> ai-common/ -> ai-gateway -> workstation

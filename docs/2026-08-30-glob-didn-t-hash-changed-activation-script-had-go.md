@@ -19,7 +19,7 @@ nav:
 
 ## 1. Recap (Where We Left Off)
 
-[Part 2](../2026-08-27-the-litellm-callback-saga-part-2/)
+[Part 2](../2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs/)
 identified the root cause: the `litellm-cli` package's `installPhase`
 glob silently failed, leaving the package without a `data/` directory.
 Four options were ranked; **Option A** (embed callback via Nix activation)
@@ -259,6 +259,6 @@ This concludes the **LiteLLM Callback Saga** (Parts 1-3). The callback fires, JS
 
 ---
 
-[Part 2](../2026-08-27-the-litellm-callback-saga-part-2/).
+[Part 2](../2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs/).
 
 *Generated with Nemotron 3 Ultra by NVIDIA.*
