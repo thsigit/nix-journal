@@ -28,11 +28,10 @@ NO_BUILD=0
 
 GH_SITE_URL="https://thsigit.github.io/nix-journal/"
 BUILD_OUT="$REPO_DIR/.publish_tmp"
-STAGE_DIR="$REPO_DIR/build_docs"
 
 WT=""
 cleanup() {
-  rm -rf "$BUILD_OUT" "$STAGE_DIR" "${TMP_CONF:-}"
+  rm -rf "$BUILD_OUT" "${TMP_CONF:-}"
   if [[ -n "$WT" && -d "$WT" ]]; then
     git worktree remove "$WT" --force 2>/dev/null || rm -rf "$WT"
   fi
@@ -86,15 +85,18 @@ preflight() {
 preflight
 
 if [[ "$NO_BUILD" -eq 0 ]]; then
-  echo "==> Staging docs with series frontmatter (gen_home.py --stage)"
-  python3 scripts/gen_home.py --stage "$STAGE_DIR"
+  # Posts carry their own nav: frontmatter, so there is no staging step:
+  # gen_home.py no longer injects anything. It still regenerates
+  # docs/index.md and runs the navigation validator, which must pass
+  # before we publish.
+  echo "==> Regenerating index.md and validating navigation (gen_home.py)"
+  python3 scripts/gen_home.py
 
   echo "==> Building site with zensical (site_url=$GH_SITE_URL)"
   CONF="$REPO_DIR/zensical.toml"
   TMP_CONF="$(mktemp "$REPO_DIR/zensical.publish.XXXX.toml")"
   sed -e "s#^site_url = .*#site_url = \"$GH_SITE_URL\"#" \
       -e "s#^site_dir = .*#site_dir = \".publish_tmp\"#" \
-      -e "s#^docs_dir = .*#docs_dir = \"build_docs\"#" \
       "$CONF" > "$TMP_CONF"
   zensical build -f "$TMP_CONF"
 fi
