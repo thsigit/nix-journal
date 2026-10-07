@@ -13,7 +13,13 @@
 
 Document the retirement of the three-host opencode deployment (FedoraWSL CLI + Windows Desktop + DebianWSL CLI) and the transition to a solo Fedora setup. Confirm the state of artifacts, sync mechanisms, and open carry-overs.
 
+This journal post documents the evolution of our Opencode deployment strategy, from a multi-host fleet configuration to a simplified solo setup on FedoraWSL. After extensive experimentation with synchronization strategies, we've distilled our workflow into a streamlined approach that preserves functionality while reducing operational complexity.
+
 ## 2. Background (or: How We Got The Fleet)
+
+Initially, we operated three Opencode instances across three machines: **Windows** hosted the canonical configuration (opencode.json, skills, plugins); **Fedora** ran Opencode CLI for local development; **Debian** initially ran CLI, later became an MCP server. This allowed cross-host synchronization testing, deployment model validation, and sync strategy experimentation.
+
+We explored two primary synchronization approaches: **Universal (Windows-centric)** - Windows disk (`C:\Users\SIGIT\.config\opencode`) as single source of truth; rsync to Fedora/Debian; centralized config. Broken because Windows became the bottleneck. **Federated (hub-and-distros)** - Fedora hub (`/mnt/c/users/sigit/git/opencode-v2/`) with `homelab` mirror; per-distro `opencode.json`; distributed sync. Challenge: managing bidirectional sync and avoiding drift.
 
 The journey started with FedoraWSL - the only working host - and grew by accident. `2026-08-29-three-distros-one-opencode-setup-part-1.md` records the origin: "I Built a Fleet by Accident." Debian arrived second (skills copied wholesale, SSH fixed, CA trust installed), then Windows (a June-12-vintage `opencode.json`, old `node_modules`, skills never pointed at anything). By `2026-09-29-three-sync-domains-and-the-unified-fleet-sync-plan.md` three hosts shared 24 active skills byte-identical across all, with `archive/` at 15 - a synchronized fleet in fact.
 
@@ -23,6 +29,8 @@ Two sync architectures were tried:
 - **Federated (hub-and-distros):** Fedora hub (`/mnt/c/users/sigit/git/opencode-v2/`) with `homelab` remote mirroring to `/srv/repo/opencode-v2/config.git`; per-distro `opencode.json` with `mcp` key differences allowed. This converged - 26 commits pushed, `0 0` divergence - but still required SSH mesh maintenance, `mesh-bootstrap.sh`, and constant parity checks.
 
 ## 3. Problem (or: Why We Stopped)
+
+After extensive testing, maintaining the multi-host fleet was unnecessary. Key reasons: (1) **Operational Complexity** - SSH configs, key distribution, network policies; (2) **Limited Benefits** - most functionality achievable with a single host; (3) **Simplicity** - one host reduces management overhead.
 
 The fleet was a successful experiment that outlived its usefulness. Reasons (in order of weight):
 
@@ -66,7 +74,7 @@ Remote `homelab` added (`sigid@192.168.1.3:/srv/repo/opencode-v2/config.git`). 2
 
 | Component | Before (Fleet) | After (Solo) |
 |---|---|---|
-| Opencode CLI | Fedora + Debian | Fedora only |
+| Opencode CLI | Windows + Fedora + Debian | Fedora only |
 | Opencode Desktop | Windows (federated sync) | Windows standalone (experiment only) |
 | Debian WSL | Opencode CLI (failed, port conflict) | MCP server only (reset, clean install) |
 | Config sync | `fleet-sync` plugin, `rsync` hub->distro, SSH mesh | None - manual pull from hub on demand |
@@ -74,6 +82,14 @@ Remote `homelab` added (`sigid@192.168.1.3:/srv/repo/opencode-v2/config.git`). 2
 | Service | Session-scoped on all three | Session-scoped on Fedora only |
 | Mesh | `mesh-bootstrap.sh`, SSH keys, sshd | Not needed |
 | Hub | Windows disk (`C:\Users\SIGIT\.config\opencode`) | `git/opencode-v2` with `homelab` remote |
+
+We're now operating with a single FedoraWSL instance as the primary Opencode host:
+
+- **Fedora**: Runs Opencode CLI and serves as the primary development environment
+- **Windows**: Runs Opencode Desktop (separate instance) for experimentation only
+- **Debian**: Completely reset to function as an MCP server, not as an Opencode host
+
+This simplified architecture provides: cleaner configuration management, reduced maintenance overhead, clearer separation between development and deployment environments, and no need to maintain synchronization between multiple hosts.
 
 ## 7. Verification Plan (or: How We Know It Works)
 
@@ -104,4 +120,4 @@ From `TASK-finish-and-archive-sync-distro-tasks.md`:
 
 ---
 
-Generated with Big Pickle by OpenCode
+Generated with Hy3 (Free) by Kenari (free tier)
