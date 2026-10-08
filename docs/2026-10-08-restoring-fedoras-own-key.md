@@ -27,14 +27,16 @@ Three episodes conspired to file Fedora's key under the wrong heading:
 
 1. **The fleet era (journal `2026-08-29-built-fleet-accident.md`, section 4.7).** Debian borrowed Fedora's key, so a copy of Fedora's private key ended up sitting in Debian's pre-reset seed at `homelab:/srv/repo/wsl-reset/debian-reset/ssh/id_ed25519`. It lived there ever since, labeled by its storage location rather than its owner.
 2. **The reset (2026-09-21).** Fedora WSL was reset, and the new `~/.ssh/id_ed25519` arrived byte-identical to the reset seed at `wsl-reset/fedora-reset/ssh/` - the shared `sigit@vantage` key, the Lenovo/Vantage lineage. File mtime says `Sep 21 20:18` to this day. Fedora's own identity was simply left behind.
-3. **The cleanup (Part 2, section 3.6).** Purging what looked like dead keys from Windows' `administrators_authorized_keys`, we removed the line `ssh-ed25519 ...IHRqLBFF... sigit@FedoraWSL` as the "stale pre-reset Debian key". It carried Fedora's comment, sat in Debian's seed, and was removed as a Debian leftover. It never stopped being Fedora's key.
+3. **The cleanup (Part 2, section 3.6).** Purging what looked like dead keys from Windows' `administrators_authorized_keys`, we removed the `sigit@FedoraWSL` line as the "stale pre-reset Debian key". It carried Fedora's comment, sat in Debian's seed, and was removed as a Debian leftover. It never stopped being Fedora's key.
 
 The two keys at the center of this:
 
-| Key | Base64 head | Fingerprint | Comment |
-|---|---|---|---|
-| Fedora's own (the lost one) | `...IHRqLBFF` | `SHA256:QLi1ZbTp/uz3jTrFK5LBq16v9Lp6c42u5EQFCX2VclA` | `sigit@FedoraWSL` |
-| Shared vantage (the borrowed one) | `...IN4bBvw5` | `SHA256:omdfClmforjWAWCS67snZOsg8EPuhvCDFwviFcTCGQ0` | `sigit@vantage` |
+| Key | Comment | Where it stands after this session |
+|---|---|---|
+| Fedora's own (the lost one) | `sigit@FedoraWSL` | restored on Fedora, trusted on all three inbound sides |
+| Shared vantage (the borrowed one) | `sigit@vantage` | archived on Fedora; still trusted by homelab, Windows, and both distros' inbound files |
+
+Fingerprints and base64 prefixes are deliberately absent: the house rule set while scrubbing Part 2 (commit `8f3abf1` - "no keys in public post") applies here too. The exact values live in the task ledger.
 
 Nothing gets deleted from where vantage still earns its keep: homelab keeps trusting it (that is the W2H leg), Windows keeps its own copy at `C:\Users\SIGIT\.ssh\id_ed25519`. Fedora just stops borrowing it. The private half of Fedora's real key survives on the homelab as that Debian seed - which is what turns this from a regeneration into a restore.
 
@@ -48,7 +50,7 @@ Host fedora / debian / windows
     IdentitiesOnly yes
 ```
 
-One file, so one swap changes Fedora's presented identity on F2D, F2W and F2H simultaneously. Two of those three inbound sides were known to be untrusting at that moment: Windows had `IHRqLBFF...` purged in Part 2, and homelab's live `/etc/ssh/authorized_keys.d/sigit` had lost the entry in this morning's cleanup (the nix config never dropped it - more on that in section 4.3). Swap first, verify later, and the first reconnect after the swap is an outage.
+One file, so one swap changes Fedora's presented identity on F2D, F2W and F2H simultaneously. Two of those three inbound sides were known to be untrusting at that moment: Windows had the FedoraWSL line purged in Part 2, and homelab's live `/etc/ssh/authorized_keys.d/sigit` had lost the entry in this morning's cleanup (the nix config never dropped it - more on that in section 4.3). Swap first, verify later, and the first reconnect after the swap is an outage.
 
 Hence the order of operations, which is the whole architecture of this session:
 
@@ -65,9 +67,9 @@ The seed was pulled to a staging path and fingerprinted *before* any live file w
 ```text
 $ scp homelab:/srv/repo/wsl-reset/debian-reset/ssh/id_ed25519{,.pub} /tmp/opencode/ssh-seed/
 $ ssh-keygen -lf /tmp/opencode/ssh-seed/id_ed25519.pub
-256 SHA256:QLi1ZbTp/uz3jTrFK5LBq16v9Lp6c42u5EQFCX2VclA sigit@FedoraWSL (ED25519)
+256 SHA256:<redacted per the no-keys rule> sigit@FedoraWSL (ED25519)
 $ ssh-keygen -lf /tmp/opencode/ssh-seed/id_ed25519
-256 SHA256:QLi1ZbTp/uz3jTrFK5LBq16v9Lp6c42u5EQFCX2VclA sigit@FedoraWSL (ED25519)
+256 SHA256:<redacted per the no-keys rule> sigit@FedoraWSL (ED25519)
 ```
 
 Both halves agree, and the fingerprint matches the entry homelab still trusts. If this step lies, everything after it is theatre - so it goes first.
@@ -117,8 +119,8 @@ Done. The new configuration is /nix/store/6adr9g0d4fv5z8garxqh4d2mlv194zfc-nixos
 The config had been carrying the answer the entire time - the FedoraWSL line was never removed from source:
 
 ```text
-/srv/repo/nix-lab/system/ssh.nix:26:             "ssh-ed25519 ...IHRqLBFF... sigit@FedoraWSL"
-/srv/repo/nix-lab/profiles/failsafe/default.nix:53: "ssh-ed25519 ...IHRqLBFF... sigit@FedoraWSL"
+/srv/repo/nix-lab/system/ssh.nix:26:             "ssh-ed25519 ... sigit@FedoraWSL"
+/srv/repo/nix-lab/profiles/failsafe/default.nix:53: "ssh-ed25519 ... sigit@FedoraWSL"
 ```
 
 Which is a quiet argument for keeping trust lists declarative: the live file drifted, the source did not, and one rebuild closed the gap.
@@ -127,8 +129,8 @@ Which is a quiet argument for keeping trust lists declarative: the live file dri
 
 | Side | What was missing | Fix | Result |
 |---|---|---|---|
-| Windows `C:\ProgramData\ssh\administrators_authorized_keys` | `IHRqLBFF...` purged in Part 2 section 3.6 | appended the line back | vantage + debianWSL + FedoraWSL |
-| Debian `~/.ssh/authorized_keys` (sigit) | never had it | appended | vantage + windows (`9BDfdCjJ`) + FedoraWSL |
+| Windows `C:\ProgramData\ssh\administrators_authorized_keys` | the FedoraWSL line purged in Part 2 section 3.6 | appended the line back | vantage + debianWSL + FedoraWSL |
+| Debian `~/.ssh/authorized_keys` (sigit) | never had it | appended | vantage + windows + FedoraWSL |
 | homelab `/etc/ssh/authorized_keys.d/sigit` | lost in this morning's cleanup | user's `nixos-rebuild switch` re-emitted it | vantage + FedoraWSL + V2333 |
 
 Debian was already up (Part 2's pending item 3 - "Debian persistence" - held in practice), so no `wsl -d Debian` rescue was needed. Fedora's own inbound `authorized_keys` needed no change: Debian and Windows authenticate *to* Fedora with their own keys, and this task does not touch them.
@@ -139,7 +141,7 @@ Debian was already up (Part 2's pending item 3 - "Debian persistence" - held in 
 $ install -m 600 /tmp/opencode/ssh-seed/id_ed25519      ~/.ssh/id_ed25519
 $ install -m 644 /tmp/opencode/ssh-seed/id_ed25519.pub  ~/.ssh/id_ed25519.pub
 $ ssh-keygen -lf ~/.ssh/id_ed25519.pub
-256 SHA256:QLi1ZbTp/uz3jTrFK5LBq16v9Lp6c42u5EQFCX2VclA sigit@FedoraWSL (ED25519)
+256 SHA256:<redacted per the no-keys rule> sigit@FedoraWSL (ED25519)
 $ cmp /tmp/opencode/ssh-seed/id_ed25519 ~/.ssh/id_ed25519 && echo SWAP-OK
 SWAP-OK
 ```
@@ -148,18 +150,18 @@ Sixty seconds of work, and every precondition above existed to make those sixty 
 
 ### 4.6 Eight legs, BatchMode, no password anywhere
 
-`BatchMode=yes` forbids password prompting, so a green leg *is* key authentication - and `ssh -v`'s `Server accepts key: ... SHA256:...` names the exact key that did it:
+`BatchMode=yes` forbids password prompting, so a green leg *is* key authentication - and `ssh -v`'s `Server accepts key:` line names the exact key that did it (values redacted per section 2):
 
 | Leg | Route | Key offered and accepted | Result |
 |---|---|---|---|
-| F2D | fedora -> `127.0.0.1:2222` (debian) | `QLi1ZbTp... sigit@FedoraWSL` | OK |
-| F2W | fedora -> `127.0.0.1:22` (windows) | `QLi1ZbTp... sigit@FedoraWSL` | OK |
-| F2H | fedora -> `192.168.1.3` (homelab) | `QLi1ZbTp... sigit@FedoraWSL` | OK |
-| D2F | debian -> `127.0.0.1:2223` (fedora) | `dKSts1ow... sigit@debianWSL` | OK |
-| D2W | debian -> `127.0.0.1:22` (windows) | `dKSts1ow... sigit@debianWSL` | OK |
-| W2F | windows -> `127.0.0.1:2223` (fedora) | `omdfClmforj... sigit@vantage` | OK |
-| W2D | windows -> `127.0.0.1:2222` (debian) | `omdfClmforj... sigit@vantage` | OK |
-| W2H | windows -> `192.168.1.3` (homelab) | `omdfClmforj... sigit@vantage` | OK |
+| F2D | fedora -> `127.0.0.1:2222` (debian) | `sigit@FedoraWSL` | OK |
+| F2W | fedora -> `127.0.0.1:22` (windows) | `sigit@FedoraWSL` | OK |
+| F2H | fedora -> `192.168.1.3` (homelab) | `sigit@FedoraWSL` | OK |
+| D2F | debian -> `127.0.0.1:2223` (fedora) | `sigit@debianWSL` | OK |
+| D2W | debian -> `127.0.0.1:22` (windows) | `sigit@debianWSL` | OK |
+| W2F | windows -> `127.0.0.1:2223` (fedora) | `sigit@vantage` | OK |
+| W2D | windows -> `127.0.0.1:2222` (debian) | `sigit@vantage` | OK |
+| W2H | windows -> `192.168.1.3` (homelab) | `sigit@vantage` | OK |
 
 All three F-legs now offer Fedora's own key. Two wrong turns happened on the way, both worth recording because both are the shared-loopback trap in a different costume:
 
@@ -178,12 +180,12 @@ A key's comment field is a claim, not a provenance record. The fingerprint ident
 
 ## 6. Verification Status (or: Prove It)
 
-- [x] Seed fingerprint `QLi1ZbTp...` verified on both halves **before** any live file was touched
+- [x] Seed fingerprint verified on both halves **before** any live file was touched
 - [x] Current vantage pair archived to `~/.ssh/archive/id_ed25519.vantage-20260921{,.pub}`, `cmp`-identical
 - [x] Windows `administrators_authorized_keys` trusts `sigit@FedoraWSL` (three entries present)
 - [x] Debian `~/.ssh/authorized_keys` trusts `sigit@FedoraWSL` (fingerprint verified in place)
 - [x] homelab `/etc/ssh/authorized_keys.d/sigit` trusts `sigit@FedoraWSL` (re-emitted by the user-run switch)
-- [x] Swap: both live files print `QLi1ZbTp...`, private half `cmp`-identical to the staged seed
+- [x] Swap: both live files print the FedoraWSL fingerprint, private half `cmp`-identical to the staged seed
 - [x] All 8 mesh legs green under `BatchMode=yes`, no password prompt anywhere, key named in every `-v` trace
 - [x] Task fully ticked; `sync-plan.sh` exit 0; `verify` reports READY-TO-ARCHIVE
 - [ ] Part 2 carry-over: fresh-session smoke test (no `sync-opencode` skill, no `fleet-sync` plugin) - not this session's scope
@@ -193,7 +195,7 @@ A key's comment field is a claim, not a provenance record. The fingerprint ident
 
 | Axis | Before (this morning) | After |
 |---|---|---|
-| Key presented on F2D / F2W / F2H | vantage `omdfClmforj` | FedoraWSL `QLi1ZbTp` |
+| Key presented on F2D / F2W / F2H | vantage key (`sigit@vantage`) | Fedora's own key (`sigit@FedoraWSL`) |
 | Fedora's `~/.ssh/id_ed25519` | byte-identical to the 2026-09-21 reset seed | verified pre-reset Fedora key from the Debian seed |
 | Windows `administrators_authorized_keys` | vantage + debianWSL | + FedoraWSL (the Part 2 purge undone) |
 | Debian `authorized_keys` (sigit) | vantage + windows | + FedoraWSL |
@@ -220,10 +222,10 @@ A key's comment field is a claim, not a provenance record. The fingerprint ident
 1. **Restore, don't regenerate, when the original survives somewhere you already trust.** A regenerated key is a new identity: every trust list changes and the lineage - who trusted what since when - is gone. The Debian seed made this a fingerprint match instead of a migration.
 2. **Re-trust before you swap.** With one `IdentityFile` for all destinations, the swap is atomic for outbound identity; every inbound list must be green first. The order of operations in section 3 is the actual deliverable of this session - the `install` command is four seconds of it.
 3. **Archive with a dated name and a `cmp` proof.** `id_ed25519.vantage-20260921` says which era it belongs to; `cmp` says the copy is real. Together they mean the swap can be undone by someone who was not in the room.
-4. **Verify legs with `BatchMode` and name the key in the output.** Exit 0 proves authentication happened; `-v`'s `Server accepts key: SHA256:...` proves *which* key - the difference between "it works" and "it works with the right identity".
+4. **Verify legs with `BatchMode` and name the key in the output.** Exit 0 proves authentication happened; `-v`'s `Server accepts key:` line proves *which* key - the difference between "it works" and "it works with the right identity".
 5. **Probe sudo before theorizing about sudoers.** Four lines of rules and three `-n` probes settled the question faster than reasoning about rule order would have - and the operative rule was documented anyway. Read the document first; probe second; theorize never (or at least, last).
 6. **Treat declarative trust lists as the backup they are.** homelab's live authorized_keys had drifted from its nix source; the source never drifted. One rebuild reconciled them - nothing had to be remembered, because the config remembered it.
-7. **A key's comment is a claim, not provenance.** `sigit@FedoraWSL` sat on a key called Debian's; `IN4bBvw5` traveled under three names in three places. Fingerprint the file, then ask which machine's seed it fell out of.
+7. **A key's comment is a claim, not provenance.** `sigit@FedoraWSL` sat on a key everyone called Debian's, and the shared key traveled under three names in three places. Fingerprint the file, then ask which machine's seed it fell out of.
 
 ---
 
