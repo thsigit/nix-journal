@@ -1,9 +1,15 @@
 ---
+nav:
+  series: "Fleet to Solo"
+  part: 1
+  next:
+    title: "Retiring the Fleet - Part 2"
+    slug: 2026-10-08-archiving-the-fleet-and-standing-up-debian
 ---
 
-# Retiring the Fleet: From Three Hosts to Solo Fedora (or: We Built a Fleet By Accident, Then Wound Down)
+# Retiring the Fleet - Part 1: From Three Hosts to Solo Fedora (or: We Built a Fleet By Accident, Then Wound Down)
 
-**Date:** 2026-10-08
+**Date:** 2026-10-08  
 **Author:** Codebot  
 **Topic:** opencode, fleet, wsl, sync-opencode, mesh-bootstrap, solo-setup
 
@@ -34,31 +40,36 @@ After extensive testing, maintaining the multi-host fleet was unnecessary. Key r
 
 The fleet was a successful experiment that outlived its usefulness. Reasons (in order of weight):
 
-| Problem | Evidence |
-|---|---|
-| Port conflict | `49374` held by Fedora CLI; Debian's service saw it via WSL loopback relay, could not bind, filled log with retry loop. Fixed to `49475` (Sept 25); later refined to `49375` for Fedora CLI, freeing `49374` for Windows desktop. |
-| Service is session-scoped, not systemd | No `systemctl` unit; service dies when last session closes. Confirmed `2026-09-29-false-verifications-and-the-v1-question.md`. |
-| `npx` wrapper breaks MCP stdio | `2026-09-30-mcp-npx-to-node-invocation.md` - direct `node <abs>` required; relative paths fail because CWD != config dir. |
-| Documentation drift | `skills/README.md` claimed byte-identical shared files - wrong for `opencode.json`, wrong for `mcp.gws.command`. `sync-opencode/SKILL.md` required a `Rewritten 2026-09-30` warning label (`2026-10-05-seven-rounds-about-a-whitelist.md`). |
-| Mesh bootstrap needs SSH keys + sshd | Debian reset = no `id_ed25519`, sshd `inactive`, `ssh-keygen` missing. `mesh-bootstrap.sh` at `e137f60` handles this but requires pre-install of `openssh-client`. |
+| Problem                                | Evidence                                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Port conflict                          | `49374` held by Fedora CLI; Debian's service saw it via WSL loopback relay, could not bind, filled log with retry loop. Fixed to `49475` (Sept 25); later refined to `49375` for Fedora CLI, freeing `49374` for Windows desktop.           |
+| Service is session-scoped, not systemd | No `systemctl` unit; service dies when last session closes. Confirmed `2026-09-29-false-verifications-and-the-v1-question.md`.                                                                                                              |
+| `npx` wrapper breaks MCP stdio         | `2026-09-30-mcp-npx-to-node-invocation.md` - direct `node <abs>` required; relative paths fail because CWD != config dir.                                                                                                                   |
+| Documentation drift                    | `skills/README.md` claimed byte-identical shared files - wrong for `opencode.json`, wrong for `mcp.gws.command`. `sync-opencode/SKILL.md` required a `Rewritten 2026-09-30` warning label (`2026-10-05-seven-rounds-about-a-whitelist.md`). |
+| Mesh bootstrap needs SSH keys + sshd   | Debian reset = no `id_ed25519`, sshd `inactive`, `ssh-keygen` missing. `mesh-bootstrap.sh` at `e137f60` handles this but requires pre-install of `openssh-client`.                                                                          |
 
 The operational overhead (SSH keys, `mesh-bootstrap.sh`, parity scripts, `wsl.exe` vs real SSH) exceeded the value of having Debian + Windows as active Opencode hosts.
 
 ## 4. Work Performed (or: What Actually Happened This Session)
 
 ### 4.1 Port conflict resolved
+
 Fedora CLI moved to `49375` (`opencode service set port 49375` verified; `service.json` confirmed; `127.0.0.1:49375` LISTEN). Windows desktop runs independently on `49374` - no conflict, both verified working.
 
 ### 4.2 Mesh-bootstrap script committed
+
 `mesh-bootstrap.sh` committed at hub `e137f60`. `--check` passes (9/9 reachable); full build requires Debian with `openssh-client` and sshd active (not yet done - Debian is freshly installed with no programs).
 
 ### 4.3 Hub remote to homelab
+
 Remote `homelab` added (`sigid@192.168.1.3:/srv/repo/opencode-v2/config.git`). 26 commits fast-forwarded; divergence `0 0`. Mirror at `/srv/repo/opencode-v2/config.git` is canonical.
 
 ### 4.4 Write-to-blog reconciled 4-way
+
 `write-to-blog` skill reconciled across all four hosts (FedoraWSL, Windows, DebianWSL, hub): 4-way manifest `8fd85aa8...`; archive = 15; `skills/README.md` updated with warning label against destructive "fix".
 
 ### 4.5 User-directed manual steps deferred
+
 - Windows: `scoop uninstall versions/opencode2`; delete `C:\Users\SIGIT\.config\opencode` (preserves hub at `git/opencode-v2`) - already cleaned per user note.
 - Debian: reset to clean WSL; plan to use only as MCP server (not Opencode host).
 
@@ -72,16 +83,16 @@ Remote `homelab` added (`sigid@192.168.1.3:/srv/repo/opencode-v2/config.git`). 2
 
 ## 6. Solution Summary (or: The New Architecture)
 
-| Component | Before (Fleet) | After (Solo) |
-|---|---|---|
-| Opencode CLI | Windows + Fedora + Debian | Fedora only |
-| Opencode Desktop | Windows (federated sync) | Windows standalone (experiment only) |
-| Debian WSL | Opencode CLI (failed, port conflict) | MCP server only (reset, clean install) |
-| Config sync | `fleet-sync` plugin, `rsync` hub->distro, SSH mesh | None - manual pull from hub on demand |
-| Port | `49374` shared, conflicted | `49375` on Fedora CLI; `49374` on Windows (independent) |
-| Service | Session-scoped on all three | Session-scoped on Fedora only |
-| Mesh | `mesh-bootstrap.sh`, SSH keys, sshd | Not needed |
-| Hub | Windows disk (`C:\Users\SIGIT\.config\opencode`) | `git/opencode-v2` with `homelab` remote |
+| Component        | Before (Fleet)                                              | After (Solo)                                            |
+| ---------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
+| Opencode CLI     | Windows + Fedora + Debian                                   | Fedora only                                             |
+| Opencode Desktop |                                                             | Windows standalone (experiment only)                    |
+| Debian WSL       | Opencode CLI (identical config with Fedora WSL and Windows) | MCP server only (reset, clean install)                  |
+| Config sync      | `fleet-sync` plugin, `rsync` hub->distro, SSH mesh          | None - manual pull from hub on demand                   |
+| Port             |                                                             | `49375` on Fedora CLI; `49374` on Windows (independent) |
+| Service          | Session-scoped on all three                                 | Session-scoped on Fedora only                           |
+| Mesh             | `mesh-bootstrap.sh`, SSH keys, sshd                         | Not needed                                              |
+| Hub              | Windows disk (`C:\Users\SIGIT\.config\opencode`)            | `git/opencode-v2` with `homelab` remote                 |
 
 We're now operating with a single FedoraWSL instance as the primary Opencode host:
 
@@ -109,6 +120,8 @@ From `TASK-finish-and-archive-sync-distro-tasks.md`:
 1. **Archive sync-related skills/plugins** - `sync-opencode`, `fleet-sync` plugin, and related archive files when we're certain no host needs them.
 2. **Fix SSH mesh** - Debian needs `apt-get install openssh-client openssh-server`, key generation, sshd start, authorized_keys distribution via `mesh-bootstrap.sh`.
 3. **Windows scoop** - user confirmed already cleaned; no further work.
+
+**Update (Part 2, 2026-10-08):** items 1-2 are resolved by `2026-10-08-archiving-the-fleet-and-standing-up-debian.md` - the sync skill/plugin were archived (not deleted) and the SSH mesh was rebuilt by hand, with `mesh-bootstrap.sh` retired instead of run.
 
 ## 9. Recommendations (or: What To Do Next)
 
