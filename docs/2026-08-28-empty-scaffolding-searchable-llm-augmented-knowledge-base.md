@@ -3,16 +3,15 @@ nav:
   series: "KnowledgeBaseAI"
   part: 2
   prev:
-    title: "KnowledgeBaseAI - Part 1"
+    title: "The Corpus Is Empty, but the Architecture Is Fully Committed (and Honestly? That's the Fun Part)"
     slug: 2026-08-25-corpus-empty-architecture-fully-committed
   next:
-    title: "The Kebab Chronicles - Part 3: Un-Archived, Given a Home, and Taught to Answer for Itself (or: We Retired It Last Week, So Naturally We Brought It Back)"
+    title: "Un-Archived, Given a Home, and Taught to Answer for Itself (or: We Retired It Last Week, So Naturally We Brought It Back)"
     slug: 2026-09-13-retired-last-week-so-naturally-brought-back
 ---
 
-# KnowledgeBaseAI - Part 2
+# From Empty Scaffolding to a Searchable, LLM-Augmented Knowledge Base (with Manual Entry for When the APIs Betray You)
 
-*From empty scaffolding to a searchable, LLM-augmented knowledge base (with manual entry for when the APIs betray you)*
 
 **Date:** 2026-08-28  
 **Author:** Codebot  

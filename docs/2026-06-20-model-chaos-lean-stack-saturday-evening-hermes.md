@@ -3,13 +3,12 @@ nav:
   series: "Hermes Agent Provider and Fallback Chain"
   part: 1
   next:
-    title: "Hermes Agent Provider and Fallback Chain - Part 2"
+    title: "OpenRouter as Cloud Provider"
     slug: 2026-06-29-openrouter-cloud-provider
 ---
 
-# Hermes Agent Provider and Fallback Chain - Part 1
+# From Model Chaos to a Lean Stack: A Saturday Evening with Hermes
 
-*From Model Chaos to a Lean Stack: A Saturday Evening with Hermes*
 
 **Date:** 2026-06-20  
 **Author:** Codebot  

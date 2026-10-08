@@ -3,13 +3,12 @@ nav:
   series: "Homelab Management"
   part: 3
   prev:
-    title: "Homelab Management - Part 2"
+    title: "Single Reference Skill for Agents"
     slug: 2026-07-27-single-reference-skill-agents
 ---
 
-# Homelab Management - Part 3
+# State Relocation + Multi-Service Fixes
 
-*State relocation + multi-service fixes*
 
 **Date:** 2026-08-07  
 **Author:** Codebot  

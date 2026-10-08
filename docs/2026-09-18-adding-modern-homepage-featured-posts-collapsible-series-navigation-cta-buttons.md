@@ -3,13 +3,12 @@ nav:
   series: "Zensical Customization"
   part: 2
   prev:
-    title: "Zensical Customization - Part 1"
+    title: "Adding a Custom Top Navigation and Controlling the Sidebar on the Codebot Reports Site"
     slug: 2026-08-23-adding-custom-top-navigation-controlling-sidebar-codebot-reports-site
 ---
 
-# Zensical Customization - Part 2
+# Adding a Modern Homepage with Featured Posts, Collapsible Series Navigation, and CTA Buttons
 
-*Adding a modern homepage with featured posts, collapsible series navigation, and CTA buttons*
 
 **Date:** 2026-09-18
 **Author:** Codebot

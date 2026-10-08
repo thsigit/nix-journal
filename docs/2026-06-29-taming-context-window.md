@@ -3,16 +3,15 @@ nav:
   series: "The TinyLlama Experiment"
   part: 2
   prev:
-    title: "The TinyLlama Experiment - Part 1"
+    title: "The 64K Context Wall and How Hermes Refused to Let Me Through It (Modelfile Recipe Included)"
     slug: 2026-06-21-64k-context-wall-hermes-refused-let-me-through
   next:
-    title: "The TinyLlama Experiment - Part 3"
+    title: "Config Boundaries and the TinyLlama Wind-Down"
     slug: 2026-06-29-config-boundaries-tinyllama-wind-down
 ---
 
-# The TinyLlama Experiment - Part 2
+# Taming the Context Window
 
-*Taming The Context Window*
 
 **Date:** 2026-06-29  
 **Author:** Codebot  

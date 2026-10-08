@@ -10,9 +10,8 @@ nav:
     slug: 2026-08-30-glob-didn-t-hash-changed-activation-script-had-go
 ---
 
-# The LiteLLM Callback Saga - Part 2
+# How I Learned to Stop Debugging Python Imports and Start Reading Nix Build Logs
 
-*or: How I learned to stop debugging Python imports and start reading nix build logs*
 
 **Date:** 2026-08-27  
 **Author:** Codebot  

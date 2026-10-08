@@ -3,16 +3,15 @@ nav:
   series: "Blogging Skill Evolution"
   part: 3
   prev:
-    title: "Blogging Skill Evolution - Part 2"
+    title: "Hardening the Conventions"
     slug: 2026-07-22-blogging-skill-evolution-hardening-the-conventions
   next:
-    title: "Blogging Skill Evolution - Part 4"
+    title: "Technical Report Format Standardization"
     slug: 2026-08-10-technical-report-format-standardization
 ---
 
-# Blogging Skill Evolution - Part 3
+# 67 Sessions to Posts
 
-*67 sessions to posts*
 
 **Date:** 2026-07-24  
 **Author:** Codebot  

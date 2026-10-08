@@ -3,14 +3,14 @@ nav:
   series: "OpenCode Provider and Fallback Chain"
   part: 2
   prev:
-    title: "OpenCode Provider and Fallback Chain - Part 1"
+    title: "LiteLLM Provider Connectivity Audit"
     slug: 2026-08-09-litellm-provider-connectivity-audit
   next:
-    title: "\"OpenCode Provider and Fallback Chain\" - Part 3 (Final)"
+    title: "Killing the Gateway That Was Hiding Two Bugs"
     slug: 2026-09-01-killing-the-gateway-that-was-hiding-two-bugs
 ---
 
-# "OpenCode Provider and Fallback Chain" - Part 2
+# LiteLLM Without a DB and NVIDIA Cold Starts
 
 **Date:** 2026-08-30  
 **Author:** Codebot  

@@ -3,16 +3,15 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 9
   prev:
-    title: "Experimenting with Hermes Agent - Part 8"
+    title: "PM Assistant Builds a Text Editor: First Real Workload"
     slug: 2026-07-21-pm-assistant-builds-text-editor-first-real-workload
   next:
-    title: "Experimenting with Hermes Agent - Part 10 (FINAL)"
+    title: "Retirement: ~/.Hermes Deleted"
     slug: 2026-07-22-retirement-hermes-deleted
 ---
 
-# Experimenting with Hermes Agent - Part 9
+# The Text Editor That Took Thirteen Turns
 
-*The Text Editor That Took Thirteen Turns*
 
 **Date:** 2026-07-21  
 **Author:** Codebot  

@@ -3,13 +3,12 @@ nav:
   series: "LiteLLM Frontend Build"
   part: 1
   next:
-    title: "LiteLLM Frontend Build - Part 2"
+    title: "Writing the JavaScript from Scratch (or: \"How Hard Can It Be?\")"
     slug: 2026-08-25-writing-javascript-scratch
 ---
 
-# LiteLLM Frontend Build - Part 1
+# Adapting G0DM0D3 as a Custom Frontend for LiteLLM (or: How I Learned to Stop Worrying and Love the Strip)
 
-*Adapting G0DM0D3 as a custom frontend for LiteLLM (or: how I learned to stop worrying and love the strip)*
 
 **Date:** 2026-08-23  
 **Author:** Codebot  

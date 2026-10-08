@@ -3,7 +3,7 @@ nav:
   series: "The LiteLLM Callback Saga"
   part: 1
   next:
-    title: "The LiteLLM Callback Saga - Part 2"
+    title: "How I Learned to Stop Debugging Python Imports and Start Reading Nix Build Logs"
     slug: 2026-08-27-learned-stop-debugging-python-imports-start-reading-nix-build-logs
 ---
 

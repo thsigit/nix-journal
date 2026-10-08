@@ -3,16 +3,15 @@ nav:
   series: "OpenCode Configuration Evolution"
   part: 2
   prev:
-    title: "OpenCode Configuration Evolution - Part 1"
+    title: "Agent Roster for Specialized Model Routing"
     slug: 2026-07-22-agent-roster-specialized-model-routing
   next:
-    title: "OpenCode Configuration Evolution - Part 3"
+    title: "Dead Provider and Agent-Model Cleanup"
     slug: 2026-07-31-dead-provider-agent-model-cleanup
 ---
 
-# OpenCode Configuration Evolution - Part 2
+# Persistent Context vs Fresh-Start Problem
 
-*Persistent context vs fresh-start problem*
 
 **Date:** 2026-07-25  
 **Author:** Codebot  

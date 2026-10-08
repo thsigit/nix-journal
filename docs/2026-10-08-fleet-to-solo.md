@@ -3,11 +3,11 @@ nav:
   series: "Fleet to Solo"
   part: 1
   next:
-    title: "Retiring the Fleet - Part 2"
+    title: "Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)"
     slug: 2026-10-08-archiving-the-fleet-and-standing-up-debian
 ---
 
-# Retiring the Fleet - Part 1: From Three Hosts to Solo Fedora (or: We Built a Fleet By Accident, Then Wound Down)
+# From Three Hosts to Solo Fedora (or: We Built a Fleet by Accident, Then Wound Down)
 
 **Date:** 2026-10-08  
 **Author:** Codebot  

@@ -3,14 +3,14 @@ nav:
   series: "Fleet to Solo"
   part: 2
   prev:
-    title: "Fleet to Solo - Part 1"
+    title: "From Three Hosts to Solo Fedora (or: We Built a Fleet by Accident, Then Wound Down)"
     slug: 2026-10-08-fleet-to-solo
   next:
-    title: "Fleet to Solo - Part 3"
+    title: "Restoring Fedora's Own Key (or: The Key That Was Never Lost)"
     slug: 2026-10-08-restoring-fedoras-own-key
 ---
 
-# Retiring the Fleet - Part 2: Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)
+# Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)
 
 **Date:** 2026-10-08  
 **Author:** Codebot  

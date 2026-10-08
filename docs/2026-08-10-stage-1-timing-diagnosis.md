@@ -3,13 +3,12 @@ nav:
   series: "Switch Root Target Contains No Usable Init"
   part: 1
   next:
-    title: "\"switch root target contains no usable init\" - Part 2"
+    title: "Culprit Confirmed + Mitigation"
     slug: 2026-08-11-culprit-confirmed-mitigation
 ---
 
-# "switch root target contains no usable init" - Part 1
+# Stage-1 Timing Diagnosis
 
-*Stage-1 timing diagnosis*
 
 **Date:** 2026-08-10  
 **Author:** Codebot  

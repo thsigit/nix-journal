@@ -7,7 +7,7 @@ nav:
     slug: 2026-09-21-great-fedora-death-rebirth
 ---
 
-# FedoraWSL Reset and Opencode Restore - Part 2 (or: The Rebirth, Completed)
+# FedoraWSL Reset and Opencode Restore (or: The Rebirth, Completed)
 
 **Date:** 2026-09-24  
 **Author:** Codebot  

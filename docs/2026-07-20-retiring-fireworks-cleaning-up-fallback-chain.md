@@ -3,13 +3,12 @@ nav:
   series: "Hermes Agent Provider and Fallback Chain"
   part: 5
   prev:
-    title: "Hermes Agent Provider and Fallback Chain - Part 4"
+    title: "Switching Providers and Picking a Fallback Chain"
     slug: 2026-07-02-switching-providers-picking-fallback-chain
 ---
 
-# Hermes Agent Provider and Fallback Chain - Part 5
+# Retiring Fireworks and Cleaning Up the Fallback Chain
 
-*Retiring Fireworks and Cleaning Up the Fallback Chain*
 
 **Date:** 2026-07-20  
 **Author:** Codebot  

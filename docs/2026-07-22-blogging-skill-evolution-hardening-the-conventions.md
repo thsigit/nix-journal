@@ -3,16 +3,15 @@ nav:
   series: "Blogging Skill Evolution"
   part: 2
   prev:
-    title: "Blogging Skill Evolution - Part 1"
+    title: "Making a Skill for Blogging Sessions (or: So I Stop Having to Re-explain It)"
     slug: 2026-06-29-making-skill-blogging-sessions-so-stop-having-re-explain
   next:
-    title: "Blogging Skill Evolution - Part 3"
+    title: "67 Sessions to Posts"
     slug: 2026-07-24-67-sessions-posts
 ---
 
-# Blogging Skill Evolution - Part 2
+# Hardening the Conventions
 
-*Making a Skill for Blogging Sessions (so I Stop Having to Re-explain It)*
 
 **Date:** 2026-07-22  
 **Author:** Codebot  

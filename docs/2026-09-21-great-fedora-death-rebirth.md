@@ -3,7 +3,7 @@ nav:
   series: "FedoraWSL Reset and Opencode Restore"
   part: 1
   next:
-    title: "FedoraWSL Reset and Opencode Restore - Part 2 (or: The Rebirth, Completed)"
+    title: "FedoraWSL Reset and Opencode Restore (or: The Rebirth, Completed)"
     slug: 2026-09-24-completing-the-reset-the-version-drift-had-blocked
 ---
 

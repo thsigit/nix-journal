@@ -3,16 +3,15 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 6
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 5"
+    title: "Model Catalog Expansion + OpenCode"
     slug: 2026-07-27-model-catalog-expansion-opencode
   next:
-    title: "The LiteLLM Gateway Evolution - Part 7"
+    title: "Prune Dead Providers + OpenCode Integration"
     slug: 2026-07-30-prune-dead-providers-opencode-integration
 ---
 
-# The LiteLLM Gateway Evolution - Part 6
+# Test Models + Fix "No Connected DB"
 
-*Test models + fix "No connected db"*
 
 **Date:** 2026-07-29  
 **Author:** Codebot  

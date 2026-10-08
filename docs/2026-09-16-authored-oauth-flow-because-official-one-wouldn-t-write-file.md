@@ -3,7 +3,7 @@ nav:
   series: "Gmail MCP"
   part: 1
   next:
-    title: "\"Gmail MCP, Wired From Scratch\" - Part 2 (or: Google's Official Servers Hit the Developer Preview Wall, So We Built a Local One)"
+    title: "Gmail MCP, Wired From Scratch (or: Google's Official Servers Hit the Developer Preview Wall, So We Built a Local One)"
     slug: 2026-09-16-google-s-official-servers-hit-developer-preview-wall-so-built
 ---
 

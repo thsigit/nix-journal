@@ -3,13 +3,12 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 10
   prev:
-    title: "Experimenting with Hermes Agent - Part 9"
+    title: "The Text Editor That Took Thirteen Turns"
     slug: 2026-07-21-text-editor-took-thirteen-turns
 ---
 
-# Experimenting with Hermes Agent - Part 10 (FINAL)
+# Retirement: ~/.Hermes Deleted
 
-*Retirement: ~/.hermes deleted*
 
 **Date:** 2026-07-22  
 **Author:** Codebot  

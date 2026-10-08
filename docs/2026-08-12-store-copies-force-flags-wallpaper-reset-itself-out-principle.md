@@ -3,13 +3,12 @@ nav:
   series: "Declarative Desktop with Home-Manager"
   part: 1
   next:
-    title: "Declarative Desktop with Home-Manager - Part 2"
+    title: "Out-of-Store Symlinks: Every GUI Click Is Now an Uncommitted Change"
     slug: 2026-08-24-out-store-symlinks-every-gui-click-now-uncommitted-change
 ---
 
-# Declarative Desktop with Home-Manager - Part 1
+# Store Copies, Force Flags, and a Wallpaper That Reset Itself Out of Principle
 
-*Store copies, force flags, and a wallpaper that reset itself out of principle*
 
 **Date:** 2026-08-12  
 **Author:** Codebot  

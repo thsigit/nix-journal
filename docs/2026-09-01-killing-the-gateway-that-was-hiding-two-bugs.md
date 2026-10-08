@@ -3,11 +3,11 @@ nav:
   series: "OpenCode Provider and Fallback Chain"
   part: 3
   prev:
-    title: "\"OpenCode Provider and Fallback Chain\" - Part 2"
+    title: "LiteLLM Without a DB and NVIDIA Cold Starts"
     slug: 2026-08-30-litellm-without-a-db-and-nvidia-cold-starts
 ---
 
-# "OpenCode Provider and Fallback Chain" - Part 3 (Final)
+# Killing the Gateway That Was Hiding Two Bugs
 
 **Date:** 2026-09-01  
 **Author:** Codebot  

@@ -3,13 +3,12 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 14
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 13"
+    title: "Podman to Native Systemd Migration"
     slug: 2026-08-21-podman-native-systemd-migration
 ---
 
-# The LiteLLM Gateway Evolution - Part 14 (Final)
+# Provider-Native Discovery + Providers.json
 
-*Provider-native discovery + providers.json*
 
 **Date:** 2026-08-21  
 **Author:** Codebot  

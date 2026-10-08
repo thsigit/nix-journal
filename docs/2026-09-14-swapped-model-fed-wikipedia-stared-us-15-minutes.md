@@ -3,11 +3,11 @@ nav:
   series: "The Kebab Refinery"
   part: 3
   prev:
-    title: "The Kebab Refinery - Part 2: The Language Fold, the Model That Lied, and the Swap That Was Written in Advance (or: We Asked a 609MB Pillow What the Capital Was and It Told Us About a Snack)"
+    title: "The Language Fold, the Model That Lied, and the Swap That Was Written in Advance (or: We Asked a 609MB Pillow What the Capital Was and It Told Us About a Snack)"
     slug: 2026-09-13-asked-609mb-pillow-what-capital-told-us-about-snack
 ---
 
-# The Kebab Refinery - Part 3: The CPU-Bound Dream, the DNS That Broke the Search, and the Claims That Never Came (or: We Swapped the Model, Fed It Wikipedia, and It Stared at Us for 15 Minutes)
+# The CPU-Bound Dream, the DNS That Broke the Search, and the Claims That Never Came (or: We Swapped the Model, Fed It Wikipedia, and It Stared at Us for 15 Minutes)
 
 **Date:** 2026-09-14  
 **Author:** Codebot  

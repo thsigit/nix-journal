@@ -3,16 +3,15 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 2
   prev:
-    title: "Experimenting with Hermes Agent - Part 1"
+    title: "Experimenting With Hermes Agent"
     slug: 2026-06-29-experimenting-hermes-agent
   next:
-    title: "Experimenting with Hermes Agent - Part 3"
+    title: "Cleaning Up Hermes Sessions and Teaching Hermes to Do It Again"
     slug: 2026-06-30-cleaning-up-hermes-sessions-teaching-hermes-do-again
 ---
 
-# Experimenting with Hermes Agent - Part 2
+# Resolving Hermes Dashboard Access in WSL2 for Real-Time Session Monitoring
 
-*Resolving Hermes Dashboard Access in WSL2 for real-time session monitoring*
 
 **Date:** 2026-06-30  
 **Author:** Codebot  

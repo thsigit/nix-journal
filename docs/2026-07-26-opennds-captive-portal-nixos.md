@@ -3,16 +3,15 @@ nav:
   series: "Captive Portal and Access Point Bundle"
   part: 4
   prev:
-    title: "Captive Portal and Access Point Bundle - Part 3"
+    title: "Runtime-Editable RADIUS Users: The Users File That Wasn't There"
     slug: 2026-07-26-runtime-editable-radius-users-users-file-wasn-t-there
   next:
-    title: "Captive Portal and Access Point Bundle - Part 5"
+    title: "Voucher-Based Guest Auth"
     slug: 2026-07-27-voucher-based-guest-auth
 ---
 
-# Captive Portal and Access Point Bundle - Part 4
+# OpenNDS Captive Portal on NixOS
 
-*openNDS captive portal on NixOS*
 
 **Date:** 2026-07-26  
 **Author:** Codebot  

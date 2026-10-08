@@ -3,16 +3,15 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 5
   prev:
-    title: "Experimenting with Hermes Agent - Part 4"
+    title: "Replacing the Gemini API Key Without Taking Down the Main Tab"
     slug: 2026-07-01-replacing-gemini-api-key-without-taking-down-main-tab
   next:
-    title: "Experimenting with Hermes Agent - Part 6"
+    title: "Attempting Llama.cpp Connection in WSL2"
     slug: 2026-07-02-attempting-llama-cpp-connection-wsl2
 ---
 
-# Experimenting with Hermes Agent - Part 5
+# A Manual Check That Caught a Rogue Blob
 
-*A Manual Check That Caught a Rogue Blob*
 
 **Date:** 2026-07-01  
 **Author:** Codebot  

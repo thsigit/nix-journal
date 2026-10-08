@@ -3,16 +3,15 @@ nav:
   series: "Hermes Agent Provider and Fallback Chain"
   part: 3
   prev:
-    title: "Hermes Agent Provider and Fallback Chain - Part 2"
+    title: "OpenRouter as Cloud Provider"
     slug: 2026-06-29-openrouter-cloud-provider
   next:
-    title: "Hermes Agent Provider and Fallback Chain - Part 4"
+    title: "Switching Providers and Picking a Fallback Chain"
     slug: 2026-07-02-switching-providers-picking-fallback-chain
 ---
 
-# Hermes Agent Provider and Fallback Chain - Part 3
+# Migrating from Ollama to Google Gemini.md + Credential Practices
 
-*Migrating from Ollama to Google Gemini.md + credential practices*
 
 **Date:** 2026-06-29  
 **Author:** Codebot  

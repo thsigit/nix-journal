@@ -3,11 +3,11 @@ nav:
   series: "OpenCode Task Plugin"
   part: 2
   prev:
-    title: "\"OpenCode Task Plugin\" - Part 1 (or: Testing the Automated Mechanism With a Real Task and Then Misreading the Result)"
+    title: "Testing the Automated Mechanism With a Real Task and Then Misreading the Result"
     slug: 2026-09-30-testing-automated-mechanism-real-task-then-misreading-result
 ---
 
-# "OpenCode Task Plugin" - Part 2 (or: The Rename, The Compile Error, and Why Two Birds Need Two Stones)
+# The Rename, the Compile Error, and Why Two Birds Need Two Stones
 
 **Date:** 2026-10-01  
 **Author:** Codebot  

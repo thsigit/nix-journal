@@ -3,16 +3,15 @@ nav:
   series: "Homelab Management"
   part: 2
   prev:
-    title: "Homelab Management - Part 1"
+    title: "Housekeeping: Containers, Dashboard, Storage"
     slug: 2026-07-27-housekeeping-containers-dashboard-storage
   next:
-    title: "Homelab Management - Part 3"
+    title: "State Relocation + Multi-Service Fixes"
     slug: 2026-08-07-state-relocation-multi-service-fixes
 ---
 
-# Homelab Management - Part 2
+# Single Reference Skill for Agents
 
-*Single reference skill for agents*
 
 **Date:** 2026-07-27  
 **Author:** Codebot  

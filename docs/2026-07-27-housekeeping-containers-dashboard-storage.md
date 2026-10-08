@@ -3,13 +3,12 @@ nav:
   series: "Homelab Management"
   part: 1
   next:
-    title: "Homelab Management - Part 2"
+    title: "Single Reference Skill for Agents"
     slug: 2026-07-27-single-reference-skill-agents
 ---
 
-# Homelab Management - Part 1
+# Housekeeping: Containers, Dashboard, Storage
 
-*Housekeeping: containers, dashboard, storage*
 
 **Date:** 2026-07-27  
 **Author:** Codebot  

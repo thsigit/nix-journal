@@ -3,11 +3,11 @@ nav:
   series: "Three Distros, One OpenCode Setup"
   part: 1
   next:
-    title: "Three Distros, One OpenCode Setup - Part 2 (or: Three Distros, One Configuration, and a Windows Asterisk)"
+    title: "Three Distros, One Configuration, and a Windows Asterisk"
     slug: 2026-08-30-three-distros-one-configuration-windows-asterisk
 ---
 
-# Three Distros, One OpenCode Setup - Part 1 (or: I Built a Fleet by Accident)
+# I Built a Fleet by Accident
 
 **Date:** 2026-08-29  
 **Author:** Codebot  

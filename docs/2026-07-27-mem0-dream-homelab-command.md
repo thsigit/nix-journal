@@ -3,16 +3,15 @@ nav:
   series: "mem0 Memory Integration"
   part: 3
   prev:
-    title: "Mem0 Memory Integration - Part 2"
+    title: "Custom Integration vs Official Plugin"
     slug: 2026-07-24-custom-integration-vs-official-plugin
   next:
-    title: "Mem0 Memory Integration - Part 4"
+    title: "259-Memory Dream Run"
     slug: 2026-08-08-259-memory-dream-run
 ---
 
-# Mem0 Memory Integration - Part 3
+# Mem0-Dream + Homelab Command
 
-*mem0-dream + homelab command*
 
 **Date:** 2026-07-27  
 **Author:** Codebot  

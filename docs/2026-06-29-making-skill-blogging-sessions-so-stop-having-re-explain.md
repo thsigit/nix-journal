@@ -3,13 +3,12 @@ nav:
   series: "Blogging Skill Evolution"
   part: 1
   next:
-    title: "Blogging Skill Evolution - Part 2"
+    title: "Hardening the Conventions"
     slug: 2026-07-22-blogging-skill-evolution-hardening-the-conventions
 ---
 
-# Blogging Skill Evolution - Part 1
+# Making a Skill for Blogging Sessions (or: So I Stop Having to Re-explain It)
 
-*Making a Skill for Blogging Sessions so I Stop Having to Re-explain It*
 
 **Date:** 2026-06-29  
 **Author:** Codebot  

@@ -3,16 +3,15 @@ nav:
   series: "Captive Portal and Access Point Bundle"
   part: 2
   prev:
-    title: "Captive Portal and Access Point Bundle - Part 1"
+    title: "The Hostapd Hunt: When DNS Gets Lost at the Firewall"
     slug: 2026-07-25-hostapd-hunt-when-dns-gets-lost-firewall
   next:
-    title: "Captive Portal and Access Point Bundle - Part 3"
+    title: "Runtime-Editable RADIUS Users: The Users File That Wasn't There"
     slug: 2026-07-26-runtime-editable-radius-users-users-file-wasn-t-there
 ---
 
-# Captive Portal and Access Point Bundle - Part 2
+# WPA2-Enterprise: FreeRADIUS, PEAP, and the PEM That Wouldn't Load
 
-*WPA2-Enterprise: FreeRADIUS, PEAP, and the PEM That Wouldn't Load*
 
 **Date:** 2026-07-25  
 **Author:** Codebot  

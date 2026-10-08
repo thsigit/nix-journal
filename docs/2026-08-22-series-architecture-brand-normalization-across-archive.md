@@ -3,16 +3,15 @@ nav:
   series: "Blogging Skill Evolution"
   part: 6
   prev:
-    title: "Blogging Skill Evolution - Part 5"
+    title: "Zensical Static Site at Reports.home.arpa"
     slug: 2026-08-14-zensical-static-site-reports-home-arpa
   next:
-    title: "Blogging Skill Evolution - Part 7"
+    title: "The Blogging Skill Grows an Agent, the Agent Grows a Personality, and We All Pretend This Was the Plan"
     slug: 2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan
 ---
 
-# Blogging Skill Evolution - Part 6
+# Series Architecture + Brand Normalization Across the Archive
 
-*Series architecture + brand normalization across the archive*
 
 **Date:** 2026-08-22  
 **Author:** Codebot  

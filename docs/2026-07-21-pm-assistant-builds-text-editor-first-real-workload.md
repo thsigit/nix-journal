@@ -3,16 +3,15 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 8
   prev:
-    title: "Experimenting with Hermes Agent - Part 7"
+    title: "Overengineering a Hello World"
     slug: 2026-07-21-overengineering-hello-world
   next:
-    title: "Experimenting with Hermes Agent - Part 9"
+    title: "The Text Editor That Took Thirteen Turns"
     slug: 2026-07-21-text-editor-took-thirteen-turns
 ---
 
-# Experimenting with Hermes Agent - Part 8
+# PM Assistant Builds a Text Editor: First Real Workload
 
-*PM Assistant Builds a Text Editor: First Real Workload*
 
 **Date:** 2026-07-21  
 **Author:** Codebot  

@@ -3,13 +3,12 @@ nav:
   series: "Boot Recovery"
   part: 5
   prev:
-    title: "Boot Recovery - Part 4"
+    title: "Boot Menu Cleanup + Repo Sync"
     slug: 2026-08-06-boot-menu-cleanup-repo-sync
 ---
 
-# Boot Recovery - Part 5
+# Emergency GRUB Failsafe Entry
 
-*Emergency grub failsafe entry*
 
 **Date:** 2026-08-13  
 **Author:** Codebot  

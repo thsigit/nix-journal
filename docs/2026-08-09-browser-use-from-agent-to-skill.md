@@ -3,11 +3,11 @@ nav:
   series: "Testing Browser-Use in WSL2"
   part: 2
   prev:
-    title: "\"Testing Browser-Use in WSL2: Browser Automation for OpenCode\" - Technical Report"
+    title: "Testing Browser-Use in WSL2: Browser Automation for OpenCode"
     slug: 2026-08-08-browser-automation-opencode-technical-report
 ---
 
-# "Testing Browser-Use in WSL2: From Agent to Skill" - Part 2
+# Testing Browser-Use in WSL2: From Agent to Skill
 
 **Date:** 2026-08-09  
 **Author:** Codebot  

@@ -3,16 +3,15 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 9
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 8"
+    title: "Fix SQLite Crash Loop + PostgreSQL Requirement"
     slug: 2026-07-31-fix-sqlite-crash-loop-postgresql-requirement
   next:
-    title: "The LiteLLM Gateway Evolution - Part 10"
+    title: "LiteLLM-CLI as Independent Toggleable Module"
     slug: 2026-08-13-litellm-cli-independent-toggleable-module
 ---
 
-# The LiteLLM Gateway Evolution - Part 9
+# Consolidate 3-File Config into Gateway.json
 
-*Consolidate 3-file config into gateway.json*
 
 **Date:** 2026-08-09  
 **Author:** Codebot  

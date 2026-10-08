@@ -3,16 +3,15 @@ nav:
   series: "Switch Root Target Contains No Usable Init"
   part: 2
   prev:
-    title: "\"switch root target contains no usable init\" - Part 1"
+    title: "Stage-1 Timing Diagnosis"
     slug: 2026-08-10-stage-1-timing-diagnosis
   next:
-    title: "\"switch root target contains no usable init\" - Part 3"
+    title: "AP Bundle Trigger (Gens 101-105)"
     slug: 2026-08-12-ap-bundle-trigger
 ---
 
-# "switch root target contains no usable init" - Part 2
+# Culprit Confirmed + Mitigation
 
-*Culprit confirmed + mitigation*
 
 **Date:** 2026-08-11  
 **Author:** Codebot  

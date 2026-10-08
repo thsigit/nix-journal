@@ -3,13 +3,12 @@ nav:
   series: "Coding with Hermes Agent"
   part: 1
   next:
-    title: "Coding with Hermes Agent - Part 2"
+    title: "Todoist Wrapper: Prototype vs Workflow Build"
     slug: 2026-07-18-todoist-wrapper-prototype-vs-workflow-build
 ---
 
-# Coding with Hermes Agent - Part 1
+# Building a Multi-Agent Workflow Orchestrator and Running the First Cycle
 
-*Building a Multi-Agent Workflow Orchestrator and running the first cycle*
 
 **Date:** 2026-07-18  
 **Author:** Codebot  

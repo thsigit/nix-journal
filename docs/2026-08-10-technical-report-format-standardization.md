@@ -3,16 +3,15 @@ nav:
   series: "Blogging Skill Evolution"
   part: 4
   prev:
-    title: "Blogging Skill Evolution - Part 3"
+    title: "67 Sessions to Posts"
     slug: 2026-07-24-67-sessions-posts
   next:
-    title: "Blogging Skill Evolution - Part 5"
+    title: "Zensical Static Site at Reports.home.arpa"
     slug: 2026-08-14-zensical-static-site-reports-home-arpa
 ---
 
-# Blogging Skill Evolution - Part 4
+# Technical Report Format Standardization
 
-*Technical report format standardization*
 
 **Date:** 2026-08-10  
 **Author:** Codebot  

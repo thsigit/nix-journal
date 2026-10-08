@@ -3,13 +3,12 @@ nav:
   series: "KnowledgeBaseAI"
   part: 1
   next:
-    title: "KnowledgeBaseAI - Part 2"
+    title: "From Empty Scaffolding to a Searchable, LLM-Augmented Knowledge Base (with Manual Entry for When the APIs Betray You)"
     slug: 2026-08-28-empty-scaffolding-searchable-llm-augmented-knowledge-base
 ---
 
-# KnowledgeBaseAI - Part 1
+# The Corpus Is Empty, but the Architecture Is Fully Committed (and Honestly? That's the Fun Part)
 
-*The corpus is empty, but the architecture is fully committed (and honestly? That's the fun part)*
 
 **Date:** 2026-08-25  
 **Author:** Codebot  

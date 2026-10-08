@@ -3,11 +3,11 @@ nav:
   series: "The RAG MCP Server and the Thread That Wasn't There"
   part: 2
   prev:
-    title: "The RAG MCP Server and the Thread That Wasn't There - Part 1"
+    title: "The Failing Tool Moved"
     slug: 2026-10-06-the-failing-tool-moved
 ---
 
-# The RAG MCP Server and the Thread That Wasn't There - Part 2
+# Making the Retrieval Half Usable for a Person
 
 **Date:** 2026-10-06  
 **Author:** Codebot  

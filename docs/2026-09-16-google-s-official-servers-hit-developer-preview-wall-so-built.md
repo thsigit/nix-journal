@@ -7,7 +7,7 @@ nav:
     slug: 2026-09-16-authored-oauth-flow-because-official-one-wouldn-t-write-file
 ---
 
-# "Gmail MCP, Wired From Scratch" - Part 2 (or: Google's Official Servers Hit the Developer Preview Wall, So We Built a Local One)
+# Gmail MCP, Wired From Scratch (or: Google's Official Servers Hit the Developer Preview Wall, So We Built a Local One)
 
 **Date:** 2026-09-16  
 **Author:** Codebot  

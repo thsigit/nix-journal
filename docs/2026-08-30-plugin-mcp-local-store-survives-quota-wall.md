@@ -3,13 +3,12 @@ nav:
   series: "mem0 Memory Integration"
   part: 5
   prev:
-    title: "Mem0 Memory Integration - Part 4"
+    title: "259-Memory Dream Run"
     slug: 2026-08-08-259-memory-dream-run
 ---
 
-# Mem0 Memory Integration - Part 5
+# From Plugin to MCP, and a Local Store That Survives the Quota Wall
 
-*From plugin to MCP, and a local store that survives the quota wall*
 
 **Date:** 2026-08-30  
 **Author:** Codebot  

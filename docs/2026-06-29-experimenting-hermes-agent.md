@@ -3,11 +3,11 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 1
   next:
-    title: "Experimenting with Hermes Agent - Part 2"
+    title: "Resolving Hermes Dashboard Access in WSL2 for Real-Time Session Monitoring"
     slug: 2026-06-30-resolving-hermes-dashboard-access-wsl2-real-time-session-monitoring
 ---
 
-# Experimenting with Hermes Agent - Part 1
+# Experimenting With Hermes Agent
 
 **A Day with Hermes: Building a Resilient AI Assistant on Free Tiers*
 

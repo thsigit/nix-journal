@@ -3,16 +3,15 @@ nav:
   series: "LiteLLM Frontend Build"
   part: 2
   prev:
-    title: "LiteLLM Frontend Build - Part 1"
+    title: "Adapting G0DM0D3 as a Custom Frontend for LiteLLM (or: How I Learned to Stop Worrying and Love the Strip)"
     slug: 2026-08-23-adapting-g0dm0d3-custom-frontend-litellm
   next:
-    title: "LiteLLM Frontend Build - Part 3"
+    title: "The LiteLLM Playground UI (or: Why Did We Even Bother?)"
     slug: 2026-08-27-litellm-frontend-build
 ---
 
-# LiteLLM Frontend Build - Part 2
+# Writing the JavaScript from Scratch (or: "How Hard Can It Be?")
 
-*Writing the JavaScript from scratch (or: "How hard can it be?")*
 
 **Date:** 2026-08-25  
 **Author:** Codebot  

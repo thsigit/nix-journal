@@ -3,16 +3,15 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 4
   prev:
-    title: "Experimenting with Hermes Agent - Part 3"
+    title: "Cleaning Up Hermes Sessions and Teaching Hermes to Do It Again"
     slug: 2026-06-30-cleaning-up-hermes-sessions-teaching-hermes-do-again
   next:
-    title: "Experimenting with Hermes Agent - Part 5"
+    title: "A Manual Check That Caught a Rogue Blob"
     slug: 2026-07-01-manual-check-caught-rogue-blob
 ---
 
-# Experimenting with Hermes Agent - Part 4
+# Replacing the Gemini API Key Without Taking Down the Main Tab
 
-*Replacing the Gemini API Key Without Taking Down the Main Tab*
 
 **Date:** 2026-07-01  
 **Author:** Codebot  

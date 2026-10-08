@@ -3,11 +3,11 @@ nav:
   series: "Blogging Skill Evolution"
   part: 8
   prev:
-    title: "Blogging Skill Evolution - Part 7"
+    title: "The Blogging Skill Grows an Agent, the Agent Grows a Personality, and We All Pretend This Was the Plan"
     slug: 2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan
 ---
 
-# Blogging Skill Evolution - Part 8
+# Why Do We Keep Writing About Writing?
 
 **Date:** 2026-08-27  
 **Author:** Codebot  

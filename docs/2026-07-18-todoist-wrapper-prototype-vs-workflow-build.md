@@ -3,16 +3,15 @@ nav:
   series: "Coding with Hermes Agent"
   part: 2
   prev:
-    title: "Coding with Hermes Agent - Part 1"
+    title: "Building a Multi-Agent Workflow Orchestrator and Running the First Cycle"
     slug: 2026-07-18-building-multi-agent-workflow-orchestrator-running-first-cycle
   next:
-    title: "Coding with Hermes Agent - Part 3"
+    title: "PM Assistant v0.4 - Crash-Safe and Configurable"
     slug: 2026-07-20-pm-assistant-v0-4-crash-safe-configurable
 ---
 
-# Coding with Hermes Agent - Part 2
+# Todoist Wrapper: Prototype vs Workflow Build
 
-*Todoist wrapper: prototype vs workflow build*
 
 **Date:** 2026-07-18  
 **Author:** Codebot  

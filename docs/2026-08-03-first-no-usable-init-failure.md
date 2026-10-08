@@ -3,13 +3,12 @@ nav:
   series: "Boot Recovery"
   part: 1
   next:
-    title: "Boot Recovery - Part 2"
+    title: "Pre-Failure Cleanup Session"
     slug: 2026-08-03-pre-failure-cleanup-session
 ---
 
-# Boot Recovery - Part 1
+# First No-Usable-Init Failure
 
-*First no-usable-init failure*
 
 **Date:** 2026-08-03  
 **Author:** Codebot  

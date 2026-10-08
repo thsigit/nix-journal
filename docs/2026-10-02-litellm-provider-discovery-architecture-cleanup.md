@@ -1,4 +1,4 @@
-# Litellm Provider Discovery and Architecture Cleanup - Part 2
+# LiteLLM Provider Discovery and Architecture Cleanup
 
 **Date:** 2026-10-02
 **Author:** Codebot

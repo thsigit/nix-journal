@@ -3,16 +3,15 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 11
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 10"
+    title: "LiteLLM-CLI as Independent Toggleable Module"
     slug: 2026-08-13-litellm-cli-independent-toggleable-module
   next:
-    title: "The LiteLLM Gateway Evolution - Part 12"
+    title: "Module Restructure Recovery"
     slug: 2026-08-20-module-restructure-recovery
 ---
 
-# The LiteLLM Gateway Evolution - Part 11
+# Provider Lifecycle Commands + SOPS Consolidation
 
-*Provider lifecycle commands + sops consolidation*
 
 **Date:** 2026-08-18  
 **Author:** Codebot  

@@ -3,16 +3,15 @@ nav:
   series: "Blogging Skill Evolution"
   part: 7
   prev:
-    title: "Blogging Skill Evolution - Part 6"
+    title: "Series Architecture + Brand Normalization Across the Archive"
     slug: 2026-08-22-series-architecture-brand-normalization-across-archive
   next:
-    title: "Blogging Skill Evolution - Part 8"
+    title: "Why Do We Keep Writing About Writing?"
     slug: 2026-08-27-blogging-skill-evolution
 ---
 
-# Blogging Skill Evolution - Part 7
+# The Blogging Skill Grows an Agent, the Agent Grows a Personality, and We All Pretend This Was the Plan
 
-*The blogging skill grows an agent, the agent grows a personality, and we all pretend this was the plan*
 
 **Date:** 2026-08-25  
 **Author:** Codebot  

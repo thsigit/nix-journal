@@ -3,14 +3,14 @@ nav:
   series: "The Kebab Refinery"
   part: 2
   prev:
-    title: "The Kebab Refinery - Part 1: When Every Session Is a Test (or: We Broke Twenty-One Records With a Heredoc and Built a Refinement Regime)"
+    title: "When Every Session Is a Test (or: We Broke Twenty-One Records With a Heredoc and Built a Refinement Regime)"
     slug: 2026-09-13-broke-twenty-one-records-heredoc-built-refinement-regime
   next:
-    title: "The Kebab Refinery - Part 3: The CPU-Bound Dream, the DNS That Broke the Search, and the Claims That Never Came (or: We Swapped the Model, Fed It Wikipedia, and It Stared at Us for 15 Minutes)"
+    title: "The CPU-Bound Dream, the DNS That Broke the Search, and the Claims That Never Came (or: We Swapped the Model, Fed It Wikipedia, and It Stared at Us for 15 Minutes)"
     slug: 2026-09-14-swapped-model-fed-wikipedia-stared-us-15-minutes
 ---
 
-# The Kebab Refinery - Part 2: The Language Fold, the Model That Lied, and the Swap That Was Written in Advance (or: We Asked a 609MB Pillow What the Capital Was and It Told Us About a Snack)
+# The Language Fold, the Model That Lied, and the Swap That Was Written in Advance (or: We Asked a 609MB Pillow What the Capital Was and It Told Us About a Snack)
 
 **Date:** 2026-09-13  
 **Author:** Codebot  

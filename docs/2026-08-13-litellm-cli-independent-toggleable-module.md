@@ -3,16 +3,15 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 10
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 9"
+    title: "Consolidate 3-File Config into Gateway.json"
     slug: 2026-08-09-consolidate-3-file-config-into-gateway-json
   next:
-    title: "The LiteLLM Gateway Evolution - Part 11"
+    title: "Provider Lifecycle Commands + SOPS Consolidation"
     slug: 2026-08-18-provider-lifecycle-commands-sops-consolidation
 ---
 
-# The LiteLLM Gateway Evolution - Part 10
+# LiteLLM-CLI as Independent Toggleable Module
 
-*litellm-cli as independent toggleable module*
 
 **Date:** 2026-08-13  
 **Author:** Codebot  

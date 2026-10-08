@@ -3,16 +3,15 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 8
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 7"
+    title: "Prune Dead Providers + OpenCode Integration"
     slug: 2026-07-30-prune-dead-providers-opencode-integration
   next:
-    title: "The LiteLLM Gateway Evolution - Part 9"
+    title: "Consolidate 3-File Config into Gateway.json"
     slug: 2026-08-09-consolidate-3-file-config-into-gateway-json
 ---
 
-# The LiteLLM Gateway Evolution - Part 8
+# Fix SQLite Crash Loop + PostgreSQL Requirement
 
-*Fix SQLite crash loop + PostgreSQL requirement*
 
 **Date:** 2026-07-31  
 **Author:** Codebot  

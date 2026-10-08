@@ -3,16 +3,15 @@ nav:
   series: "Experimenting with Hermes Agent"
   part: 7
   prev:
-    title: "Experimenting with Hermes Agent - Part 6"
+    title: "Attempting Llama.cpp Connection in WSL2"
     slug: 2026-07-02-attempting-llama-cpp-connection-wsl2
   next:
-    title: "Experimenting with Hermes Agent - Part 8"
+    title: "PM Assistant Builds a Text Editor: First Real Workload"
     slug: 2026-07-21-pm-assistant-builds-text-editor-first-real-workload
 ---
 
-# Experimenting with Hermes Agent - Part 7
+# Overengineering a Hello World
 
-*Overengineering a Hello World*
 
 
 

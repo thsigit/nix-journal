@@ -3,16 +3,15 @@ nav:
   series: "Boot Recovery"
   part: 2
   prev:
-    title: "Boot Recovery - Part 1"
+    title: "First No-Usable-Init Failure"
     slug: 2026-08-03-first-no-usable-init-failure
   next:
-    title: "Boot Recovery - Part 3"
+    title: "Reinstall Recovery + Fixes"
     slug: 2026-08-03-reinstall-recovery-fixes
 ---
 
-# Boot Recovery - Part 2
+# Pre-Failure Cleanup Session
 
-*Pre-failure cleanup session*
 
 **Date:** 2026-08-03  
 **Author:** Codebot  

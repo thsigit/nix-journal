@@ -3,16 +3,15 @@ nav:
   series: "Captive Portal and Access Point Bundle"
   part: 7
   prev:
-    title: "Captive Portal and Access Point Bundle - Part 6"
+    title: "Voucher Fix + BitRouter Bug"
     slug: 2026-08-01-voucher-fix-bitrouter-bug
   next:
-    title: "Captive Portal and Access Point Bundle - Part 8"
+    title: "Boot Failure Root-Caused, OpenNDS Nft/iptables Hybrid Wall"
     slug: 2026-09-03-boot-failure-root-caused-opennds-nft-iptables-hybrid-wall
 ---
 
-# Captive Portal and Access Point Bundle - Part 7
+# Common/ Reorg + AP Revival
 
-*common/ reorg + AP revival*
 
 **Date:** 2026-08-12  
 **Author:** Codebot  

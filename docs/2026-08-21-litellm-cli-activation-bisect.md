@@ -3,13 +3,12 @@ nav:
   series: "Switch Root Target Contains No Usable Init"
   part: 5
   prev:
-    title: "\"switch root target contains no usable init\" - Part 4"
+    title: "Workstation Wave (Gens 136-142)"
     slug: 2026-08-16-workstation-wave
 ---
 
-# "switch root target contains no usable init" - Part 5 (FINAL)
+# LiteLLM-CLI Activation Bisect
 
-*litellm-cli activation bisect (FINAL)*
 
 **Date:** 2026-08-21  
 **Author:** Codebot  

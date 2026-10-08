@@ -3,16 +3,15 @@ nav:
   series: "Captive Portal and Access Point Bundle"
   part: 3
   prev:
-    title: "Captive Portal and Access Point Bundle - Part 2"
+    title: "WPA2-Enterprise: FreeRADIUS, PEAP, and the PEM That Wouldn't Load"
     slug: 2026-07-25-wpa2-enterprise-freeradius-peap-pem-wouldn-t-load
   next:
-    title: "Captive Portal and Access Point Bundle - Part 4"
+    title: "OpenNDS Captive Portal on NixOS"
     slug: 2026-07-26-opennds-captive-portal-nixos
 ---
 
-# Captive Portal and Access Point Bundle - Part 3
+# Runtime-Editable RADIUS Users: The Users File That Wasn't There
 
-*Runtime-editable RADIUS users: The Users File That Wasn't There*
 
 **Date:** 2026-07-26  
 **Author:** Codebot  

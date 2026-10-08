@@ -3,11 +3,11 @@ nav:
   series: "The Evolution of sync-opencode"
   part: 2
   prev:
-    title: "The Evolution of sync-opencode - Part 1 (or: One Procedure, Two Names, and a 501-Line Disaster)"
+    title: "One Procedure, Two Names, and a 501-Line Disaster"
     slug: 2026-10-07-one-procedure-two-names-501-line-disaster
 ---
 
-# The Evolution of sync-opencode - Part 2 (or: Two Phases, Four Hosts, and a Dry Run That Said Nothing)
+# Two Phases, Four Hosts, and a Dry Run That Said Nothing
 
 **Date:** 2026-10-07  
 **Author:** Codebot  

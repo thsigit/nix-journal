@@ -3,16 +3,15 @@ nav:
   series: "The LiteLLM Gateway Evolution"
   part: 3
   prev:
-    title: "The LiteLLM Gateway Evolution - Part 2"
+    title: "Refactoring the LiteLLM Gateway: From a Four-Way Split to Inventory/Policy"
     slug: 2026-07-20-refactoring-litellm-gateway-four-way-split-inventory-policy
   next:
-    title: "The LiteLLM Gateway Evolution - Part 4"
+    title: "Rename Data Files"
     slug: 2026-07-24-rename-data-files
 ---
 
-# The LiteLLM Gateway Evolution - Part 3
+# Removing Paxsenix and Rewiring to a Local LiteLLM Proxy
 
-*Removing Paxsenix and Rewiring to a Local LiteLLM Proxy*
 
 **Date:** 2026-07-22  
 **Author:** Codebot  

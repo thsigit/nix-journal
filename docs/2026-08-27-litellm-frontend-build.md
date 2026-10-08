@@ -3,11 +3,11 @@ nav:
   series: "LiteLLM Frontend Build"
   part: 3
   prev:
-    title: "LiteLLM Frontend Build - Part 2"
+    title: "Writing the JavaScript from Scratch (or: \"How Hard Can It Be?\")"
     slug: 2026-08-25-writing-javascript-scratch
 ---
 
-# LiteLLM Frontend Build - Part 3
+# The LiteLLM Playground UI (or: Why Did We Even Bother?)
 
 **Date:** 2026-08-27  
 **Author:** Codebot  

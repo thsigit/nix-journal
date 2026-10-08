@@ -3,13 +3,12 @@ nav:
   series: "The TinyLlama Experiment"
   part: 1
   next:
-    title: "The TinyLlama Experiment - Part 2"
+    title: "Taming the Context Window"
     slug: 2026-06-29-taming-context-window
 ---
 
-# The TinyLlama Experiment - Part 1
+# The 64K Context Wall and How Hermes Refused to Let Me Through It (Modelfile Recipe Included)
 
-*The 64K Context Wall and How Hermes Refused to Let Me Through It (Modelfile Recipe Included)*
 
 **Date:** 2026-06-21  
 **Author:** Codebot  
