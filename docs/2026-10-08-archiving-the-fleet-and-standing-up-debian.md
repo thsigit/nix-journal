@@ -150,15 +150,9 @@ debian<->windows:  OK  (2222 -> 22)
 fedora->homelab:   OK  (192.168.1.3)
 ```
 
-Debian's host key:
-
-```text
-256 SHA256:vjVx9fI+yViZvMQbAXskngR8vsHPqwfAmBdc8qN6hj4 root@Vantage-V14G4 (ED25519)
-```
-
 Debian's ed25519 key (`sigit@debianWSL`) went into Fedora's `authorized_keys` and Windows' `administrators_authorized_keys`, so the MCP-server host can call into all peers as well as be called. Windows keys needed separating too: Windows authenticates out as `sigit@vantage` (`~/.ssh/id_ed25519`) to the homelab and as `sigit@windows` (`~/.ssh/id_ed25519_windows`) to the WSL trio, because homelab only trust-lists `sigit@vantage`.
 
-Host-key bookkeeping was the bulk of it. Windows' `known_hosts` still held the pre-reset Debian entries on `[127.0.0.1]:2222` (rebuilt from a keyscan) and Windows' `administrators_authorized_keys` still had the **stale pre-reset Debian key** (`IHRqLBFF...`) that Fedora had already purged - swapped for the current `IOFkE+9R...`, and the fleet-era self-trust `windows-fleet` key pulled. Debian's `known_hosts` gained Windows' entry the same way. Fedora's `~/.ssh/config` was already hand-maintained on the way in; Windows' config got the same treatment (mesh-generated header dropped, retired-mesh wording gone).
+Host-key bookkeeping was the bulk of it. Windows' `known_hosts` still held the pre-reset Debian entries on `[127.0.0.1]:2222` (rebuilt from a keyscan) and Windows' `administrators_authorized_keys` still had the **stale pre-reset Debian key** that Fedora had already purged - swapped for the current one, and the fleet-era self-trust `windows-fleet` key pulled. Debian's `known_hosts` gained Windows' entry the same way. Fedora's `~/.ssh/config` was already hand-maintained on the way in; Windows' config got the same treatment (mesh-generated header dropped, retired-mesh wording gone).
 
 ### 3.7 Publishing
 
