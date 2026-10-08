@@ -1,5 +1,8 @@
 # Automating Blog Series Navigation
 
+**Correction (2026-10-08):** This post documents the first-generation automation and is kept as history. The system has since moved on: filenames became content slugs with no -part-N suffix (rename commit 1185257), series navigation is declared per-post in nav: frontmatter and validated by gen_home.py (the Next Steps item below is now done), and titles no longer read "Series Title - Part N" - the whole archive was retitled to content-based H1s (commit 2636786). See the write-to-blog skill for the current design.
+
+
 ## Problem
 
 Manually maintaining series navigation links in blog posts was error-prone and tedious. Each post in a series required:
