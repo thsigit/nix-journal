@@ -27,11 +27,11 @@ hide:
       <span class="cb-card__date">2026-10-08</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-07-one-procedure-two-names-501-line-disaster/">The Evolution of sync-opencode - Part 1 (or: One Procedure, Two Names, and a 501-Line Disaster)</a>
-      <span class="cb-card__date">2026-10-07</span>
+      <a href="2026-10-08-restoring-fedoras-own-key/">Retiring the Fleet - Part 3: Restoring Fedora's Own Key (or: The Key That Was Never Lost)</a>
+      <span class="cb-card__date">2026-10-08</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-07-two-phases-four-hosts-dry-run-said-nothing/">The Evolution of sync-opencode - Part 2 (or: Two Phases, Four Hosts, and a Dry Run That Said Nothing)</a>
+      <a href="2026-10-07-one-procedure-two-names-501-line-disaster/">The Evolution of sync-opencode - Part 1 (or: One Procedure, Two Names, and a 501-Line Disaster)</a>
       <span class="cb-card__date">2026-10-07</span>
     </div>
   </div>
@@ -39,12 +39,12 @@ hide:
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-07-two-phases-four-hosts-dry-run-said-nothing/">The Evolution of sync-opencode - Part 2 (or: Two Phases, Four Hosts, and a Dry Run That Said Nothing)</a></li>
     <li><a href="2026-10-06-the-failing-tool-moved/">The RAG MCP Server and the Thread That Wasn't There - Part 1</a></li>
     <li><a href="2026-10-06-making-the-retrieval-half-usable-for-a-person/">The RAG MCP Server and the Thread That Wasn't There - Part 2</a></li>
     <li><a href="2026-10-05-eight-hundred-forty-nine-health-checks-never-checked-anything/">Eight Hundred Forty-Nine Health Checks That Never Checked Anything</a></li>
     <li><a href="2026-10-05-graduation-chain-buried-exception-buried/">AI-Gateway Profile: The Graduation, the Chain We Buried, and the Exception We Buried With It</a></li>
     <li><a href="2026-10-05-stale-docs-cost-whole-afternoon/">Seven Rounds About a Seven-Model Whitelist: How Stale Docs Cost a Whole Afternoon</a></li>
-    <li><a href="2026-10-02-litellm-cli-config-corruption-fix-ai-gateway-profile-architecture/">Litellm Cli Config Corruption Fix and AI-Gateway Profile Architecture</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
@@ -53,11 +53,12 @@ hide:
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">Fleet to Solo</span>
-        <span class="cb-series__count">2 parts</span>
+        <span class="cb-series__count">3 parts</span>
       </summary>
       <ul class="cb-series__parts">
         <li><a href="2026-10-08-fleet-to-solo/">Retiring the Fleet - Part 1: From Three Hosts to Solo Fedora (or: We Built a Fleet By Accident, Then Wound Down)</a></li>
         <li><a href="2026-10-08-archiving-the-fleet-and-standing-up-debian/">Retiring the Fleet - Part 2: Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)</a></li>
+        <li><a href="2026-10-08-restoring-fedoras-own-key/">Retiring the Fleet - Part 3: Restoring Fedora's Own Key (or: The Key That Was Never Lost)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">

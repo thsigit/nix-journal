@@ -5,6 +5,9 @@ nav:
   prev:
     title: "Fleet to Solo - Part 1"
     slug: 2026-10-08-fleet-to-solo
+  next:
+    title: "Fleet to Solo - Part 3"
+    slug: 2026-10-08-restoring-fedoras-own-key
 ---
 
 # Retiring the Fleet - Part 2: Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)
