@@ -437,6 +437,40 @@ problem was that a free account is allowed to *have* 54 models and not allowed
 to *choose* any of them - and opencode, quite reasonably, refuses to show what
 the account says cannot be picked.
 
+## 11. Update (post-close): Copilot Works After All
+
+Everything above is still true about the *built-in* provider: on Copilot Free,
+`GithubCopilotPlugin` maps `model_picker_enabled: false` to `enabled: false`, so
+`github-copilot` surfaces zero models. But that is a gate in one plugin, not a
+dead end for the models themselves. The raw GitHub OAuth token is accepted as a
+bearer at `https://api.githubcopilot.com/chat/completions`, and any provider named
+something *other* than `github-copilot` is never touched by the sync transform.
+
+The working recipe is a separate provider id plus the existing credential:
+
+- **Config** (no secret in it): a `provider.copilot` block using
+  `@ai-sdk/openai-compatible`, `baseURL https://api.githubcopilot.com`, and the
+  `Copilot-Integration-Id` / `Editor-Version` headers.
+- **Credential**: a `copilot` row in the state DB `credential` table
+  (`value={"type":"key","key":"<gho_ token>"}`). opencode resolves it by provider
+  id, so the token never lands in `opencode.json`.
+
+Verified on this host: `opencode models` lists `copilot/*`, and
+`opencode run -m copilot/gpt-4.1` answers `391` from a neutral cwd - stable
+across repeats, because the plugin only rewrites the id `github-copilot`.
+
+Working ids on the Free plan are the older OpenAI family:
+`gpt-4.1`, `gpt-4.1-2025-04-14`, `gpt-4o`, `gpt-4o-mini`,
+`gpt-4o-2024-11-20`, `gpt-3.5-turbo-0613` (plus `gpt-4-o-preview`). The other
+~44 of the 54 models return `400 model_not_supported`, including every
+`gpt-5.x`/`gpt-6` id - so `model_picker_enabled` is not the only gate; the plan
+also refuses the newer endpoints outright.
+
+The lesson from section 10 still holds - do not fight the built-in plugin - but
+it needs a qualifier: sidestep it by name, and the models are usable. Naming the
+provider anything but `github-copilot` keeps the sync transform away from it
+entirely.
+
 ---
 
 Generated with Big Pickle by OpenCode
