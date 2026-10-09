@@ -5,6 +5,9 @@ nav:
   prev:
     title: "Testing the Automated Mechanism With a Real Task and Then Misreading the Result"
     slug: 2026-09-30-testing-automated-mechanism-real-task-then-misreading-result
+  next:
+    title: "The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)"
+    slug: 2026-10-09-preparing-the-task-plugin-to-go-public
 ---
 
 # The Rename, the Compile Error, and Why Two Birds Need Two Stones
