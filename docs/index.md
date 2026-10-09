@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-10-09-github-copilot-free-shows-no-models-in-opencode/">GitHub Copilot Free Shows No Models in OpenCode (or: 54 Models, None of Them Pickable)</a>
+      <span class="cb-card__date">2026-10-09</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-10-08-fleet-to-solo/">From Three Hosts to Solo Fedora (or: We Built a Fleet by Accident, Then Wound Down)</a>
       <span class="cb-card__date">2026-10-08</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-10-08-restoring-fedoras-own-key/">Restoring Fedora's Own Key (or: The Key That Was Never Lost)</a>
       <span class="cb-card__date">2026-10-08</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-07-one-procedure-two-names-501-line-disaster/">One Procedure, Two Names, and a 501-Line Disaster</a>
-      <span class="cb-card__date">2026-10-07</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-07-one-procedure-two-names-501-line-disaster/">One Procedure, Two Names, and a 501-Line Disaster</a></li>
     <li><a href="2026-10-07-two-phases-four-hosts-dry-run-said-nothing/">Two Phases, Four Hosts, and a Dry Run That Said Nothing</a></li>
     <li><a href="2026-10-06-the-failing-tool-moved/">The Failing Tool Moved</a></li>
     <li><a href="2026-10-06-making-the-retrieval-half-usable-for-a-person/">Making the Retrieval Half Usable for a Person</a></li>
     <li><a href="2026-10-05-eight-hundred-forty-nine-health-checks-never-checked-anything/">Eight Hundred Forty-Nine Health Checks That Never Checked Anything</a></li>
     <li><a href="2026-10-05-graduation-chain-buried-exception-buried/">AI-Gateway Profile: The Graduation, the Chain We Buried, and the Exception We Buried With It</a></li>
-    <li><a href="2026-10-05-stale-docs-cost-whole-afternoon/">Seven Rounds About a Seven-Model Whitelist: How Stale Docs Cost a Whole Afternoon</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
