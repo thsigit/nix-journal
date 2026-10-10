@@ -2,6 +2,9 @@
 nav:
   series: "Skills Streamline"
   part: 1
+  next:
+    title: "Verifying the Skill Library (or: The Oracle Counts Back)"
+    slug: 2026-10-10-the-oracle-counts-back
 ---
 
 # Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)
