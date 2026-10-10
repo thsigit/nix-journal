@@ -5,6 +5,9 @@ nav:
   prev:
     title: "The Rename, the Compile Error, and Why Two Birds Need Two Stones"
     slug: 2026-10-01-rename-compile-error-why-two-birds-need-two-stones
+  next:
+    title: "The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)"
+    slug: 2026-10-10-the-plugin-learns-to-ask-before-it-pushes
 ---
 
 # The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)
