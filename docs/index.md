@@ -27,11 +27,11 @@ hide:
       <span class="cb-card__date">2026-10-10</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-09-github-copilot-free-shows-no-models-in-opencode/">GitHub Copilot Free Shows No Models in OpenCode (or: 54 Models, None of Them Pickable)</a>
-      <span class="cb-card__date">2026-10-09</span>
+      <a href="2026-10-10-the-broken-oracle-and-the-archive-that-wasnt/">Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)</a>
+      <span class="cb-card__date">2026-10-10</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a>
+      <a href="2026-10-09-github-copilot-free-shows-no-models-in-opencode/">GitHub Copilot Free Shows No Models in OpenCode (or: 54 Models, None of Them Pickable)</a>
       <span class="cb-card__date">2026-10-09</span>
     </div>
   </div>
@@ -39,12 +39,12 @@ hide:
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a></li>
     <li><a href="2026-10-08-fleet-to-solo/">From Three Hosts to Solo Fedora (or: We Built a Fleet by Accident, Then Wound Down)</a></li>
     <li><a href="2026-10-08-archiving-the-fleet-and-standing-up-debian/">Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)</a></li>
     <li><a href="2026-10-08-restoring-fedoras-own-key/">Restoring Fedora's Own Key (or: The Key That Was Never Lost)</a></li>
     <li><a href="2026-10-07-one-procedure-two-names-501-line-disaster/">One Procedure, Two Names, and a 501-Line Disaster</a></li>
     <li><a href="2026-10-07-two-phases-four-hosts-dry-run-said-nothing/">Two Phases, Four Hosts, and a Dry Run That Said Nothing</a></li>
-    <li><a href="2026-10-06-the-failing-tool-moved/">The Failing Tool Moved</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
@@ -60,6 +60,15 @@ hide:
         <li><a href="2026-10-01-rename-compile-error-why-two-birds-need-two-stones/">The Rename, the Compile Error, and Why Two Birds Need Two Stones</a></li>
         <li><a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a></li>
         <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Skills Streamline</span>
+        <span class="cb-series__count">1 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-10-10-the-broken-oracle-and-the-archive-that-wasnt/">Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">
