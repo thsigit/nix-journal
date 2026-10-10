@@ -308,8 +308,9 @@ user-facing surface.
 
 ## 9. Pending Actions
 
-- Journal KB build running: 504/8889 chunks at last check, roughly 75 minutes
-  left. Nothing downstream should be wired until it verifies.
+- ~~Journal KB build running~~ **DONE**: 204 posts, 8,889 chunks, 0 errors,
+  0 orphans, ~77 min. All seven stores now verify consistent. The MCP server
+  below is unblocked.
 - Backfill `sources:` into the 244 existing records, and reconcile the 57
   referenced source ids that have no `sources/*.md` record. Deliberately
   deferred, not forgotten.
