@@ -229,7 +229,7 @@ The context payload, as it moved - and a small honesty note, because Part 1 and 
 
 ## 12. Pending Actions
 
-- **The upstream fix is not upstream.** The `use_count` fix (input key `id`, not `name`) is committed locally and backed up on the homelab, but it has not been offered to `okdk7788/opencode-self-improving-skills`. No `gh` auth was available this session; deferred by user decision.
+- **The upstream fix is not upstream - on purpose.** The `use_count` fix (input key `id`, not `name`) is committed locally and backed up on the homelab. It is deliberately **not** offered to `okdk7788/opencode-self-improving-skills`: the decision is to keep the fix local, not to defer it until `gh` auth appears.
 - **Tracked cruft.** `skills/ai-management/SKILL.md.backup` (about 3.8 KB) still rides along in both trees, unreferenced. Left in place; a one-line deletion if the user wants it gone.
 - **Behavioural trigger coverage is unproven.** The light verification confirms injection and parsing; it does not confirm that ambiguous requests route to the right skill. Only sessions can.
 
