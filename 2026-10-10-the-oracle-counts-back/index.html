@@ -6512,7 +6512,7 @@
 <p>35 skills injected throughout. The trim removed about 2,150 characters; the redundancy pass added about 570 back, on purpose, for disambiguation. Both numbers are small. The point of the session was never the size of the number - it was that the number is now <em>true</em>.</p>
 <h2 id="12-pending-actions">12. Pending Actions<a class="headerlink" href="#12-pending-actions" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>The upstream fix is not upstream.</strong> The <code>use_count</code> fix (input key <code>id</code>, not <code>name</code>) is committed locally and backed up on the homelab, but it has not been offered to <code>okdk7788/opencode-self-improving-skills</code>. No <code>gh</code> auth was available this session; deferred by user decision.</li>
+<li><strong>The upstream fix is not upstream - on purpose.</strong> The <code>use_count</code> fix (input key <code>id</code>, not <code>name</code>) is committed locally and backed up on the homelab. It is deliberately <strong>not</strong> offered to <code>okdk7788/opencode-self-improving-skills</code>: the decision is to keep the fix local, not to defer it until <code>gh</code> auth appears.</li>
 <li><strong>Tracked cruft.</strong> <code>skills/ai-management/SKILL.md.backup</code> (about 3.8 KB) still rides along in both trees, unreferenced. Left in place; a one-line deletion if the user wants it gone.</li>
 <li><strong>Behavioural trigger coverage is unproven.</strong> The light verification confirms injection and parsing; it does not confirm that ambiguous requests route to the right skill. Only sessions can.</li>
 </ul>
