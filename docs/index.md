@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a>
+      <span class="cb-card__date">2026-10-11</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-10-11-the-default-that-looked-like-a-fix/">The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)</a>
       <span class="cb-card__date">2026-10-11</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-10-10-teaching-language-learning-to-remember/">The Skill That Forgot Its Own Stop Word (or: Teaching language-learning to Remember)</a>
       <span class="cb-card__date">2026-10-10</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a>
-      <span class="cb-card__date">2026-10-10</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
     <li><a href="2026-10-10-the-broken-oracle-and-the-archive-that-wasnt/">Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)</a></li>
     <li><a href="2026-10-10-the-oracle-counts-back/">Verifying the Skill Library (or: The Oracle Counts Back)</a></li>
     <li><a href="2026-10-09-github-copilot-free-shows-no-models-in-opencode/">GitHub Copilot Free Shows No Models in OpenCode (or: 54 Models, None of Them Pickable)</a></li>
     <li><a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a></li>
     <li><a href="2026-10-08-fleet-to-solo/">From Three Hosts to Solo Fedora (or: We Built a Fleet by Accident, Then Wound Down)</a></li>
-    <li><a href="2026-10-08-archiving-the-fleet-and-standing-up-debian/">Archiving the Fleet and Standing Up Debian (or: We Actually Deleted Things This Time)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
