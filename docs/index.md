@@ -39,12 +39,12 @@ hide:
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
     <li><a href="2026-10-10-teaching-language-learning-to-remember/">The Skill That Forgot Its Own Stop Word (or: Teaching language-learning to Remember)</a></li>
     <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
     <li><a href="2026-10-10-the-broken-oracle-and-the-archive-that-wasnt/">Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)</a></li>
     <li><a href="2026-10-10-the-oracle-counts-back/">Verifying the Skill Library (or: The Oracle Counts Back)</a></li>
     <li><a href="2026-10-09-github-copilot-free-shows-no-models-in-opencode/">GitHub Copilot Free Shows No Models in OpenCode (or: 54 Models, None of Them Pickable)</a></li>
-    <li><a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
@@ -53,13 +53,14 @@ hide:
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">The Retrieval Merge</span>
-        <span class="cb-series__count">4 parts</span>
+        <span class="cb-series__count">5 parts</span>
       </summary>
       <ul class="cb-series__parts">
         <li><a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a></li>
         <li><a href="2026-10-11-the-default-that-looked-like-a-fix/">The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)</a></li>
         <li><a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a></li>
         <li><a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a></li>
+        <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">

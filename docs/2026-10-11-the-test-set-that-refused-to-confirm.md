@@ -5,6 +5,9 @@ nav:
   prev:
     title: "The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)"
     slug: 2026-10-11-the-claim-that-was-wrong-about-which-component
+  next:
+    title: "Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)"
+    slug: 2026-10-11-sixty-four-records-that-never-existed
 ---
 
 # The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)
