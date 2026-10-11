@@ -1,3 +1,15 @@
+---
+nav:
+  series: "The Retrieval Merge"
+  part: 3
+  prev:
+    title: "The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)"
+    slug: 2026-10-11-the-default-that-looked-like-a-fix
+  next:
+    title: "The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)"
+    slug: 2026-10-11-the-test-set-that-refused-to-confirm
+---
+
 # The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)
 
 **Date:** 2026-10-11  

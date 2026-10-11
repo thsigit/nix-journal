@@ -1,3 +1,15 @@
+---
+nav:
+  series: "The Retrieval Merge"
+  part: 2
+  prev:
+    title: "Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)"
+    slug: 2026-10-11-two-rags-one-store
+  next:
+    title: "The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)"
+    slug: 2026-10-11-the-claim-that-was-wrong-about-which-component
+---
+
 # The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)
 
 **Date:** 2026-10-11  

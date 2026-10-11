@@ -1,3 +1,12 @@
+---
+nav:
+  series: "The Retrieval Merge"
+  part: 1
+  next:
+    title: "The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)"
+    slug: 2026-10-11-the-default-that-looked-like-a-fix
+---
+
 # Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)
 
 **Date:** 2026-10-11  
