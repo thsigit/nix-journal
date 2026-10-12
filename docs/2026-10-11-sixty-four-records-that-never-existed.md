@@ -5,6 +5,9 @@ nav:
   prev:
     title: "The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)"
     slug: 2026-10-11-the-test-set-that-refused-to-confirm
+  next:
+    title: "Proving Every Sentence Against Its Source (or: The Checker I Deleted With the Wrong Flag)"
+    slug: 2026-10-12-proving-every-sentence-against-its-source
 ---
 
 # Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)

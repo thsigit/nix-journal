@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-10-12-proving-every-sentence-against-its-source/">Proving Every Sentence Against Its Source (or: The Checker I Deleted With the Wrong Flag)</a>
+      <span class="cb-card__date">2026-10-12</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a>
       <span class="cb-card__date">2026-10-11</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a>
       <span class="cb-card__date">2026-10-11</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a>
-      <span class="cb-card__date">2026-10-11</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a></li>
     <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
     <li><a href="2026-10-10-teaching-language-learning-to-remember/">The Skill That Forgot Its Own Stop Word (or: Teaching language-learning to Remember)</a></li>
     <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
     <li><a href="2026-10-10-the-broken-oracle-and-the-archive-that-wasnt/">Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)</a></li>
     <li><a href="2026-10-10-the-oracle-counts-back/">Verifying the Skill Library (or: The Oracle Counts Back)</a></li>
-    <li><a href="2026-10-09-github-copilot-free-shows-no-models-in-opencode/">GitHub Copilot Free Shows No Models in OpenCode (or: 54 Models, None of Them Pickable)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
@@ -53,7 +53,7 @@ hide:
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">The Retrieval Merge</span>
-        <span class="cb-series__count">5 parts</span>
+        <span class="cb-series__count">6 parts</span>
       </summary>
       <ul class="cb-series__parts">
         <li><a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a></li>
@@ -61,6 +61,7 @@ hide:
         <li><a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a></li>
         <li><a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a></li>
         <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
+        <li><a href="2026-10-12-proving-every-sentence-against-its-source/">Proving Every Sentence Against Its Source (or: The Checker I Deleted With the Wrong Flag)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">
