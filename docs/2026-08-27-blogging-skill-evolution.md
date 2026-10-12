@@ -5,6 +5,9 @@ nav:
   prev:
     title: "The Blogging Skill Grows an Agent, the Agent Grows a Personality, and We All Pretend This Was the Plan"
     slug: 2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan
+  next:
+    title: "The Pattern That Was Not A Pattern"
+    slug: 2026-10-12-the-pattern-that-was-not-a-pattern
 ---
 
 # Why Do We Keep Writing About Writing?
