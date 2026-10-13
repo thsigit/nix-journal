@@ -5,6 +5,9 @@ nav:
   prev:
     title: "Why Do We Keep Writing About Writing?"
     slug: 2026-08-27-blogging-skill-evolution
+  next:
+    title: "The Writers Get Their Channels (or: Three Clones and a Deferred Rename)"
+    slug: 2026-10-14-three-clones-and-a-deferred-rename
 ---
 
 # The Pattern That Was Not A Pattern (or: I Copied openwriter's Skill Layout Before Reading What It Was For)

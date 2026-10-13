@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a>
+      <span class="cb-card__date">2026-10-14</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-10-12-the-pattern-that-was-not-a-pattern/">The Pattern That Was Not A Pattern (or: I Copied openwriter's Skill Layout Before Reading What It Was For)</a>
       <span class="cb-card__date">2026-10-12</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a>
       <span class="cb-card__date">2026-10-11</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-11-the-default-that-looked-like-a-fix/">The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)</a>
-      <span class="cb-card__date">2026-10-11</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-11-the-default-that-looked-like-a-fix/">The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)</a></li>
     <li><a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a></li>
     <li><a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a></li>
     <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
     <li><a href="2026-10-10-teaching-language-learning-to-remember/">The Skill That Forgot Its Own Stop Word (or: Teaching language-learning to Remember)</a></li>
     <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
-    <li><a href="2026-10-10-the-broken-oracle-and-the-archive-that-wasnt/">Cleaning the Skill Library (or: The Broken Oracle and the Archive That Wasn't)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
@@ -53,7 +53,7 @@ hide:
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">Blogging Skill Evolution</span>
-        <span class="cb-series__count">9 parts</span>
+        <span class="cb-series__count">10 parts</span>
       </summary>
       <ul class="cb-series__parts">
         <li><a href="2026-06-29-making-skill-blogging-sessions-so-stop-having-re-explain/">Making a Skill for Blogging Sessions (or: So I Stop Having to Re-explain It)</a></li>
@@ -65,6 +65,7 @@ hide:
         <li><a href="2026-08-25-blogging-skill-grows-agent-agent-grows-personality-all-pretend-plan/">The Blogging Skill Grows an Agent, the Agent Grows a Personality, and We All Pretend This Was the Plan</a></li>
         <li><a href="2026-08-27-blogging-skill-evolution/">Why Do We Keep Writing About Writing?</a></li>
         <li><a href="2026-10-12-the-pattern-that-was-not-a-pattern/">The Pattern That Was Not A Pattern (or: I Copied openwriter's Skill Layout Before Reading What It Was For)</a></li>
+        <li><a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">
