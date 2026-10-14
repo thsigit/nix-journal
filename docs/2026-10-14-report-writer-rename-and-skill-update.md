@@ -5,6 +5,9 @@ nav:
   prev:
     title: "The Writers Get Their Channels (or: Three Clones and a Deferred Rename)"
     slug: 2026-10-14-three-clones-and-a-deferred-rename
+  next:
+    title: "Report-Writer Skill Failure Diagnosis (or: The Footer We Forgot)"
+    slug: 2026-10-14-report-writer-skill-failure-diagnosis
 ---
 
 # Report-Writer Rename (or: The Skill Finally Matches the Pipeline)

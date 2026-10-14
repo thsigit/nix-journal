@@ -5,6 +5,9 @@ nav:
   prev:
     title: "The Pattern That Was Not A Pattern (or: I Copied openwriter's Skill Layout Before Reading What It Was For)"
     slug: 2026-10-12-the-pattern-that-was-not-a-pattern
+  next:
+    title: "Report-Writer Rename (or: The Skill Finally Matches the Pipeline)"
+    slug: 2026-10-14-report-writer-rename-and-skill-update
 ---
 
 # The Writers Get Their Channels (or: Three Clones and a Deferred Rename)
