@@ -24,7 +24,7 @@ Part 3 closed with a tidy loop. Two filed claims had been refuted, a stale
 index had been deleted, and the next item on the list read, in full:
 
 > **Cross-KB relevance floor.** The filed diagnosis is wrong; do NOT cut the
-> vector floor. [...] The actual defect is an unfloored FTS arm. The design
+> vector floor. \[...\] The actual defect is an unfloored FTS arm. The design
 > tension is narrow and must be respected by any fix: the Xfce query's *best*
 > hit is `via=fts` alone and is correct, so "drop all FTS-only hits" would have
 > lost it. A fix needs its own test set holding both the Xfce case
