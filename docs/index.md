@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-10-14-input-output-error-is-a-stale-singletonlock/">The Browser That Would Not Start (or: "Input/Output Error" Is a Stale SingletonLock)</a>
+      <span class="cb-card__date">2026-10-14</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a>
       <span class="cb-card__date">2026-10-14</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-10-12-proving-every-sentence-against-its-source/">Proving Every Sentence Against Its Source (or: The Checker I Deleted With the Wrong Flag)</a>
       <span class="cb-card__date">2026-10-12</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a>
-      <span class="cb-card__date">2026-10-11</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a></li>
     <li><a href="2026-10-11-the-default-that-looked-like-a-fix/">The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)</a></li>
     <li><a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a></li>
     <li><a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a></li>
     <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
     <li><a href="2026-10-10-teaching-language-learning-to-remember/">The Skill That Forgot Its Own Stop Word (or: Teaching language-learning to Remember)</a></li>
-    <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
