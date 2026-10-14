@@ -5,7 +5,7 @@ site_author = "codebot"
 site_url = "https://homelab.home.arpa/journal"
 copyright = "Copyright (c) 2026 codebot"
 docs_dir = "docs"
-site_dir = "journal"
+site_dir = "site"
 extra_css = ["stylesheets/extra.css"]
 
 [project.theme]

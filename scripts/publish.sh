@@ -15,7 +15,10 @@
 # own site_url (journal.home.arpa) and also serves at root.
 #
 # IMPORTANT: the publish build writes to a throwaway dir, never to the live
-# /srv/www/codebot/journal, so local serving is left untouched.
+# /srv/www/nix-journal, and publish.sh does not touch the local public dir at
+# all. zensical-build-journal.service owns it (rsync -a --delete from the
+# repo-local site/); this script's build carries the gh-pages site_url and would
+# corrupt the local canonicals.
 #
 # Usage: ./scripts/publish.sh [--no-build]
 set -euo pipefail
@@ -116,11 +119,11 @@ if [[ ! -d "$SRC" ]]; then
   exit 1
 fi
 
-# Update local journal directory (served at homelab.home.arpa/journal)
-if [[ "$NO_BUILD" -eq 0 ]]; then
-  echo "==> Updating local journal directory"
-  cp -r "$SRC"/* /srv/www/codebot/journal/
-fi
+# The local preview at homelab.home.arpa/journal is NOT updated here.
+# zensical-build-journal.service owns /srv/www/nix-journal and rebuilds it from
+# source with the local site_url. This script's build carries the GitHub Pages
+# site_url, so copying it in would replace every canonical with the gh-pages one
+# -- and the service's `rsync -a --delete` would then wipe it anyway.
 
 WT="$(mktemp -d /tmp/codebot-gh-pages.XXXX)"
 
@@ -169,10 +172,11 @@ touch "$WT/.nojekyll"
 # above deletes every old path. GitHub Pages serves /404.html for ANY missing
 # URL, so injecting the old->new map into the built 404.html rescues all 186
 # renamed URLs with one file instead of keeping stale copies of every post.
-# The local /srv/www/codebot/journal is deliberately not touched: it keeps the
-# old directories (the copy at line 122 is additive), so old URLs still resolve
-# there, and the path-triggered zensical-build.service would overwrite any
-# injection anyway.
+# The local /srv/www/nix-journal is deliberately not touched. Old renamed slugs
+# resolve there only if they are still in the source docs/; since the rename in
+# 1185257 they are not, so /journal/<old-slug>/ is a local 404. That is the
+# intended trade: the local preview mirrors source, and the gh-pages 404 map is
+# what rescues historical URLs.
 REDIRECT_JS="$REPO_DIR/scripts/gh-pages-redirect.js"
 if [[ -f "$REDIRECT_JS" && -f "$WT/404.html" ]]; then
   echo "==> Injecting renamed-slug redirect into 404.html"

@@ -1,7 +1,7 @@
 # Generated site output (do not edit)
-journal
+site
 
-# Cache
+# Zensical cache
 .cache/
 
 # Publish build output (throwaway)
@@ -9,6 +9,10 @@ journal
 
 # Staged docs copy (series frontmatter)
 build_docs
+
+# Build-time config copies (zensical-build-journal.service)
+zensical.build.*.toml
+zensical.publish.*.toml
 
 # Python
 __pycache__/
