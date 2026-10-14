@@ -5,6 +5,9 @@ nav:
   prev:
     title: "Report-Writer Rename (or: The Skill Finally Matches the Pipeline)"
     slug: 2026-10-14-report-writer-rename-and-skill-update
+  next:
+    title: "The Triggers That Started Two Writers (or: 251 Skills and a Routing Collision)"
+    slug: 2026-10-14-the-triggers-that-started-two-writers
 ---
 
 # Report-Writer Skill Failure Diagnosis (or: The Footer We Forgot)
