@@ -2,6 +2,9 @@
 nav:
   series: "Codex Plugin Conversion"
   part: 1
+  next:
+    title: "Avoid Codex Conversion When Official Plugins Exist (or: The Empty Skills Directory Taught Us Better)"
+    slug: 2026-10-15-avoid-codex-conversion
 ---
 
 # Convert a 180-Plugin Codex Bundle into OpenCode Skills and Park Them Dormantly
