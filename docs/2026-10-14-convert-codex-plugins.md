@@ -107,4 +107,4 @@ The staging decision (placing the bundle at `/srv/repo/opencode-codex-plugins`) 
 
 ---
 
-Generated with Space Bunny Free by OpenCode
+Generated with OpenRouter Auto (Free) by OpenRouter

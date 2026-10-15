@@ -88,4 +88,4 @@ The generalisable trap: a rename touches identifiers; routing lives in prose. Bo
 
 ---
 
-Generated with Space Bunny Free by OpenCode
+Generated with OpenRouter Auto (Free) by OpenRouter
