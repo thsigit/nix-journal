@@ -19,37 +19,76 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
-      <a href="2026-10-14-input-output-error-is-a-stale-singletonlock/">The Browser That Would Not Start (or: "Input/Output Error" Is a Stale SingletonLock)</a>
-      <span class="cb-card__date">2026-10-14</span>
+      <a href="2026-10-27-kaggle-llm-inference-endpoint/">Llama.cpp Inference on Kaggle: A Free GPU Fallback (or: The Wheel, Reinvented)</a>
+      <span class="cb-card__date">2026-10-27</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a>
-      <span class="cb-card__date">2026-10-14</span>
+      <a href="2026-10-27-making-gpt-oss-20b-reason-at-high/">The Low That Would Not Leave (or: Making gpt-oss-20b Reason at High)</a>
+      <span class="cb-card__date">2026-10-27</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-14-report-writer-rename-and-skill-update/">Report-Writer Rename (or: The Skill Finally Matches the Pipeline)</a>
-      <span class="cb-card__date">2026-10-14</span>
+      <a href="2026-10-24-opencode-task-plugin-testing-git-convention/">Testing and Git Convention Setup for opencode-task-plugin</a>
+      <span class="cb-card__date">2026-10-24</span>
     </div>
     <div class="cb-card">
-      <a href="2026-10-14-report-writer-skill-failure-diagnosis/">Report-Writer Skill Failure Diagnosis (or: The Footer We Forgot)</a>
-      <span class="cb-card__date">2026-10-14</span>
+      <a href="2026-10-23-git-repo-consolidation/">Git Repository Consolidation Across Homelab, WSL, and GitHub</a>
+      <span class="cb-card__date">2026-10-23</span>
     </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
-    <li><a href="2026-10-14-the-triggers-that-started-two-writers/">The Triggers That Started Two Writers (or: 251 Skills and a Routing Collision)</a></li>
-    <li><a href="2026-10-12-the-pattern-that-was-not-a-pattern/">The Pattern That Was Not A Pattern (or: I Copied openwriter's Skill Layout Before Reading What It Was For)</a></li>
-    <li><a href="2026-10-12-proving-every-sentence-against-its-source/">Proving Every Sentence Against Its Source (or: The Checker I Deleted With the Wrong Flag)</a></li>
-    <li><a href="2026-10-11-two-rags-one-store/">Two RAG Systems, One Store (or: How I Deleted a Perfectly Good Skill and Saved the Code Inside It)</a></li>
-    <li><a href="2026-10-11-the-default-that-looked-like-a-fix/">The Default That Looked Like a Fix (or: How I Broke a Test Into the Production Store and Blamed the Server)</a></li>
-    <li><a href="2026-10-11-the-claim-that-was-wrong-about-which-component/">The Claim That Was Right About the Wrong Component (or: Two RAGs, One Store, and a Stale File That Nobody Noticed for a Month)</a></li>
+    <li><a href="2026-10-20-debian-wsl-toolchain-install/">In-Place Toolchain Install on debianWSL (Without Reset, Without opencode)</a></li>
+    <li><a href="2026-10-19-opencode-task-plugin-merge-skills-tools-github-mirror/">Merging Skills into Tools and GitHub Mirror</a></li>
+    <li><a href="2026-10-15-avoid-codex-conversion/">Avoid Codex Conversion When Official Plugins Exist (or: The Empty Skills Directory Taught Us Better)</a></li>
+    <li><a href="2026-10-14-input-output-error-is-a-stale-singletonlock/">The Browser That Would Not Start (or: "Input/Output Error" Is a Stale SingletonLock)</a></li>
+    <li><a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a></li>
+    <li><a href="2026-10-14-report-writer-rename-and-skill-update/">Report-Writer Rename (or: The Skill Finally Matches the Pipeline)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
   <h2>Series Archive</h2>
   <div class="cb-series__list">
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">OpenCode Configuration Evolution</span>
+        <span class="cb-series__count">7 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-07-22-agent-roster-specialized-model-routing/">Agent Roster for Specialized Model Routing</a></li>
+        <li><a href="2026-07-25-persistent-context-vs-fresh-start-problem/">Persistent Context vs Fresh-Start Problem</a></li>
+        <li><a href="2026-07-31-dead-provider-agent-model-cleanup/">Dead Provider and Agent-Model Cleanup</a></li>
+        <li><a href="2026-08-09-multi-provider-config-kenari-freetheai-aihubmix/">Multi-Provider Config: Kenari, Freetheai, Aihubmix</a></li>
+        <li><a href="2026-08-11-nvidia-whitelist-dead-reference-sweep/">NVIDIA Whitelist + Dead-Reference Sweep</a></li>
+        <li><a href="2026-08-22-agent-cli-path-openclaw-hermes-agent-opencode/">The Agent CLI Path: OpenClaw to Hermes Agent to OpenCode</a></li>
+        <li><a href="2026-10-27-making-gpt-oss-20b-reason-at-high/">The Low That Would Not Leave (or: Making gpt-oss-20b Reason at High)</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">OpenCode Task Plugin</span>
+        <span class="cb-series__count">6 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-09-30-testing-automated-mechanism-real-task-then-misreading-result/">Testing the Automated Mechanism With a Real Task and Then Misreading the Result</a></li>
+        <li><a href="2026-10-01-rename-compile-error-why-two-birds-need-two-stones/">The Rename, the Compile Error, and Why Two Birds Need Two Stones</a></li>
+        <li><a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a></li>
+        <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
+        <li><a href="2026-10-19-opencode-task-plugin-merge-skills-tools-github-mirror/">Merging Skills into Tools and GitHub Mirror</a></li>
+        <li><a href="2026-10-24-opencode-task-plugin-testing-git-convention/">Testing and Git Convention Setup for opencode-task-plugin</a></li>
+      </ul>
+    </details>
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Codex Plugin Conversion</span>
+        <span class="cb-series__count">2 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-10-14-convert-codex-plugins/">Convert a 180-Plugin Codex Bundle into OpenCode Skills and Park Them Dormantly</a></li>
+        <li><a href="2026-10-15-avoid-codex-conversion/">Avoid Codex Conversion When Official Plugins Exist (or: The Empty Skills Directory Taught Us Better)</a></li>
+      </ul>
+    </details>
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">Blogging Skill Evolution</span>
@@ -68,7 +107,7 @@ hide:
         <li><a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a></li>
         <li><a href="2026-10-14-report-writer-rename-and-skill-update/">Report-Writer Rename (or: The Skill Finally Matches the Pipeline)</a></li>
         <li><a href="2026-10-14-report-writer-skill-failure-diagnosis/">Report-Writer Skill Failure Diagnosis (or: The Footer We Forgot)</a></li>
-        <li><a href="2026-10-14-the-triggers-that-started-two-writers/">The Triggers That Started Two Writers (or: 251 Skills and a Routing Collision)</a></li>
+        <li><a href="2026-10-14-writer-skill-routing/">The Two Writers That Started a Collision (or: How `write to blog` Landed in the Wrong Channel)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">
@@ -83,18 +122,6 @@ hide:
         <li><a href="2026-10-11-the-test-set-that-refused-to-confirm/">The Test Set That Refused to Confirm the Diagnosis (or: I Built the Fixture the Task File Asked For and It Refuted the Premise Three Ways)</a></li>
         <li><a href="2026-10-11-sixty-four-records-that-never-existed/">Sixty-Four Records That Never Existed (or: A Health Check That Reported Perfect Health Over a Third of the Corpus)</a></li>
         <li><a href="2026-10-12-proving-every-sentence-against-its-source/">Proving Every Sentence Against Its Source (or: The Checker I Deleted With the Wrong Flag)</a></li>
-      </ul>
-    </details>
-    <details class="cb-series__item">
-      <summary class="cb-series__summary">
-        <span class="cb-series__name">OpenCode Task Plugin</span>
-        <span class="cb-series__count">4 parts</span>
-      </summary>
-      <ul class="cb-series__parts">
-        <li><a href="2026-09-30-testing-automated-mechanism-real-task-then-misreading-result/">Testing the Automated Mechanism With a Real Task and Then Misreading the Result</a></li>
-        <li><a href="2026-10-01-rename-compile-error-why-two-birds-need-two-stones/">The Rename, the Compile Error, and Why Two Birds Need Two Stones</a></li>
-        <li><a href="2026-10-09-preparing-the-task-plugin-to-go-public/">The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)</a></li>
-        <li><a href="2026-10-10-the-plugin-learns-to-ask-before-it-pushes/">The Plugin Learns to Ask Before It Pushes (or: Phases 2 Through 4 of Going Public)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">
@@ -305,20 +332,6 @@ hide:
       <ul class="cb-series__parts">
         <li><a href="2026-08-12-store-copies-force-flags-wallpaper-reset-itself-out-principle/">Store Copies, Force Flags, and a Wallpaper That Reset Itself Out of Principle</a></li>
         <li><a href="2026-08-24-out-store-symlinks-every-gui-click-now-uncommitted-change/">Out-of-Store Symlinks: Every GUI Click Is Now an Uncommitted Change</a></li>
-      </ul>
-    </details>
-    <details class="cb-series__item">
-      <summary class="cb-series__summary">
-        <span class="cb-series__name">OpenCode Configuration Evolution</span>
-        <span class="cb-series__count">6 parts</span>
-      </summary>
-      <ul class="cb-series__parts">
-        <li><a href="2026-07-22-agent-roster-specialized-model-routing/">Agent Roster for Specialized Model Routing</a></li>
-        <li><a href="2026-07-25-persistent-context-vs-fresh-start-problem/">Persistent Context vs Fresh-Start Problem</a></li>
-        <li><a href="2026-07-31-dead-provider-agent-model-cleanup/">Dead Provider and Agent-Model Cleanup</a></li>
-        <li><a href="2026-08-09-multi-provider-config-kenari-freetheai-aihubmix/">Multi-Provider Config: Kenari, Freetheai, Aihubmix</a></li>
-        <li><a href="2026-08-11-nvidia-whitelist-dead-reference-sweep/">NVIDIA Whitelist + Dead-Reference Sweep</a></li>
-        <li><a href="2026-08-22-agent-cli-path-openclaw-hermes-agent-opencode/">The Agent CLI Path: OpenClaw to Hermes Agent to OpenCode</a></li>
       </ul>
     </details>
     <details class="cb-series__item">

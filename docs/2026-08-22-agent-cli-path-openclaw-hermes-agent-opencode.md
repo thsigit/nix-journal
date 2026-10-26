@@ -5,6 +5,9 @@ nav:
   prev:
     title: "NVIDIA Whitelist + Dead-Reference Sweep"
     slug: 2026-08-11-nvidia-whitelist-dead-reference-sweep
+  next:
+    title: "The Low That Would Not Leave (or: Making gpt-oss-20b Reason at High)"
+    slug: 2026-10-27-making-gpt-oss-20b-reason-at-high
 ---
 
 # The Agent CLI Path: OpenClaw to Hermes Agent to OpenCode
