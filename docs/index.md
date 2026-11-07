@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-11-07-system-maintenance-sweep/">System Maintenance Sweep</a>
+      <span class="cb-card__date">2026-11-07</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-10-27-kaggle-llm-inference-endpoint/">Llama.cpp Inference on Kaggle: A Free GPU Fallback (or: The Wheel, Reinvented)</a>
       <span class="cb-card__date">2026-10-27</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-10-24-opencode-task-plugin-testing-git-convention/">Testing and Git Convention Setup for opencode-task-plugin</a>
       <span class="cb-card__date">2026-10-24</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-23-git-repo-consolidation/">Git Repository Consolidation Across Homelab, WSL, and GitHub</a>
-      <span class="cb-card__date">2026-10-23</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-23-git-repo-consolidation/">Git Repository Consolidation Across Homelab, WSL, and GitHub</a></li>
     <li><a href="2026-10-20-debian-wsl-toolchain-install/">In-Place Toolchain Install on debianWSL (Without Reset, Without opencode)</a></li>
     <li><a href="2026-10-19-opencode-task-plugin-merge-skills-tools-github-mirror/">Merging Skills into Tools and GitHub Mirror</a></li>
     <li><a href="2026-10-15-avoid-codex-conversion/">Avoid Codex Conversion When Official Plugins Exist (or: The Empty Skills Directory Taught Us Better)</a></li>
     <li><a href="2026-10-14-input-output-error-is-a-stale-singletonlock/">The Browser That Would Not Start (or: "Input/Output Error" Is a Stale SingletonLock)</a></li>
     <li><a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a></li>
-    <li><a href="2026-10-14-report-writer-rename-and-skill-update/">Report-Writer Rename (or: The Skill Finally Matches the Pipeline)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
