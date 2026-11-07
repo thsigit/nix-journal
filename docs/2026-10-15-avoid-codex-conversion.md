@@ -59,7 +59,6 @@ For both Binance and Cloudflare:
 - Deleted/staged the `codex-*` conversion directories for these plugins.
 - Imported the official repositories to `homelab:/srv/repo/opencode-plugins/<plugin-name>/`.
 - Verified the official repos contain working `SKILL.md` files, CLI references, and structured instructions.
-- Updated the article `2026-10-15-cloudflare-skills.md` and created `2026-10-15-binance-skills-hub.md` to document the official sources.
 
 ### 4.4 Updated the conversion task
 

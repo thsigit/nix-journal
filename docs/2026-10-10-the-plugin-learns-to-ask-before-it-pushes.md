@@ -2,6 +2,9 @@
 nav:
   series: "OpenCode Task Plugin"
   part: 4
+  next:
+    title: "Merging Skills into Tools and GitHub Mirror"
+    slug: 2026-10-19-opencode-task-plugin-merge-skills-tools-github-mirror
   prev:
     title: "The Instruction That Got Quoted (or: Preparing the Task Plugin to Go Public)"
     slug: 2026-10-09-preparing-the-task-plugin-to-go-public

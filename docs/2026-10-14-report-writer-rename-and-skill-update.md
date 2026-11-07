@@ -93,4 +93,4 @@ Skill now discoverable as `report-writer`; `write-to-blog` ID is removed.
 
 ---
 
-*Generated with report-writer skill. This post will appear in the local preview after the next `zensical-build-journal` run and will be published to GitHub Pages via `scripts/publish.sh` when ready.*
+Generated with Big Pickle by OpenCode
