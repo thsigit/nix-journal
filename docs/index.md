@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-11-08-three-things-the-docs-swore-were-true/">The Add Model Button (or: Three Things the Docs Swore Were True)</a>
+      <span class="cb-card__date">2026-11-08</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-11-07-system-maintenance-sweep/">System Maintenance Sweep</a>
       <span class="cb-card__date">2026-11-07</span>
     </div>
@@ -30,26 +34,34 @@ hide:
       <a href="2026-10-27-making-gpt-oss-20b-reason-at-high/">The Low That Would Not Leave (or: Making gpt-oss-20b Reason at High)</a>
       <span class="cb-card__date">2026-10-27</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-10-24-opencode-task-plugin-testing-git-convention/">Testing and Git Convention Setup for opencode-task-plugin</a>
-      <span class="cb-card__date">2026-10-24</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-10-24-opencode-task-plugin-testing-git-convention/">Testing and Git Convention Setup for opencode-task-plugin</a></li>
     <li><a href="2026-10-23-git-repo-consolidation/">Git Repository Consolidation Across Homelab, WSL, and GitHub</a></li>
     <li><a href="2026-10-20-debian-wsl-toolchain-install/">In-Place Toolchain Install on debianWSL (Without Reset, Without opencode)</a></li>
     <li><a href="2026-10-19-opencode-task-plugin-merge-skills-tools-github-mirror/">Merging Skills into Tools and GitHub Mirror</a></li>
     <li><a href="2026-10-15-avoid-codex-conversion/">Avoid Codex Conversion When Official Plugins Exist (or: The Empty Skills Directory Taught Us Better)</a></li>
     <li><a href="2026-10-14-input-output-error-is-a-stale-singletonlock/">The Browser That Would Not Start (or: "Input/Output Error" Is a Stale SingletonLock)</a></li>
-    <li><a href="2026-10-14-three-clones-and-a-deferred-rename/">The Writers Get Their Channels (or: Three Clones and a Deferred Rename)</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
   <h2>Series Archive</h2>
   <div class="cb-series__list">
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">LiteLLM Frontend Build</span>
+        <span class="cb-series__count">4 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-08-23-adapting-g0dm0d3-custom-frontend-litellm/">Adapting G0DM0D3 as a Custom Frontend for LiteLLM (or: How I Learned to Stop Worrying and Love the Strip)</a></li>
+        <li><a href="2026-08-25-writing-javascript-scratch/">Writing the JavaScript from Scratch (or: "How Hard Can It Be?")</a></li>
+        <li><a href="2026-08-27-litellm-frontend-build/">The LiteLLM Playground UI (or: Why Did We Even Bother?)</a></li>
+        <li><a href="2026-11-08-three-things-the-docs-swore-were-true/">The Add Model Button (or: Three Things the Docs Swore Were True)</a></li>
+      </ul>
+    </details>
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">OpenCode Configuration Evolution</span>
@@ -311,17 +323,6 @@ hide:
       <ul class="cb-series__parts">
         <li><a href="2026-08-29-built-fleet-accident/">I Built a Fleet by Accident</a></li>
         <li><a href="2026-08-30-three-distros-one-configuration-windows-asterisk/">Three Distros, One Configuration, and a Windows Asterisk</a></li>
-      </ul>
-    </details>
-    <details class="cb-series__item">
-      <summary class="cb-series__summary">
-        <span class="cb-series__name">LiteLLM Frontend Build</span>
-        <span class="cb-series__count">3 parts</span>
-      </summary>
-      <ul class="cb-series__parts">
-        <li><a href="2026-08-23-adapting-g0dm0d3-custom-frontend-litellm/">Adapting G0DM0D3 as a Custom Frontend for LiteLLM (or: How I Learned to Stop Worrying and Love the Strip)</a></li>
-        <li><a href="2026-08-25-writing-javascript-scratch/">Writing the JavaScript from Scratch (or: "How Hard Can It Be?")</a></li>
-        <li><a href="2026-08-27-litellm-frontend-build/">The LiteLLM Playground UI (or: Why Did We Even Bother?)</a></li>
       </ul>
     </details>
     <details class="cb-series__item">

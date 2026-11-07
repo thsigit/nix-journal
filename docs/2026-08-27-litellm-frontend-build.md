@@ -5,6 +5,9 @@ nav:
   prev:
     title: "Writing the JavaScript from Scratch (or: \"How Hard Can It Be?\")"
     slug: 2026-08-25-writing-javascript-scratch
+  next:
+    title: "The Add Model Button (or: Three Things the Docs Swore Were True)"
+    slug: 2026-11-08-three-things-the-docs-swore-were-true
 ---
 
 # The LiteLLM Playground UI (or: Why Did We Even Bother?)
