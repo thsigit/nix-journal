@@ -628,10 +628,46 @@
         <loc>https://thsigit.github.io/nix-journal/2026-10-12-the-pattern-that-was-not-a-pattern/</loc>
       </url>
       <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-14-convert-codex-plugins/</loc>
+      </url>
+      <url>
         <loc>https://thsigit.github.io/nix-journal/2026-10-14-input-output-error-is-a-stale-singletonlock/</loc>
       </url>
       <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-14-report-writer-rename-and-skill-update/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-14-report-writer-skill-failure-diagnosis/</loc>
+      </url>
+      <url>
         <loc>https://thsigit.github.io/nix-journal/2026-10-14-three-clones-and-a-deferred-rename/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-14-writer-skill-routing/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-15-avoid-codex-conversion/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-19-opencode-task-plugin-merge-skills-tools-github-mirror/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-20-debian-wsl-toolchain-install/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-23-git-repo-consolidation/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-24-opencode-task-plugin-testing-git-convention/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-27-kaggle-llm-inference-endpoint/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-10-27-making-gpt-oss-20b-reason-at-high/</loc>
+      </url>
+      <url>
+        <loc>https://thsigit.github.io/nix-journal/2026-11-07-system-maintenance-sweep/</loc>
       </url>
       <url>
         <loc>https://thsigit.github.io/nix-journal/about/</loc>
