@@ -1,3 +1,12 @@
+---
+nav:
+  series: "OAuth Cleanup"
+  part: 1
+  next:
+    title: "The GCP Project Purge (or: From Nine Projects Down to the One GWS Actually Uses)"
+    slug: 2026-11-09-from-nine-projects-down-to-the-one-gws-actually-uses
+---
+
 # The OAuth Cleanup (or: One Secret, Two Clients, and the Wrong gcloud Command)
 
 **Date:** 2026-09-17  
