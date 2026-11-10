@@ -1,3 +1,12 @@
+---
+nav:
+  series: "Kaggle Ephemeral LLM"
+  part: 1
+  next:
+    title: "A Proxy That Remembers What Kaggle Forgets (or: Making an Ephemeral Endpoint Look Fixed)"
+    slug: 2026-11-10-a-proxy-that-remembers-what-kaggle-forgets
+---
+
 # Kaggle Ephemeral LLM: Datasets, Wheel Caching, and a Tunnel (or: Making the Free Fallback Less Painful)
 
 **Date:** 2026-11-09  

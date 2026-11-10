@@ -23,11 +23,11 @@ hide:
       <span class="cb-card__date">2026-11-10</span>
     </div>
     <div class="cb-card">
-      <a href="2026-11-09-kaggle-ephemeral-llm-datasets-wheel-and-tunnel/">Kaggle Ephemeral LLM: Datasets, Wheel Caching, and a Tunnel (or: Making the Free Fallback Less Painful)</a>
+      <a href="2026-11-09-from-nine-projects-down-to-the-one-gws-actually-uses/">The GCP Project Purge (or: From Nine Projects Down to the One GWS Actually Uses)</a>
       <span class="cb-card__date">2026-11-09</span>
     </div>
     <div class="cb-card">
-      <a href="2026-11-09-from-nine-projects-down-to-the-one-gws-actually-uses/">The GCP Project Purge (or: From Nine Projects Down to the One GWS Actually Uses)</a>
+      <a href="2026-11-09-kaggle-ephemeral-llm-datasets-wheel-and-tunnel/">Kaggle Ephemeral LLM: Datasets, Wheel Caching, and a Tunnel (or: Making the Free Fallback Less Painful)</a>
       <span class="cb-card__date">2026-11-09</span>
     </div>
     <div class="cb-card">
@@ -50,6 +50,16 @@ hide:
 <section class="cb-series" id="series">
   <h2>Series Archive</h2>
   <div class="cb-series__list">
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Kaggle Ephemeral LLM</span>
+        <span class="cb-series__count">2 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-11-09-kaggle-ephemeral-llm-datasets-wheel-and-tunnel/">Kaggle Ephemeral LLM: Datasets, Wheel Caching, and a Tunnel (or: Making the Free Fallback Less Painful)</a></li>
+        <li><a href="2026-11-10-a-proxy-that-remembers-what-kaggle-forgets/">A Proxy That Remembers What Kaggle Forgets (or: Making an Ephemeral Endpoint Look Fixed)</a></li>
+      </ul>
+    </details>
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">OAuth Cleanup</span>
