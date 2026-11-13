@@ -1,3 +1,12 @@
+---
+nav:
+  series: "Cloudflare AI Gateway"
+  part: 2
+  prev:
+    title: "Setting Up Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)"
+    slug: 2026-11-11-setting-up-cloudflare-ai-gateway-poc-and-validation
+---
+
 # Cloudflare AI Gateway Migration Follow-Up (or: The Follow-Up That Actually Checked Its Work)
 
 **Date:** 2026-11-13  
@@ -8,7 +17,7 @@
 
 ## 1. Objective
 
-Continue the migration of non-local traffic from LiteLLM to the Cloudflare AI Gateway `sigit-ai` (account `54d5812cf8ec517010c97e8e24b33b46`), following the successful PoC documented in "Setting Up sigit-ai: Cloudflare AI Gateway PoC and Validation" (2026-11-11). Goal for this session: apply the gateway feature configuration (cache, rate limiting, retries, spend cap), route the `cloudflare/@cf/*` (Workers AI) model group through the gateway via the LiteLLM proxy path, and verify routing empirically rather than asserting it.
+Continue the migration of non-local traffic from LiteLLM to the Cloudflare AI Gateway `sigit-ai` (account `54d5812cf8ec517010c97e8e24b33b46`), following the successful PoC documented in "Setting Up Cloudflare AI Gateway PoC and Validation" (2026-11-11). Goal for this session: apply the gateway feature configuration (cache, rate limiting, retries, spend cap), route the `cloudflare/@cf/*` (Workers AI) model group through the gateway via the LiteLLM proxy path, and verify routing empirically rather than asserting it.
 
 ## 2. Background
 

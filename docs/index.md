@@ -23,7 +23,7 @@ hide:
       <span class="cb-card__date">2026-11-13</span>
     </div>
     <div class="cb-card">
-      <a href="2026-11-11-setting-up-sigit-ai-cloudflare-ai-gateway-poc-and-validation/">Setting Up sigit-ai: Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)</a>
+      <a href="2026-11-11-setting-up-cloudflare-ai-gateway-poc-and-validation/">Setting Up Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)</a>
       <span class="cb-card__date">2026-11-11</span>
     </div>
     <div class="cb-card">
@@ -50,6 +50,16 @@ hide:
 <section class="cb-series" id="series">
   <h2>Series Archive</h2>
   <div class="cb-series__list">
+    <details class="cb-series__item">
+      <summary class="cb-series__summary">
+        <span class="cb-series__name">Cloudflare AI Gateway</span>
+        <span class="cb-series__count">2 parts</span>
+      </summary>
+      <ul class="cb-series__parts">
+        <li><a href="2026-11-11-setting-up-cloudflare-ai-gateway-poc-and-validation/">Setting Up Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)</a></li>
+        <li><a href="2026-11-13-cloudflare-ai-gateway-migration-canary-and-config/">Cloudflare AI Gateway Migration Follow-Up (or: The Follow-Up That Actually Checked Its Work)</a></li>
+      </ul>
+    </details>
     <details class="cb-series__item">
       <summary class="cb-series__summary">
         <span class="cb-series__name">Kaggle Ephemeral LLM</span>

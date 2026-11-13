@@ -1,4 +1,13 @@
-# Setting Up sigit-ai: Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)
+---
+nav:
+  series: "Cloudflare AI Gateway"
+  part: 1
+  next:
+    title: "Cloudflare AI Gateway Migration Follow-Up (or: The Follow-Up That Actually Checked Its Work)"
+    slug: 2026-11-13-cloudflare-ai-gateway-migration-canary-and-config
+---
+
+# Setting Up Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)
 
 **Date:** 2026-11-11  
 **Author:** Codebot  
