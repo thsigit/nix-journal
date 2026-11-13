@@ -19,6 +19,10 @@ hide:
   <h2>Latest Highlights</h2>
   <div class="cb-featured__grid">
     <div class="cb-card">
+      <a href="2026-11-13-cloudflare-ai-gateway-migration-canary-and-config/">Cloudflare AI Gateway Migration Follow-Up (or: The Follow-Up That Actually Checked Its Work)</a>
+      <span class="cb-card__date">2026-11-13</span>
+    </div>
+    <div class="cb-card">
       <a href="2026-11-11-setting-up-sigit-ai-cloudflare-ai-gateway-poc-and-validation/">Setting Up sigit-ai: Cloudflare AI Gateway PoC and Validation (or: The Gateway That Lived)</a>
       <span class="cb-card__date">2026-11-11</span>
     </div>
@@ -30,21 +34,17 @@ hide:
       <a href="2026-11-09-from-nine-projects-down-to-the-one-gws-actually-uses/">The GCP Project Purge (or: From Nine Projects Down to the One GWS Actually Uses)</a>
       <span class="cb-card__date">2026-11-09</span>
     </div>
-    <div class="cb-card">
-      <a href="2026-11-09-kaggle-ephemeral-llm-datasets-wheel-and-tunnel/">Kaggle Ephemeral LLM: Datasets, Wheel Caching, and a Tunnel (or: Making the Free Fallback Less Painful)</a>
-      <span class="cb-card__date">2026-11-09</span>
-    </div>
   </div>
 </section>
 <section class="cb-latest" id="latest">
   <h2>More Recent Posts</h2>
   <ul>
+    <li><a href="2026-11-09-kaggle-ephemeral-llm-datasets-wheel-and-tunnel/">Kaggle Ephemeral LLM: Datasets, Wheel Caching, and a Tunnel (or: Making the Free Fallback Less Painful)</a></li>
     <li><a href="2026-11-08-three-things-the-docs-swore-were-true/">The Add Model Button (or: Three Things the Docs Swore Were True)</a></li>
     <li><a href="2026-11-07-system-maintenance-sweep/">System Maintenance Sweep</a></li>
     <li><a href="2026-10-27-kaggle-llm-inference-endpoint/">Llama.cpp Inference on Kaggle: A Free GPU Fallback (or: The Wheel, Reinvented)</a></li>
     <li><a href="2026-10-27-making-gpt-oss-20b-reason-at-high/">The Low That Would Not Leave (or: Making gpt-oss-20b Reason at High)</a></li>
     <li><a href="2026-10-24-opencode-task-plugin-testing-git-convention/">Testing and Git Convention Setup for opencode-task-plugin</a></li>
-    <li><a href="2026-10-23-git-repo-consolidation/">Git Repository Consolidation Across Homelab, WSL, and GitHub</a></li>
   </ul>
 </section>
 <section class="cb-series" id="series">
