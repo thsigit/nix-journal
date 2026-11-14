@@ -1,7 +1,10 @@
 ---
 nav:
-  series: "The LiteLLM Gateway Evolution"
-  part: ?
+  series: "Cloudflare AI Gateway"
+  part: 3
+  prev:
+    title: "Cloudflare AI Gateway Migration Follow-Up (or: The Follow-Up That Actually Checked Its Work)"
+    slug: 2026-11-13-cloudflare-ai-gateway-migration-canary-and-config
 ---
 
 # Cloudflare AI Gateway Migration Follow-up — Cutover Complete
